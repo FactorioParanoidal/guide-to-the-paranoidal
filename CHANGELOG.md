@@ -1,5 +1,11 @@
 # Changelog — Guide to the Paranoidal
 
+## 1.3.2 — 2026-10-25
+
+- EN wording: "eats power" replaced; mining chapter: unclear "two fluids" warning and "soil geology" tag removed.
+- Solid fuels table: hyphenation of long names, header sticks to the top while scrolling.
+- The "cleans the air" spoiler has no X-FILES stamp over the text.
+
 ## 1.3.1 — 2026-10-25
 
 - Teasers are quiet inline text with a small lock instead of a badge.
