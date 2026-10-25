@@ -146,3 +146,24 @@ kbd.kbd-link:hover{border-color:var(--orange);box-shadow:inset 0 1px 0 rgba(255,
 
 /* ---- efficiency bar: the wasted part is plain orange, no red flame ---- */
 .kc-bar i.l{background:linear-gradient(#ffa020,#d07a10);animation:none;color:#000;text-shadow:none}
+
+/* ---- teasers: quiet inline text with a small lock, no badge ---- */
+.tease{display:inline;padding:0;background:none;border:0;border-radius:0;font:inherit;color:var(--title);
+  border-bottom:1px dashed var(--orange);cursor:help}
+.tease::before{content:"";display:inline-block;width:.7em;height:.8em;margin-right:.3em;vertical-align:-.05em;background:var(--orange);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 16'%3E%3Cpath d='M3 7V5a4 4 0 0 1 8 0v2h1v9H2V7zm2 0h4V5a2 2 0 0 0-4 0z'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 16'%3E%3Cpath d='M3 7V5a4 4 0 0 1 8 0v2h1v9H2V7zm2 0h4V5a2 2 0 0 0-4 0z'/%3E%3C/svg%3E") center/contain no-repeat}
+
+/* ---- tables open in full (long ones get a "show all" button instead of an inner scrollbar) ---- */
+.table-wrap.open{max-height:none;overflow:visible}
+
+/* ---- scrollbars in the page style ---- */
+*{scrollbar-width:thin;scrollbar-color:#5a5654 #1a1918}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:#1a1918}
+::-webkit-scrollbar-thumb{background:#5a5654;border:2px solid #1a1918;border-radius:5px}
+::-webkit-scrollbar-thumb:hover{background:var(--orange)}
+
+/* ---- solid fuels table: icon and name on one line ---- */
+[data-widget=solid-fuels] td:first-child{display:flex;align-items:center;gap:6px;line-height:1.25}
+[data-widget=solid-fuels] td:first-child .ic{flex:none}
