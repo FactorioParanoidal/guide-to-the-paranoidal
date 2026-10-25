@@ -1,0 +1,1104 @@
+{
+ "_doc": "Extra assets for tools/collect_assets.py. icons: [type,name]; technology_icons: names; sprites: {key,type,name,path?,max?,shadows?}; static: {src (workspace-relative or __mod__/ path), dst, note, crop?, resize?, keyout? [lo,hi] = make a dark background transparent}",
+ "icons": [
+  [
+   "fluid",
+   "water"
+  ],
+  [
+   "fluid",
+   "steam"
+  ],
+  [
+   "item",
+   "coal"
+  ],
+  [
+   "item",
+   "stone"
+  ],
+  [
+   "item",
+   "wood"
+  ],
+  [
+   "item",
+   "iron-plate"
+  ],
+  [
+   "item",
+   "copper-plate"
+  ],
+  [
+   "item",
+   "steel-plate"
+  ],
+  [
+   "item",
+   "angels-slag"
+  ],
+  [
+   "item",
+   "angels-stone-crushed"
+  ],
+  [
+   "item",
+   "repair-pack"
+  ],
+  [
+   "item",
+   "ic-refine-workshop"
+  ],
+  [
+   "container",
+   "ic-control-post"
+  ],
+  [
+   "item",
+   "iron-chest"
+  ],
+  [
+   "item",
+   "iron-gear-wheel"
+  ],
+  [
+   "item",
+   "burner-mining-drill"
+  ],
+  [
+   "item",
+   "assembling-machine-1"
+  ],
+  [
+   "item",
+   "electronic-circuit"
+  ],
+  [
+   "item",
+   "uranium-ore"
+  ],
+  [
+   "item",
+   "uranium-235"
+  ],
+  [
+   "item",
+   "raw-fish"
+  ],
+  [
+   "item",
+   "landfill"
+  ],
+  [
+   "item",
+   "satellite"
+  ],
+  [
+   "item",
+   "rocket-part"
+  ],
+  [
+   "fluid",
+   "angels-liquid-multi-phase-oil"
+  ],
+  [
+   "fluid",
+   "angels-gas-natural-1"
+  ],
+  [
+   "fluid",
+   "angels-thermal-water"
+  ],
+  [
+   "fluid",
+   "sulfuric-acid"
+  ],
+  [
+   "fluid",
+   "angels-water-purified"
+  ],
+  [
+   "fluid",
+   "angels-water-yellow-waste"
+  ],
+  [
+   "item",
+   "angels-geode-blue"
+  ],
+  [
+   "item",
+   "angels-geode-purple"
+  ],
+  [
+   "item",
+   "angels-geode-red"
+  ],
+  [
+   "item",
+   "angels-bio-puffer-1"
+  ],
+  [
+   "item",
+   "angels-token-bio"
+  ],
+  [
+   "capsule",
+   "bob-alien-artifact-purple"
+  ],
+  [
+   "item",
+   "memory-unit"
+  ],
+  [
+   "item",
+   "factory-1"
+  ],
+  [
+   "item",
+   "factory-4"
+  ],
+  [
+   "item",
+   "big-lab"
+  ],
+  [
+   "item",
+   "paranoidal-beta8-hyper-lab"
+  ],
+  [
+   "item",
+   "bob-god-module"
+  ],
+  [
+   "item",
+   "god-module-5"
+  ],
+  [
+   "item",
+   "bob-quality-module-5"
+  ],
+  [
+   "item",
+   "space-science-pack"
+  ],
+  [
+   "item",
+   "bet-fuel-4-full"
+  ],
+  [
+   "item",
+   "hazmat-suit"
+  ],
+  [
+   "armor",
+   "respirator"
+  ],
+  [
+   "item",
+   "teleporter"
+  ],
+  [
+   "item",
+   "gun-turret"
+  ],
+  [
+   "unit",
+   "juggernaut-biter-v1-t10-rampant"
+  ],
+  [
+   "unit",
+   "behemoth-biter"
+  ],
+  [
+   "unit",
+   "small-biter"
+  ],
+  [
+   "unit",
+   "biterzilla35"
+  ],
+  [
+   "unit",
+   "bm-motherbiterzilla5"
+  ],
+  [
+   "unit",
+   "maf-giant-fire-spitter5"
+  ],
+  [
+   "unit",
+   "bm_fake_human_boss_nuke_rocket_10"
+  ],
+  [
+   "unit-spawner",
+   "neutral-super-hive-v1-t10-rampant"
+  ],
+  [
+   "unit-spawner",
+   "biter-spawner"
+  ],
+  [
+   "furnace",
+   "recycler"
+  ],
+  [
+   "furnace",
+   "recycler-1"
+  ],
+  [
+   "furnace",
+   "recycler-2"
+  ],
+  [
+   "furnace",
+   "recycler-3"
+  ],
+  [
+   "storage-tank",
+   "storage-tank"
+  ],
+  [
+   "fluid",
+   "angels-liquid-naphtha"
+  ],
+  [
+   "fluid-turret",
+   "pd-fire-safety-turret"
+  ],
+  [
+   "item",
+   "memory-unit"
+  ],
+  [
+   "ammo-turret",
+   "hero-turret-1-for-gun-turret"
+  ],
+  [
+   "ammo-turret",
+   "hero-turret-2-for-gun-turret"
+  ],
+  [
+   "ammo-turret",
+   "hero-turret-3-for-gun-turret"
+  ],
+  [
+   "ammo-turret",
+   "hero-turret-4-for-gun-turret"
+  ],
+  [
+   "ammo-turret",
+   "hero-turret-5-for-gun-turret"
+  ],
+  [
+   "ammo-turret",
+   "hero-turret-6-for-gun-turret"
+  ],
+  [
+   "ammo-turret",
+   "hero-turret-7-for-gun-turret"
+  ],
+  [
+   "ammo-turret",
+   "hero-turret-8-for-gun-turret"
+  ],
+  [
+   "ammo-turret",
+   "hero-turret-9-for-gun-turret"
+  ],
+  [
+   "ammo-turret",
+   "hero-turret-10-for-gun-turret"
+  ],
+  [
+   "ammo-turret",
+   "hero-turret-11-for-gun-turret"
+  ],
+  [
+   "armor",
+   "hazmat-suit"
+  ],
+  [
+   "armor",
+   "bob-power-armor-mk5"
+  ],
+  [
+   "gun",
+   "bob-laser-rifle"
+  ],
+  [
+   "capsule",
+   "poison-capsule"
+  ],
+  [
+   "ammo",
+   "bob-atomic-artillery-shell"
+  ],
+  [
+   "item",
+   "mirv-rocket"
+  ],
+  [
+   "ammo",
+   "thermonuclear-bomb"
+  ],
+  [
+   "ammo",
+   "artillery-shell-thermonuclear"
+  ],
+  [
+   "capsule",
+   "clowns-neurotoxin-capsule"
+  ],
+  [
+   "capsule",
+   "mirv-targeting-remote"
+  ],
+  [
+   "container",
+   "repair-turret"
+  ],
+  [
+   "armor",
+   "respirator"
+  ]
+ ],
+ "technology_icons": [
+  "ic-defect-control-1",
+  "ic-defect-control-10",
+  "ftl-propulsion",
+  "ftl-theory-A",
+  "spaceship-command",
+  "space-construction",
+  "rocket-silo",
+  "rocket-failure-revision",
+  "factory-architecture-t1",
+  "factory-architecture-t4",
+  "factory-recursion-t1",
+  "memory-unit",
+  "fluid-memory-storage",
+  "teleporter",
+  "nuclear-power",
+  "angels-thorium-power",
+  "fusion-reactor",
+  "thermonuclear-bomb",
+  "atomic-bomb",
+  "bob-atomic-artillery-shell",
+  "mirv-technology",
+  "Schall-tank-SH-0",
+  "cargo-planes",
+  "nanobots",
+  "texugo-wind-turbine3",
+  "solar-energy",
+  "bob-boiler-5",
+  "OilBurning",
+  "steam-power",
+  "angels-gas-processing",
+  "angels-oil-processing",
+  "angels-bio-refugium-puffer-1",
+  "angels-bio-arboretum-1",
+  "bi-tech-bio-farming",
+  "angels-ore-crushing",
+  "angels-ore-floatation",
+  "angels-ore-leaching",
+  "angels-ore-refining",
+  "angels-slag-processing-1",
+  "remelting-alloy-mixer-1",
+  "angels-strand-casting-1",
+  "angels-water-treatment",
+  "angels-flare-stack",
+  "angels-geode-processing-1",
+  "quality-module",
+  "recycling",
+  "modules",
+  "research-speed-1",
+  "laboratory-productivity-1",
+  "railway",
+  "elevated-rail",
+  "cybersyn-train-network",
+  "hiend_train",
+  "JunkTrain_tech",
+  "multiple-unit-train-control",
+  "aai-loader",
+  "bob-near-inserters",
+  "toolbelt",
+  "qol-crafting-speed-1-1",
+  "robotics",
+  "worker-robots-speed-1",
+  "warehouse-research",
+  "w93-modular-turrets",
+  "w93-modular-turrets-hcannon",
+  "bob-plasma-turrets-1",
+  "laser",
+  "heavy-armor",
+  "bob-power-armor-5",
+  "ore-radar",
+  "burner-mechanics",
+  "big-burner-generator",
+  "automation",
+  "orbital-ai-core",
+  "space-telescope",
+  "astrometrics",
+  "orbital-autonomous-fabricators",
+  "artillery",
+  "repair-turret-speed-1",
+  "bob-artifact-radar",
+  "space-lab",
+  "angels-electric-boiler",
+  "afterburner"
+ ],
+ "sprites": [
+  {
+   "key": "factory-1",
+   "type": "storage-tank",
+   "name": "factory-1"
+  },
+  {
+   "key": "factory-3",
+   "type": "storage-tank",
+   "name": "factory-3"
+  },
+  {
+   "key": "factory-4",
+   "type": "storage-tank",
+   "name": "factory-4"
+  },
+  {
+   "key": "memory-unit",
+   "type": "container",
+   "name": "memory-unit"
+  },
+  {
+   "key": "fluid-memory-unit",
+   "type": "storage-tank",
+   "name": "fluid-memory-unit"
+  },
+  {
+   "key": "texugo-wind-turbine3",
+   "type": "electric-energy-interface",
+   "name": "texugo-wind-turbine3"
+  },
+  {
+   "key": "RITEG-1",
+   "type": "electric-energy-interface",
+   "name": "RITEG-1"
+  },
+  {
+   "key": "ic-refine-workshop",
+   "type": "furnace",
+   "name": "ic-refine-workshop"
+  },
+  {
+   "key": "ic-control-post",
+   "type": "container",
+   "name": "ic-control-post"
+  },
+  {
+   "key": "crash-site-spaceship",
+   "type": "container",
+   "name": "crash-site-spaceship"
+  },
+  {
+   "key": "rocket-silo",
+   "type": "rocket-silo",
+   "name": "rocket-silo"
+  },
+  {
+   "key": "rsc-silo-stage1",
+   "type": "assembling-machine",
+   "name": "rsc-silo-stage1"
+  },
+  {
+   "key": "paranoidal-beta8-hyper-lab",
+   "type": "lab",
+   "name": "paranoidal-beta8-hyper-lab"
+  },
+  {
+   "key": "burner-lab",
+   "type": "lab",
+   "name": "burner-lab"
+  },
+  {
+   "key": "salvaged-lab",
+   "type": "lab",
+   "name": "salvaged-lab"
+  },
+  {
+   "key": "lab",
+   "type": "lab",
+   "name": "lab"
+  },
+  {
+   "key": "yir_usl",
+   "type": "locomotive",
+   "name": "yir_usl",
+   "path": [
+    "pictures",
+    "rotated"
+   ],
+   "frame": 48
+  },
+  {
+   "key": "hiend_loco",
+   "type": "locomotive",
+   "name": "hiend_loco",
+   "path": [
+    "pictures",
+    "rotated"
+   ],
+   "frame": 48
+  },
+  {
+   "key": "bet-locomotive",
+   "type": "locomotive",
+   "name": "bet-locomotive",
+   "path": [
+    "pictures",
+    "rotated"
+   ],
+   "frame": 48
+  },
+  {
+   "key": "Schall-tank-SH",
+   "type": "car",
+   "name": "Schall-tank-SH",
+   "frame": 0
+  },
+  {
+   "key": "flying-fortress",
+   "type": "car",
+   "name": "flying-fortress",
+   "frame": 8
+  },
+  {
+   "key": "gunship",
+   "type": "car",
+   "name": "gunship",
+   "frame": 8
+  },
+  {
+   "key": "w93-hcannon-turret2",
+   "type": "ammo-turret",
+   "name": "w93-hcannon-turret2"
+  },
+  {
+   "key": "bob-plasma-turret-5",
+   "type": "electric-turret",
+   "name": "bob-plasma-turret-5"
+  },
+  {
+   "key": "bi-dart-turret",
+   "type": "ammo-turret",
+   "name": "bi-dart-turret"
+  },
+  {
+   "key": "biterzilla35",
+   "type": "unit",
+   "name": "biterzilla35"
+  },
+  {
+   "key": "bm-motherbiterzilla5",
+   "type": "unit",
+   "name": "bm-motherbiterzilla5"
+  },
+  {
+   "key": "maf-giant-fire-spitter5",
+   "type": "unit",
+   "name": "maf-giant-fire-spitter5"
+  },
+  {
+   "key": "bm_fake_human_boss_nuke_rocket_10",
+   "type": "unit",
+   "name": "bm_fake_human_boss_nuke_rocket_10"
+  },
+  {
+   "key": "juggernaut-biter-v1-t10-rampant",
+   "type": "unit",
+   "name": "juggernaut-biter-v1-t10-rampant"
+  },
+  {
+   "key": "behemoth-biter",
+   "type": "unit",
+   "name": "behemoth-biter"
+  },
+  {
+   "key": "small-biter",
+   "type": "unit",
+   "name": "small-biter"
+  },
+  {
+   "key": "neutral-super-hive-v1-t10-rampant",
+   "type": "unit-spawner",
+   "name": "neutral-super-hive-v1-t10-rampant"
+  },
+  {
+   "key": "boiler",
+   "type": "boiler",
+   "name": "boiler"
+  },
+  {
+   "key": "bob-boiler-5",
+   "type": "boiler",
+   "name": "bob-boiler-5"
+  },
+  {
+   "key": "oil-steam-boiler-5",
+   "type": "boiler",
+   "name": "oil-steam-boiler-5"
+  },
+  {
+   "key": "burner-generator",
+   "type": "burner-generator",
+   "name": "burner-generator"
+  },
+  {
+   "key": "big-burner-generator",
+   "type": "burner-generator",
+   "name": "big-burner-generator"
+  },
+  {
+   "key": "steam-engine",
+   "type": "generator",
+   "name": "steam-engine"
+  },
+  {
+   "key": "nuclear-reactor",
+   "type": "reactor",
+   "name": "nuclear-reactor"
+  },
+  {
+   "key": "angels-burner-reactor",
+   "type": "reactor",
+   "name": "angels-burner-reactor"
+  },
+  {
+   "key": "burner-mining-drill",
+   "type": "mining-drill",
+   "name": "burner-mining-drill"
+  },
+  {
+   "key": "bob-area-mining-drill-4",
+   "type": "mining-drill",
+   "name": "bob-area-mining-drill-4"
+  },
+  {
+   "key": "angels-ore-crusher",
+   "type": "assembling-machine",
+   "name": "angels-ore-crusher"
+  },
+  {
+   "key": "angels-ore-sorting-facility",
+   "type": "assembling-machine",
+   "name": "angels-ore-sorting-facility"
+  },
+  {
+   "key": "angels-ore-floatation-cell",
+   "type": "assembling-machine",
+   "name": "angels-ore-floatation-cell"
+  },
+  {
+   "key": "angels-ore-leaching-plant",
+   "type": "assembling-machine",
+   "name": "angels-ore-leaching-plant"
+  },
+  {
+   "key": "angels-ore-refinery",
+   "type": "assembling-machine",
+   "name": "angels-ore-refinery"
+  },
+  {
+   "key": "angels-flare-stack",
+   "type": "furnace",
+   "name": "angels-flare-stack"
+  },
+  {
+   "key": "angels-clarifier",
+   "type": "furnace",
+   "name": "angels-clarifier"
+  },
+  {
+   "key": "angels-algae-farm",
+   "type": "assembling-machine",
+   "name": "angels-algae-farm"
+  },
+  {
+   "key": "bi-bio-farm",
+   "type": "assembling-machine",
+   "name": "bi-bio-farm"
+  },
+  {
+   "key": "angels-bio-refugium-puffer",
+   "type": "assembling-machine",
+   "name": "angels-bio-refugium-puffer"
+  },
+  {
+   "key": "Schall-pickup-tower-R128",
+   "type": "container",
+   "name": "Schall-pickup-tower-R128"
+  },
+  {
+   "key": "repair-turret",
+   "type": "container",
+   "name": "repair-turret"
+  },
+  {
+   "key": "zcs-trash-landfill",
+   "type": "container",
+   "name": "zcs-trash-landfill"
+  },
+  {
+   "key": "warehouse-basic",
+   "type": "container",
+   "name": "warehouse-basic"
+  },
+  {
+   "key": "angels-electrolyser",
+   "type": "assembling-machine",
+   "name": "angels-electrolyser"
+  },
+  {
+   "key": "angels-gas-refinery",
+   "type": "assembling-machine",
+   "name": "angels-gas-refinery"
+  },
+  {
+   "key": "bi-bio-garden-huge",
+   "type": "assembling-machine",
+   "name": "bi-bio-garden-huge"
+  },
+  {
+   "key": "aai-big-ship-wreck-1",
+   "type": "container",
+   "name": "aai-big-ship-wreck-1"
+  },
+  {
+   "key": "bm-spidertron_5",
+   "type": "spider-vehicle",
+   "name": "bm-spidertron_5"
+  },
+  {
+   "key": "maf_flying_saucer_10",
+   "type": "spider-vehicle",
+   "name": "maf_flying_saucer_10"
+  },
+  {
+   "key": "salvaged-assembling-machine",
+   "type": "assembling-machine",
+   "name": "salvaged-assembling-machine"
+  },
+  {
+   "key": "salvaged-generator",
+   "type": "electric-energy-interface",
+   "name": "salvaged-generator"
+  },
+  {
+   "key": "bi-solar-boiler",
+   "type": "boiler",
+   "name": "bi-solar-boiler"
+  },
+  {
+   "key": "bi-bio-accumulator",
+   "type": "accumulator",
+   "name": "bi-bio-accumulator"
+  },
+  {
+   "key": "character",
+   "type": "character",
+   "name": "character"
+  },
+  {
+   "key": "pumpjack",
+   "type": "mining-drill",
+   "name": "pumpjack"
+  },
+  {
+   "key": "stone-furnace",
+   "type": "furnace",
+   "name": "stone-furnace"
+  },
+  {
+   "key": "assembling-machine-1",
+   "type": "assembling-machine",
+   "name": "assembling-machine-1"
+  },
+  {
+   "key": "angels-thermal-bore",
+   "type": "mining-drill",
+   "name": "angels-thermal-bore"
+  },
+  {
+   "key": "storage-tank",
+   "type": "storage-tank",
+   "name": "storage-tank"
+  },
+  {
+   "key": "w93-plaser-turret2",
+   "type": "electric-turret",
+   "name": "w93-plaser-turret2"
+  },
+  {
+   "key": "Schall-tank-H",
+   "type": "car",
+   "name": "Schall-tank-H",
+   "frame": 0
+  },
+  {
+   "key": "bob-heavy-spidertron",
+   "type": "spider-vehicle",
+   "name": "bob-heavy-spidertron"
+  },
+  {
+   "key": "big-lab",
+   "type": "lab",
+   "name": "big-lab"
+  },
+  {
+   "key": "paranoidal-beta8-big-lab",
+   "type": "lab",
+   "name": "paranoidal-beta8-big-lab"
+  },
+  {
+   "key": "bob-lab-2",
+   "type": "lab",
+   "name": "bob-lab-2"
+  },
+  {
+   "key": "bob-lab-alien",
+   "type": "lab",
+   "name": "bob-lab-alien"
+  },
+  {
+   "key": "lab-module",
+   "type": "lab",
+   "name": "lab-module"
+  },
+  {
+   "key": "erp-lab",
+   "type": "lab",
+   "name": "erp-lab"
+  }
+ ],
+ "static": [
+  {
+   "src": "__core__/fonts/Lilittium-Regular.ttf",
+   "dst": "fonts/Lilittium-Regular.ttf",
+   "note": "Factorio GUI font (Cyrillic)"
+  },
+  {
+   "src": "__core__/fonts/Lilittium-SemiBold.ttf",
+   "dst": "fonts/Lilittium-SemiBold.ttf",
+   "note": "Factorio GUI font (Cyrillic)"
+  },
+  {
+   "src": "__core__/fonts/Lilittium-Bold.ttf",
+   "dst": "fonts/Lilittium-Bold.ttf",
+   "note": "Factorio GUI font (Cyrillic)"
+  },
+  {
+   "src": "__core__/fonts/license - Lilittium.txt",
+   "dst": "fonts/license-Lilittium.txt",
+   "note": "font license"
+  },
+  {
+   "src": "__core__/graphics/background-image.jpg",
+   "dst": "bg/menu-background.webp",
+   "note": "Factorio main menu background",
+   "resize": [
+    1920,
+    1080
+   ],
+   "quality": 82
+  },
+  {
+   "src": "__base__/graphics/terrain/hazard-concrete-left/refined-hazard-concrete-left.png",
+   "dst": "bg/hazard-refined.webp",
+   "note": "refined hazard concrete tile",
+   "crop": [
+    0,
+    0,
+    512,
+    512
+   ],
+   "quality": 88
+  },
+  {
+   "src": "__base__/graphics/terrain/hazard-concrete-left/hazard-concrete-left.png",
+   "dst": "bg/hazard.webp",
+   "note": "hazard concrete tile",
+   "crop": [
+    0,
+    0,
+    512,
+    512
+   ],
+   "quality": 88
+  },
+  {
+   "src": "review/splash-anim/out/variant1/preview.webp",
+   "dst": "logo/paranoidal-animated.webp",
+   "note": "Paranoidal animated splash logo (variant 1)"
+  },
+  {
+   "src": "splash-screen-image.webp",
+   "dst": "logo/factorio-paranoidal.webp",
+   "note": "Factorio PARANOIDAL logo"
+  },
+  {
+   "src": "paranoidal.png",
+   "dst": "logo/paranoidal-circuit.png",
+   "note": "PARANOIDAL circuit logo"
+  },
+  {
+   "src": "factory-4.webp",
+   "dst": "art/factory-4.webp",
+   "note": "Factorissimo building 4 art"
+  },
+  {
+   "src": "__core__/graphics/icons/alerts/danger-icon.png",
+   "dst": "ui/danger.png",
+   "note": "alert icon"
+  },
+  {
+   "src": "__core__/graphics/icons/alerts/warning-icon.png",
+   "dst": "ui/warning.png",
+   "note": "alert icon"
+  },
+  {
+   "src": "__core__/graphics/icons/alerts/fuel-icon-red.png",
+   "dst": "ui/fuel-red.png",
+   "note": "alert icon"
+  },
+  {
+   "src": "__core__/graphics/icons/alerts/electricity-icon-unplugged.png",
+   "dst": "ui/unplugged.png",
+   "note": "alert icon"
+  },
+  {
+   "src": "__core__/graphics/icons/alerts/ammo-icon-red.png",
+   "dst": "ui/ammo-red.png",
+   "note": "alert icon"
+  },
+  {
+   "src": "__core__/graphics/icons/alerts/destroyed-icon.png",
+   "dst": "ui/destroyed.png",
+   "note": "alert icon"
+  },
+  {
+   "src": "__core__/graphics/icons/tip.png",
+   "dst": "ui/tip.png",
+   "note": "tips icon"
+  },
+  {
+   "src": "__core__/graphics/factorio-icon.png",
+   "dst": "ui/factorio-icon.png",
+   "note": "favicon"
+  },
+  {
+   "src": "review/splash-anim/out/variant1/preview.webp",
+   "dst": "logo/paranoidal-animated-alpha.webp",
+   "keyout": [
+    34,
+    70
+   ],
+   "note": "Paranoidal animated logo, dark background keyed out to transparency"
+  },
+  {
+   "src": "__base__/graphics/entity/transport-belt/transport-belt.png",
+   "dst": "ui/belt-tile.png",
+   "crop": [
+    32,
+    165,
+    96,
+    239
+   ],
+   "note": "one tile of the vanilla transport belt, moving west (hero conveyor)"
+  },
+  {
+   "src": "__core__/graphics/gui-new.png",
+   "dst": "gui/btn.png",
+   "crop": [
+    0,
+    17,
+    17,
+    34
+   ],
+   "note": "Factorio GUI button tile (core style.lua button graphical sets, corner 8)"
+  },
+  {
+   "src": "__core__/graphics/gui-new.png",
+   "dst": "gui/btn-hover.png",
+   "crop": [
+    34,
+    17,
+    51,
+    34
+   ],
+   "note": "Factorio GUI button tile (core style.lua button graphical sets, corner 8)"
+  },
+  {
+   "src": "__core__/graphics/gui-new.png",
+   "dst": "gui/btn-press.png",
+   "crop": [
+    51,
+    17,
+    68,
+    34
+   ],
+   "note": "Factorio GUI button tile (core style.lua button graphical sets, corner 8)"
+  },
+  {
+   "src": "__core__/graphics/gui-new.png",
+   "dst": "gui/btn-off.png",
+   "crop": [
+    17,
+    17,
+    34,
+    34
+   ],
+   "note": "Factorio GUI button tile (core style.lua button graphical sets, corner 8)"
+  },
+  {
+   "src": "__core__/graphics/gui-new.png",
+   "dst": "gui/btn-green.png",
+   "crop": [
+    68,
+    17,
+    85,
+    34
+   ],
+   "note": "Factorio GUI button tile (core style.lua button graphical sets, corner 8)"
+  },
+  {
+   "src": "__core__/graphics/gui-new.png",
+   "dst": "gui/btn-green-hover.png",
+   "crop": [
+    102,
+    17,
+    119,
+    34
+   ],
+   "note": "Factorio GUI button tile (core style.lua button graphical sets, corner 8)"
+  },
+  {
+   "src": "__core__/graphics/gui-new.png",
+   "dst": "gui/btn-red.png",
+   "crop": [
+    136,
+    17,
+    153,
+    34
+   ],
+   "note": "Factorio GUI button tile (core style.lua button graphical sets, corner 8)"
+  },
+  {
+   "src": "__core__/graphics/gui-new.png",
+   "dst": "gui/btn-red-hover.png",
+   "crop": [
+    170,
+    17,
+    187,
+    34
+   ],
+   "note": "Factorio GUI button tile (core style.lua button graphical sets, corner 8)"
+  }
+ ]
+}
