@@ -86,11 +86,15 @@ def tint_img(img, tint):
     return Image.merge('RGBA', (r, g, b, a))
 
 # corner badges the guide does not want (design rule: clean icons without overlays):
-# tech level markers / badge frames of zzzparanoidal, vanilla tech "constant" badges, Rampant tier letters.
-BADGE_PARTS = ('/icon-markers/', '/technology/constants/', '/icons/signal/signal_')
+# tech level markers / badge frames of zzzparanoidal, vanilla tech "constant" badges, Rampant tier letters,
+# reskins tier numbers / letters / symbols, Angel's num-N, molecule badges of gases, Mk1/Mk2 tank marks, Clowns % badges.
+BADGE_PARTS = ('/icon-markers/', '/technology/constants/', '/icons/signal/signal_', '/icons/signal/signal-star',
+               '/icons/tiers/', '/icons/letters/', '/icons/symbols/', '/num-', '/molecules/', '/icons/mk1.png', '/icons/mk2.png')
+BADGE_RE = re.compile(r'/\d+%\.png$')   # Clowns enrichment percent badges
 
 def is_badge(l):
-    return l.get('floating') or any(s in (l.get('icon') or '') for s in BADGE_PARTS)
+    ic = l.get('icon') or ''
+    return l.get('floating') or any(s in ic for s in BADGE_PARTS) or bool(BADGE_RE.search(ic))
 
 def icon_layers(p):
     if p.get('icons'):
@@ -318,7 +322,16 @@ if 'static' in kinds:
             continue
         dst = os.path.join(ROOT, 'assets', 'static', e['dst'])
         os.makedirs(os.path.dirname(dst), exist_ok=True)
-        if e.get('keyout'):
+        if e.get('strip'):
+            # sprite sheet (grid of frames) -> one horizontal strip for a CSS steps() animation
+            fw, fh, cols, n = e['strip']
+            sheet = Image.open(src_abs).convert('RGBA')
+            out = Image.new('RGBA', (fw * n, fh), (0, 0, 0, 0))
+            for i in range(n):
+                x, y = (i % cols) * fw, (i // cols) * fh
+                out.paste(sheet.crop((x, y, x + fw, y + fh)), (i * fw, 0))
+            out.save(dst, quality=e.get('quality', 82), method=4)
+        elif e.get('keyout'):
             # make a dark background transparent in every frame (animated WebP logo): alpha = (max(r,g,b) - lo) / (hi - lo)
             from PIL import ImageSequence
             lo, hi = e['keyout']

@@ -1,5 +1,5 @@
 {
- "_doc": "Extra assets for tools/collect_assets.py. icons: [type,name]; technology_icons: names; sprites: {key,type,name,path?,max?,shadows?}; static: {src (workspace-relative or __mod__/ path), dst, note, crop?, resize?, keyout? [lo,hi] = make a dark background transparent}",
+ "_doc": "Extra assets for tools/collect_assets.py. icons: [type,name]; technology_icons: names; sprites: {key,type,name,path?,max?,shadows?}; static: {src (workspace-relative or __mod__/ path), dst, note, crop?, resize?, keyout? [lo,hi] = make a dark background transparent, strip? [w,h,cols,frames] = sprite sheet to a horizontal strip}",
  "icons": [
   [
    "fluid",
@@ -1099,6 +1099,43 @@
     34
    ],
    "note": "Factorio GUI button tile (core style.lua button graphical sets, corner 8)"
+  },
+  {
+   "src": "__base__/graphics/entity/fire-flame/fire-flame-01.png",
+   "dst": "fx/fire-flame.webp",
+   "strip": [
+    84,
+    130,
+    10,
+    90
+   ],
+   "note": "vanilla fire flame, 90 frames as a strip (base prototypes/entity/fire.lua)"
+  },
+  {
+   "src": "__base__/graphics/entity/big-explosion/big-explosion.png",
+   "dst": "fx/big-explosion.webp",
+   "strip": [
+    197,
+    245,
+    6,
+    47
+   ],
+   "note": "vanilla big explosion, 47 frames as a strip (explosion-animations.lua)"
+  },
+  {
+   "src": "__base__/graphics/technology/spidertron.png",
+   "dst": "art/spidertron.webp",
+   "resize": [
+    256,
+    256
+   ],
+   "note": "vanilla spidertron technology picture (spider with legs)",
+   "crop": [
+    0,
+    0,
+    256,
+    256
+   ]
   }
  ]
 }
