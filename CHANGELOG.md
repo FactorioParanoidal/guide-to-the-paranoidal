@@ -1,5 +1,13 @@
 # Changelog — Guide to the Paranoidal
 
+## 1.3.1 — 2026-10-25
+
+- Teasers are quiet inline text with a small lock instead of a badge.
+- Accumulators: what fast / slow / large means (charge and discharge rates from the dump); emission sentence merged;
+  coal crushing explained with numbers (4 MJ → 2 × 2.5 MJ).
+- Fluid map labels every point that fits without overlaps; solid fuels table shows 12 rows and a "Show all" button
+  instead of an inner scrollbar; scrollbars styled.
+
 ## 1.3.0 — 2026-10-25
 
 - One design system (`src/css/60-unified.css`): one orange `#ffa020`, the Factorio GUI font everywhere, buttons made of
