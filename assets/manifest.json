@@ -4403,8 +4403,7 @@
    "ParanoidalModpack-master/mods/zzzparanoidal/graphics/atlas-icons/angelsrefininggraphics/icons/angels-liquid/liquid-item-base-256.png#88153e2fdbcfedd8",
    "ParanoidalModpack-master/mods/zzzparanoidal/graphics/atlas-icons/angelsrefininggraphics/icons/angels-liquid/liquid-item-top-256.png#a4a0d1676c4e39bd",
    "ParanoidalModpack-master/mods/zzzparanoidal/graphics/atlas-icons/angelsrefininggraphics/icons/angels-liquid/liquid-item-mid-256.png#02307d3fa28350f5",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/atlas-icons/angelsrefininggraphics/icons/angels-liquid/liquid-item-bot-256.png#ac04dedd3e67cff1",
-   "ParanoidalModpack-master/mods/angelspetrochemgraphics/graphics/icons/molecules/polyethylene_rotated.png#c6ae7834f04ea30d"
+   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/atlas-icons/angelsrefininggraphics/icons/angels-liquid/liquid-item-bot-256.png#ac04dedd3e67cff1"
   ]
  },
  "icons/fluid__angels-liquid-propionic-acid.webp": {
@@ -8124,15 +8123,13 @@
   "from": "icon of technology/Schall-tank-SH-0",
   "sources": [
    "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/technology/tank.png#d0286f7e2f69a9fc",
-   "ParanoidalModpack-master/mods/paranoidal-tank-platoon/graphics/technology/tank-SH.png#dc23646f80c170cf",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/level-left-0.png#21729b09ff7847dd"
+   "ParanoidalModpack-master/mods/paranoidal-tank-platoon/graphics/technology/tank-SH.png#dc23646f80c170cf"
   ]
  },
  "icons/technology__aai-loader.webp": {
   "from": "icon of technology/aai-loader",
   "sources": [
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/approved-icons/aai-loader.png#f652df5c1047c1ba",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/level-2.png#9d92d10e6f0bf6ee"
+   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/approved-icons/aai-loader.png#f652df5c1047c1ba"
   ]
  },
  "icons/technology__afterburner.webp": {
@@ -8144,22 +8141,19 @@
  "icons/technology__angels-bio-arboretum-1.webp": {
   "from": "icon of technology/angels-bio-arboretum-1",
   "sources": [
-   "ParanoidalModpack-master/mods/angelsbioprocessinggraphics/graphics/technology/bio-arboretum-tech.png#d3cff492560f4533",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/level-1.png#82f775ad2c7f35f8"
+   "ParanoidalModpack-master/mods/angelsbioprocessinggraphics/graphics/technology/bio-arboretum-tech.png#d3cff492560f4533"
   ]
  },
  "icons/technology__angels-bio-refugium-puffer-1.webp": {
   "from": "icon of technology/angels-bio-refugium-puffer-1",
   "sources": [
-   "ParanoidalModpack-master/mods/angelsbioprocessinggraphics/graphics/technology/bio-refugium-puffer-breeding-tech.png#5a764c5915bae6b3",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/level-1.png#82f775ad2c7f35f8"
+   "ParanoidalModpack-master/mods/angelsbioprocessinggraphics/graphics/technology/bio-refugium-puffer-breeding-tech.png#5a764c5915bae6b3"
   ]
  },
  "icons/technology__angels-electric-boiler.webp": {
   "from": "icon of technology/angels-electric-boiler",
   "sources": [
-   "ParanoidalModpack-master/mods/angelspetrochemgraphics/graphics/technology/electric-boiler-tech.png#80b6197e4f32eae1",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/level-1.png#82f775ad2c7f35f8"
+   "ParanoidalModpack-master/mods/angelspetrochemgraphics/graphics/technology/electric-boiler-tech.png#80b6197e4f32eae1"
   ]
  },
  "icons/technology__angels-flare-stack.webp": {
@@ -8221,8 +8215,7 @@
  "icons/technology__angels-slag-processing-1.webp": {
   "from": "icon of technology/angels-slag-processing-1",
   "sources": [
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/approved-icons/angels-slag-processing.png#17a64df40b1a455d",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/level-1.png#82f775ad2c7f35f8"
+   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/approved-icons/angels-slag-processing.png#17a64df40b1a455d"
   ]
  },
  "icons/technology__angels-strand-casting-1.webp": {
@@ -8349,8 +8342,7 @@
  "icons/technology__elevated-rail.webp": {
   "from": "icon of technology/elevated-rail",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/elevated-rails/graphics/technology/elevated-rail.png#c265572e130fe508",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/level-1.png#82f775ad2c7f35f8"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/elevated-rails/graphics/technology/elevated-rail.png#c265572e130fe508"
   ]
  },
  "icons/technology__factory-architecture-t1.webp": {
@@ -8380,57 +8372,43 @@
  "icons/technology__ftl-propulsion.webp": {
   "from": "icon of technology/ftl-propulsion",
   "sources": [
-   "ParanoidalModpack-master/mods/SpaceModFeorasFork/graphics/technology/ftl.png#a50cee2bcc579dd0",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/badge-frame.png#05f9783830528c93",
-   "ParanoidalModpack-master/mods/SpaceModFeorasFork/graphics/icons/ftl-drive.png#3ac555de47fea18f"
+   "ParanoidalModpack-master/mods/SpaceModFeorasFork/graphics/technology/ftl.png#a50cee2bcc579dd0"
   ]
  },
  "icons/technology__ftl-theory-A.webp": {
   "from": "icon of technology/ftl-theory-A",
   "sources": [
-   "ParanoidalModpack-master/mods/SpaceModFeorasFork/graphics/technology/ftl.png#a50cee2bcc579dd0",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/badge-frame.png#05f9783830528c93",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/bobicons-beta8/bobicons/graphics/icons/base/automation-science-pack-128.png#d81389306732fef7"
+   "ParanoidalModpack-master/mods/SpaceModFeorasFork/graphics/technology/ftl.png#a50cee2bcc579dd0"
   ]
  },
  "icons/technology__ftl-theory-B.webp": {
   "from": "icon of technology/ftl-theory-B",
   "sources": [
-   "ParanoidalModpack-master/mods/SpaceModFeorasFork/graphics/technology/ftl.png#a50cee2bcc579dd0",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/badge-frame.png#05f9783830528c93",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/bobicons-beta8/bobicons/graphics/icons/base/logistic-science-pack-128.png#1c2f8580761e794e"
+   "ParanoidalModpack-master/mods/SpaceModFeorasFork/graphics/technology/ftl.png#a50cee2bcc579dd0"
   ]
  },
  "icons/technology__ftl-theory-C.webp": {
   "from": "icon of technology/ftl-theory-C",
   "sources": [
-   "ParanoidalModpack-master/mods/SpaceModFeorasFork/graphics/technology/ftl.png#a50cee2bcc579dd0",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/badge-frame.png#05f9783830528c93",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/bobicons-beta8/bobicons/graphics/icons/base/chemical-science-pack-128.png#6426d0047779cf34"
+   "ParanoidalModpack-master/mods/SpaceModFeorasFork/graphics/technology/ftl.png#a50cee2bcc579dd0"
   ]
  },
  "icons/technology__ftl-theory-D.webp": {
   "from": "icon of technology/ftl-theory-D",
   "sources": [
-   "ParanoidalModpack-master/mods/SpaceModFeorasFork/graphics/technology/ftl.png#a50cee2bcc579dd0",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/badge-frame.png#05f9783830528c93",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/bobicons-beta8/bobicons/graphics/icons/base/military-science-pack-128.png#728a274edbc6a5bc"
+   "ParanoidalModpack-master/mods/SpaceModFeorasFork/graphics/technology/ftl.png#a50cee2bcc579dd0"
   ]
  },
  "icons/technology__ftl-theory-D1.webp": {
   "from": "icon of technology/ftl-theory-D1",
   "sources": [
-   "ParanoidalModpack-master/mods/SpaceModFeorasFork/graphics/technology/ftl.png#a50cee2bcc579dd0",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/badge-frame.png#05f9783830528c93",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/bobicons-beta8/bobicons/graphics/icons/base/production-science-pack-128.png#bf92031aa2a54e38"
+   "ParanoidalModpack-master/mods/SpaceModFeorasFork/graphics/technology/ftl.png#a50cee2bcc579dd0"
   ]
  },
  "icons/technology__ftl-theory-D2.webp": {
   "from": "icon of technology/ftl-theory-D2",
   "sources": [
-   "ParanoidalModpack-master/mods/SpaceModFeorasFork/graphics/technology/ftl.png#a50cee2bcc579dd0",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/badge-frame.png#05f9783830528c93",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/bobicons-beta8/bobicons/graphics/icons/base/utility-science-pack-128.png#b56074794b985253"
+   "ParanoidalModpack-master/mods/SpaceModFeorasFork/graphics/technology/ftl.png#a50cee2bcc579dd0"
   ]
  },
  "icons/technology__fusion-reactor.webp": {
@@ -8454,22 +8432,19 @@
  "icons/technology__ic-defect-control-1.webp": {
   "from": "icon of technology/ic-defect-control-1",
   "sources": [
-   "ParanoidalModpack-master/mods/ic-more-qualities/graphics/technology/defect-control-1.png#a652897aec3b9825",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/level-1.png#82f775ad2c7f35f8"
+   "ParanoidalModpack-master/mods/ic-more-qualities/graphics/technology/defect-control-1.png#a652897aec3b9825"
   ]
  },
  "icons/technology__ic-defect-control-10.webp": {
   "from": "icon of technology/ic-defect-control-10",
   "sources": [
-   "ParanoidalModpack-master/mods/ic-more-qualities/graphics/technology/defect-control-10.png#b73f23970570e67b",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/level-10.png#8ade595be9f3cf01"
+   "ParanoidalModpack-master/mods/ic-more-qualities/graphics/technology/defect-control-10.png#b73f23970570e67b"
   ]
  },
  "icons/technology__laboratory-productivity-1.webp": {
   "from": "icon of technology/laboratory-productivity-1",
   "sources": [
-   "ParanoidalModpack-master/mods/All-infinit-tech/graphics/science-prod-tech.png#35358b2b1a741932",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/level-1.png#82f775ad2c7f35f8"
+   "ParanoidalModpack-master/mods/All-infinit-tech/graphics/science-prod-tech.png#35358b2b1a741932"
   ]
  },
  "icons/technology__laser.webp": {
@@ -8537,10 +8512,7 @@
  "icons/technology__qol-crafting-speed-1-1.webp": {
   "from": "icon of technology/qol-crafting-speed-1-1",
   "sources": [
-   "ParanoidalModpack-master/mods/qol_research/graphics/crafting-speed.png#0e7d932bf2106098",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/level-1.png#82f775ad2c7f35f8",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/badge-frame.png#05f9783830528c93",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/bobicons-beta8/bobicons/graphics/icons/base/automation-science-pack-128.png#d81389306732fef7"
+   "ParanoidalModpack-master/mods/qol_research/graphics/crafting-speed.png#0e7d932bf2106098"
   ]
  },
  "icons/technology__quality-module.webp": {
@@ -8552,8 +8524,7 @@
  "icons/technology__railway.webp": {
   "from": "icon of technology/railway",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/technology/railway.png#dc88183e8caf5e88",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/level-1.png#82f775ad2c7f35f8"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/technology/railway.png#dc88183e8caf5e88"
   ]
  },
  "icons/technology__recycling.webp": {
@@ -8566,23 +8537,19 @@
   "from": "icon of technology/remelting-alloy-mixer-1",
   "sources": [
    "ParanoidalModpack-master/mods/angelssmeltinggraphics/graphics/technology/induction-furnace-tech.png#e8ac378b24697330",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/alloy-mixer/alloy-mixer-tech-mask.png#31bfe51a5a2be474",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/level-1.png#82f775ad2c7f35f8"
+   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/alloy-mixer/alloy-mixer-tech-mask.png#31bfe51a5a2be474"
   ]
  },
  "icons/technology__repair-turret-speed-1.webp": {
   "from": "icon of technology/repair-turret-speed-1",
   "sources": [
-   "ParanoidalModpack-master/mods/defence-tower-reforged/graphics/repairturret256.png#f361debb870c356a",
-   "../../../../Games/Factorio 2.077 - QUILITY/data/core/graphics/icons/technology/constants/constant-speed.png#d4f441ab5870e74c"
+   "ParanoidalModpack-master/mods/defence-tower-reforged/graphics/repairturret256.png#f361debb870c356a"
   ]
  },
  "icons/technology__research-speed-1.webp": {
   "from": "icon of technology/research-speed-1",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/technology/research-speed.png#7d5b4acb2e565ed5",
-   "../../../../Games/Factorio 2.077 - QUILITY/data/core/graphics/icons/technology/constants/constant-speed.png#d4f441ab5870e74c",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/level-1.png#82f775ad2c7f35f8"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/technology/research-speed.png#7d5b4acb2e565ed5"
   ]
  },
  "icons/technology__robotics.webp": {
@@ -8596,8 +8563,7 @@
  "icons/technology__rocket-failure-revision.webp": {
   "from": "icon of technology/rocket-failure-revision",
   "sources": [
-   "ParanoidalModpack-master/mods/RocketExplosions2/icons/rocket-failure-revision.png#b9e505e2cc4da8ac",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/level-1.png#82f775ad2c7f35f8"
+   "ParanoidalModpack-master/mods/RocketExplosions2/icons/rocket-failure-revision.png#b9e505e2cc4da8ac"
   ]
  },
  "icons/technology__rocket-silo.webp": {
@@ -8665,9 +8631,7 @@
  "icons/technology__toolbelt.webp": {
   "from": "icon of technology/toolbelt",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/technology/toolbelt.png#00c2b56bb787e510",
-   "../../../../Games/Factorio 2.077 - QUILITY/data/core/graphics/icons/technology/constants/constant-capacity.png#056984c37a29d02f",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/level-1.png#82f775ad2c7f35f8"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/technology/toolbelt.png#00c2b56bb787e510"
   ]
  },
  "icons/technology__w93-modular-turrets-hcannon.webp": {
@@ -8691,9 +8655,7 @@
  "icons/technology__worker-robots-speed-1.webp": {
   "from": "icon of technology/worker-robots-speed-1",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/technology/worker-robots-speed.png#5a71137aebccc8f8",
-   "../../../../Games/Factorio 2.077 - QUILITY/data/core/graphics/icons/technology/constants/constant-movement-speed.png#84315e474412605c",
-   "ParanoidalModpack-master/mods/zzzparanoidal/graphics/technology/icon-markers/level-1.png#82f775ad2c7f35f8"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/technology/worker-robots-speed.png#5a71137aebccc8f8"
   ]
  },
  "icons/tool__angels-token-bio.webp": {
@@ -8989,29 +8951,25 @@
  "icons/unit-spawner__neutral-super-hive-v1-t10-rampant.webp": {
   "from": "icon of unit-spawner/neutral-super-hive-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/biter-spawner.png#dc3c1d23800b9aa0",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/biter-spawner.png#dc3c1d23800b9aa0"
   ]
  },
  "icons/unit__acid-biter-v1-t10-rampant.webp": {
   "from": "icon of unit/acid-biter-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec"
   ]
  },
  "icons/unit__arachnids-biter-v1-t10-rampant.webp": {
   "from": "icon of unit/arachnids-biter-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec"
   ]
  },
  "icons/unit__arachnids-flyer-v1-t10-rampant-hour-boss-from-t10.webp": {
   "from": "icon of unit/arachnids-flyer-v1-t10-rampant-hour-boss-from-t10",
   "sources": [
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/flyer.png#6ceb44b4d18498f7",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/flyer.png#6ceb44b4d18498f7"
   ]
  },
  "icons/unit__behemoth-biter.webp": {
@@ -9194,64 +9152,55 @@
  "icons/unit__electric-biter-v1-t10-rampant.webp": {
   "from": "icon of unit/electric-biter-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec"
   ]
  },
  "icons/unit__energy-thief-biter-v1-t10-rampant.webp": {
   "from": "icon of unit/energy-thief-biter-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec"
   ]
  },
  "icons/unit__fast-biter-v1-t10-rampant.webp": {
   "from": "icon of unit/fast-biter-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec"
   ]
  },
  "icons/unit__fire-biter-v1-t10-rampant.webp": {
   "from": "icon of unit/fire-biter-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec"
   ]
  },
  "icons/unit__inferno-spitter-v1-t10-rampant.webp": {
   "from": "icon of unit/inferno-spitter-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-spitter.png#cf783cf98311f41a",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-spitter.png#cf783cf98311f41a"
   ]
  },
  "icons/unit__juggernaut-biter-v1-t10-rampant-hour-boss-from-t10.webp": {
   "from": "icon of unit/juggernaut-biter-v1-t10-rampant-hour-boss-from-t10",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec"
   ]
  },
  "icons/unit__juggernaut-biter-v1-t10-rampant.webp": {
   "from": "icon of unit/juggernaut-biter-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec"
   ]
  },
  "icons/unit__juggernaut-flyer-v1-t10-rampant-hour-boss-from-t10.webp": {
   "from": "icon of unit/juggernaut-flyer-v1-t10-rampant-hour-boss-from-t10",
   "sources": [
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/flyer.png#6ceb44b4d18498f7",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/flyer.png#6ceb44b4d18498f7"
   ]
  },
  "icons/unit__laser-biter-v1-t10-rampant.webp": {
   "from": "icon of unit/laser-biter-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec"
   ]
  },
  "icons/unit__maf-boss-biter-10.webp": {
@@ -9282,29 +9231,25 @@
  "icons/unit__neutral-biter-v1-t10-rampant.webp": {
   "from": "icon of unit/neutral-biter-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec"
   ]
  },
  "icons/unit__nuclear-biter-v1-t10-rampant.webp": {
   "from": "icon of unit/nuclear-biter-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec"
   ]
  },
  "icons/unit__physical-biter-v1-t10-rampant.webp": {
   "from": "icon of unit/physical-biter-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec"
   ]
  },
  "icons/unit__poison-biter-v1-t10-rampant.webp": {
   "from": "icon of unit/poison-biter-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec"
   ]
  },
  "icons/unit__small-biter.webp": {
@@ -9317,36 +9262,31 @@
  "icons/unit__spawner-spitter-v1-t10-rampant.webp": {
   "from": "icon of unit/spawner-spitter-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-spitter.png#cf783cf98311f41a",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-spitter.png#cf783cf98311f41a"
   ]
  },
  "icons/unit__suicide-biter-v1-t10-rampant.webp": {
   "from": "icon of unit/suicide-biter-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec"
   ]
  },
  "icons/unit__troll-biter-v1-t10-rampant.webp": {
   "from": "icon of unit/troll-biter-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-biter.png#5ff60cf66eec16ec"
   ]
  },
  "icons/unit__troll-flyer-v1-t10-rampant-hour-boss-from-t10.webp": {
   "from": "icon of unit/troll-flyer-v1-t10-rampant-hour-boss-from-t10",
   "sources": [
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/flyer.png#6ceb44b4d18498f7",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/flyer.png#6ceb44b4d18498f7"
   ]
  },
  "icons/unit__wasp-spitter-v1-t10-rampant.webp": {
   "from": "icon of unit/wasp-spitter-v1-t10-rampant",
   "sources": [
-   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-spitter.png#cf783cf98311f41a",
-   "ParanoidalModpack-master/mods/RampantFixed/graphics/icons/signal/signal_A.png#389457ca7ec3c8ae"
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/icons/small-spitter.png#cf783cf98311f41a"
   ]
  },
  "sprites/RITEG-1.webp": {
@@ -9969,10 +9909,64 @@
    "../../../../Games/Factorio 2.077 - QUILITY/data/core/fonts/license - Lilittium.txt#c61a3d26ff3f1208"
   ]
  },
+ "static/gui/btn-green-hover.png": {
+  "from": "Factorio GUI button tile (core style.lua button graphical sets, corner 8)",
+  "sources": [
+   "../../../../Games/Factorio 2.077 - QUILITY/data/core/graphics/gui-new.png#820cb159dfe8466a"
+  ]
+ },
+ "static/gui/btn-green.png": {
+  "from": "Factorio GUI button tile (core style.lua button graphical sets, corner 8)",
+  "sources": [
+   "../../../../Games/Factorio 2.077 - QUILITY/data/core/graphics/gui-new.png#820cb159dfe8466a"
+  ]
+ },
+ "static/gui/btn-hover.png": {
+  "from": "Factorio GUI button tile (core style.lua button graphical sets, corner 8)",
+  "sources": [
+   "../../../../Games/Factorio 2.077 - QUILITY/data/core/graphics/gui-new.png#820cb159dfe8466a"
+  ]
+ },
+ "static/gui/btn-off.png": {
+  "from": "Factorio GUI button tile (core style.lua button graphical sets, corner 8)",
+  "sources": [
+   "../../../../Games/Factorio 2.077 - QUILITY/data/core/graphics/gui-new.png#820cb159dfe8466a"
+  ]
+ },
+ "static/gui/btn-press.png": {
+  "from": "Factorio GUI button tile (core style.lua button graphical sets, corner 8)",
+  "sources": [
+   "../../../../Games/Factorio 2.077 - QUILITY/data/core/graphics/gui-new.png#820cb159dfe8466a"
+  ]
+ },
+ "static/gui/btn-red-hover.png": {
+  "from": "Factorio GUI button tile (core style.lua button graphical sets, corner 8)",
+  "sources": [
+   "../../../../Games/Factorio 2.077 - QUILITY/data/core/graphics/gui-new.png#820cb159dfe8466a"
+  ]
+ },
+ "static/gui/btn-red.png": {
+  "from": "Factorio GUI button tile (core style.lua button graphical sets, corner 8)",
+  "sources": [
+   "../../../../Games/Factorio 2.077 - QUILITY/data/core/graphics/gui-new.png#820cb159dfe8466a"
+  ]
+ },
+ "static/gui/btn.png": {
+  "from": "Factorio GUI button tile (core style.lua button graphical sets, corner 8)",
+  "sources": [
+   "../../../../Games/Factorio 2.077 - QUILITY/data/core/graphics/gui-new.png#820cb159dfe8466a"
+  ]
+ },
  "static/logo/factorio-paranoidal.webp": {
   "from": "Factorio PARANOIDAL logo",
   "sources": [
    "splash-screen-image.webp#b0160b900c796d73"
+  ]
+ },
+ "static/logo/paranoidal-animated-alpha.webp": {
+  "from": "Paranoidal animated logo, dark background keyed out to transparency",
+  "sources": [
+   "review/splash-anim/out/variant1/preview.webp#43a25afa74c812b7"
   ]
  },
  "static/logo/paranoidal-animated.webp": {
@@ -9991,6 +9985,12 @@
   "from": "alert icon",
   "sources": [
    "../../../../Games/Factorio 2.077 - QUILITY/data/core/graphics/icons/alerts/ammo-icon-red.png#ce89a66b065f762f"
+  ]
+ },
+ "static/ui/belt-tile.png": {
+  "from": "one tile of the vanilla transport belt, moving west (hero conveyor)",
+  "sources": [
+   "../../../../Games/Factorio 2.077 - QUILITY/data/base/graphics/entity/transport-belt/transport-belt.png#89bd090471495532"
   ]
  },
  "static/ui/danger.png": {
