@@ -1,0 +1,45 @@
+<!-- CHAPTER 09 — Biology & farms. Widgets: puffer-breeding (records.puffer_breeding), green-machines (static list with dump values).
+     Facts: dump assembling-machine emissions (negative = absorbs), Bio_Industries_2, angelsbioprocessing, Noxys_Trees, carbon-capture2, ПР-048 (natural puffer nests). -->
+<section id="bio" class="chapter" data-num="09" data-icon="assets/icons/technology__bi-tech-bio-farming.webp" data-toc="Биология и фермы|Biology & farms">
+  <header class="ch-head">
+    <div class="ch-num"><ru>Глава 09</ru><en>Chapter 09</en></div>
+    <h2><ru>Биология и фермы</ru><en>Biology and farms</en></h2>
+    <p class="ch-lead"><ru>Посреди дымящих заводов здесь растут леса, цветут водоросли, плавают рыбы и размножаются фугу. Не ради красоты: из биологии получают целлюлозу, масла, пластик, топливо, науку — и чистый воздух.</ru><en>Amid the smoking factories, forests grow, algae bloom, fish swim and puffers breed. Not for beauty: biology yields cellulose, oils, plastic, fuel, science, and clean air.</en></p>
+    <div class="ch-tags"><span><ru>ДЕРЕВЬЯ В ТЕПЛИЦАХ</ru><en>TREES IN GREENHOUSES</en></span><span><ru>ВОДОРОСЛИ</ru><en>ALGAE</en></span><span><ru>РЫБА И ФУГУ</ru><en>FISH & PUFFERS</en></span><span><ru>ТЕРРАФОРМИНГ</ru><en>TERRAFORMING</en></span></div>
+    {{sprite:bi-bio-farm|ch-art}}
+  </header>
+
+  <h3 id="bio-wood"><ru>Лес как производство</ru><en>Forest as an industry</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>Дерево здесь — ресурс первой необходимости: из него делают ранние столбы, платы, бумагу, топливо и даже <a class="x" href="#military-early">турели</a>. Деревья выращивают в <b>питомниках</b> из семян, сажают саженцами и собирают на <b>био-фермах</b>. Удобрение превращает пустыню в луг, а <b>терраформер</b> делает это сам, по площади.</ru><en>Wood is a basic necessity here: early poles, circuit boards, paper, fuel and even <a class="x" href="#military-early">turrets</a> are made of it. Trees are grown in <b>nurseries</b> from seeds, planted as seedlings and harvested in <b>bio farms</b>. Fertilizer turns desert into grassland, and the <b>terraformer</b> does it on its own, area by area.</en></p>
+      <p><ru>А дикий лес на карте живёт своей жизнью: деревья медленно разрастаются и отмирают при определённых условиях. Тот лес, что вы вырубили, может вернуться. Тот, что вы задушили смогом, — нет.</ru><en>The wild forest lives a life of its own: trees slowly spread and die off under certain conditions. The forest you cut may come back. The one you choked with smog will not.</en></p>
+    </div>
+    <div class="grid g2">
+      <figure class="deep sprite-card">{{sprite:bi-bio-garden-huge|md}}<figcaption><ru>Огромный био-сад</ru><en>Huge bio garden</en></figcaption></figure>
+      <figure class="deep sprite-card">{{sprite:angels-algae-farm|md}}<figcaption><ru>Водорослевая ферма</ru><en>Algae farm</en></figcaption></figure>
+    </div>
+  </div>
+
+  <h3 id="bio-angels"><ru>Сельское хозяйство Ангела</ru><en>Angel's agriculture</en></h3>
+  <div class="grid g3">
+    <div class="panel"><div class="panel-title">🌿 <ru>Водоросли</ru><en>Algae</en></div><p><ru>Зелёные, бурые, красные и синие водоросли — первый шаг к целлюлозе, древесной массе, бумаге и химии. Растут на воде и углекислом газе, то есть буквально на выхлопе.</ru><en>Green, brown, red and blue algae are the first step to cellulose, wood pulp, paper and chemistry. They grow on water and carbon dioxide, literally on exhaust.</en></p></div>
+    <div class="panel"><div class="panel-title">🌾 <ru>Фермы и сады</ru><en>Farms and gardens</en></div><p><ru>Умеренные, пустынные и болотные фермы выращивают свои культуры, а из урожая получают масла, сахар, кормовую массу. Растения с чужой планеты дают образцы для <a class="x" href="#science">науки</a>: {{n:records.science_packs.@angels-token-bio.techs}} технологий требуют образцы инопланетной флоры.</ru><en>Temperate, desert and swamp farms grow their own crops, which become oils, sugar and nutrient pulp. Alien plants provide samples for <a class="x" href="#science">science</a>: {{n:records.science_packs.@angels-token-bio.techs}} technologies require alien plant-life samples.</en></p></div>
+    <div class="panel"><div class="panel-title">🐟 <ru>Рыба</ru><en>Fish</en></div><p><ru>Рыбные садки разводят рыбу, а из рыбы давят рыбий жир — одно из самых калорийных <a class="x" href="#fuels-fluids">жидких топлив</a> в игре. Да, можно отапливать базу рыбой.</ru><en>Fish tanks breed fish, and fish are pressed into fish oil, one of the most energy-dense <a class="x" href="#fuels-fluids">liquid fuels</a> in the game. Yes, you can heat your base with fish.</en></p></div>
+  </div>
+
+  <h3 id="bio-puffers"><ru>Фугу: генетическая лотерея</ru><en>Puffers: a genetic lottery</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>Фугу (в оригинале — puffers) — летающие инопланетные создания, которые выделяют газы. Их разводят в рефугиуме, и разведение — чистая лотерея: из яйца одного вида чаще всего выходит такое же яйцо, но с шансом 5–10% — яйцо совсем другой породы. Всего пород пять: газообразующая, прогорклая, пылающая, кислотообразующая и разъедающая.</ru><en>Puffers are flying alien creatures that exhale gases. They are bred in a refugium, and breeding is a pure lottery: an egg of one kind usually yields the same egg, but with a 5–10% chance an egg of a completely different breed. There are five breeds: gaseous, rancid, blazing, acidic and corrosive.</en></p>
+      <p><ru>Природные гнёзда фугу встречаются и на карте — их можно использовать как сырьё. Каждое — со своим случайным уловом.</ru><en>Natural puffer nests also occur on the map and can be harvested as a raw input, each with its own random catch.</en></p>
+    </div>
+    <div class="panel" data-widget="puffer-breeding"></div>
+  </div>
+  <div class="spoiler" data-label="🦗 В рефугиумах разводят не только рыбу и фугу. Открыть?" data-label-en="🦗 Refugiums breed more than fish and puffers. Open?"><div class="sp-body"><p><ru>Есть ещё <b>рефугиум кусак</b>. Вы правильно поняли: можно разводить <a class="x" href="#enemies">тех самых жуков</a> у себя на заводе — ради биоматериалов. Что может пойти не так. Бойня и инкубатор прилагаются.</ru><en>There is also a <b>biter refugium</b>. You read that right: you can breed <a class="x" href="#enemies">those very bugs</a> in your factory, for biomaterials. What could go wrong. Butchery and hatchery included.</en></p></div></div>
+
+  <h3 id="bio-clean"><ru>Машины, которые чистят воздух</ru><en>Machines that clean the air</en></h3>
+  <p><ru>В ванили единственный способ бороться со смогом — модули эффективности. Здесь целый класс машин <b>поглощает</b> загрязнение. Ниже — самые сильные «зелёные лёгкие» сборки, числа взяты из игры.</ru><en>In vanilla, the only weapon against smog is efficiency modules. Here a whole class of machines <b>absorbs</b> pollution. Below are the strongest “green lungs” of the modpack, numbers straight from the game.</en></p>
+  <div class="panel" data-widget="green-machines"></div>
+  <div class="quip rv"><ru>Вы пришли строить заводы, а стали фермером, лесником, рыбаком и заводчиком фугу. Factorio, говорили они. Про автоматизацию, говорили они.</ru><en>You came to build factories and became a farmer, forester, fisherman and puffer breeder. Factorio, they said. It's about automation, they said.</en></div>
+</section>

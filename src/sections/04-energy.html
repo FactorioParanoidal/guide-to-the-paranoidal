@@ -1,0 +1,71 @@
+<!-- CHAPTER 04 — Power & efficiency (КПД). Widgets: kpd-calc, boiler-ladder, wind-sim.
+     Facts: records.boilers/generators/burner_generators/reactors/solar/accumulators/spot; Wind-Turbines-Reforged/README.md; NightBrightness/README.md; ElectricResistance2. -->
+<section id="energy" class="chapter" data-num="04" data-icon="assets/icons/technology__steam-power.webp" data-toc="Энергетика и КПД|Power & efficiency">
+  <header class="ch-head">
+    <div class="ch-num"><ru>Глава 04</ru><en>Chapter 04</en></div>
+    <h2><ru>Энергетика и КПД</ru><en>Power and efficiency</en></h2>
+    <p class="ch-lead"><ru>В ванили котёл превращает в пар всё, что в него положили. Здесь у каждой топки есть <b>КПД</b>, и первый котёл честно выбрасывает половину угля в трубу. Эта цифра незаметно управляет всей вашей экономикой.</ru><en>In vanilla a boiler turns everything you feed it into steam. Here every furnace has an <b>efficiency</b>, and the first boiler honestly throws half of its coal up the chimney. That number quietly runs your whole economy.</en></p>
+    <div class="ch-tags"><span><ru>КПД 25–98%</ru><en>25–98% EFFICIENCY</en></span><span>{{n:#records.boilers}} <ru>КОТЛОВ</ru><en>BOILERS</en></span><span><ru>СЛУЧАЙНЫЙ ВЕТЕР</ru><en>RANDOM WIND</en></span><span><ru>СЕЗОНЫ</ru><en>SEASONS</en></span><span><ru>СТОЛБЫ ЕДЯТ ТОК</ru><en>POLES EAT POWER</en></span></div>
+    {{sprite:bob-boiler-5|ch-art}}
+  </header>
+
+  <h3 id="energy-kpd"><ru>Что такое КПД и почему он так важен</ru><en>What efficiency is and why it matters so much</en></h3>
+  <div class="vs">
+        <div class="van"><h5><ru>Ваниль</ru><en>Vanilla</en></h5><p><ru>Котёл: КПД 100%.<br>1,8 МВт = 27 угля в минуту.</ru><en>Boiler: 100% efficiency.<br>1.8 MW = 27 coal per minute.</en></p></div>
+        <div class="mid">→</div>
+        <div class="par"><h5>Paranoidal</h5><p><ru>Котёл: КПД 50%.<br>1,8 МВт = <b>54 угля</b> в минуту и вдвое больше дыма на тот же мегаватт.</ru><en>Boiler: 50% efficiency.<br>1.8 MW = <b>54 coal</b> per minute and twice the smoke per megawatt.</en></p></div>
+      </div>
+  <div class="split">
+    <div>
+      <p><ru><a class="x g" href="#g-kpd">КПД</a> (коэффициент полезного действия) — доля энергии топлива, которая превращается в полезную работу. Котёл мощностью 1,8 МВт с КПД 50% каждую секунду сжигает <b>3,6 МДж</b> топлива: 1,8 уходит в пар, 1,8 — в небо.</ru><en><a class="x g" href="#g-kpd">Efficiency</a> is the share of fuel energy that becomes useful work. A 1.8 MW boiler at 50% burns <b>3.6 MJ</b> of fuel every second: 1.8 goes into steam, 1.8 into the sky.</en></p>
+      <p><ru>Отсюда следствия, которые чувствуются весь первый десяток часов: угольные шахты нужны вдвое больше, <a class="x" href="#world-pollution">загрязнение</a> растёт быстрее, жуки злятся раньше. Зато каждый апгрейд котла — это не просто «больше мегаватт», а <b>меньше угля и меньше смога</b> на мегаватт.</ru><en>The consequences are felt for the first dozen hours: you need twice the coal mines, <a class="x" href="#world-pollution">pollution</a> grows faster, the bugs get angry sooner. But every boiler upgrade is not just “more megawatts”: it is <b>less coal and less smog</b> per megawatt.</en></p>
+    </div>
+    <div class="panel" data-widget="kpd-calc"></div>
+  </div>
+
+  <h3 id="energy-boilers"><ru>Лестница котлов: от «полкотла» до 98%</ru><en>The boiler ladder: from “half a boiler” to 98%</en></h3>
+  <p><ru>Пять уровней твердотопливных котлов и пять уровней жидкотопливных. С каждым уровнем растут мощность и температура пара, а КПД поднимается 50 → 67 → 80 → 90 → 98%. Загрязнение при этом <b>падает</b> — у пятого котла оно втрое ниже, чем у первого, при впятеро большей мощности.</ru><en>Five tiers of solid-fuel boilers and five tiers of liquid-fuel ones. Each tier raises power and steam temperature, while efficiency climbs 50 → 67 → 80 → 90 → 98%. Pollution meanwhile <b>drops</b>: tier five emits three times less than tier one at five times the power.</en></p>
+  <div class="panel" data-widget="boiler-ladder"></div>
+  <div class="callout hint"><p><ru><b>Температура важна.</b> Каждый уровень котла выдаёт пар горячее: 165, 315, 465, 615, 765 °C. Паровой двигатель первого уровня использует пар только до своих 165 °C. Пар на 765 °C в старом двигателе — это деньги, сожжённые дважды. Подбирайте двигатели и турбины под котёл.</ru><en><b>Temperature matters.</b> Each boiler tier makes hotter steam: 165, 315, 465, 615, 765 °C. A tier-one steam engine only uses steam up to its own 165 °C. 765 °C steam in an old engine is money burned twice. Match engines and turbines to the boiler.</en></p></div>
+
+  <h3 id="energy-generators"><ru>Генераторы «всё в одном» и прочая экзотика</ru><en>All-in-one generators and other exotics</en></h3>
+  <div class="grid g3">
+    <div class="panel"><div class="panel-title">{{icon:burner-generator/burner-generator}} <ru>Твердотопливный генератор</ru><en>Burner generator</en></div><p><ru>Без пара и труб: топливо → электричество. Удобно. КПД <b>25%</b>. Удобство здесь стоит трёх четвертей угля.</ru><en>No steam, no pipes: fuel → electricity. Handy. Efficiency <b>25%</b>. Convenience costs three quarters of your coal.</en></p></div>
+    <div class="panel"><div class="panel-title">{{icon:burner-generator/big-burner-generator}} <ru>Большой генератор</ru><en>Big burner generator</en></div><p><ru><b>50 МВт</b> из одной коробки при КПД 50%. И <b>1000 единиц загрязнения в минуту</b>. Это не электростанция, это дымовая шашка размером с завод.</ru><en><b>50 MW</b> from a single box at 50% efficiency. And <b>1000 pollution per minute</b>. That is not a power plant, it is a smoke bomb the size of a factory.</en></p></div>
+    <div class="panel"><div class="panel-title">{{icon:generator/petroleum-generator}} <ru>Дизель-генератор</ru><en>Diesel generator</en></div><p><ru>Сжигает <a class="x" href="#fuels">жидкое топливо</a> прямо в генераторе: до 4 МВт. Что именно залить — решает ваш кошелёк: у жидкостей разная теплотворность и разный дым.</ru><en>Burns <a class="x" href="#fuels">liquid fuel</a> right in the generator: up to 4 MW. What to pour in is your wallet's call: fluids differ in heat value and smoke.</en></p></div>
+  </div>
+  <div class="spoiler" data-label="🔥 Самый неэффективный генератор в игре — нажмите, если не боитесь" data-label-en="🔥 The least efficient generator in the game: click if you dare"><div class="sp-body"><p><ru>Его КПД — <b>0,001%</b>. Это… факел. Технически он числится генератором и горит на топливе, но светит, а не питает сеть. Не пытайтесь запитать от него завод. Мы проверили за вас — математически.</ru><en>Its efficiency is <b>0.001%</b>. It is… a torch. Technically it is listed as a generator and burns fuel, but it gives light, not power. Do not try to run a factory off it. We checked for you, mathematically.</en></p></div></div>
+
+  <h3 id="energy-nuclear"><ru>Атом: уран, торий, дейтерий — и ещё кое-что</ru><en>Nuclear: uranium, thorium, deuterium, and something else</en></h3>
+  <div class="split rev">
+    <div class="grid g2">
+      <figure class="deep sprite-card">{{sprite:nuclear-reactor|md}}<figcaption><ru>Реакторы 54 / 72 / 90 МВт</ru><en>Reactors 54 / 72 / 90 MW</en></figcaption></figure>
+      <figure class="deep sprite-card">{{sprite:angels-burner-reactor|md}}<figcaption><ru>Быстрый реактор: 160 МВт, КПД 25%</ru><en>Fast burner reactor: 160 MW, 25% efficiency</en></figcaption></figure>
+    </div>
+    <div>
+      <p><ru>Три линейки реакторов: урановая, ториевая и дейтериевая, у каждой свои топливные элементы. Плутониевые и MOX-элементы несут по <b>40 ГДж</b>, дейтериевые — до <b>120 ГДж</b> (обычный урановый элемент — 8 ГДж).</ru><en>Three reactor lines: uranium, thorium and deuterium, each with its own fuel cells. Plutonium and MOX cells carry <b>40 GJ</b> each, deuterium cells up to <b>120 GJ</b> (a vanilla uranium cell holds 8 GJ).</en></p>
+      <p><ru>Быстрый реактор выдаёт 160 МВт, но с КПД 25%: чтобы получить эти мегаватты, он сжигает топлива на 640 МВт. Зато его можно поставить там, где обычный реактор ещё недоступен.</ru><en>The fast burner reactor gives 160 MW, but at 25%: to deliver those megawatts it burns 640 MW of fuel. On the other hand, it fits where a regular reactor is not yet available.</en></p>
+      <p><ru>А ещё есть <span class="tease">термоядерный реактор</span> — одна из самых дорогих технологий игры. Больше ничего не скажем.</ru><en>And then there is the <span class="tease">fusion reactor</span>, one of the most expensive technologies in the game. We will say no more.</en></p>
+    </div>
+  </div>
+  <div class="callout warn"><p><ru>Урановая руда, уран-235, уран-238 и топливные элементы в инвентаре <b>облучают персонажа</b>. Нужен противорадиационный костюм — подробнее в главе <a class="x" href="#military-hazards">«Военное дело»</a>.</ru><en>Uranium ore, uranium-235, uranium-238 and fuel cells in your inventory <b>irradiate the character</b>. You need a hazmat suit; see <a class="x" href="#military-hazards">“Warfare”</a>.</en></p></div>
+
+  <h3 id="energy-green"><ru>Солнце, ветер и сезоны</ru><en>Sun, wind and seasons</en></h3>
+  <p><ru>Солнечных панелей {{n:#records.solar}} видов: от малой на 27 кВт до био-солнечной фермы на 3,6 МВт. Но солнце здесь непостоянно: на планете есть <a class="x" href="#world-seasons">сезоны</a>, ночи бывают тёмными (яркость 5–15%), а летом и зимой выработка панелей меняется от 50 до 100%. А густой <a class="x" href="#world-pollution">смог</a> над панелями режет мощность ещё до 50%.</ru><en>There are {{n:#records.solar}} kinds of solar panels, from a small 27 kW panel to a 3.6 MW bio solar farm. But the sun is fickle: the planet has <a class="x" href="#world-seasons">seasons</a>, nights are dark (5–15% brightness), and panel output swings between 50% and 100% over the year. Thick <a class="x" href="#world-pollution">smog</a> above the panels cuts their power by up to another 50%.</en></p>
+  <div class="split">
+    <div>
+      <p><ru>Ветряки трёх уровней (67,5 кВт, 675 кВт и 6,75 МВт) работают от <b>случайного ветра</b>. Его скорость складывается из десяти синусоид и шума, а доля мощности — это «температура» ветра минус 15, делённая на 85. Ниже — симулятор по той же формуле, что и в игре. Штиль бывает. Привыкайте.</ru><en>Three tiers of wind turbines (67.5 kW, 675 kW and 6.75 MW) run on <b>random wind</b>. Its speed is a sum of ten sine waves plus noise, and the power share is the wind “temperature” minus 15, divided by 85. Below is a simulator with the same formula as in the game. Calm days happen. Get used to it.</en></p>
+      <p><ru><b>РИТЭГ</b> — радиоизотопный генератор на 6 МВт: ни топлива, ни ветра, ни солнца не просит. Догадайтесь, сколько он стоит.</ru><en>The <b>RTG</b> is a 6 MW radioisotope generator: it needs no fuel, wind or sun. Guess how much it costs.</en></p>
+    </div>
+    <div class="panel" data-widget="wind-sim"></div>
+  </div>
+
+  <h3 id="energy-grid"><ru>Сеть, которая сама ест ток</ru><en>A grid that eats its own power</en></h3>
+  <div class="grid g3">
+    <div class="panel"><div class="panel-title">{{icon:electric-pole/medium-electric-pole}} <ru>Электросопротивление</ru><en>Electric resistance</en></div><p><ru>Каждый столб потребляет <b>1 кВт</b>. Мелочь? Тысяча столбов — это мегаватт в никуда. Длинные ЛЭП к дальним шахтам начинают стоить электричество.</ru><en>Every pole consumes <b>1 kW</b>. Trivial? A thousand poles are a megawatt into nowhere. Long power lines to remote mines start to cost electricity.</en></p></div>
+    <div class="panel"><div class="panel-title">{{icon:electric-pole/ued-large-db}} <ru>Подземные щиты</ru><en>Underground boxes</en></div><p><ru>Электрощиты трёх размеров прячут сеть под землю: поверх них можно строить. А всего видов опор, столбов и щитов — {{n:counts.placeable_by_type.electric-pole}}, плюс версии со встроенными лампами.</ru><en>Distribution boxes of three sizes bury the grid: you can build on top of them. There are {{n:counts.placeable_by_type.electric-pole}} kinds of poles, pylons and boxes, plus versions with built-in lamps.</en></p></div>
+    <div class="panel"><div class="panel-title">{{icon:accumulator/bi-bio-accumulator}} <ru>Аккумуляторы</ru><en>Accumulators</en></div><p><ru>От железо-углеродного (1,25 МДж) в самом начале до огромного био-аккумулятора на 300 МДж. Быстрые, медленные, ёмкие — у каждого свой характер.</ru><en>From the iron-carbon cell (1.25 MJ) at the very start to the huge 300 MJ bio accumulator. Fast, slow, high-capacity: each has its own character.</en></p></div>
+  </div>
+  <div class="callout warn"><p><ru>Вы почти наверняка переживёте несколько глубоких <b>энергетических кризисов</b>, которые поставят базу на колени. Котлы встанут без угля, буры — без электричества, а уголь — без буров. Заранее держите резервные мощности и сундук топлива «на чёрный день».</ru><en>You will almost certainly live through several deep <b>energy crises</b> that bring the base to its knees. Boilers stop without coal, drills stop without power, and coal stops without drills. Keep reserve capacity and a “rainy day” chest of fuel in advance.</en></p></div>
+  <p class="see"><ru>Что сжигать — уголь, кокс, брикеты, водород или нафту — разбирается в следующей главе: <a class="x" href="#fuels">«Топливо и теплотворность»</a>.</ru><en>What to burn (coal, coke, briquettes, hydrogen or naphtha) is covered in the next chapter: <a class="x" href="#fuels">“Fuels & heat value”</a>.</en></p>
+</section>

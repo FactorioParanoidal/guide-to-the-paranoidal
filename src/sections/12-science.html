@@ -1,0 +1,39 @@
+<!-- CHAPTER 12 — Science. Widgets: science-wall (records.science_packs), tech-eras (records.tech_by_pack_kinds), lab-scale (records.labs + spot sizes), evolution-calc (research_evolution_factor/parameters.lua).
+     Facts: counts.technologies_*, tech_max_depth, science_packs_total_all_finite; paranoidal-tech-tree/README.md. -->
+<section id="science" class="chapter" data-num="12" data-icon="assets/icons/technology__research-speed-1.webp" data-toc="Наука|Science">
+  <header class="ch-head">
+    <div class="ch-num"><ru>Глава 12</ru><en>Chapter 12</en></div>
+    <h2><ru>Наука</ru><en>Science</en></h2>
+    <p class="ch-lead"><ru>{{n:counts.technologies_visible}} технологий, цепочка зависимостей глубиной {{n:counts.tech_max_depth}} шага, {{n:counts.science_packs}} видов научных пакетов. И одна неприятная новость: каждое исследование делает жуков сильнее.</ru><en>{{n:counts.technologies_visible}} technologies, a dependency chain {{n:counts.tech_max_depth}} steps deep, {{n:counts.science_packs}} kinds of science packs. And one piece of bad news: every research makes the bugs stronger.</en></p>
+    <div class="ch-tags"><span>{{n:counts.technologies_visible}} <ru>ТЕХНОЛОГИЙ</ru><en>TECHNOLOGIES</en></span><span>{{n:counts.technologies_infinite}} <ru>БЕСКОНЕЧНЫХ</ru><en>INFINITE</en></span><span><ru>ЭВОЛЮЦИЯ ОТ НАУКИ</ru><en>EVOLUTION FROM RESEARCH</en></span><span><ru>ГИПЕР-ЛАБА</ru><en>HYPER LAB</en></span></div>
+    {{sprite:paranoidal-beta8-hyper-lab|ch-art}}
+  </header>
+
+  <h3 id="science-packs"><ru>Научные пакеты</ru><en>Science packs</en></h3>
+  <p><ru>Семь ванильных пакетов никуда не делись, но к ним добавились транспортный, <b>золотой</b>, семь <b>инопланетных</b> (из артефактов, которые падают с <a class="x" href="#enemies-rampant">жуков</a> и гнёзд), образцы инопланетной флоры, а в эндгейме — <b>данные с космической станции</b> и <b>данные со спутника</b>. И даже первые пакеты здесь требуют серьёзного производства: «штамповать науку тысячами» не выйдет.</ru><en>The seven vanilla packs are still here, joined by the transport pack, the <b>gold</b> pack, seven <b>alien</b> packs (made from artifacts dropped by <a class="x" href="#enemies-rampant">bugs</a> and nests), alien plant samples, and in the endgame <b>space station data</b> and <b>satellite data</b>. Even the first packs need serious production: “stamping science by the thousands” will not work.</en></p>
+  <div class="panel" data-widget="science-wall"></div>
+
+  <h3 id="science-tree"><ru>Дерево, в котором можно заблудиться</ru><en>A tree you can get lost in</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>Технологии сгруппированы по «эпохам» — по числу видов пакетов в стоимости. Больше всего исследований на трёх-четырёх видах науки, а на самом верху стоят восемь технологий, которые требуют <b>восемь видов пакетов одновременно</b>.</ru><en>Technologies are grouped into “eras” by the number of pack kinds in their cost. Most research uses three or four kinds of science, and at the very top sit eight technologies requiring <b>eight kinds of packs at once</b>.</en></p>
+      <p><ru>Если изучить <b>всё</b>, кроме бесконечных технологий, понадобится примерно {{n:counts.science_packs_total_all_finite}} научных пакетов. Это не опечатка. Изучать всё подряд — плохая идея: выбирайте, что действительно нужно.</ru><en>To research <b>everything</b> except infinite technologies you would need about {{n:counts.science_packs_total_all_finite}} science packs. That is not a typo. Researching everything in sight is a bad idea: choose what you actually need.</en></p>
+      <div class="callout tip"><p><ru><b>Своё окно технологий.</b> <kbd>Ctrl</kbd>+<kbd>T</kbd> открывает дерево Paranoidal: эпохи без горизонтальной прокрутки, цепочки предков, поиск по тому, что технология <i>открывает</i>, планировщик пути и общая цель с автоматической очередью. В ванильном окне такого не найти.</ru><en><b>A custom tech window.</b> <kbd>Ctrl</kbd>+<kbd>T</kbd> opens the Paranoidal tree: eras without horizontal scrolling, ancestor chains, search by what a technology <i>unlocks</i>, a path planner and a shared goal with an automatic queue. You will not find that in the vanilla window.</en></p></div>
+    </div>
+    <div class="panel" data-widget="tech-eras"></div>
+  </div>
+
+  <h3 id="science-labs"><ru>Лаборатории: от огарка до гипер-лабы</ru><en>Labs: from a candle stub to the hyper lab</en></h3>
+  <p><ru>Первая лаборатория — <a class="x" href="#start-wreck">спасённая из обломков</a>, со скоростью 0,15. Потом твердотопливная, обычная (она ест 2,5 МВт — в ванили 60 кВт), вторая, инопланетная, лаборатория модулей… А в конце — три монстра. Выберите любую лабораторию: она появится рядом с обычной <b>в одном масштабе</b>.</ru><en>The first lab is <a class="x" href="#start-wreck">salvaged from the wreck</a>, with a speed of 0.15. Then the burner lab, the regular one (it eats 2.5 MW; in vanilla 60 kW), lab 2, the alien lab, the module lab… And finally three monsters. Pick any lab: it appears next to a regular one <b>at the same scale</b>.</en></p>
+  <div class="panel" data-widget="lab-scale"></div>
+
+  <h3 id="science-evolution"><ru>Наука = эволюция жуков</ru><en>Science = bug evolution</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>В ванили жуки эволюционируют от времени, загрязнения и разрушенных гнёзд. Здесь ванильная эволюция по умолчанию <b>выключена</b>, и единственный двигатель <a class="x g" href="#g-evolution">эволюции</a> — <b>ваши исследования</b>. Каждая изученная технология добавляет 0,15% «показателя», а каждая тысяча потраченных пакетов — ещё 0,35%. Итоговая эволюция = 1 − e<sup>−показатель</sup>, поэтому к концу рост замедляется, но не останавливается.</ru><en>In vanilla, bugs evolve with time, pollution and destroyed nests. Here vanilla evolution is <b>switched off</b> by default, and the only engine of <a class="x g" href="#g-evolution">evolution</a> is <b>your research</b>. Each researched technology adds 0.15% to an “exponent”, and each thousand packs spent adds 0.35%. Final evolution = 1 − e<sup>−exponent</sup>, so growth slows down near the end but never stops.</en></p>
+      <p><ru>Персональные QoL-исследования и бесконечные технологии в эволюцию не идут. Десять уровней <a class="x" href="#defects-control">«Контроля качества»</a> считаются как одна технология. А подсказка в дереве технологий честно показывает: «Увеличивает эволюцию на X%».</ru><en>Personal QoL research and infinite technologies do not count. The ten <a class="x" href="#defects-control">“Quality control”</a> levels count as one technology. And the tooltip in the tech tree honestly says: “Increases evolution by X%”.</en></p>
+    </div>
+    <div class="panel" data-widget="evolution-calc"></div>
+  </div>
+  <div class="quip rv"><ru>Хотите, чтобы жуки оставались слабыми? Просто не изучайте ничего. Мы серьёзно. Ну, почти.</ru><en>Want the bugs to stay weak? Just don't research anything. We are serious. Well, almost.</en></div>
+</section>

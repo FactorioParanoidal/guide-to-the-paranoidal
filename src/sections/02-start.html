@@ -1,0 +1,50 @@
+<!-- CHAPTER 02 — Start. Widgets: wreck-field (clickable wreck sprites), start-levels (quality roll weights of the start supplies). Facts: zzzparanoidal-shipwreck/README.md, dump (salvaged machines), tips. -->
+<section id="start" class="chapter" data-num="02" data-icon="assets/icons/technology__burner-mechanics.webp" data-toc="Крушение: первый час|The crash: hour one">
+  <header class="ch-head">
+    <div class="ch-num"><ru>Глава 02</ru><en>Chapter 02</en></div>
+    <h2><ru>Крушение: первый час</ru><en>The crash: hour one</en></h2>
+    <p class="ch-lead"><ru>Вы начинаете не с пистолета и горсти железа. Вы начинаете с пустыми карманами посреди обломков корабля. Всё, что у вас будет в первые полчаса, придётся выковырять из металлолома.</ru><en>You do not start with a pistol and a handful of iron. You start with empty pockets in a field of ship debris. Everything you will own in the first half hour has to be pried out of scrap metal.</en></p>
+    <div class="ch-tags"><span><ru>ПУСТОЙ ИНВЕНТАРЬ</ru><en>EMPTY INVENTORY</en></span><span><ru>ТВЕРДОТОПЛИВНАЯ ЭПОХА</ru><en>BURNER ERA</en></span><span><ru>СПАСЁННЫЕ МАШИНЫ</ru><en>SALVAGED MACHINES</en></span></div>
+    {{sprite:crash-site-spaceship|ch-art}}
+  </header>
+
+  <h3 id="start-wreck"><ru>Поле обломков</ru><en>The debris field</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>Корабль, его обломки и разбросанные вокруг остовы — это ваш стартовый склад. Каждый обломок нужно <b>добыть</b>, как дерево или камень: мелкие поддаются за полторы секунды, большие — за три, сам корабль — за шесть. Внутри найдутся материалы, детали, ремонтные наборы и несколько <b>спасённых машин</b>, которые не купишь ни за какие исследования.</ru><en>The ship, its debris and the hulks scattered around are your starting warehouse. Each wreck has to be <b>mined</b> like a tree or a rock: small ones take a second and a half, big ones three, the ship itself six. Inside you will find materials, parts, repair packs and a few <b>salvaged machines</b> that no research can buy.</en></p>
+      <p><ru>Нажмите на обломки справа и посмотрите, что из них выпадает.</ru><en>Click the wrecks on the right to see what falls out.</en></p>
+      <div class="callout hint"><p><ru>Половина стартовых ремонтных наборов всегда обычного качества — на любом уровне старта их хватит, чтобы собрать первую <a class="x" href="#defects-workshop">мастерскую доводки</a>.</ru><en>Half of the starting repair packs are always of normal quality, so on any start level you can build your first <a class="x" href="#defects-workshop">refinement workshop</a>.</en></p></div>
+    </div>
+    <div class="panel" data-widget="wreck-field"></div>
+  </div>
+
+  <h3 id="start-levels"><ru>Насколько вам повезло с обломками</ru><en>How lucky your wreckage is</en></h3>
+  <p><ru>Уровень старта выбирается в настройках карты. От него зависит, сколько припасов уцелело и какого они <a class="x" href="#defects">качества</a>. Готовые изделия бросают кубик один раз на каждый вид предмета на всю карту; материалы и ленты всегда обычные.</ru><en>The start level is a map setting. It decides how much of the supplies survived and their <a class="x" href="#defects">quality</a>. Finished items roll once per item type per map; materials and belts are always normal.</en></p>
+  <div class="panel" data-widget="start-levels"></div>
+
+  <h3 id="start-burner"><ru>Твердотопливная эпоха</ru><en>The burner era</en></h3>
+  <div class="split rev">
+    <div class="grid g3">
+      <figure class="sprite-card deep">{{sprite:burner-mining-drill|md}}<figcaption><ru>Твердотопливный бур</ru><en>Burner mining drill</en></figcaption></figure>
+      <figure class="sprite-card deep">{{sprite:burner-lab|md}}<figcaption><ru>Твердотопливная лаборатория</ru><en>Burner lab</en></figcaption></figure>
+      <figure class="sprite-card deep">{{sprite:stone-furnace|md}}<figcaption><ru>Каменная печь</ru><en>Stone furnace</en></figcaption></figure>
+    </div>
+    <div>
+      <p><ru>До электричества далеко, поэтому у сборки есть целая эпоха на угле и дровах: твердотопливные сборочные автоматы, манипуляторы, насосы, <a class="x" href="#science-labs">лаборатория</a> и даже исследования для этого века. Первое из них, «Твердотопливная механизация», стоит всего один красный пакет.</ru><en>Electricity is far away, so the modpack has a whole coal-and-wood era: burner assemblers, inserters, pumps, a <a class="x" href="#science-labs">lab</a> and research for that age. The first one, “Burner mechanics”, costs a single red pack.</en></p>
+      <p><ru>Обратите внимание: даже твердотопливному буру нужна <b>вода</b>. Все руды, кроме угля, добываются только с <a class="x" href="#mining-fluids">жидкостью</a>. Без воды бур просто стоит.</ru><en>Note: even the burner drill needs <b>water</b>. Every ore except coal can only be mined with a <a class="x" href="#mining-fluids">fluid</a>. Without water the drill just sits there.</en></p>
+      <p><ru>Ещё одна находка: руду можно <b>дробить вручную</b> (2 руды → 2 дроблёной + 1 щебень, 4 секунды), а дроблёный сапфирит плавится прямо в железные пластины: 7 штук дают 4 пластины и кусок шлака. Неэффективно — зато сразу.</ru><en>Another trick: ore can be <b>crushed by hand</b> (2 ore → 2 crushed + 1 crushed stone, 4 seconds), and crushed saphirite smelts straight into iron plates: 7 of them give 4 plates and a lump of slag. Inefficient, but immediate.</en></p>
+    </div>
+  </div>
+
+  <h3 id="start-plan"><ru>План на первый час</ru><en>A plan for hour one</en></h3>
+  <div class="steps">
+    <div class="step rv"><h4><ru>Разберите обломки</ru><en>Strip the wreckage</en></h4><p><ru>Кирка, терпение и порядок: сначала корабль (там больше всего), потом крупные остовы. Ставьте <b>спасённый генератор</b> — это ваше первое электричество без единого котла.</ru><en>Pickaxe, patience and order: the ship first (it holds the most), then big hulks. Place the <b>salvaged generator</b>: your first electricity without a single boiler.</en></p></div>
+    <div class="step rv"><h4><ru>Сразу изучайте «Контроль качества»</ru><en>Research “Quality control” right away</en></h4><p><ru>Почти всё, что вы соберёте в эпоху красной науки, будет <a class="x" href="#defects">бракованным</a>. Каждый уровень контроля делает новые здания лучше. Десять уровней стоят 550 красных пакетов и не требуют других исследований.</ru><en>Almost everything you build in the red-science era will be <a class="x" href="#defects">defective</a>. Each control level makes new buildings better. Ten levels cost 550 red packs and need no other research.</en></p></div>
+    <div class="step rv"><h4><ru>Вода — до руды</ru><en>Water before ore</en></h4><p><ru>Твердотопливный береговой насос даёт 300 единиц в секунду. Трубу к бурам на сапфирите — и только потом радуйтесь первой руде.</ru><en>The burner offshore pump gives 300 units per second. Run a pipe to the drills on saphirite, and only then celebrate your first ore.</en></p></div>
+    <div class="step rv"><h4><ru>Пар и честный КПД</ru><en>Steam and honest efficiency</en></h4><p><ru>Первый котёл работает с КПД 50%: половина угля уходит в трубу. Это не баг, это <a class="x" href="#energy">новая энергетика</a>. Считайте уголь заранее.</ru><en>The first boiler runs at 50% efficiency: half of the coal goes up the chimney. Not a bug, it is the <a class="x" href="#energy">new power system</a>. Count your coal in advance.</en></p></div>
+    <div class="step rv"><h4><ru>Готовьте оборону раньше, чем кажется</ru><en>Build defences earlier than you think</en></h4><p><ru>Деревянная <a class="x" href="#military-early">дротиковая турель</a> открывается за один пакет. Смеяться будете потом, а сейчас — <a class="x" href="#enemies">Rampant</a> умеет искать дыры в обороне.</ru><en>The wooden <a class="x" href="#military-early">dart turret</a> unlocks for one pack. Laugh later; right now <a class="x" href="#enemies">Rampant</a> knows how to probe your defences.</en></p></div>
+  </div>
+
+  <div class="quip rv"><ru>В ванили вы просыпаетесь с пистолетом, буром и печкой. Здесь вы просыпаетесь с кучей металлолома и чувством, что кто-то уже пытался — и у него не получилось.</ru><en>In vanilla you wake up with a pistol, a drill and a furnace. Here you wake up with a heap of scrap and the feeling that someone already tried, and it did not work out for them.</en></div>
+  <p class="see"><ru>Руины чужих баз встречаются по всей карте — о них в главе <a class="x" href="#world-ruins">«Мир и экология»</a>.</ru><en>Ruins of other bases are scattered all over the map; see <a class="x" href="#world-ruins">“World & ecology”</a>.</en></p>
+</section>

@@ -1,0 +1,39 @@
+<!-- CHAPTER 16 — Space & endgame. Widgets: rocket-launch (RocketExplosions2: chance = 0.5·(0.1a + 0.1b + 0.8ab), a = 0.681^revisions, b = 0.891^launched), ftl-ladder (records.tech_most_expensive).
+     Facts: Rocket-Silo-Construction recipes (6 stages), SpaceModFeorasFork/README.md, ERPCTbaAB2, MIRV2, tech costs from the dump. -->
+<section id="space" class="chapter" data-num="16" data-icon="assets/icons/technology__ftl-propulsion.webp" data-toc="Космос и эндгейм|Space & endgame">
+  <header class="ch-head">
+    <div class="ch-num"><ru>Глава 16</ru><en>Chapter 16</en></div>
+    <h2><ru>Космос и эндгейм</ru><en>Space and endgame</en></h2>
+    <p class="ch-lead"><ru>В ванили запуск ракеты — финальные титры. Здесь это только пропуск в настоящий эндгейм: сеть спутников, орбитальная станция, верфь и межзвёздный корабль, на котором вы улетите домой.</ru><en>In vanilla, a rocket launch rolls the credits. Here it is just the ticket into the real endgame: a satellite network, an orbital station, a shipyard and an interstellar ship to fly home on.</en></p>
+    <div class="ch-tags"><span><ru>СТРОЙКА ШАХТЫ В 6 ЭТАПОВ</ru><en>6-STAGE SILO BUILD</en></span><span><ru>РАКЕТЫ ВЗРЫВАЮТСЯ</ru><en>ROCKETS EXPLODE</en></span><span><ru>СОТНИ ЗАПУСКОВ</ru><en>HUNDREDS OF LAUNCHES</en></span><span>FTL</span></div>
+    {{sprite:rocket-silo|ch-art}}
+  </header>
+
+  <h3 id="space-silo"><ru>Шахту ещё нужно построить</ru><en>First you have to build the silo</en></h3>
+  <div class="split mid">
+    <div>
+      <p><ru>Ракетную шахту не ставят из инвентаря. Сначала котлован выкапывают, потом заливают, потом строят — <b>шесть этапов</b>, каждый со своими материалами: бетон, кирпич, сталь, арматура, трубы, кабели, платы, двигатели, процессоры. Стройка ест много электричества и дымит. Готовая шахта потребляет до <b>{{fmt:records.spot.rocket-silo.energy_usage_w|mw}} МВт</b>.</ru><en>The rocket silo is not placed from your inventory. First the pit is dug, then filled, then built: <b>six stages</b>, each with its own materials: concrete, bricks, steel, rebar, pipes, cables, circuits, engines, processors. Construction eats lots of power and smokes. The finished silo draws up to <b>{{fmt:records.spot.rocket-silo.energy_usage_w|mw}} MW</b>.</en></p>
+    </div>
+    <figure class="deep sprite-card">{{sprite:rsc-silo-stage1|md}}<figcaption><ru>Первый этап: котлован</ru><en>Stage one: the pit</en></figcaption></figure>
+  </div>
+
+  <h3 id="space-explosions"><ru>Первые ракеты взрываются</ru><en>The first rockets explode</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>Ваша первая ракета взорвётся с вероятностью <b>50%</b>. Каждая следующая чуть надёжнее (опыт!), а семь исследований «Усовершенствование конструкции ракеты» снижают шанс аварии ещё сильнее. Шанс считается так: 0,5 × (0,1a + 0,1b + 0,8ab), где a = 0,681<sup>исследования</sup>, b = 0,891<sup>запуски</sup>. Попробуйте запустить ракету — вдруг повезёт.</ru><en>Your first rocket explodes with a <b>50%</b> chance. Each next one is a bit more reliable (experience!), and seven “Rocket failure revision” technologies cut the risk further. The chance is 0.5 × (0.1a + 0.1b + 0.8ab), where a = 0.681<sup>revisions</sup>, b = 0.891<sup>launches</sup>. Try launching a rocket; maybe you'll be lucky.</en></p>
+      <div class="callout warn"><p><ru>Запуск ракеты ещё и <b>злит <a class="x" href="#enemies-rampant">жуков</a></b>: они формируют дополнительные волны атак. Так что в день старта держите оборону в полной готовности.</ru><en>A rocket launch also <b>angers the <a class="x" href="#enemies-rampant">bugs</a></b>: they form extra attack waves. Keep your defences fully ready on launch day.</en></p></div>
+    </div>
+    <div class="panel" data-widget="rocket-launch"></div>
+  </div>
+
+  <h3 id="space-network"><ru>После первой ракеты</ru><en>After the first rocket</en></h3>
+  <div class="steps">
+    <div class="step rv"><h4><ru>Спутники и данные</ru><en>Satellites and data</en></h4><p><ru>Спутники приносят <b>данные со спутника</b>, а космическая станция — <b>данные со станции</b>: это новые <a class="x" href="#science-packs">«научные пакеты»</a> для космических исследований. Есть телескоп, разведывательные и добывающие шаттлы, автономные дроны для добычи в космосе.</ru><en>Satellites bring <b>satellite data</b>, and the space station brings <b>station data</b>: new <a class="x" href="#science-packs">“science packs”</a> for space research. There is a telescope, scouting and mining shuttles, autonomous drones for space mining.</en></p></div>
+    <div class="step rv"><h4><ru>Орбитальные фабрики</ru><en>Orbital fabricators</en></h4><p><ru>Орбитальные автономные фабрики строят компоненты прямо в космосе, а наземная станция-фабрика потребляет <b>1 ГВт</b> — столько же, сколько <a class="x" href="#science-labs">гипер-лаба</a>. Иногда с орбиты прилетает случайный десантный корабль — распакуете его и узнаете, что внутри.</ru><en>Orbital autonomous fabricators build components in space, and the ground fabricator station draws <b>1 GW</b>, as much as the <a class="x" href="#science-labs">hyper lab</a>. Sometimes a random dropship comes down from orbit; unbox it to find out what is inside.</en></p></div>
+    <div class="step rv"><h4><ru>Верфь и корабль</ru><en>Shipyard and ship</en></h4><p><ru>Корпус, двигатели, командный модуль, топливо, жилые отсеки, астрометрия… Каждая часть — десятки запусков, каждое исследование — сотни тысяч пакетов. Всего понадобится <b>несколько сотен запусков</b>.</ru><en>Hull, thrusters, command module, fuel, habitation, astrometrics… Every part takes dozens of launches, every research hundreds of thousands of packs. In total you need <b>several hundred launches</b>.</en></p></div>
+    <div class="step rv"><h4><ru>Сверхсветовой двигатель</ru><en>The FTL drive</en></h4><p><ru>И наконец — <a class="x g" href="#g-ftl">теория сверхсветового перемещения</a> от A до D и сами двигатели FTL. Это самые дорогие исследования игры. Насколько дорогие — смотрите ниже, если не боитесь.</ru><en>And finally, <a class="x g" href="#g-ftl">faster-than-light theory</a> from A to D and the FTL drives themselves. The most expensive research in the game. How expensive? See below, if you dare.</en></p></div>
+  </div>
+  <div class="panel" data-widget="ftl-ladder"></div>
+  <div class="spoiler" data-label="🚀 Чем всё заканчивается? (большой спойлер)" data-label-en="🚀 How does it all end? (big spoiler)"><div class="sp-body dossier" data-stamp="ФИНАЛ" data-stamp-en="FINALE"><p><ru>Цель всей игры — не ракета и не спутник, а корабль, способный унести вас с этой планеты <b>домой</b>. Когда он собран и все системы готовы, вы улетаете. Где-то позади остаётся завод размером с континент, тысячи <a class="x" href="#military-heroes">турелей с генеральскими нашивками</a>, руины и очень злые жуки. Самая глубокая цепочка технологий в игре — {{n:counts.tech_max_depth}} шага — ведёт именно туда.</ru><en>The goal of the whole game is not a rocket or a satellite, but a ship capable of carrying you off this planet <b>home</b>. Once it is built and all systems are ready, you leave. Behind you remains a continent-sized factory, thousands of <a class="x" href="#military-heroes">turrets with general's insignia</a>, ruins and very angry bugs. The deepest technology chain in the game, {{n:counts.tech_max_depth}} steps, leads exactly there.</en></p></div></div>
+  <div class="quip rv"><ru>«Теория сверхсветового перемещения A» требует два миллиона <b>красных</b> пакетов. Тех самых, с которых вы начинали эту игру. Да, двух миллионов. Да, красных.</ru><en>“Faster than light theory A” requires two million <b>red</b> packs. The very ones you started this game with. Yes, two million. Yes, red.</en></div>
+</section>

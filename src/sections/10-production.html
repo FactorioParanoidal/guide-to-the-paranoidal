@@ -1,0 +1,60 @@
+<!-- CHAPTER 10 — Production & modules. Widgets: module-explorer (records.modules), factory-zoom (Factorissimo recursion animation), memory-calc (deep-storage-unit/README.md formula).
+     Facts: counts.placeable_by_type; factorissimo layout.lua sizes 8→30, 12→46, 16→60, 20→90; ПР-054/060/061. -->
+<section id="production" class="chapter" data-num="10" data-icon="assets/icons/technology__modules.webp" data-toc="Производство и модули|Production & modules">
+  <header class="ch-head">
+    <div class="ch-num"><ru>Глава 10</ru><en>Chapter 10</en></div>
+    <h2><ru>Производство и модули</ru><en>Production and modules</en></h2>
+    <p class="ch-lead"><ru>{{n:counts.placeable_by_type.assembling-machine}} видов сборочных машин, {{n:counts.modules}} модулей в {{n:counts.module_categories}} семействах, заводы внутри зданий и склады, в которые помещается бесконечность. Производство здесь — отдельная наука.</ru><en>{{n:counts.placeable_by_type.assembling-machine}} kinds of crafting machines, {{n:counts.modules}} modules in {{n:counts.module_categories}} families, factories inside buildings and storage that holds infinity. Production here is a science of its own.</en></p>
+    <div class="ch-tags"><span><ru>8 УРОВНЕЙ МОДУЛЕЙ</ru><en>8 MODULE TIERS</en></span><span><ru>КВАНТОВЫЕ МОДУЛИ</ru><en>QUANTUM MODULES</en></span><span>FACTORISSIMO</span><span><ru>МАТЕРИОПАМЯТЬ</ru><en>MEMORY STORAGE</en></span></div>
+    {{sprite:factory-4|ch-art}}
+  </header>
+
+  <h3 id="production-machines"><ru>Машины: специализация и ступени</ru><en>Machines: specialization and tiers</en></h3>
+  <p><ru>В ванили есть три сборочных автомата, химзавод, НПЗ и печи. Здесь у каждой отрасли свои станки: дробилки, флотаторы, электролизёры, смесители, литейные машины, газоперерабатывающие и нефтеперерабатывающие заводы, фермы, электронные сборщики, — и почти у каждого 3–6 уровней. Самый быстрый «обычный» сборщик электроники работает со скоростью ×8 и держит 8 модулей.</ru><en>Vanilla has three assemblers, a chemical plant, a refinery and furnaces. Here every industry has its own machines: crushers, flotation cells, electrolysers, mixers, casting machines, gas and oil refineries, farms, electronics assemblers, and almost every one has 3–6 tiers. The fastest “regular” electronics assembler runs at ×8 speed with 8 module slots.</en></p>
+  <div class="stats-row">
+    <div class="stat"><span class="v">{{n:counts.placeable_by_type.assembling-machine}}</span><span class="l"><ru>сборочных машин</ru><en>crafting machines</en></span></div>
+    <div class="stat"><span class="v">{{n:counts.placeable_by_type.furnace}}</span><span class="l"><ru>печей и печеподобных</ru><en>furnaces and furnace-likes</en></span></div>
+    <div class="stat"><span class="v">{{n:counts.recipe_categories}}</span><span class="l"><ru>категорий рецептов</ru><en>recipe categories</en></span></div>
+    <div class="stat"><span class="v">{{n:counts.buildings_placeable}}</span><span class="l"><ru>зданий всего, которые можно поставить</ru><en>placeable buildings in total</en></span></div>
+  </div>
+
+  <h3 id="production-modules"><ru>Модули: восемь уровней и квантовый бонус</ru><en>Modules: eight tiers and a quantum bonus</en></h3>
+  <p><ru>Скорость, эффективность и продуктивность здесь идут до <b>8-го</b> уровня. Есть модули <b>очистки</b> (−загрязнение) и <b>загрязнения</b> (+загрязнение, кому-то и это нужно), гибриды «эффективность + очистка», «продуктивность + эффективность», «скорость + эффективность». <a class="x" href="#defects-quality">Модули качества</a> — до 5-го уровня. А на вершине — <b>квантовые модули</b>, которые дают сразу скорость, продуктивность, экономию энергии и чистоту. Выберите семейство и уровень:</ru><en>Speed, efficiency and productivity go up to tier <b>8</b>. There are <b>cleaning</b> modules (−pollution) and <b>polluting</b> ones (+pollution; someone needs that too), hybrids “efficiency + cleaning”, “productivity + efficiency”, “speed + efficiency”. <a class="x" href="#defects-quality">Quality modules</a> go to tier 5. And at the top sit <b>quantum modules</b>, which give speed, productivity, energy saving and cleanliness all at once. Pick a family and a tier:</en></p>
+  <div class="panel" data-widget="module-explorer"></div>
+  <div class="callout hint"><p><ru><b>Модули исследуют платами.</b> Технологии модулей изучают не обычной наукой, а платами модулей — в отдельной <b><a class="x" href="#science-labs">лаборатории модулей</a></b>. Плата скорости, продуктивности, эффективности, очистки… Это {{n:counts.module_research_tokens}} отдельных «научных пакетов» только для модулей.</ru><en><b>Modules are researched with boards.</b> Module technologies are researched not with regular science but with module circuit boards, in a separate <b><a class="x" href="#science-labs">module lab</a></b>. Speed board, productivity board, efficiency board, cleaning board… That is {{n:counts.module_research_tokens}} extra “science packs” just for modules.</en></p></div>
+  <div class="spoiler" data-label="⚛ Что делает квантовый модуль 5-го уровня? Нажмите" data-label-en="⚛ What does a tier-5 quantum module do? Click"><div class="sp-body"><p><ru>+50% скорости, +50% продуктивности, −50% энергии и −50% загрязнения. Одновременно. В одном модуле. Цену рецепта лучше не смотреть до того, как вы до него доберётесь.</ru><en>+50% speed, +50% productivity, −50% energy and −50% pollution. At once. In one module. Better not look at the recipe cost until you get there.</en></p></div></div>
+
+  <h3 id="production-factorissimo"><ru>Заводы внутри зданий</ru><en>Factories inside buildings</en></h3>
+  <div class="split">
+    <div>
+      <p><ru><a class="x g" href="#g-factorissimo">Здание фабрики</a> ставится как обычная постройка, но внутрь можно <b>войти</b>. Внутри — пустой цех, который соединяется с миром снаружи лентами, трубами, сундуками, теплом и сигналами (каждый тип связи открывается исследованием). Переставили здание — внутри всё осталось на месте.</ru><en>A <a class="x g" href="#g-factorissimo">factory building</a> is placed like any building, but you can <b>walk inside</b>. Inside is an empty hall connected to the outside by belts, pipes, chests, heat and signals (each connection type unlocks by research). Move the building and everything inside stays put.</en></p>
+      <table class="ftable">
+        <tr><th><ru>Здание</ru><en>Building</en></th><th><ru>Снаружи</ru><en>Outside</en></th><th><ru>Внутри</ru><en>Inside</en></th><th><ru>Выигрыш площади</ru><en>Area gain</en></th></tr>
+        <tr><td>{{icon:item/factory-1}} 1</td><td class="n">8×8</td><td class="n">30×30</td><td class="n">×14</td></tr>
+        <tr><td>2</td><td class="n">12×12</td><td class="n">46×46</td><td class="n">×14,7</td></tr>
+        <tr><td>3</td><td class="n">16×16</td><td class="n">60×60</td><td class="n">×14</td></tr>
+        <tr><td>{{icon:item/factory-4}} 4 <span class="badge new">Paranoidal</span></td><td class="n">20×20</td><td class="n">90×90</td><td class="n">×20</td></tr>
+      </table>
+      <p><ru>И да, здание фабрики можно поставить <b>внутри</b> другого здания фабрики. Четвёртое здание — собственное дополнение Paranoidal. Внутри нельзя строить артиллерию, ракетные шахты и посадочные площадки; на фабрики не действуют <a class="x" href="#defects">брак и качество</a>. Все ваши фабрики видны в диспетчерской: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.</ru><en>And yes, a factory building can be placed <b>inside</b> another factory building. Building 4 is Paranoidal's own addition. You cannot build artillery, rocket silos or landing pads inside; <a class="x" href="#defects">defects and quality</a> do not apply to factories. All your factories are listed in the dispatcher: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.</en></p>
+    </div>
+    <div class="panel" data-widget="factory-zoom"></div>
+  </div>
+
+  <h3 id="production-memory"><ru>Материопамять: склад для бесконечности</ru><en>Memory storage: a warehouse for infinity</en></h3>
+  <div class="split">
+    <div>
+      <p><ru><b><a class="x g" href="#g-memory">Хранилище материопамяти</a></b> — сундук 6×6, который привязывается к одному предмету одного качества и хранит его в <b>неограниченном</b> количестве. В самом сундуке всегда держится буфер для манипуляторов, остальное уходит «в память». <b>Ёмкость материопамяти</b> делает то же с любой жидкостью или газом. Есть и логистическая версия для роботов.</ru><en>The <b><a class="x g" href="#g-memory">memory storage unit</a></b> is a 6×6 chest bound to one item of one quality that stores it in <b>unlimited</b> amounts. The chest itself always keeps a buffer for inserters; everything else goes “into memory”. The <b>fluid memory unit</b> does the same with any liquid or gas. There is a logistic version for robots, too.</en></p>
+      <p><ru>Подвох в энергии: чем больше лежит, тем больше блок ест. Если питания меньше 90% — обмен с памятью останавливается. А если блок <b>разрушить</b> — всё содержимое пропадёт. Совсем. Качество блока снижает потребление, вплоть до −80% у высшей ступени.</ru><en>The catch is power: the more it holds, the more the unit eats. Below 90% power, exchange with memory stops. And if the unit is <b>destroyed</b>, everything inside is lost. Entirely. Unit quality lowers consumption, down to −80% at the top grade.</en></p>
+    </div>
+    <div class="panel" data-widget="memory-calc"></div>
+  </div>
+
+  <h3 id="production-storage"><ru>Склады, сундуки и сбор хлама</ru><en>Warehouses, chests and junk collection</en></h3>
+  <div class="grid g4">
+    <figure class="deep sprite-card">{{sprite:warehouse-basic|md}}<figcaption><ru>Склад 6×6 на 800 слотов: больше места и больше сторон для манипуляторов</ru><en>6×6 warehouse with 800 slots: more space and more sides for inserters</en></figcaption></figure>
+    <figure class="deep sprite-card">{{icon-lg:item/iron-chest}}<figcaption><ru>Объединение сундуков: несколько сундуков склеиваются в один большой</ru><en>Merging chests: several chests become one big chest</en></figcaption></figure>
+    <figure class="deep sprite-card">{{sprite:Schall-pickup-tower-R128|md}}<figcaption><ru>Башня сбора подбирает предметы с земли в радиусе до 128 клеток. Розовые шарики после <a class="x" href="#enemies">боя</a> соберутся сами</ru><en>The pickup tower collects items from the ground within up to 128 tiles. Pink orbs after a <a class="x" href="#enemies">battle</a> collect themselves</en></figcaption></figure>
+    <figure class="deep sprite-card">{{sprite:zcs-trash-landfill|md}}<figcaption><ru>Свалка уничтожает мусор ценой <a class="x" href="#world-pollution">загрязнения</a></ru><en>The landfill destroys junk at the cost of <a class="x" href="#world-pollution">pollution</a></en></figcaption></figure>
+  </div>
+  <div class="quip rv"><ru>Ваниль учит строить «главную шину». Paranoidal учит строить главную шину внутри здания, внутри другого здания, рядом со складом бесконечности, который отключится, если вы забудете про электростанцию.</ru><en>Vanilla teaches you to build a “main bus”. Paranoidal teaches you to build a main bus inside a building inside another building, next to an infinity warehouse that shuts off if you forget about the power plant.</en></div>
+</section>

@@ -1,0 +1,97 @@
+<!-- CHAPTER 03 — Defects & quality (ic-more-qualities, Paranoidal's own system).
+     Widgets: quality-ladder, defect-sim, workshop-sim, quality-calc, qc-loop (animated SVG).
+     Recycler stats: dump guide-dump-20261025 (furnace recycler-1..3, recycler: crafting_speed, module_slots, energy_usage).
+     Facts: in-game tips zzz-defects*/zzz-quality* (dump tips-and-tricks-item), ic-more-qualities/scripts/defects/model.lua. -->
+<section id="defects" class="chapter" data-num="03" data-icon="assets/icons/technology__ic-defect-control-1.webp" data-toc="Брак и качество|Defects & quality">
+  <header class="ch-head">
+    <div class="ch-num"><ru>Глава 03</ru><en>Chapter 03</en></div>
+    <h2><ru>Брак и качество</ru><en>Defects and quality</en></h2>
+    <p class="ch-lead"><ru>В ванили качество бывает только хорошим. Здесь у шкалы есть дно: ваши первые здания выходят кривыми, медленными и прожорливыми. Зато у шкалы нет и потолка — там, наверху, сорок ступеней вплоть до «Божественного».</ru><en>In vanilla, quality only goes up. Here the scale has a floor: your first buildings come out crooked, slow and power-hungry. But the scale has no ceiling either: up there are forty grades all the way to “Extreme”.</en></p>
+    <div class="ch-tags"><span>{{n:counts.qualities_defect}} <ru>СТУПЕНЕЙ БРАКА</ru><en>DEFECT GRADES</en></span><span>{{n:counts.qualities_positive}} <ru>СТУПЕНЕЙ КАЧЕСТВА</ru><en>QUALITY GRADES</en></span><span><ru>МАСТЕРСКАЯ ДОВОДКИ</ru><en>REFINEMENT WORKSHOP</en></span><span><ru>КОНТРОЛЬНЫЙ ПОСТ</ru><en>CONTROL POST</en></span></div>
+    {{sprite:ic-refine-workshop|ch-art}}
+  </header>
+
+  <h3 id="defects-ladder"><ru>Лестница из {{n:counts.qualities}} ступеней</ru><en>A ladder of {{n:counts.qualities}} grades</en></h3>
+  <p><ru>Слева — пять ступеней брака, по центру — обычное качество, справа — сорок ступеней качества, сгруппированных в семейства: Хорошее, Редкое, Эпическое, Легендарное, Уникальное, Астральное, Квантовое… и несколько одиночных вершин, о которых лучше не говорить вслух. Наведите курсор на ступень, чтобы увидеть её название, уровень и шанс перехода дальше.</ru><en>On the left are five defect grades, in the middle is normal, on the right forty quality grades grouped into families: Uncommon, Rare, Epic, Legendary, Unique, Astral, Quantum… and a few lonely summits better left unnamed. Hover a grade to see its name, level and chance to go further.</en></p>
+  <div class="panel" data-widget="quality-ladder"></div>
+
+  <h3 id="defects-what"><ru>Брак: что это и откуда берётся</ru><en>Defects: what they are and where they come from</en></h3>
+  <div class="split">
+    <div>
+      <p><ru><a class="x g" href="#g-defect">Брак</a> — это пять ступеней ниже обычного качества: от «−1: Нестандартное» до «−5: Бракованное». Его получают только <b>готовые изделия эпохи красной науки</b>: здания, броня, капсулы, ремонтные наборы, научные пакеты. Материалы — руда, пластины, шестерни, платы, трубы — браком не бывают <b>никогда</b>.</ru><en><a class="x g" href="#g-defect">Defects</a> are five grades below normal: from “−1: Substandard” to “−5: Defective”. Only <b>finished items of the red-science era</b> get them: buildings, armor, capsules, repair packs, science packs. Materials such as ore, plates, gears, circuits and pipes are <b>never</b> defective.</en></p>
+      <p><ru>Ступень выпадает случайно при каждом крафте — ручном или в машине. В самом начале игры распределение жестокое: 90% всего, что вы сделаете, выйдет с браком «−5». Двигайте ползунок «Контроль качества» в симуляторе и смотрите, как меняется жизнь.</ru><en>A grade is rolled on every craft, by hand or in a machine. At the very start the distribution is brutal: 90% of everything you make comes out at “−5”. Move the “Quality control” slider in the simulator and watch life change.</en></p>
+      <div class="callout tip"><p><ru>Ленты, подземные ленты, разделители, погрузчики, оружие, боеприпасы, турели, модули, техника, робопорты и всё, что открывается после зелёной науки, брака не получают вообще.</ru><en>Belts, undergrounds, splitters, loaders, weapons, ammo, turrets, modules, vehicles, roboports and everything unlocked after green science are never defective.</en></p></div>
+    </div>
+    <div class="deep">
+      <table class="ftable">
+        <tr><th><ru>Ступень</ru><en>Grade</en></th><th><ru>Полезные свойства</ru><en>Useful stats</en></th><th><ru>Энергия</ru><en>Energy</en></th><th><ru>Расход залежи бура</ru><en>Drill resource drain</en></th></tr>
+        <tr><td>{{icon:quality/ic-defect-5}} −5</td><td class="n">33%</td><td class="n">×3</td><td class="n">600%</td></tr>
+        <tr><td>{{icon:quality/ic-defect-4}} −4</td><td class="n">47%</td><td class="n"><ru>×2,14</ru><en>×2.14</en></td><td class="n">500%</td></tr>
+        <tr><td>{{icon:quality/ic-defect-3}} −3</td><td class="n">60%</td><td class="n"><ru>×1,67</ru><en>×1.67</en></td><td class="n">400%</td></tr>
+        <tr><td>{{icon:quality/ic-defect-2}} −2</td><td class="n">73%</td><td class="n"><ru>×1,36</ru><en>×1.36</en></td><td class="n">300%</td></tr>
+        <tr><td>{{icon:quality/ic-defect-1}} −1</td><td class="n">87%</td><td class="n"><ru>×1,15</ru><en>×1.15</en></td><td class="n">200%</td></tr>
+        <tr><td>{{icon:quality/normal}} 0</td><td class="n">100%</td><td class="n">×1</td><td class="n">100%</td></tr>
+      </table>
+      <p class="small-note muted"><ru>Бракованный бур «−5» выедает месторождение в шесть раз быстрее. Залежь не бесконечна, а RSO и так скуп.</ru><en>A “−5” drill eats the ore patch six times faster. Patches are not infinite, and RSO is stingy as it is.</en></p>
+    </div>
+  </div>
+
+  <h3 id="defects-control"><ru>Контроль качества 1–10</ru><en>Quality control 1–10</en></h3>
+  <p><ru>Исследования <a class="x g" href="#g-control">«Контроль качества»</a> стоят 10, 20, … 100 красных пакетов — всего 550, — и не требуют ничего другого. Каждые два уровня убирают худшую возможную ступень, нечётные сдвигают распределение наполовину. На десятом уровне новый брак больше не появляется.</ru><en>The <a class="x g" href="#g-control">“Quality control”</a> research levels cost 10, 20, … 100 red packs (550 in total) and require nothing else. Every two levels remove the worst possible grade, odd levels shift the distribution halfway. At level ten no new defects appear.</en></p>
+  <div class="panel" data-widget="defect-sim"></div>
+  <div class="callout warn">
+    <p><ru><b>Спойлер, без которого не обойтись:</b> «Контроль качества 10» — обязательное условие для <b>логистического (зелёного) пакета</b>. Пока брак не побеждён, зелёной науки не будет. Ваниль приучила вас бежать к зелёной науке через десять минут после старта. Здесь сначала придётся навести порядок на производстве.</ru><en><b>A spoiler you cannot avoid:</b> “Quality control 10” is required for the <b>logistic (green) science pack</b>. Until defects are beaten there is no green science. Vanilla taught you to rush green science ten minutes after landing. Here you clean up your production first.</en></p>
+    <p class="small-note"><ru>Утешение: все десять уровней вместе поднимают <a class="x" href="#science-evolution">эволюцию жуков</a> примерно как одна обычная технология.</ru><en>Consolation: all ten levels together raise <a class="x" href="#science-evolution">bug evolution</a> about as much as one ordinary technology.</en></p>
+  </div>
+
+  <h3 id="defects-buildings"><ru>Жизнь с бракованными зданиями</ru><en>Living with defective buildings</en></h3>
+  <div class="grid g3">
+    <div class="panel"><div class="panel-title">{{icon:item/assembling-machine-1}} <ru>Машины и печи</ru><en>Machines and furnaces</en></div><p><ru>Работают медленнее и тратят больше энергии: у «−5» треть скорости и втрое больший расход. Твердотопливные сжигают больше топлива, электрические забирают больше электричества.</ru><en>They work slower and use more energy: a “−5” machine has a third of the speed and triple the consumption. Burner ones burn more fuel, electric ones draw more power.</en></p></div>
+    <div class="panel"><div class="panel-title">{{icon:item/iron-chest}} <ru>Сундуки, лаборатории, аккумуляторы</ru><en>Chests, labs, accumulators</en></div><p><ru>У сундука меньше слотов, лаборатория медленнее исследует, аккумулятор хранит меньше энергии. И у всех меньше здоровья.</ru><en>A chest has fewer slots, a lab researches slower, an accumulator stores less energy. And all of them have less health.</en></p></div>
+    <div class="panel"><div class="panel-title">{{icon:electric-pole/small-electric-pole}} <ru>Столбы</ru><en>Poles</en></div><p><ru>У столба «−5» зона покрытия меньше на клетку, а провод короче. Ровная сетка столбов из ванили внезапно перестаёт смыкаться.</ru><en>A “−5” pole covers one tile less and has a shorter wire. Your neat vanilla pole grid suddenly stops connecting.</en></p></div>
+  </div>
+  <p><ru>Бракованными зданиями вполне можно пользоваться — они просто хуже. Ленты брак не замедляет. Главная ловушка — <b>ингредиенты</b>: рецепт принимает предметы только одного качества, а результат не бывает лучше ингредиентов. Столб «−3» и обычная лампа в один рецепт не лягут.</ru><en>Defective buildings are perfectly usable, just worse. Belts are not slowed. The main trap is <b>ingredients</b>: a recipe accepts items of a single quality, and the result is never better than its ingredients. A “−3” pole and a normal lamp will not go into one recipe.</en></p>
+
+  <h3 id="defects-workshop"><ru>Мастерская доводки</ru><en>The refinement workshop</en></h3>
+  <div class="split rev">
+    <figure class="deep sprite-card">{{sprite:ic-refine-workshop|md}}<figcaption><ru>Мастерская доводки 3×3: твердотопливный сборочный автомат + 10 ремонтных наборов + 5 базовых плат</ru><en>Refinement workshop, 3×3: a burner assembler + 10 repair packs + 5 basic circuit boards</en></figcaption></figure>
+    <div>
+      <p><ru>Уже сделанный брак сам не исчезает — его исправляет <b>мастерская доводки</b>. Кладёте изделие и ремонтные наборы, мастерская расходует их прочность, как лаборатория науку. Одна попытка на изделие: в обычном режиме 90% — на ступень выше (и ещё по 10% на каждую следующую), 10% — без изменений. Хуже изделие не становится и не пропадает.</ru><en>Existing defects do not go away by themselves; the <b>refinement workshop</b> fixes them. Insert the item and repair packs, and the workshop consumes their durability the way a lab consumes science. One attempt per item: in normal mode 90% go one grade up (plus 10% for each further step), 10% stay unchanged. The item never gets worse and never disappears.</en></p>
+      <p><ru>Три режима: <b>Обычный</b> (быстро, наборов уходит больше), <b>Точный</b> (×5 времени, гарантированно +2 ступени), <b>Эталонный</b> (×20 времени, сразу обычное качество). Сравните их в симуляторе.</ru><en>Three modes: <b>Normal</b> (fast, uses the most packs), <b>Precise</b> (×5 time, guaranteed +2 grades), <b>Reference</b> (×20 time, straight to normal). Compare them in the simulator.</en></p>
+    </div>
+  </div>
+  <div class="panel" data-widget="workshop-sim"></div>
+
+  <h3 id="defects-post"><ru>Контрольный пост и замкнутый цикл</ru><en>The control post and the closed loop</en></h3>
+  <p><ru>Контрольный пост принимает партию по заказу и сам раскладывает изделия на три выхода: годное — вперёд, брак — влево (на доводку), прочее — вправо. Электричество ему не нужно. Классическая схема: производство → пост → мастерская → обратно на пост. Брак ходит по кругу, пока не станет обычным.</ru><en>The control post takes an order and sorts items to three outputs by itself: good items forward, defects left (to refinement), anything else right. It needs no electricity. The classic layout: production → post → workshop → back to the post. Defects circle until they become normal.</en></p>
+  <div class="panel" data-widget="qc-loop"></div>
+
+  <h3 id="defects-modes"><ru>Режимы производства</ru><en>Production modes</en></h3>
+  <div class="grid g3">
+    <div class="panel"><div class="panel-title">I · <ru>Обычный</ru><en>Normal</en></div><p><ru>Всё как всегда. Брак по текущему уровню контроля.</ru><en>Business as usual. Defects follow the current control level.</en></p></div>
+    <div class="panel"><div class="panel-title">II · <ru>Точный</ru><en>Careful</en></div><p><ru>Операция в 5 раз дольше, энергия на операцию ×25. Брак — как при контроле на 4 уровня выше, модули качества — как 3 броска.</ru><en>An operation takes 5× longer, energy per operation ×25. Defects as if control were 4 levels higher; quality modules roll as if 3 times.</en></p></div>
+    <div class="panel"><div class="panel-title">III · <ru>Эталонный</ru><en>Reference</en></div><p><ru>В 20 раз дольше, энергия на операцию ×400. Новые изделия без брака, модули качества — как 10 бросков. Лаборатории и буры в начале игры стоит делать именно так.</ru><en>20× longer, energy per operation ×400. New items are never defective; quality modules roll as if 10 times. Make your early labs and drills this way.</en></p></div>
+  </div>
+
+  <h3 id="defects-quality"><ru>Положительное качество</ru><en>Positive quality</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>После «Контроля качества 10» и зелёной науки открываются <b>модули качества 1–5</b> (каждый замедляет машину на 20%). Сила модуля зависит от качества ингредиентов: у обычного шанс перехода 0,204 — вдвое щедрее ванили, где он 0,1, — и модуль 1 даёт <b>+2,04%</b>, модуль 5 — +10,2%. Это те же числа, что игра показывает в подсказке модуля, а там же виден список для каждой следующей ступени: 2%, 1,96%, 1,92%…</ru><en>After “Quality control 10” and green science, <b>quality modules 1–5</b> unlock (each slows a machine by 20%). A module's strength depends on the ingredients' quality: normal has a next-grade chance of 0.204, twice as generous as vanilla's 0.1, so module 1 gives <b>+2.04%</b> and module 5 gives +10.2%. These are the same numbers the game shows in the module tooltip, along with the list for every further grade: 2%, 1.96%, 1.92%…</en></p>
+      <p><ru>А ещё есть стартовая настройка «Качество для всего производства», включённая по умолчанию: модули качества работают в печах и бурах, и даже <b>руда и пластины</b> могут выйти качественными.</ru><en>There is also the startup setting “Quality for all production”, enabled by default: quality modules work in furnaces and drills, and even <b>ore and plates</b> can come out with quality.</en></p>
+      <p><ru>Каждое следующее повышение чуть труднее: шанс перехода падает на 0,004 за ступень. Иногда результат перескакивает сразу на две-три ступени. Поиграйте с калькулятором.</ru><en>Each further step is slightly harder: the next-grade chance drops by 0.004 per grade. Sometimes the result jumps two or three grades at once. Play with the calculator.</en></p>
+    </div>
+    <div class="panel" data-widget="quality-calc"></div>
+  </div>
+
+  <h3 id="defects-recycling"><ru>Переработка: четыре переработчика вместо одного</ru><en>Recycling: four recyclers instead of one</en></h3>
+  <p><ru>Переработчики 1–4 разбирают изделие обратно и возвращают в среднем 25% ингредиентов. Отличаются они скоростью, слотами модулей и потреблением: первый доступен с самого начала, но медленный и без слотов; каждый следующий быстрее, четвёртый — вчетверо быстрее первого и с четырьмя слотами. Бракованное изделие при переработке даёт <b>обычные</b> компоненты: дорогой, но рабочий способ избавиться от брака. Всего в игре {{n:counts.recipes_recycling}} рецептов переработки — по одному почти на каждый предмет.</ru><en>Recyclers 1–4 take an item apart and return 25% of its ingredients on average. They differ in speed, module slots and power: the first is available from the very start but is slow and has no slots; each next one is faster, and the fourth is four times faster than the first with four slots. A defective item recycles into <b>normal</b> components: an expensive but working way to get rid of defects. The game has {{n:counts.recipes_recycling}} recycling recipes, one for almost every item.</en></p>
+  <div class="grid g4">
+    <figure class="deep sprite-card rc-card">{{icon-lg:furnace/recycler-1}}<figcaption><b><ru>Переработчик 1</ru><en>Recycler 1</en></b><span class="rc-stats"><span><ru>скорость</ru><en>speed</en> <b>0,125</b></span><span><ru>нет слотов</ru><en>no module slots</en></span><span>45 <ru>кВт</ru><en>kW</en></span></span></figcaption></figure>
+    <figure class="deep sprite-card rc-card">{{icon-lg:furnace/recycler-2}}<figcaption><b><ru>Переработчик 2</ru><en>Recycler 2</en></b><span class="rc-stats"><span><ru>скорость</ru><en>speed</en> <b>0,25</b></span><span><ru>2 слота модулей</ru><en>2 module slots</en></span><span>90 <ru>кВт</ru><en>kW</en></span></span></figcaption></figure>
+    <figure class="deep sprite-card rc-card">{{icon-lg:furnace/recycler-3}}<figcaption><b><ru>Переработчик 3</ru><en>Recycler 3</en></b><span class="rc-stats"><span><ru>скорость</ru><en>speed</en> <b>0,375</b></span><span><ru>3 слота модулей</ru><en>3 module slots</en></span><span>135 <ru>кВт</ru><en>kW</en></span></span></figcaption></figure>
+    <figure class="deep sprite-card rc-card">{{icon-lg:furnace/recycler}}<figcaption><b><ru>Переработчик 4</ru><en>Recycler 4</en></b><span class="rc-stats"><span><ru>скорость</ru><en>speed</en> <b>0,5</b></span><span><ru>4 слота модулей</ru><en>4 module slots</en></span><span>180 <ru>кВт</ru><en>kW</en></span></span></figcaption></figure>
+  </div>
+
+  <div class="quip rv"><ru>В ванили вы гордились легендарным сундуком. Здесь вы гордитесь тем, что ваш сундук наконец-то <i>обычный</i>.</ru><en>In vanilla you were proud of a legendary chest. Here you are proud that your chest is finally <i>normal</i>.</en></div>
+  <p class="see"><ru>Панель контроля качества открывается сочетанием <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Q</kbd>, а в Helmod есть окно «Вероятность качества» — подробнее в главе <a class="x" href="#qol">«Удобства»</a>.</ru><en>The quality control panel opens with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Q</kbd>, and Helmod has a “Quality probability” window; see <a class="x" href="#qol">“Quality of life”</a>.</en></p>
+</section>

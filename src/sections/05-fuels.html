@@ -1,0 +1,44 @@
+<!-- CHAPTER 05 — Fuels & heat value. Widgets: fuel-scatter (fluids: kJ vs emission multiplier), solid-fuels (sortable table), vehicle-kpd.
+     Facts: records.fuels_fluid / fuels_solid / locomotives / cars; docs/FAQ.md (coal chain); zzzparanoidal energy-port (barrels burn, ×100). -->
+<section id="fuels" class="chapter" data-num="05" data-icon="assets/icons/technology__OilBurning.webp" data-toc="Топливо и теплотворность|Fuels & heat value">
+  <header class="ch-head">
+    <div class="ch-num"><ru>Глава 05</ru><en>Chapter 05</en></div>
+    <h2><ru>Топливо и теплотворность</ru><en>Fuels and heat value</en></h2>
+    <p class="ch-lead"><ru>В ванили выбор топлива — это «уголь или твёрдое топливо». Здесь горит почти всё: {{n:counts.fuels_solid}} видов твёрдого топлива и {{n:counts.fuels_fluid}} горючих жидкостей и газов. У каждого — своя теплотворность, свой дым и свой характер.</ru><en>In vanilla, picking a fuel means “coal or solid fuel”. Here almost everything burns: {{n:counts.fuels_solid}} solid fuels and {{n:counts.fuels_fluid}} combustible liquids and gases. Each has its own heat value, its own smoke and its own temper.</en></p>
+    <div class="ch-tags"><span><ru>ТЕПЛОТВОРНОСТЬ</ru><en>HEAT VALUE</en></span><span><ru>МНОЖИТЕЛЬ ЗАГРЯЗНЕНИЯ</ru><en>EMISSION MULTIPLIER</en></span><span><ru>УСКОРЕНИЕ ТЕХНИКИ</ru><en>VEHICLE ACCELERATION</en></span><span><ru>БОЧКИ ГОРЯТ</ru><en>BARRELS BURN</en></span></div>
+    {{sprite:oil-steam-boiler-5|ch-art}}
+  </header>
+
+  <h3 id="fuels-two"><ru>Два числа, которые решают всё</ru><en>Two numbers that decide everything</en></h3>
+  <div class="grid g2">
+    <div class="panel hz"><div class="panel-title"><ru>Теплотворность</ru><en>Heat value</en></div><p><ru><a class="x g" href="#g-heat">Теплотворность</a> — сколько энергии в одной штуке или одной единице жидкости. Уголь — 4 МДж, коксовые пеллеты — 15, обогащённое топливо — 50, ракетное — 100. У жидкостей счёт идёт на килоджоули за единицу: водород — 35 кДж, бутан — 710, дизель — 700.</ru><en><a class="x g" href="#g-heat">Heat value</a> is how much energy one item or one unit of fluid holds. Coal is 4 MJ, coke pellets 15, enriched fuel 50, rocket fuel 100. Fluids count kilojoules per unit: hydrogen 35 kJ, butane 710, diesel 700.</en></p></div>
+    <div class="panel hz"><div class="panel-title"><ru>Множитель загрязнения</ru><en>Emission multiplier</en></div><p><ru><a class="x g" href="#g-emissions">Множитель загрязнения</a> умножает дым установки, которая это топливо сжигает. Уголь — ×3, древесный уголь — ×1,25, обогащённое топливо — ×0,7, гидразин — ×0,1. А большинство химических жидкостей коптят на ×10, резина и сырая нефть — на ×15.</ru><en>The <a class="x g" href="#g-emissions">emission multiplier</a> multiplies the smoke of whatever burns the fuel. Coal is ×3, charcoal ×1.25, enriched fuel ×0.7, hydrazine ×0.1. Most chemical fluids smoke at ×10, rubber and crude oil at ×15.</en></p></div>
+  </div>
+  <p><ru>Вместе с <a class="x" href="#energy-kpd">КПД</a> котла эти два числа и есть экономика вашей энергетики: <b>сколько топлива</b> вы производите и <b>сколько смога</b> получите в ответ. Плохой выбор топлива не просто дороже — он злит <a class="x" href="#enemies">жуков</a>.</ru><en>Together with boiler <a class="x" href="#energy-kpd">efficiency</a>, these two numbers are the economics of your power: <b>how much fuel</b> you must produce and <b>how much smog</b> you get back. A bad fuel choice is not only more expensive, it angers the <a class="x" href="#enemies">bugs</a>.</en></p>
+
+  <h3 id="fuels-fluids"><ru>Карта горючих жидкостей</ru><en>A map of combustible fluids</en></h3>
+  <p><ru>Каждая точка — горючая жидкость или газ сборки, цвет — её цвет в трубе. По горизонтали — теплотворность (логарифмическая шкала), по вертикали — множитель загрязнения. Ищите правый нижний угол: много энергии, мало дыма. Фильтруйте газы и жидкости, наводите курсор — названия появятся.</ru><en>Each dot is a combustible fluid or gas of the modpack, coloured as it looks in a pipe. Horizontal: heat value (log scale); vertical: emission multiplier. Look for the bottom right corner: lots of energy, little smoke. Filter gases and liquids, hover for names.</en></p>
+  <div class="panel" data-widget="fuel-scatter"></div>
+  <div class="grid g3">
+    <div class="callout tip"><p><ru><b>Дизель</b> — 700 кДж при ×0,8. Редкий случай, когда вкусно и полезно одновременно.</ru><en><b>Diesel</b>: 700 kJ at ×0.8. A rare case of tasty and healthy at once.</en></p></div>
+    <div class="callout hint"><p><ru><b>Водород и гидразин</b> — почти без дыма, но и энергии в них кот наплакал. Хороши, когда смог важнее объёмов.</ru><en><b>Hydrogen and hydrazine</b>: almost no smoke, but barely any energy. Good when smog matters more than volume.</en></p></div>
+    <div class="callout warn"><p><ru><b>Жидкая резина</b> — 1,2 МДж и ×15. Горит роскошно. Жуки оценят.</ru><en><b>Liquid rubber</b>: 1.2 MJ and ×15. Burns gorgeously. The bugs will appreciate it.</en></p></div>
+  </div>
+  <p><ru>Не обязательно гонять жидкость по трубам: бочка с горючим тоже топливо, причём теплотворность бочки — <b>×100</b> от единицы жидкости. Жидкое топливо в бочках можно возить поездом к удалённым котлам. А вот <a class="x" href="#chemistry-fire">огнеопасность</a> никто не отменял.</ru><en>You do not have to pipe it: a barrel of fuel is fuel too, with <b>×100</b> the heat value of a unit. Barrelled fuel can ride a train to remote boilers. <a class="x" href="#chemistry-fire">Flammability</a> still applies, though.</en></p>
+
+  <h3 id="fuels-solid"><ru>Твёрдое топливо: от полена до ядерного стержня</ru><en>Solid fuels: from a log to a nuclear rod</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>Угольная цепочка — первое, чему учит сборка. Уголь можно раздробить (из куска выходит больше дроблёного угля, чем было угля), обжечь в кокс, восстановить в углерод, спрессовать в коксовые пеллеты на 15 МДж. Каждый шаг повышает отдачу с одного куска — но сам цех жжёт топливо, ест электричество и дымит.</ru><en>The coal chain is the first lesson of the modpack. Coal can be crushed (one lump yields more crushed coal than it was), roasted into coke, reduced into carbon, pressed into 15 MJ coke pellets. Every step raises the yield per lump, but the plant itself burns fuel, eats power and smokes.</en></p>
+      <div class="quip"><ru>Всё вышеописанное — только ради вашего фана!</ru><en>All of the above is purely for your fun!</en><cite><ru>— FAQ сборки об угольной цепочке</ru><en>— the modpack FAQ on the coal chain</en></cite></div>
+      <p><ru>Дерево — тоже полноценная ветка: древесные пеллеты, брикеты на 20 МДж, древесный уголь. И да, деревянные сундуки, заборы, трубы и столбы горят. Гигантский деревянный сундук — это 400 МДж. Самый уютный способ отопления.</ru><en>Wood is a full branch too: wood pellets, 20 MJ bricks, charcoal. And yes, wooden chests, fences, pipes and poles burn. A giga wooden chest is 400 MJ. The coziest heating method there is.</en></p>
+    </div>
+    <div class="panel" data-widget="solid-fuels"></div>
+  </div>
+  <div class="spoiler" data-label="👽 Топливо, которое ОЧИЩАЕТ воздух. Нажмите, чтобы узнать" data-label-en="👽 A fuel that CLEANS the air. Click to find out"><div class="sp-body dossier" data-stamp="X-FILES" data-stamp-en="X-FILES"><p><ru>У инопланетных артефактов множитель загрязнения бывает <b>отрицательным</b>. Фиолетовый артефакт горит на 30 МДж с множителем <b>−1,9</b>: сжигая его, котёл вычищает смог вместо того, чтобы его производить. Артефакты добываются из гнёзд жуков. Получается, у войны есть экологическая сторона.</ru><en>Alien artifacts can have a <b>negative</b> emission multiplier. The purple artifact burns for 30 MJ at <b>−1.9</b>: a boiler burning it cleans smog instead of producing it. Artifacts come from bug nests. So war has an ecological side after all.</en></p></div></div>
+
+  <h3 id="fuels-vehicles"><ru>Топливо для техники и КПД двигателей</ru><en>Vehicle fuel and engine efficiency</en></h3>
+  <p><ru>Для поездов и машин у топлива есть ещё два свойства: ускорение и максимальная скорость. Ядерное топливо разгоняет вдвое быстрее и даёт +25% к скорости. А у самих двигателей тоже есть КПД — и он разбросан от смешного до невероятного.</ru><en>For trains and vehicles, fuel has two more properties: acceleration and top speed. Nuclear fuel doubles acceleration and adds +25% speed. Engines themselves have an efficiency too, ranging from laughable to unbelievable.</en></p>
+  <div class="panel" data-widget="vehicle-kpd"></div>
+  <p class="see"><ru>Батарейные электровозы и маглев не жгут топливо вовсе — они ездят на заряженных аккумуляторных блоках. Подробнее в главе <a class="x" href="#logistics-trains">«Логистика»</a>.</ru><en>Battery-electric locomotives and the maglev burn no fuel at all: they run on charged battery packs. See <a class="x" href="#logistics-trains">“Logistics”</a>.</en></p>
+</section>

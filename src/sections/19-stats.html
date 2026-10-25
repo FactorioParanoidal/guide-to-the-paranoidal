@@ -1,0 +1,62 @@
+<!-- CHAPTER 19 — Statistics. Widgets: stat-dashboard (counts), recipe-kinds (counts.recipes_*), records-board (records.*).
+     #facts-list feeds the “Random fact” button in the top bar: keep every <li> bilingual and true (numbers via n: placeholders). -->
+<section id="stats" class="chapter" data-num="19" data-icon="assets/icons/technology__laboratory-productivity-1.webp" data-toc="Статистика|Statistics">
+  <header class="ch-head">
+    <div class="ch-num"><ru>Глава 19</ru><en>Chapter 19</en></div>
+    <h2><ru>Статистика: Paranoidal в цифрах</ru><en>Statistics: Paranoidal in numbers</en></h2>
+    <p class="ch-lead"><ru>Все числа на этой странице посчитаны скриптом прямо по игровым данным текущей сборки. Ниже — общая картина, рекорды и немного занимательной арифметики.</ru><en>Every number on this page is computed by a script straight from the current modpack's game data. Below: the big picture, the records and a bit of entertaining arithmetic.</en></p>
+    <div class="ch-tags"><span>{{n:counts.prototypes_total}} <ru>ПРОТОТИПОВ</ru><en>PROTOTYPES</en></span><span>{{n:counts.prototype_types}} <ru>ТИПОВ ПРОТОТИПОВ</ru><en>PROTOTYPE TYPES</en></span><span>{{n:counts.mods_enabled}} <ru>МОДОВ В ПРОФИЛЕ</ru><en>MODS IN THE PROFILE</en></span></div>
+    {{sprite:paranoidal-beta8-hyper-lab|ch-art}}
+  </header>
+
+  <h3 id="stats-overview"><ru>Общая картина</ru><en>The big picture</en></h3>
+  <div data-widget="stat-dashboard"></div>
+
+  <h3 id="stats-recipes"><ru>Из чего состоят {{n:counts.recipes_total_prototypes}} рецептов</ru><en>What the {{n:counts.recipes_total_prototypes}} recipes are made of</en></h3>
+  <p><ru>Прототипов рецептов в игре почти девять с половиной тысяч (из них {{n:counts.recipes_recycling}} — <a class="x" href="#defects-recycling">переработка</a>), но не все они — то, что вы крафтите. Многие скрыты или служебные. Вот как делятся доступные игроку:</ru><en>The game has almost nine and a half thousand recipe prototypes ({{n:counts.recipes_recycling}} of them <a class="x" href="#defects-recycling">recycling</a>), but not all of them are things you craft. Many are hidden or technical. Here is how the player-accessible ones split:</en></p>
+  <div class="panel" data-widget="recipe-kinds"></div>
+
+  <h3 id="stats-records"><ru>Рекорды сборки</ru><en>Modpack records</en></h3>
+  <div data-widget="records-board"></div>
+
+  <h3 id="stats-fun"><ru>Занимательная арифметика</ru><en>Entertaining arithmetic</en></h3>
+  <div class="grid g3">
+    <div class="stat rv"><span class="v"><ru>2,2 года</ru><en>2.2 years</en></span><span class="l"><ru>займёт изучение всех конечных <a class="x" href="#science-tree">технологий</a>, если лаборатории будут съедать по одному пакету в секунду без перерыва</ru><en>to research every finite <a class="x" href="#science-tree">technology</a> if your labs eat one pack per second non-stop</en></span></div>
+    <div class="stat rv"><span class="v"><ru>40 минут</ru><en>40 minutes</en></span><span class="l"><ru>длится самый долгий рецепт игры — техническое обслуживание добывающего шаттла</ru><en>is the longest recipe in the game: refurbishing a mining shuttle</en></span></div>
+    <div class="stat rv"><span class="v">{{n:counts.item_subgroups}}</span><span class="l"><ru>подгрупп в меню крафта. Если вы думали, что потеряли предмет, — вы просто ещё не долистали</ru><en>subgroups in the crafting menu. If you think you lost an item, you just haven't scrolled far enough</en></span></div>
+    <div class="stat rv"><span class="v">×{{fmt:records.assemblers_fastest.0.speed|raw}}</span><span class="l"><ru>скорость самой быстрой «сборочной машины» — огромного <a class="x" href="#bio-clean">био-сада</a>. Растения не любят ждать</ru><en>is the speed of the fastest “crafting machine”, the huge <a class="x" href="#bio-clean">bio garden</a>. Plants hate waiting</en></span></div>
+    <div class="stat rv"><span class="v">15</span><span class="l"><ru>ингредиентов у самого сложного рецепта — интеллектуального арифметико-логического устройства</ru><en>ingredients in the most complex recipe, the intelligent I/O interface</en></span></div>
+    <div class="stat rv"><span class="v">{{n:counts.custom_inputs}}</span><span class="l"><ru>управляющих команд объявлено модами. Хорошо, что большинство без клавиш по умолчанию</ru><en>control inputs declared by mods. Good thing most have no default keys</en></span></div>
+  </div>
+
+  <h3 id="stats-facts"><ru>Колода фактов</ru><en>A deck of facts</en></h3>
+  <p><ru>Кнопка «🎲 Случайный факт» наверху тянет карту отсюда.</ru><en>The “🎲 Random fact” button at the top draws a card from here.</en></p>
+  <ul id="facts-list" class="facts">
+    <li><ru>Где-то очень далеко от старта стоит Лабиринт Минотавра. И ещё 21 <a class="x" href="#world-legendary">легендарная руина</a>, которые нельзя сломать, пока их не пройдёшь.</ru><en>Somewhere very far from the start stands the Labyrinth of the Minotaur, plus 21 more <a class="x" href="#world-legendary">legendary ruins</a> that cannot be broken until you beat them.</en></li>
+    <li><ru>Стартовый котёл работает с КПД 50%: половина угля улетает в трубу. Пятый котёл — уже 98%.</ru><en>The starter boiler runs at 50% efficiency: half of the coal goes up the chimney. Boiler five reaches 98%.</en></li>
+    <li><ru>На планете нет ни железной руды, ни медной, ни камня. Всё добывается из шести «сложных» руд.</ru><en>The planet has no iron ore, no copper ore and no stone. Everything comes from six “compound” ores.</en></li>
+    <li><ru>Пока не изучен «Контроль качества 10», зелёной науки не будет.</ru><en>No green science until “Quality control 10” is researched.</en></li>
+    <li><ru>Качество в сборке — {{n:counts.qualities}} ступеней, включая 5 ступеней брака. Самая высокая называется «Божественное».</ru><en>Quality has {{n:counts.qualities}} grades, including 5 defect grades. The highest is called “Extreme”.</en></li>
+    <li><ru>Фиолетовый инопланетный артефакт при сжигании очищает воздух: множитель загрязнения −1,9.</ru><en>A purple alien artifact cleans the air when burned: an emission multiplier of −1.9.</en></li>
+    <li><ru>У маглева КПД 200%. У боевого самолёта — 7%.</ru><en>The maglev runs at 200% efficiency. The gunship at 7%.</en></li>
+    <li><ru>Гипер-лаба занимает 98×78 клеток, ест 1 ГВт и исследует в 128 раз быстрее обычной лаборатории.</ru><en>The hyper lab covers 98×78 tiles, eats 1 GW and researches 128 times faster than a regular lab.</en></li>
+    <li><ru>Первая ракета взрывается на старте с вероятностью 50%.</ru><en>The first rocket explodes at launch with a 50% chance.</en></li>
+    <li><ru>«Теория сверхсветового перемещения A» требует 2 000 000 красных пакетов.</ru><en>“Faster than light theory A” requires 2,000,000 red packs.</en></li>
+    <li><ru>Среди врагов есть {{n:counts.enemy_humans}} видов людей — вплоть до бойцов с ядерными ракетами.</ru><en>Among the enemies there are {{n:counts.enemy_humans}} kinds of humans, all the way up to soldiers with nuclear rockets.</en></li>
+    <li><ru>У самого толстого врага {{fmt:records.enemy_toughest.0.health|int}} здоровья — в 576 раз больше ванильного чудовища.</ru><en>The toughest enemy has {{fmt:records.enemy_toughest.0.health|int}} HP, 576 times a vanilla behemoth.</en></li>
+    <li><ru>Эволюция жуков растёт только от ваших исследований. Не изучаете — жуки не растут.</ru><en>Bug evolution grows only from your research. No research, no growth.</en></li>
+    <li><ru>Шлак производят {{n:records.ways.@angels-slag.produced_by}} разных рецептов.</ru><en>{{n:records.ways.@angels-slag.produced_by}} different recipes produce slag.</en></li>
+    <li><ru>Стальная балка (так в сборке зовут стальную пластину) нужна в {{n:records.top_ingredients.@steel-plate.recipes}} рецептах.</ru><en>Steel plate goes into {{n:records.top_ingredients.@steel-plate.recipes}} recipes.</en></li>
+    <li><ru>Каждый электрический столб потребляет 1 кВт. Тысяча столбов — мегаватт впустую.</ru><en>Every electric pole consumes 1 kW. A thousand poles waste a megawatt.</en></li>
+    <li><ru>Большой генератор даёт 50 МВт и 1000 загрязнения в минуту.</ru><en>The big burner generator gives 50 MW and 1000 pollution per minute.</en></li>
+    <li><ru>Подземная лента может прыгнуть на 250 клеток.</ru><en>An underground belt can jump 250 tiles.</en></li>
+    <li><ru>Здание фабрики 20×20 снаружи — это 90×90 внутри. И внутрь можно поставить ещё одну фабрику.</ru><en>A 20×20 factory building is 90×90 inside. And you can place another factory inside it.</en></li>
+    <li><ru>Хранилище материопамяти хранит бесконечное количество одного предмета, но при разрушении теряет всё.</ru><en>A memory storage unit holds an infinite amount of one item but loses everything if destroyed.</en></li>
+    <li><ru>Турели получают звания за убийства: на последнем, «Легендарном», они бьют вдвое сильнее. Для этого в игре есть {{n:counts.hero_turret_ranks}} «ранговых» вариантов турелей.</ru><en>Turrets earn ranks for kills: at the last one, “Legendary”, they hit twice as hard. The game holds {{n:counts.hero_turret_ranks}} ranked turret variants for this.</en></li>
+    <li><ru>Год на планете — 24 игровых дня. Зимой солнечные панели дают вдвое меньше.</ru><en>A year on the planet lasts 24 game days. In winter solar panels give half as much.</en></li>
+    <li><ru>Загоревшийся резервуар можно спасти, если за минуту откачать горючее ниже 25%.</ru><en>A burning tank can be saved if you drain the fuel below 25% within a minute.</en></li>
+    <li><ru>Бракованный бур «−5» выедает месторождение в шесть раз быстрее.</ru><en>A “−5” defective drill eats an ore patch six times faster.</en></li>
+    <li><ru>В сборке {{n:counts.achievements}} достижений — в 16 раз больше, чем в ванили.</ru><en>The modpack has {{n:counts.achievements}} achievements, 16 times more than vanilla.</en></li>
+    <li><ru>Самая длинная цепочка технологий — {{n:counts.tech_max_depth}} шага, и она ведёт к орбитальному ядру ИИ.</ru><en>The longest technology chain is {{n:counts.tech_max_depth}} steps, ending at the orbital AI data core.</en></li>
+  </ul>
+</section>

@@ -1,0 +1,43 @@
+<!-- CHAPTER 07 — Refining & metallurgy. Widgets: ore-decoder (records.ore_decoder + refining_machines), top-materials (records.top_ingredients/top_products/ways).
+     Facts: Angels refining/smelting recipes in the dump; zzzparanoidal changelog (strand casting = МНЛЗ). -->
+<section id="refining" class="chapter" data-num="07" data-icon="assets/icons/technology__angels-ore-crushing.webp" data-toc="Обогащение и металлургия|Refining & metallurgy">
+  <header class="ch-head">
+    <div class="ch-num"><ru>Глава 07</ru><en>Chapter 07</en></div>
+    <h2><ru>Обогащение и металлургия</ru><en>Refining and metallurgy</en></h2>
+    <p class="ch-lead"><ru>Добыть руду — полдела. Её нужно раздробить, промыть, выщелочить, очистить и рассортировать, чтобы достать из неё металлы. А потом расплавить, смешать в сплав и разлить в формы. Добро пожаловать в настоящую металлургию.</ru><en>Mining ore is only half the job. It must be crushed, washed, leached, purified and sorted to get metals out of it. Then melted, mixed into alloys and cast. Welcome to real metallurgy.</en></p>
+    <div class="ch-tags"><span><ru>4 СТУПЕНИ ОБОГАЩЕНИЯ</ru><en>4 REFINING TIERS</en></span><span><ru>ШЛАК</ru><en>SLAG</en></span><span><ru>ЖИДКИЙ МЕТАЛЛ</ru><en>MOLTEN METAL</en></span><span><ru>СПЛАВЫ</ru><en>ALLOYS</en></span></div>
+    {{sprite:angels-ore-sorting-facility|ch-art}}
+  </header>
+
+  <h3 id="refining-tiers"><ru>Четыре ступени: чем глубже, тем богаче</ru><en>Four tiers: the deeper, the richer</en></h3>
+  <p><ru>Сырая руда проходит путь <b>дробилка → флотация → выщелачивание → очистка</b>, и на каждой ступени её можно отправить на <b>сортировку</b>. Дроблёный сапфирит отдаёт только железо и медь. Кристаллы того же сапфирита — уже железо, медь, кварц, никель и рутил. А очищенная руда — ещё и вольфрам, причём без грамма шлака. Выберите руду и ступень:</ru><en>Raw ore travels <b>crusher → flotation → leaching → refinery</b>, and at every tier it can go to <b>sorting</b>. Crushed saphirite yields only iron and copper. Saphirite crystals already give iron, copper, quartz, nickel and rutile. Purified ore adds tungsten, without a gram of slag. Pick an ore and a tier:</en></p>
+  <div class="panel" data-widget="ore-decoder"></div>
+  <div class="grid g3">
+    <div class="callout tip"><p><ru><b>Жеоды.</b> Флотация с вероятностью 50% выбрасывает жеоду. Из жеод получают кристаллы и драгоценные камни — те самые, что идут в лазерное оружие и модули.</ru><en><b>Geodes.</b> Flotation drops a geode with a 50% chance. Geodes turn into crystals and gems, the very ones used in laser weapons and modules.</en></p></div>
+    <div class="callout hint"><p><ru><b>Смешанная сортировка.</b> Две-три руды плюс катализатор дают один нужный металл чисто: например, сапфирит и дживолит с бурым катализатором — только железо. Так добывают дефицит: кобальт, золото, уран, платину, хром, марганец.</ru><en><b>Mixed sorting.</b> Two or three ores plus a catalyst give one wanted metal cleanly: saphirite and jivolite with a brown catalyst yield iron only. That is how you get the scarce ones: cobalt, gold, uranium, platinum, chrome, manganese.</en></p></div>
+    <div class="callout warn"><p><ru><b>Грязная вода.</b> Флотация оставляет сернистую, зелёную, красную и прочую <a class="x" href="#chemistry-water">сточную воду</a>. Её придётся очищать или утилизировать — в канализацию её не выльешь.</ru><en><b>Dirty water.</b> Flotation leaves sulfuric, green, red and other <a class="x" href="#chemistry-water">waste water</a>. You will have to treat or void it; there is no sewer to pour it into.</en></p></div>
+  </div>
+
+  <h3 id="refining-slag"><ru>Шлак: побочный продукт, который никуда не денется</ru><en>Slag: the by-product that will not go away</en></h3>
+  <div class="split mid">
+    <div>
+      <p><ru><a class="x g" href="#g-slag">Шлак</a> производят {{n:records.ways.@angels-slag.produced_by}} рецептов — больше, чем любой другой продукт в игре. Он выходит при сортировке, при прямой плавке дроблёной руды, в металлургии. Шлак нельзя просто выкинуть: склад забьётся за час. Его перерабатывают в шлаковую взвесь и минеральный раствор, из которого снова получают рудное сырьё. Круг замыкается.</ru><en><a class="x g" href="#g-slag">Slag</a> is produced by {{n:records.ways.@angels-slag.produced_by}} recipes, more than any other product in the game. It comes from sorting, from smelting crushed ore directly, from metallurgy. You cannot just dump it: storage clogs within an hour. It is processed into slag slurry and mineral sludge, which yields ore feedstock again. The circle closes.</en></p>
+      <p><ru>Совет: в начале игры отдайте шлак <a class="x" href="#world-landfill">свалке</a> — она съест мусор ценой загрязнения.</ru><en>Tip: early on, feed slag to the <a class="x" href="#world-landfill">landfill</a>; it eats junk at the cost of pollution.</en></p>
+    </div>
+    <div class="deep center">{{icon-lg:technology/angels-slag-processing-1}}<div class="out">{{n:records.ways.@angels-slag.produced_by}}</div><small><ru>рецептов дают шлак</ru><en>recipes yield slag</en></small></div>
+  </div>
+
+  <h3 id="refining-smelting"><ru>Металлургия: слитки, расплав и литьё</ru><en>Metallurgy: ingots, melt and casting</en></h3>
+  <div class="steps">
+    <div class="step rv"><h4><ru>Обработка руды</ru><en>Ore processing</en></h4><p><ru>Металлическая руда после сортировки превращается в обработанную руду или гранулы — чем лучше подготовка, тем больше металла на выходе.</ru><en>After sorting, metal ore becomes processed ore or pellets: the better the preparation, the more metal comes out.</en></p></div>
+    <div class="step rv"><h4><ru>Слитки в доменной печи</ru><en>Ingots in a blast furnace</en></h4><p><ru>Доменная печь превращает подготовленную руду в слитки. У каждого металла свой рецепт и свои добавки — где-то нужен уголь или кокс, где-то газ или химия.</ru><en>The blast furnace turns prepared ore into ingots. Each metal has its own recipe and additives: some need coal or coke, others gas or chemicals.</en></p></div>
+    <div class="step rv"><h4><ru>Расплав в индукционной печи</ru><en>Melt in an induction furnace</en></h4><p><ru>Слитки плавят в жидкий металл. Да, жидкое железо течёт по трубам.</ru><en>Ingots are melted into liquid metal. Yes, molten iron flows through pipes.</en></p></div>
+    <div class="step rv"><h4><ru>Литьё и МНЛЗ</ru><en>Casting and strand casting</en></h4><p><ru>Литейная машина разливает металл в пластины, прутки, проволоку. Машина непрерывного литья заготовок выдаёт поток продукции для больших заводов.</ru><en>The casting machine pours metal into plates, rods and wire. The strand casting machine delivers a continuous flow for big factories.</en></p></div>
+    <div class="step rv"><h4><ru>Сплавы в смесителе</ru><en>Alloys in a mixer</en></h4><p><ru>Смеситель сплавов соединяет расплавы напрямую: бронза, латунь, нитинол, инвар, кобальтовая сталь, карбид вольфрама. Нитинол, к слову, нужен в {{n:records.top_ingredients.@bob-nitinol-alloy.recipes}} рецептах.</ru><en>The alloy mixer combines melts directly: bronze, brass, nitinol, invar, cobalt steel, tungsten carbide. Nitinol, by the way, goes into {{n:records.top_ingredients.@bob-nitinol-alloy.recipes}} recipes.</en></p></div>
+  </div>
+
+  <h3 id="refining-top"><ru>Материалы, без которых не обойтись</ru><en>Materials you cannot do without</en></h3>
+  <p><ru>Какие предметы чаще всего стоят в рецептах сборки? Вот честный рейтинг по {{n:counts.recipes_main}} рецептам. Сталь в ванили — важный материал. Здесь сталь — это <b>валюта</b>.</ru><en>Which items appear in recipes most often? Here is an honest ranking over {{n:counts.recipes_main}} recipes. In vanilla, steel is an important material. Here steel is <b>currency</b>.</en></p>
+  <div class="panel" data-widget="top-materials"></div>
+  <div class="quip rv"><ru>Ваниль: руда → печь → пластина. Paranoidal: руда → дробилка → флотация → выщелачивание → очистка → сортировка → гранулы → доменная печь → индукционная печь → литьё → пластина. И шлак. Всегда шлак.</ru><en>Vanilla: ore → furnace → plate. Paranoidal: ore → crusher → flotation → leaching → refinery → sorting → pellets → blast furnace → induction furnace → casting → plate. And slag. Always slag.</en></div>
+</section>

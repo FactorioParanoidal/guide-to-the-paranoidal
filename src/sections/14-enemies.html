@@ -1,0 +1,51 @@
+<!-- CHAPTER 14 — Enemies. Widgets: hp-ladder (records.vanilla_biters + enemy_toughest), enemy-sources (records.enemy_sources donut), faction-gallery (records.rampant_faction_units, bob_breeds), threat-board (Big-Monsters settings.lua min_evo thresholds).
+     Facts: RampantFixed/README.md, ПР-063 (flyers ≥10%), Big-Monsters settings/changelog, RSO guards, zzzparanoidal Rampant defaults (safe buildings). -->
+<section id="enemies" class="chapter" data-num="14" data-icon="assets/icons/unit__juggernaut-biter-v1-t10-rampant.webp" data-toc="Враги|Enemies">
+  <header class="ch-head">
+    <div class="ch-num"><ru>Глава 14</ru><en>Chapter 14</en></div>
+    <h2><ru>Враги</ru><en>Enemies</en></h2>
+    <p class="ch-lead"><ru>Неужели вы уже привыкли к тому, что жуки в игре очень тупые? Это вы зря. Злые, умные, мутирующие, летающие — и это ещё не все, кто придёт к вам в гости.</ru><en>Did you get used to bugs being really dumb? That was a mistake. Angry, smart, mutating, flying, and they are not the only guests coming to visit.</en></p>
+    <div class="ch-tags"><span>{{n:counts.enemy_units}} <ru>ВИДОВ ВРАГОВ</ru><en>ENEMY TYPES</en></span><span>{{n:counts.enemy_spawners}} <ru>ГНЁЗД И УЛЬЕВ</ru><en>NESTS & HIVES</en></span><span>{{n:counts.rampant_factions}} <ru>ФРАКЦИЙ</ru><en>FACTIONS</en></span><span><ru>БОССЫ</ru><en>BOSSES</en></span></div>
+    {{sprite:biterzilla35|ch-art}}
+  </header>
+
+  <h3 id="enemies-scale"><ru>Масштаб угрозы</ru><en>The scale of the threat</en></h3>
+  <p><ru>Ванильный «чудовищный» кусака — самый страшный жук, которого вы видели: 25 000 здоровья. Здесь это середина таблицы. Ниже — лестница здоровья по логарифмической шкале: от ванильного малыша на 15 единиц до самых толстых созданий сборки.</ru><en>The vanilla behemoth biter is the scariest bug you have seen: 25,000 HP. Here it is mid-table. Below is a health ladder on a log scale: from the 15-HP vanilla small biter to the fattest creatures of the modpack.</en></p>
+  <div class="panel" data-widget="hp-ladder"></div>
+
+  <h3 id="enemies-rampant"><ru>Rampant: жуки, которые думают</ru><en>Rampant: bugs that think</en></h3>
+  <div class="split">
+    <div>
+      <p><ru><a class="x g" href="#g-rampant">Rampant</a> — новый искусственный интеллект для жуков. Они <b>прощупывают</b> оборону и обходят клетки, где погибло много сородичей; <b>отступают</b>, когда потери велики; зовут <b>подкрепления</b> предсмертным криком; устраивают <b>рейды</b> на ближайшие постройки, даже если от них нет смога; переселяются к рудным полям; охотятся на <b>игрока</b> по следу. Их снаряды больше не самонаводящиеся — от плевка можно увернуться, а стена и деревья его блокируют.</ru><en><a class="x g" href="#g-rampant">Rampant</a> is a new artificial intelligence for bugs. They <b>probe</b> defences and avoid tiles where many of their kin died; they <b>retreat</b> when losses are high; they call <b>reinforcements</b> with a death cry; they <b>raid</b> nearby buildings even without smog; they migrate to ore fields; they <b>hunt the player</b> by scent. Their projectiles no longer home in: you can dodge a spit, and walls and trees block it.</en></p>
+      <p><ru>Фракций — {{n:counts.rampant_factions}}: обычная, кислотная, лазерная, огненная, адская, осиная, «гнездовая», электрическая, бронированная, регенерирующая, ядовитая, самоубийцы, ядерная, «саперы», быстрая, джаггернауты и арахниды. У каждой — десять уровней кусак, плевак и <b>летунов</b>, свои сопротивления и свои ульи. Гнёзда со временем <b>мутируют</b> в другую фракцию.</ru><en>There are {{n:counts.rampant_factions}} factions: common, acidic, laser, fire, inferno, wasp, spawner, electric, armored, regenerative, poison, suicide, nuclear, sapper, fast, juggernaut and arachnids. Each has ten tiers of biters, spitters and <b>flyers</b>, its own resistances and its own hives. Nests <b>mutate</b> into other factions over time.</en></p>
+      <div class="callout hint"><p><ru><b>Летуны</b> перелетают стены. Утешение: до 10% эволюции они не появляются никогда. Ещё одно утешение: по умолчанию жуки Rampant не трогают большие опоры ЛЭП, лампы и рельсы.</ru><en><b>Flyers</b> fly over walls. Consolation: they never appear before 10% evolution. Another one: by default Rampant bugs leave big power poles, lamps and rails alone.</en></p></div>
+    </div>
+    <div class="panel" data-widget="faction-gallery"></div>
+  </div>
+  <div class="grid g3">
+    <div class="panel"><div class="panel-title">⭐ <ru>Чемпионы и боссы часа</ru><en>Champions and hour bosses</en></div><p><ru>У жуков есть элита: {{n:counts.enemy_champions}} видов «чемпионов» и {{n:counts.enemy_bosses}} видов боссов. Это усиленные версии обычных жуков с запасом здоровья и урона следующих уровней — они появляются среди атакующих отрядов и делают каждую волну непредсказуемой.</ru><en>Bugs have an elite: {{n:counts.enemy_champions}} champion types and {{n:counts.enemy_bosses}} boss types. They are reinforced versions of regular bugs with health and damage of higher tiers; they show up in attack squads and make every wave unpredictable.</en></p></div>
+    <div class="panel"><div class="panel-title">🏰 <ru>Супер-ульи</ru><en>Super hives</en></div><p><ru>Самые развитые гнёзда превращаются в супер-ульи — их видно издалека по мягкому свечению цвета фракции. Если светится — обходите стороной. Или несите артиллерию.</ru><en>The most developed nests turn into super hives, visible from afar by a soft glow in the faction colour. If it glows, go around. Or bring artillery.</en></p></div>
+    <div class="panel"><div class="panel-title">🐛 <ru>Семь пород Боба</ru><en>Bob's seven breeds</en></div><p><ru>Ещё одна армия: обычные, бронебойные, электрические, кислотные, взрывные, ядовитые и огненные жуки восьми размеров — до «левиафана». С них падают инопланетные <a class="x" href="#science-packs">артефакты</a> шести цветов.</ru><en>Another army: normal, piercing, electric, acid, explosive, poison and fire bugs in eight sizes, up to the “leviathan”. They drop alien <a class="x" href="#science-packs">artifacts</a> in six colours.</en></p></div>
+  </div>
+
+  <h3 id="enemies-sources"><ru>Кто есть кто</ru><en>Who is who</en></h3>
+  <div class="split mid">
+    <div class="panel" data-widget="enemy-sources"></div>
+    <div>
+      <p><ru>Рост эволюции здесь зависит от <a class="x" href="#science-evolution">ваших исследований</a>. Что приходит на каждом этапе, решает не только эволюция, но и расстояние: дальние гнёзда сильнее ближних, а богатые <a class="x" href="#mining-rso">жилы</a> охраняют базы побольше.</ru><en>Evolution here grows with <a class="x" href="#science-evolution">your research</a>. What shows up at each stage depends not only on evolution but also on distance: far nests are stronger than near ones, and rich <a class="x" href="#mining-rso">veins</a> are guarded by bigger bases.</en></p>
+    </div>
+  </div>
+
+  <h3 id="enemies-events"><ru>Эволюция: кто придёт и когда</ru><en>Evolution: who comes and when</en></h3>
+  <p><ru>Чем выше <a class="x" href="#science-evolution">эволюция</a>, тем сильнее жуки. Растут три вещи: <b>уровень жуков</b> (от 1 до 10), <b>виды гнёзд</b> (у каждого вида свои жуки и свои сопротивления) и <b>особые нападения</b>. Двигайте ползунок.</ru><en>The higher the <a class="x" href="#science-evolution">evolution</a>, the stronger the bugs. Three things grow: the <b>bug level</b> (1 to 10), the <b>nest types</b> (each type has its own bugs and resistances) and the <b>special attacks</b>. Move the slider.</en></p>
+  <div class="panel" data-widget="threat-board"></div>
+
+  <div class="dossier rv" data-stamp="СЕКРЕТНО" data-stamp-en="CLASSIFIED">
+    <h4 style="margin-top:0"><ru>Досье: они не жуки</ru><en>Dossier: they are not bugs</en></h4>
+    <div class="spoiler" data-label="Нажмите, чтобы снять гриф секретности" data-label-en="Click to declassify"><div class="sp-body">
+      <p><ru>Среди {{n:counts.enemy_units}} видов врагов есть {{n:counts.enemy_humans}} видов <b>людей</b>. Отряды вражеских солдат появляются с 20% эволюции: с кирками, пистолетами, пулемётами, снайперскими винтовками, лазерами, гранатомётами, огнемётами, пушками — и с ядерными ракетами. У каждого вида по десять уровней, у отрядов есть боссы. А на самом верху — <b>верховный командир врага</b> с пушкой и <b>{{fmt:records.enemy_toughest.0.health|int}}</b> единиц здоровья. Это в 576 раз больше, чем у ванильного чудовища.</ru><en>Among the {{n:counts.enemy_units}} enemy types there are {{n:counts.enemy_humans}} types of <b>humans</b>. Squads of hostile soldiers show up from 20% evolution: with pickaxes, pistols, machine guns, sniper rifles, lasers, grenade launchers, flamethrowers, cannons, and nuclear rockets. Each kind has ten levels, squads have bosses. And at the very top stands the <b>ultimate enemy commander</b> with a cannon and <b>{{fmt:records.enemy_toughest.0.health|int}}</b> HP. That is 576 times a vanilla behemoth.</en></p>
+      <p><ru>А ещё есть исполины: адский великан, синий великан, каменный зверь, <b>королева-матка</b>, которая выводит потомство прямо на поле боя, короли огненных и кислотных плевак. Есть вражеские паукотроны и <b>летающие тарелки</b>. А вулкан, который в оригинальном моде однажды просто вырастает у игрока на базе, в Paranoidal выключен. Цените.</ru><en>And there are giants: the Giant of Hell, the Giant Blue, the Rock Beast, the <b>Brood Mother</b> who breeds offspring right on the battlefield, the monster fire and acid spitters. There are enemy spidertrons and <b>flying saucers</b>. The volcano that in the original mod one day simply grows on a player's base is switched off in Paranoidal. Be grateful.</en></p>
+    </div></div>
+  </div>
+  <div class="quip rv"><ru>Совет сборки тем, кто впервые играет с таким количеством модов: поставьте галочку «Мирный режим». Иначе в момент безмятежного строительства заводиков на вас смертельно набегут и жадно сожрут эти самые голодные жуки.</ru><en>The modpack's advice for first-timers with this many mods: tick “Peaceful mode”. Otherwise, in the middle of your serene little factory building, those very hungry bugs will run you over and devour you greedily.</en><cite><ru>— рекомендации к старту</ru><en>— starting recommendations</en></cite></div>
+</section>

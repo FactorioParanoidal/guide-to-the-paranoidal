@@ -1,0 +1,67 @@
+<!-- CHAPTER 21 — Glossary + “vanilla translator”. Every <dt id="g-…"> is a tooltip target for links href="#g-…" anywhere on the page (core.js).
+     Keep definitions short (2–3 sentences) and add a link to the chapter where the term is explained. -->
+<section id="glossary" class="chapter" data-num="21" data-icon="assets/icons/technology__modules.webp" data-toc="Глоссарий|Glossary">
+  <header class="ch-head">
+    <div class="ch-num"><ru>Глава 21</ru><en>Chapter 21</en></div>
+    <h2><ru>Глоссарий и переводчик с ванильного</ru><en>Glossary and vanilla translator</en></h2>
+    <p class="ch-lead"><ru>Короткие определения терминов, которые встречаются по всему гайду. Наведите курсор на подчёркнутое пунктиром слово в любой главе — определение появится само.</ru><en>Short definitions of terms used throughout the guide. Hover a dash-underlined word in any chapter and the definition appears by itself.</en></p>
+    <div class="ch-tags"><span><ru>ТЕРМИНЫ</ru><en>TERMS</en></span><span><ru>ВАНИЛЬ → PARANOIDAL</ru><en>VANILLA → PARANOIDAL</en></span></div>
+  </header>
+
+  <h3 id="glossary-translator"><ru>Переводчик с ванильного</ru><en>Vanilla translator</en></h3>
+  <div class="table-wrap">
+  <table class="ftable tr-table">
+    <tr><th><ru>В ванили</ru><en>In vanilla</en></th><th><ru>В Paranoidal</ru><en>In Paranoidal</en></th></tr>
+    <tr><td><ru>Железная и медная руда</ru><en>Iron and copper ore</en></td><td><ru>Шесть сложных руд и <a class="x" href="#refining-tiers">сортировка</a></ru><en>Six compound ores and <a class="x" href="#refining-tiers">sorting</a></en></td></tr>
+    <tr><td><ru>Камень на карте</ru><en>Stone on the map</en></td><td><ru>Камень из щебня после дробления</ru><en>Stone from crushed stone after crushing</en></td></tr>
+    <tr><td><ru>Котёл, КПД 100%</ru><en>Boiler, 100% efficiency</en></td><td><ru><a class="x" href="#energy-boilers">Пять котлов</a>, КПД 50 → 98%</ru><en><a class="x" href="#energy-boilers">Five boilers</a>, 50 → 98% efficiency</en></td></tr>
+    <tr><td><ru>Уголь или твёрдое топливо</ru><en>Coal or solid fuel</en></td><td><ru>{{n:counts.fuels_solid}} твёрдых и {{n:counts.fuels_fluid}} жидких <a class="x" href="#fuels">топлив</a></ru><en>{{n:counts.fuels_solid}} solid and {{n:counts.fuels_fluid}} liquid <a class="x" href="#fuels">fuels</a></en></td></tr>
+    <tr><td><ru>5 ступеней качества</ru><en>5 quality grades</en></td><td><ru>{{n:counts.qualities}} ступеней, из них 5 — <a class="x" href="#defects">брак</a></ru><en>{{n:counts.qualities}} grades, 5 of them <a class="x" href="#defects">defects</a></en></td></tr>
+    <tr><td><ru>Эволюция от времени и смога</ru><en>Evolution from time and smog</en></td><td><ru><a class="x" href="#science-evolution">Эволюция от исследований</a></ru><en><a class="x" href="#science-evolution">Evolution from research</a></en></td></tr>
+    <tr><td><ru>Чудовищный кусака, 25 000 HP</ru><en>Behemoth biter, 25,000 HP</en></td><td><ru>Верховный командир врага, {{fmt:records.enemy_toughest.0.health|int}} HP</ru><en>Ultimate enemy commander, {{fmt:records.enemy_toughest.0.health|int}} HP</en></td></tr>
+    <tr><td><ru>Пулемётная турель</ru><en>Gun turret</en></td><td><ru><a class="x" href="#military-heroes">Турель-герой</a> со званиями</ru><en><a class="x" href="#military-heroes">Hero turret</a> with ranks</en></td></tr>
+    <tr><td><ru>Нефть → три фракции</ru><en>Oil → three fractions</en></td><td><ru>Многофазная нефть, газовые скважины и {{n:counts.fluids_visible}} жидкостей</ru><en>Multi-phase oil, gas wells and {{n:counts.fluids_visible}} fluids</en></td></tr>
+    <tr><td><ru>Главная шина</ru><en>Main bus</en></td><td><ru><a class="x" href="#production-factorissimo">Завод внутри здания</a> внутри здания</ru><en>A <a class="x" href="#production-factorissimo">factory inside a building</a> inside a building</en></td></tr>
+    <tr><td><ru>Лаборатория 60 кВт</ru><en>60 kW lab</en></td><td><ru>Лаборатория 2,5 МВт… и <a class="x" href="#science-labs">гипер-лаба</a> на 1 ГВт</ru><en>A 2.5 MW lab… and a 1 GW <a class="x" href="#science-labs">hyper lab</a></en></td></tr>
+    <tr><td><ru>Ракета — титры</ru><en>Rocket: roll the credits</en></td><td><ru>Ракета — <a class="x" href="#space">начало эндгейма</a></ru><en>Rocket: <a class="x" href="#space">the start of the endgame</a></en></td></tr>
+  </table>
+  </div>
+
+  <h3 id="glossary-terms"><ru>Термины</ru><en>Terms</en></h3>
+  <dl class="gloss">
+    <dt id="g-kpd"><ru>КПД</ru><en>Efficiency</en></dt>
+    <dd><ru>Доля энергии топлива, которая становится полезной работой. Котёл 1,8 МВт с КПД 50% сжигает 3,6 МВт топлива. См. <a class="x" href="#energy-kpd">«Энергетика»</a>.</ru><en>The share of fuel energy that becomes useful work. A 1.8 MW boiler at 50% burns 3.6 MW of fuel. See <a class="x" href="#energy-kpd">“Power”</a>.</en></dd>
+    <dt id="g-heat"><ru>Теплотворность</ru><en>Heat value</en></dt>
+    <dd><ru>Сколько энергии в одной штуке топлива или одной единице жидкости: уголь 4 МДж, дизель 700 кДж за единицу.</ru><en>How much energy one fuel item or one unit of fluid holds: coal 4 MJ, diesel 700 kJ per unit.</en></dd>
+    <dt id="g-emissions"><ru>Множитель загрязнения</ru><en>Emission multiplier</en></dt>
+    <dd><ru>Во сколько раз топливо усиливает дым установки, которая его сжигает. Бывает и отрицательным.</ru><en>How many times a fuel multiplies the smoke of whatever burns it. It can even be negative.</en></dd>
+    <dt id="g-defect"><ru>Брак</ru><en>Defect</en></dt>
+    <dd><ru>Пять ступеней ниже обычного качества (−1…−5). Хуже свойства, больше расход энергии. Бывает только у готовых изделий эпохи красной науки. См. <a class="x" href="#defects">«Брак и качество»</a>.</ru><en>Five grades below normal quality (−1…−5). Worse stats, higher energy use. Only red-science-era finished items get it. See <a class="x" href="#defects">“Defects & quality”</a>.</en></dd>
+    <dt id="g-control"><ru>Контроль качества</ru><en>Quality control</en></dt>
+    <dd><ru>Десять исследований за красную науку. Снижают брак; десятый уровень убирает его полностью и открывает зелёную науку.</ru><en>Ten red-science technologies. They reduce defects; level ten removes them and unlocks green science.</en></dd>
+    <dt id="g-workshop"><ru>Мастерская доводки</ru><en>Refinement workshop</en></dt>
+    <dd><ru>Здание, которое исправляет брак за счёт ремонтных наборов. Режимы: обычный, точный, эталонный.</ru><en>A building that fixes defects using repair packs. Modes: normal, precise, reference.</en></dd>
+    <dt id="g-angels-ore"><ru>Сложная руда</ru><en>Compound ore</en></dt>
+    <dd><ru>Сапфирит, дживолит, стиратит, кротиниум, рубит и бобмониум: смесь металлов, которую нужно обогатить и рассортировать. См. <a class="x" href="#mining-ores">«Добыча»</a>.</ru><en>Saphirite, jivolite, stiratite, crotinnium, rubyte and bobmonium: a mix of metals that must be refined and sorted. See <a class="x" href="#mining-ores">“Mining”</a>.</en></dd>
+    <dt id="g-infinite"><ru>Бесконечный кластер</ru><en>Infinite cluster</en></dt>
+    <dd><ru>Участок руды, который не истощается до нуля. Добывается с кислотой, а не с водой.</ru><en>An ore patch that never runs dry. Mined with acid instead of water.</en></dd>
+    <dt id="g-slag"><ru>Шлак</ru><en>Slag</en></dt>
+    <dd><ru>Побочный продукт сортировки и плавки. Его перерабатывают обратно в сырьё или отправляют на свалку.</ru><en>A by-product of sorting and smelting. It is processed back into feedstock or sent to the landfill.</en></dd>
+    <dt id="g-rampant"><ru>Rampant</ru><en>Rampant</en></dt>
+    <dd><ru>Искусственный интеллект жуков: разведка, рейды, отступления, подкрепления, мутации гнёзд и 17 фракций. См. <a class="x" href="#enemies-rampant">«Враги»</a>.</ru><en>The bugs' AI: scouting, raids, retreats, reinforcements, nest mutation and 17 factions. See <a class="x" href="#enemies-rampant">“Enemies”</a>.</en></dd>
+    <dt id="g-evolution"><ru>Эволюция</ru><en>Evolution</en></dt>
+    <dd><ru>Уровень силы врагов от 0 до 100%. Здесь растёт только от исследований: 0,15% за технологию и 0,35% за каждую тысячу пакетов (в показателе экспоненты).</ru><en>The enemy strength level from 0 to 100%. Here it grows only with research: 0.15% per technology and 0.35% per thousand packs (in the exponent).</en></dd>
+    <dt id="g-rso"><ru>RSO Reforged</ru><en>RSO Reforged</en></dt>
+    <dd><ru>Генератор месторождений и вражеских баз: редкие крупные поля, геологические провинции, формы полей, охраняемые жилы. См. <a class="x" href="#mining-rso">«Добыча»</a>.</ru><en>The ore field and enemy base generator: rare large fields, geological provinces, field shapes, guarded veins. See <a class="x" href="#mining-rso">“Mining”</a>.</en></dd>
+    <dt id="g-factorissimo"><ru>Здание-фабрика</ru><en>Factory building</en></dt>
+    <dd><ru>Здание, внутри которого можно построить завод, в том числе другое здание-фабрику. См. <a class="x" href="#production-factorissimo">«Производство»</a>.</ru><en>A building you can enter and build a factory inside, including another factory building. See <a class="x" href="#production-factorissimo">“Production”</a>.</en></dd>
+    <dt id="g-memory"><ru>Материопамять</ru><en>Memory storage</en></dt>
+    <dd><ru>Хранилище бесконечного количества одного предмета или одной жидкости. Ест тем больше энергии, чем больше хранит.</ru><en>Storage for an infinite amount of one item or one fluid. The more it holds, the more power it eats.</en></dd>
+    <dt id="g-hero"><ru>Турель-герой</ru><en>Hero turret</en></dt>
+    <dd><ru>Турель, получившая звание за убийства. Одиннадцать званий, на последнем — вдвое сильнее.</ru><en>A turret that earned a rank for kills. Eleven ranks; at the last one it is twice as strong.</en></dd>
+    <dt id="g-ftl"><ru>FTL</ru><en>FTL</en></dt>
+    <dd><ru>Сверхсветовое перемещение: самые дорогие технологии игры и последний шаг к кораблю домой. См. <a class="x" href="#space">«Космос»</a>.</ru><en>Faster-than-light travel: the most expensive technologies in the game and the last step towards the ship home. See <a class="x" href="#space">“Space”</a>.</en></dd>
+  </dl>
+  <div class="quip rv"><ru>Если вы дочитали до глоссария — поздравляем, вы уже знаете о Paranoidal больше, чем большинство тех, кто в него играл. Осталось только запустить.</ru><en>If you read all the way to the glossary, congratulations: you already know more about Paranoidal than most people who have played it. All that is left is to launch it.</en></div>
+  <div class="center" style="margin:30px 0"><a class="fbtn go big" href="#hero"><ru>▲ Наверх, к началу</ru><en>▲ Back to the top</en></a></div>
+</section>
