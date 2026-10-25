@@ -1,0 +1,64 @@
+/* ==========================================================================
+   BASE: fonts, tokens, language switching, typography
+   Tokens are the single place to change the palette (see AGENTS.md §Style).
+   ========================================================================== */
+@font-face{font-family:"Lilittium";src:url(assets/static/fonts/Lilittium-Regular.ttf) format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"Lilittium";src:url(assets/static/fonts/Lilittium-SemiBold.ttf) format("truetype");font-weight:600;font-display:swap}
+@font-face{font-family:"Lilittium";src:url(assets/static/fonts/Lilittium-Bold.ttf) format("truetype");font-weight:700;font-display:swap}
+
+:root{
+  --bg:#0d0c0b; --bg2:#151413; --frame:#313031; --frame-hi:#4a4846; --deep:#1f1e1e; --deep2:#242324;
+  --text:#e6e1d8; --muted:#a39e96; --dim:#6f6a64;
+  --orange:#ffa020; --orange2:#ffa020; --amber:#ffa020; --title:#ffe6c0; --hz-dark:#141210;
+  --green:#7ccf5a; --red:#ff5a4a; --blue:#58b6ff; --violet:#b58cff; --cyan:#3fd6cc;
+  --q-defect:#5c5c5c;
+  --radius:4px;
+  --nav-w:270px; --top-h:56px;
+  --font:"Lilittium","Titillium Web","Segoe UI",system-ui,sans-serif;
+  --mono:var(--font); /* labels/numbers use the GUI font too */
+  --code:Consolas,"Cascadia Mono",ui-monospace,monospace; /* only code snippets */
+  --hazard:repeating-linear-gradient(-45deg,var(--orange2) 0 16px,var(--hz-dark) 16px 32px);
+  --hazard-thin:repeating-linear-gradient(-45deg,var(--orange2) 0 7px,var(--hz-dark) 7px 14px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--top-h) + 18px)}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.62 var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:
+   radial-gradient(1200px 700px at 85% -10%,rgba(255,160,32,.10),transparent 60%),
+   radial-gradient(900px 600px at -10% 110%,rgba(255,160,32,.07),transparent 60%),
+   linear-gradient(180deg,#0f0e0d,#0b0a09)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.035;
+  background-image:linear-gradient(rgba(255,255,255,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.6) 1px,transparent 1px);
+  background-size:32px 32px}
+::selection{background:rgba(255,160,32,.35)}
+
+/* ---- language switching: every text exists twice, lang="ru" and lang="en" ---- */
+html[data-lang="ru"] [lang="en"]{display:none!important}
+html[data-lang="en"] [lang="ru"]{display:none!important}
+
+h1,h2,h3,h4{font-weight:700;line-height:1.15;margin:0 0 .5em;letter-spacing:.01em}
+h2{font-size:clamp(30px,4vw,48px)}
+h3{font-size:clamp(22px,2.4vw,29px);color:var(--amber);margin-top:1.6em}
+h4{font-size:19px;color:#ffe6c0;margin-top:1.2em}
+p{margin:.55em 0 .9em}
+a{color:var(--amber);text-decoration:none}
+a:hover{color:#fff}
+b,strong{color:#fff;font-weight:700}
+em{color:#ffd9a0;font-style:normal}
+small{color:var(--muted)}
+code{font-family:var(--code);font-size:.88em}
+.mono{font-variant-numeric:tabular-nums}
+code{background:#000;padding:1px 6px;border-radius:3px;color:#ffd38a;border:1px solid #2a2826}
+kbd{display:inline-block;font:600 .85em var(--font);padding:2px 7px;border-radius:4px;background:linear-gradient(#5b5a58,#3e3d3b);color:#fff;
+  border:1px solid #1a1918;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 2px 0 #000;margin:0 1px;white-space:nowrap}
+hr{border:0;height:8px;background:var(--hazard-thin);opacity:.5;margin:2.5em 0}
+ul,ol{padding-left:1.25em}
+li{margin:.25em 0}
+li::marker{color:var(--orange)}
+img{max-width:100%}
+table{border-collapse:collapse;width:100%}
+.num{font-variant-numeric:tabular-nums;color:#fff}
+.muted{color:var(--muted)}
+.center{text-align:center}
+.nowrap{white-space:nowrap}

@@ -1,0 +1,148 @@
+/* ==========================================================================
+   UNIFIED STYLE (loaded last, overrides older per-widget rules)
+   One look for the whole page, taken from the Factorio GUI:
+   - text buttons  = Factorio button tiles (assets/static/gui/*.png, 9-slice, corner 8): grey, orange on hover,
+                     green = confirm/primary, red = danger. Black text, like in the game.
+   - choice tiles  = every icon/card picker in widgets: dark slot, orange frame when selected.
+   - one accent    = var(--orange) (#ffa020, the Paranoidal launcher orange); titles = var(--title).
+   - one font      = Lilittium (Factorio GUI font) everywhere; only code/kbd use a monospace font.
+   Do not add new colours, fonts or button styles in widgets: reuse these classes.
+   ========================================================================== */
+:root{color-scheme:dark}
+
+/* ---- text buttons ---- */
+.fbtn,.lang-switch button{
+  height:34px;padding:0 14px;cursor:pointer;white-space:nowrap;font:600 15px var(--font);color:#000;text-shadow:none;
+  border:0;border-radius:0;background:none;box-shadow:0 2px 3px rgba(0,0,0,.45);
+  border-style:solid;border-width:0;border-image:url(assets/static/gui/btn.png) 8 fill / 8px stretch}
+.fbtn:hover,.lang-switch button:hover{background:none;color:#000;border-image-source:url(assets/static/gui/btn-hover.png)}
+.fbtn:active{transform:translateY(1px);border-image-source:url(assets/static/gui/btn-press.png)}
+.fbtn.go{border-image-source:url(assets/static/gui/btn-green.png)}
+.fbtn.go:hover{border-image-source:url(assets/static/gui/btn-green-hover.png)}
+.fbtn.danger{color:#000;border-image-source:url(assets/static/gui/btn-red.png)}
+.fbtn.danger:hover{border-image-source:url(assets/static/gui/btn-red-hover.png)}
+.fbtn.big{height:42px;padding:0 22px;font-size:17px;display:inline-flex;align-items:center}
+.fbtn[disabled]{cursor:default;color:#555;border-image-source:url(assets/static/gui/btn-off.png)}
+.lang-switch{border:0;border-radius:0;box-shadow:none;gap:2px;overflow:visible}
+.lang-switch button{width:44px;height:32px;padding:0}
+.lang-switch button.on{color:#000;border-image-source:url(assets/static/gui/btn-hover.png)}
+
+/* ---- choice tiles (pickers inside widgets) ---- */
+.wf-item,.od-ore,.pb-b,.me-c,.qm-btn,.ls-card,.qz-b{
+  background:var(--deep2);border:0;border-radius:2px;color:var(--text);cursor:pointer;
+  box-shadow:inset 0 0 0 1px #000,inset 0 2px 4px rgba(0,0,0,.6);transition:background .15s,box-shadow .15s}
+.wf-item:hover,.od-ore:hover,.pb-b:hover,.me-c:hover,.qm-btn:hover,.ls-card:hover,.qz-b:hover:not([disabled]){background:#34322f;box-shadow:inset 0 0 0 1px #000,0 0 0 1px var(--orange)}
+.wf-item.on,.od-ore.on,.pb-b.on,.me-c.on,.qm-btn.on,.ls-card.on{background:#3d2c14;color:#fff;box-shadow:inset 0 0 0 2px var(--orange)}
+.qz-b.ok{background:#1f3a18;box-shadow:inset 0 0 0 2px var(--green)}
+.qz-b.bad{background:#3a1814;box-shadow:inset 0 0 0 2px var(--red)}
+.ls-card small,.qm-btn b{color:var(--orange)}
+
+/* ---- one font: "mono" labels use the GUI font with tabular digits ---- */
+.ch-num,.ch-tags > span,.badge,.toast small,#fact-pop .fp-k,.hero-kicker,#toc .toc-title,#toc a .tn,.stat .x,.vs h5,.ftable th{font-family:var(--font);font-variant-numeric:tabular-nums}
+.ch-tags > span{font-size:13px;font-weight:600;letter-spacing:.04em;line-height:20px;padding:2px 9px}
+.badge{font-size:13px;font-weight:600;letter-spacing:.02em;line-height:20px;padding:2px 9px;border-radius:2px}
+.badge.hot{background:#3d2c14;color:var(--orange);border:1px solid var(--orange);text-shadow:none}
+.chip{line-height:20px}
+.dossier::before{font-family:var(--font);font-size:15px}
+
+/* ---- dossier stamp never covers the text ---- */
+.dossier{padding-top:54px}
+
+/* ---- chapter header: hazard band across the whole content width ----
+   #content is a size container, so 100cqw = content column width; --gut = side padding of a chapter. */
+#content{container-type:inline-size}
+.chapter{--gut:max(clamp(16px,4vw,64px),calc((100cqw - 1132px) / 2));max-width:none;padding-inline:var(--gut)}
+.ch-head{margin-inline:calc(-1 * var(--gut));padding-inline:var(--gut)}
+.ch-head .ch-art{right:var(--gut)}
+#footer{padding-inline:max(clamp(16px,4vw,64px),calc((100cqw - 1132px) / 2))}
+
+/* ---- headings and titles ---- */
+h3{color:var(--orange)}
+h4,.panel-title,.pillar > b,.gloss dt{color:var(--title)}
+.hero-title b{background:none;color:var(--orange);-webkit-text-fill-color:var(--orange);filter:none;text-shadow:0 4px 0 #000}
+
+/* ---- sprite cards: same picture box, captions on one line ---- */
+.sprite-card{display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+.sprite-card .sprite{height:150px;width:100%;max-height:none;object-fit:contain}
+.sprite-card figcaption{margin-top:8px;min-height:2.6em;display:flex;align-items:flex-start;justify-content:center;text-align:center;line-height:1.3}
+
+/* ---- "not in this game" mark on an icon ---- */
+.no-mark{position:relative;display:inline-block;float:right;margin:0 0 6px 8px}
+.no-mark .ic,.no-mark img{float:none;margin:0;display:block}
+.no-mark::after{content:"";position:absolute;inset:4px;border:4px solid var(--red);border-radius:50%;
+  background:linear-gradient(45deg,transparent calc(50% - 2px),var(--red) calc(50% - 2px) calc(50% + 2px),transparent calc(50% + 2px))}
+
+/* ---- Russian-only paragraphs (facts about the Russian translation) ---- */
+html[data-lang="en"] .ru-only{display:none}
+
+/* ---- hero: transparent logo, real conveyor belt ---- */
+.hero-logo{mix-blend-mode:normal}
+.belt{height:60px;background:#1a1918 url(assets/static/ui/belt-tile.png) 0 50% / 52px 60px repeat-x;border:0;
+  box-shadow:inset 0 2px 0 #000,inset 0 -2px 0 #000;animation:beltMove 1.08s linear infinite;image-rendering:auto}
+.belt .track{top:9px;gap:8px;animation-duration:60s}
+.belt .track img{width:42px;height:42px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.7))}
+@keyframes beltMove{from{background-position-x:0}to{background-position-x:-52px}}
+
+/* ---- mobile ---- */
+@media (max-width:640px){
+  #topbar{gap:6px;padding:0 8px}
+  #topbar .brand{display:none}
+  .lang-switch button{width:38px}
+  .hero-inner{padding:16px 22px 24px}
+  .hero-stripes{width:12px}
+  .hero-kicker{font-size:11px;letter-spacing:.15em}
+  .hero-counters{grid-template-columns:repeat(2,1fr)}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .hero-cta .fbtn{justify-content:center}
+  .ch-head{padding-top:44px}
+  .ch-head h2,.ch-lead,.ch-tags{max-width:100%}
+  .ch-head .ch-art{display:none}
+  .panel{padding:14px 12px}
+  .panel-title{margin:-14px -12px 12px;padding:9px 12px}
+  .sl-row{grid-template-columns:1fr 64px}
+  .sl-row .sl-q{grid-column:1/-1}
+  .stats-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat .v{font-size:24px}
+  .ftable{display:block;overflow-x:auto}
+  .tb-lvls{grid-template-columns:repeat(5,1fr)}
+  .tb-fac,[data-widget=threat-board] .tb{grid-template-columns:repeat(3,1fr)}
+  .ls-pick,.ls-stats{grid-template-columns:repeat(2,1fr)}
+  .ls-stage{height:220px!important}
+  .qm-res .sl-row{grid-template-columns:1fr 64px}
+  .quip{padding-left:40px}
+}
+
+/* ---- quality calculator: machine slots chosen by hover/tap ---- */
+.qm-slot{cursor:pointer}
+.qm-slot img{opacity:0;transition:opacity .1s}
+.qm-slot.on img{opacity:1}
+.qm-slot:hover{box-shadow:inset 0 0 0 1px var(--orange)}
+
+/* ---- qc-loop labels: explicit anchors (CSS text-anchor overrides SVG attributes) ---- */
+.qcl-t.l,.qcl-s.l{text-anchor:start}
+.qcl-t.r,.qcl-s.r{text-anchor:end}
+.qcl-s{font-size:14px}
+
+/* ---- quality ladder: more room, family labels never cut ---- */
+.ql-stair{height:330px;gap:3px}
+.ql-col img{max-width:24px}
+.ql-fams{gap:3px}
+.ql-fams span{display:flex;justify-content:center;overflow:visible;text-overflow:clip;font:600 13px var(--font)}
+@media (max-width:900px){[data-widget=quality-ladder]{overflow-x:auto}.ql-stair,.ql-fams{min-width:900px}}
+
+/* ---- recyclers: stats under each card ---- */
+.rc-card figcaption{flex-direction:column;align-items:center;gap:4px;min-height:0}
+.rc-stats{display:flex;flex-direction:column;font-size:13px;color:var(--muted);line-height:1.35}
+.rc-stats b{color:var(--orange)}
+
+/* ---- hotkeys in text are links to the keyboard ---- */
+kbd.kbd-link{cursor:pointer}
+kbd.kbd-link:hover{border-color:var(--orange);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 2px 0 #000,0 0 0 1px var(--orange)}
+
+/* ---- spoiler cover: dark plate with hazard edges, orange label (same orange as everywhere) ---- */
+.spoiler::after{color:var(--orange);border:0;border-radius:2px;letter-spacing:.02em;font-size:16px;
+  background:var(--hazard-thin) top/100% 8px no-repeat,var(--hazard-thin) bottom/100% 8px no-repeat,rgba(20,19,18,.86);
+  box-shadow:inset 0 0 0 1px #000}
+
+/* ---- efficiency bar: the wasted part is plain orange, no red flame ---- */
+.kc-bar i.l{background:linear-gradient(#ffa020,#d07a10);animation:none;color:#000;text-shadow:none}
