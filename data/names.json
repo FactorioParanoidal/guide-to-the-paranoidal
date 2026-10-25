@@ -1,0 +1,5190 @@
+{
+"accumulator__accumulator": {
+"ru": "Аккумулятор повышенной ёмкости",
+"en": "High capacity accumulator"
+},
+"accumulator__bi-bio-accumulator": {
+"ru": "Аккумулятор огромной емкости",
+"en": "Huge accumulator"
+},
+"accumulator__bob-fast-accumulator": {
+"ru": "Аккумулятор с повышенной энергоотдачей",
+"en": "Fast accumulator"
+},
+"accumulator__bob-fast-accumulator-2": {
+"ru": "Аккумулятор с повышенной энергоотдачей 2",
+"en": "Fast accumulator 2"
+},
+"accumulator__bob-fast-accumulator-3": {
+"ru": "Аккумулятор с повышенной энергоотдачей 3",
+"en": "Fast accumulator 3"
+},
+"accumulator__bob-large-accumulator-2": {
+"ru": "Аккумулятор повышенной ёмкости 2",
+"en": "High capacity accumulator 2"
+},
+"accumulator__bob-large-accumulator-3": {
+"ru": "Аккумулятор повышенной ёмкости 3",
+"en": "High capacity accumulator 3"
+},
+"accumulator__bob-slow-accumulator": {
+"ru": "Медленный аккумулятор",
+"en": "Slow accumulator"
+},
+"accumulator__bob-slow-accumulator-2": {
+"ru": "Медленный аккумулятор 2",
+"en": "Slow accumulator 2"
+},
+"accumulator__bob-slow-accumulator-3": {
+"ru": "Медленный аккумулятор 3",
+"en": "Slow accumulator 3"
+},
+"accumulator__fe-c-accumulator": {
+"ru": "Железо-угольный аккумулятор",
+"en": "Fe-C accumulator"
+},
+"ammo__artillery-shell-thermonuclear": {
+"ru": "Тактическая термоядерная боеголовка",
+"en": "Tactical thermonuclear artillery shell"
+},
+"ammo__bob-atomic-artillery-shell": {
+"ru": "Атомные артиллерийские снаряды",
+"en": "Atomic artillery shell"
+},
+"ammo__thermonuclear-bomb": {
+"ru": "Термоядерная бомба",
+"en": "Thermonuclear bomb"
+},
+"ammo-turret__bi-bio-cannon": {
+"ru": "Прототип артиллерии",
+"en": "Prototype artillery"
+},
+"ammo-turret__bi-dart-turret": {
+"ru": "Дротиковая турель",
+"en": "Dart turret"
+},
+"ammo-turret__bob-gun-turret-2": {
+"ru": "Мелкокалиберная турель 2",
+"en": "Gun turret MK2"
+},
+"ammo-turret__bob-gun-turret-3": {
+"ru": "Мелкокалиберная турель 3",
+"en": "Gun turret MK3"
+},
+"ammo-turret__bob-gun-turret-4": {
+"ru": "Мелкокалиберная турель 4",
+"en": "Gun turret MK4"
+},
+"ammo-turret__bob-gun-turret-5": {
+"ru": "Мелкокалиберная турель 5",
+"en": "Gun turret MK5"
+},
+"ammo-turret__bob-sniper-turret-1": {
+"ru": "Снайперская турель 1",
+"en": "Sniper turret MK1"
+},
+"ammo-turret__bob-sniper-turret-2": {
+"ru": "Снайперская турель 2",
+"en": "Sniper turret MK2"
+},
+"ammo-turret__bob-sniper-turret-3": {
+"ru": "Снайперская турель 3",
+"en": "Sniper turret MK3"
+},
+"ammo-turret__gun-turret": {
+"ru": "Пулемётная турель",
+"en": "Gun turret"
+},
+"ammo-turret__hero-turret-1-for-gun-turret": {
+"ru": "Пулемётная турель  Ефрейтор",
+"en": "Gun turret  Ефрейтор"
+},
+"ammo-turret__hero-turret-10-for-gun-turret": {
+"ru": "Пулемётная турель  Генерал",
+"en": "Gun turret  Генерал"
+},
+"ammo-turret__hero-turret-11-for-gun-turret": {
+"ru": "Пулемётная турель  Легендарный",
+"en": "Gun turret  Легендарный"
+},
+"ammo-turret__hero-turret-2-for-gun-turret": {
+"ru": "Пулемётная турель  Капрал",
+"en": "Gun turret  Капрал"
+},
+"ammo-turret__hero-turret-3-for-gun-turret": {
+"ru": "Пулемётная турель  Сержант",
+"en": "Gun turret  Сержант"
+},
+"ammo-turret__hero-turret-4-for-gun-turret": {
+"ru": "Пулемётная турель  Старшина",
+"en": "Gun turret  Старшина"
+},
+"ammo-turret__hero-turret-5-for-gun-turret": {
+"ru": "Пулемётная турель  Лейтенант",
+"en": "Gun turret  Лейтенант"
+},
+"ammo-turret__hero-turret-6-for-gun-turret": {
+"ru": "Пулемётная турель  Капитан",
+"en": "Gun turret  Капитан"
+},
+"ammo-turret__hero-turret-7-for-gun-turret": {
+"ru": "Пулемётная турель  Майор",
+"en": "Gun turret  Майор"
+},
+"ammo-turret__hero-turret-8-for-gun-turret": {
+"ru": "Пулемётная турель  Подполковник",
+"en": "Gun turret  Подполковник"
+},
+"ammo-turret__hero-turret-9-for-gun-turret": {
+"ru": "Пулемётная турель  Полковник",
+"en": "Gun turret  Полковник"
+},
+"ammo-turret__w93-dcannon-turret": {
+"ru": "Спаренная пушечная турель (Передовая)",
+"en": "Dual cannon turret (Frontline)"
+},
+"ammo-turret__w93-dcannon-turret2": {
+"ru": "Спаренная пушечная турель (Тыловая)",
+"en": "Dual cannon turret (Backline)"
+},
+"ammo-turret__w93-gatling-turret": {
+"ru": "Гатлинг турель (Передовая)",
+"en": "Gatling turret (Frontline)"
+},
+"ammo-turret__w93-gatling-turret2": {
+"ru": "Гатлинг турель (Тыловая)",
+"en": "Gatling turret (Backline)"
+},
+"ammo-turret__w93-hcannon-turret": {
+"ru": "Тяжёлая пушечная турель (Передовая)",
+"en": "Heavy cannon turret (Frontline)"
+},
+"ammo-turret__w93-hcannon-turret2": {
+"ru": "Тяжёлая пушечная турель (Тыловая)",
+"en": "Heavy cannon turret (Backline)"
+},
+"ammo-turret__w93-hmg-turret": {
+"ru": "Тяжёлая пулемётная турель (Передовая)",
+"en": "Heavy MG turret (Frontline)"
+},
+"ammo-turret__w93-hmg-turret2": {
+"ru": "Тяжёлая пулемётная турель (Тыловая)",
+"en": "Heavy MG turret (Backline)"
+},
+"ammo-turret__w93-lcannon-turret": {
+"ru": "Лёгкая пушечная турель (Передовая)",
+"en": "Light cannon turret (Frontline)"
+},
+"ammo-turret__w93-lcannon-turret2": {
+"ru": "Лёгкая пушечная турель (Тыловая)",
+"en": "Light cannon turret (Backline)"
+},
+"ammo-turret__w93-rocket-turret": {
+"ru": "Ракетная турель (Передовая)",
+"en": "Cruise missile turret (Frontline)"
+},
+"ammo-turret__w93-rocket-turret2": {
+"ru": "Ракетная турель (Тыловая)",
+"en": "Cruise missile turret (Backline)"
+},
+"ammo-turret__w93-scattergun-turret": {
+"ru": "Тяжёлая дробовая турель",
+"en": "Heavy scattergun turret"
+},
+"armor__bob-power-armor-mk5": {
+"ru": "Силовая броня MK5",
+"en": "Power armor MK5"
+},
+"armor__hazmat-suit": {
+"ru": "Противорадиационный костюм",
+"en": "Hazmat suit"
+},
+"armor__respirator": {
+"ru": "Респиратор",
+"en": "Respirator"
+},
+"artillery-turret__artillery-turret": {
+"ru": "Артиллерийское орудие",
+"en": "Artillery turret"
+},
+"artillery-turret__artillery-turret-prototype": {
+"ru": "Прототип артиллерийского орудия",
+"en": "Artillery Cannon Prototype"
+},
+"artillery-turret__bob-artillery-turret-2": {
+"ru": "Артиллерийское орудие MK2",
+"en": "Artillery turret MK2"
+},
+"artillery-turret__bob-artillery-turret-3": {
+"ru": "Артиллерийское орудие MK3",
+"en": "Artillery turret MK3"
+},
+"artillery-turret__pd-relic-hammer": {
+"ru": "Молот",
+"en": "The Hammer"
+},
+"assembling-machine__CW-air-filter-machine-1": {
+"ru": "Воздухо-очистительная станция МК1",
+"en": "Air filter machine MK1"
+},
+"assembling-machine__CW-air-filter-machine-2": {
+"ru": "Воздухо-очистительная станция MK2",
+"en": "Air filter machine MK2"
+},
+"assembling-machine__CW-air-filter-machine-3": {
+"ru": "Воздухо-очистительная станция MK3",
+"en": "Air filter machine MK3"
+},
+"assembling-machine__CW-air-filter-machine-4": {
+"ru": "Воздухо-очистительная станция МК4",
+"en": "Air filter machine MK4"
+},
+"assembling-machine__CW-air-filter-machine-5": {
+"ru": "Воздухо-очистительная станция MK5",
+"en": "Air filter machine MK5"
+},
+"assembling-machine__CW-air-filter-machine-6": {
+"ru": "Воздухо-очистительная станция MK6",
+"en": "Air filter machine MK6"
+},
+"assembling-machine__advanced-assembler": {
+"ru": "Сборщик-фабрикатор",
+"en": "Advanced Assembler"
+},
+"assembling-machine__alloy-mixer": {
+"ru": "Смешиватель Металлов MK1",
+"en": "Alloy Mixer MK1"
+},
+"assembling-machine__alloy-mixer-2": {
+"ru": "Смешиватель Металлов MK2",
+"en": "Alloy Mixer MK2"
+},
+"assembling-machine__alloy-mixer-3": {
+"ru": "Смешиватель Металлов MK3",
+"en": "Alloy Mixer MK3"
+},
+"assembling-machine__alloy-mixer-4": {
+"ru": "Смешиватель Металлов MK4",
+"en": "Alloy Mixer MK4"
+},
+"assembling-machine__angels-advanced-chemical-plant": {
+"ru": "Улучшенный химический завод",
+"en": "Advanced chemical plant 1"
+},
+"assembling-machine__angels-advanced-chemical-plant-2": {
+"ru": "Улучшенный химический завод 2",
+"en": "Advanced chemical plant 2"
+},
+"assembling-machine__angels-advanced-chemical-plant-3": {
+"ru": "Улучшенный химический завод 3",
+"en": "Advanced chemical plant 3"
+},
+"assembling-machine__angels-air-filter": {
+"ru": "Компрессорная воздушная станция",
+"en": "Air filter 1"
+},
+"assembling-machine__angels-air-filter-2": {
+"ru": "Компрессорная воздушная станция МК2",
+"en": "Air filter 2"
+},
+"assembling-machine__angels-air-filter-3": {
+"ru": "Компрессорная станция MK3",
+"en": "Air filter 3"
+},
+"assembling-machine__angels-air-filter-4": {
+"ru": "Очиститель воздуха 4",
+"en": "Air filter 4"
+},
+"assembling-machine__angels-algae-farm": {
+"ru": "Ферма водорослей MK1",
+"en": "Algae farm 1"
+},
+"assembling-machine__angels-algae-farm-2": {
+"ru": "Ферма водорослей MK2",
+"en": "Algae farm 2"
+},
+"assembling-machine__angels-algae-farm-3": {
+"ru": "Ферма водорослей MK3",
+"en": "Algae farm 3"
+},
+"assembling-machine__angels-algae-farm-4": {
+"ru": "Ферма водорослей MK4",
+"en": "Algae farm 4"
+},
+"assembling-machine__angels-algae-farm-5": {
+"ru": "Ферма водорослей 5",
+"en": "Algae farm 5"
+},
+"assembling-machine__angels-barreling-pump": {
+"ru": "Насос для обработки бочек",
+"en": "Barreling pump"
+},
+"assembling-machine__angels-bio-arboretum-1": {
+"ru": "Дендрарий",
+"en": "Arboretum"
+},
+"assembling-machine__angels-bio-arboretum-2": {
+"ru": "Дендрарий 2",
+"en": "Arboretum 2"
+},
+"assembling-machine__angels-bio-arboretum-3": {
+"ru": "Дендрарий 3",
+"en": "Arboretum 3"
+},
+"assembling-machine__angels-bio-generator-desert-1": {
+"ru": "Культиватор семян деревьев пустынной зоны",
+"en": "Desert tree seed generator"
+},
+"assembling-machine__angels-bio-generator-desert-2": {
+"ru": "Генератор семян деревьев пустынной зоны 2",
+"en": "Desert tree seed generator 2"
+},
+"assembling-machine__angels-bio-generator-desert-3": {
+"ru": "Генератор семян деревьев пустынной зоны 3",
+"en": "Desert tree seed generator 3"
+},
+"assembling-machine__angels-bio-generator-swamp-1": {
+"ru": "Культиватор семян деревьев болотистой зоны",
+"en": "Swamp tree seed generator"
+},
+"assembling-machine__angels-bio-generator-swamp-2": {
+"ru": "Генератор семян деревьев болотистой зоны 2",
+"en": "Swamp tree seed generator 2"
+},
+"assembling-machine__angels-bio-generator-swamp-3": {
+"ru": "Генератор семян деревьев болотистой зоны 3",
+"en": "Swamp tree seed generator 3"
+},
+"assembling-machine__angels-bio-generator-temperate-1": {
+"ru": "Культиватор семян деревьев умеренной зоны",
+"en": "Temperate tree seed generator"
+},
+"assembling-machine__angels-bio-generator-temperate-2": {
+"ru": "Генератор семян деревьев умеренной зоны 2",
+"en": "Temperate tree seed generator 2"
+},
+"assembling-machine__angels-bio-generator-temperate-3": {
+"ru": "Генератор семян деревьев умеренной зоны 3",
+"en": "Temperate tree seed generator 3"
+},
+"assembling-machine__angels-bio-press": {
+"ru": "Пресс",
+"en": "Oil press"
+},
+"assembling-machine__angels-bio-press-2": {
+"ru": "Маслобойный пресс 2",
+"en": "Oil press 2"
+},
+"assembling-machine__angels-bio-press-3": {
+"ru": "Маслобойный пресс 3",
+"en": "Oil press 3"
+},
+"assembling-machine__angels-bio-processor": {
+"ru": "БиоПроцессор",
+"en": "Bioprocessor"
+},
+"assembling-machine__angels-bio-processor-2": {
+"ru": "Биореактор 2",
+"en": "Bioprocessor 2"
+},
+"assembling-machine__angels-bio-processor-3": {
+"ru": "Биореактор 3",
+"en": "Bioprocessor 3"
+},
+"assembling-machine__angels-bio-refugium-biter": {
+"ru": "Заповедник кусак",
+"en": "Biter refugium"
+},
+"assembling-machine__angels-bio-refugium-biter-2": {
+"ru": "Заповедник опасных животных 2",
+"en": "Biter refugium 2"
+},
+"assembling-machine__angels-bio-refugium-biter-3": {
+"ru": "Заповедник опасных животных 3",
+"en": "Biter refugium 3"
+},
+"assembling-machine__angels-bio-refugium-fish": {
+"ru": "Аквариум",
+"en": "Fish tank"
+},
+"assembling-machine__angels-bio-refugium-fish-2": {
+"ru": "Аквариум 2",
+"en": "Fish tank 2"
+},
+"assembling-machine__angels-bio-refugium-fish-3": {
+"ru": "Аквариум 3",
+"en": "Fish tank 3"
+},
+"assembling-machine__angels-bio-refugium-puffer": {
+"ru": "Заповедник фугу",
+"en": "Puffer refugium"
+},
+"assembling-machine__angels-bio-refugium-puffer-2": {
+"ru": "Заповедник рыбо-кусак 2",
+"en": "Puffer refugium 2"
+},
+"assembling-machine__angels-bio-refugium-puffer-3": {
+"ru": "Заповедник рыбо-кусак 3",
+"en": "Puffer refugium 3"
+},
+"assembling-machine__angels-blast-furnace": {
+"ru": "Доменная печь MK1",
+"en": "Blast furnace 1"
+},
+"assembling-machine__angels-blast-furnace-2": {
+"ru": "Доменная печь MK2",
+"en": "Blast furnace 2"
+},
+"assembling-machine__angels-blast-furnace-3": {
+"ru": "Доменная печь MK3",
+"en": "Blast furnace 3"
+},
+"assembling-machine__angels-blast-furnace-4": {
+"ru": "Доменная печь MK4",
+"en": "Blast furnace 4"
+},
+"assembling-machine__angels-burner-ore-crusher": {
+"ru": "Дробилка руды на твёрдом топливе",
+"en": "Burner ore crusher"
+},
+"assembling-machine__angels-casting-machine": {
+"ru": "Отливная машина MK1",
+"en": "Casting machine 1"
+},
+"assembling-machine__angels-casting-machine-2": {
+"ru": "Отливная машина MK2",
+"en": "Casting machine 2"
+},
+"assembling-machine__angels-casting-machine-3": {
+"ru": "Отливная машина MK3",
+"en": "Casting machine 3"
+},
+"assembling-machine__angels-casting-machine-4": {
+"ru": "Отливная машина MK4",
+"en": "Casting machine 4"
+},
+"assembling-machine__angels-chemical-furnace": {
+"ru": "Химическая печь MK1",
+"en": "Chemical furnace 1"
+},
+"assembling-machine__angels-chemical-furnace-2": {
+"ru": "Химическая печь MK2",
+"en": "Chemical furnace 2"
+},
+"assembling-machine__angels-chemical-furnace-3": {
+"ru": "Химическая печь MK3",
+"en": "Chemical furnace 3"
+},
+"assembling-machine__angels-chemical-furnace-4": {
+"ru": "Химическая печь MK4",
+"en": "Chemical furnace 4"
+},
+"assembling-machine__angels-chemical-plant-2": {
+"ru": "Химический завод 2",
+"en": "Chemical plant 2"
+},
+"assembling-machine__angels-chemical-plant-3": {
+"ru": "Химический завод 3",
+"en": "Chemical plant 3"
+},
+"assembling-machine__angels-chemical-plant-4": {
+"ru": "Химический завод 4",
+"en": "Chemical plant 4"
+},
+"assembling-machine__angels-cooling-tower": {
+"ru": "Радиаторная охладительная башня",
+"en": "Cooling tower"
+},
+"assembling-machine__angels-crop-farm": {
+"ru": "Базовая ферма",
+"en": "Basic farm"
+},
+"assembling-machine__angels-crop-farm-2": {
+"ru": "Базовая ферма 2",
+"en": "Basic farm 2"
+},
+"assembling-machine__angels-crop-farm-3": {
+"ru": "Базовая ферма 3",
+"en": "Basic farm 3"
+},
+"assembling-machine__angels-crystallizer": {
+"ru": "Кристаллизатор",
+"en": "Crystallizer 1"
+},
+"assembling-machine__angels-crystallizer-2": {
+"ru": "Кристаллизатор MK2",
+"en": "Crystallizer 2"
+},
+"assembling-machine__angels-crystallizer-3": {
+"ru": "Кристаллизатор MK3",
+"en": "Crystallizer 3"
+},
+"assembling-machine__angels-desert-farm": {
+"ru": "Улучшенная ферма для пустынной зоны",
+"en": "Desert-environment farm"
+},
+"assembling-machine__angels-desert-farm-2": {
+"ru": "Ферма с пустынным климатом 2",
+"en": "Desert-environment farm 2"
+},
+"assembling-machine__angels-desert-farm-3": {
+"ru": "Ферма с пустынным климатом 3",
+"en": "Desert-environment farm 3"
+},
+"assembling-machine__angels-electric-boiler": {
+"ru": "Электро-бойлер",
+"en": "Electric boiler 1"
+},
+"assembling-machine__angels-electric-boiler-2": {
+"ru": "Электро-бойлер МК2",
+"en": "Electric boiler 2"
+},
+"assembling-machine__angels-electric-boiler-3": {
+"ru": "Электро-бойлер МК3",
+"en": "Electric boiler 3"
+},
+"assembling-machine__angels-electro-whinning-cell": {
+"ru": "Электролитная ячейка",
+"en": "Electrowinning cell 1"
+},
+"assembling-machine__angels-electro-whinning-cell-2": {
+"ru": "Электролитная ячейка MK2",
+"en": "Electrowinning cell 2"
+},
+"assembling-machine__angels-electro-whinning-cell-3": {
+"ru": "Электролитная ячейка MK3",
+"en": "Electrowinning cell 3"
+},
+"assembling-machine__angels-electrolyser": {
+"ru": "Электролизер",
+"en": "Electrolyser 1"
+},
+"assembling-machine__angels-electrolyser-2": {
+"ru": "Электролизер 2",
+"en": "Electrolyser 2"
+},
+"assembling-machine__angels-electrolyser-3": {
+"ru": "Электролизер 3",
+"en": "Electrolyser 3"
+},
+"assembling-machine__angels-electrolyser-4": {
+"ru": "Электролизер 4",
+"en": "Electrolyser 4"
+},
+"assembling-machine__angels-filtration-unit": {
+"ru": "Фильтрационная установка",
+"en": "Filtration unit 1"
+},
+"assembling-machine__angels-filtration-unit-2": {
+"ru": "Фильтрационная установка MK2",
+"en": "Filtration unit 2"
+},
+"assembling-machine__angels-filtration-unit-3": {
+"ru": "Фильтрационная установка MK3",
+"en": "Filtration unit 3"
+},
+"assembling-machine__angels-gas-refinery": {
+"ru": "Улучшенный газоперерабатывающий завод",
+"en": "Advanced gas refinery 1"
+},
+"assembling-machine__angels-gas-refinery-2": {
+"ru": "Улучшенный газоперерабатывающий завод 2",
+"en": "Advanced gas refinery 2"
+},
+"assembling-machine__angels-gas-refinery-3": {
+"ru": "Улучшенный газоперерабатывающий завод 3",
+"en": "Advanced gas refinery 3"
+},
+"assembling-machine__angels-gas-refinery-4": {
+"ru": "Улучшенный газоперерабатывающий завод 4",
+"en": "Advanced gas refinery 4"
+},
+"assembling-machine__angels-gas-refinery-small": {
+"ru": "Газоперерабатывающий завод",
+"en": "Gas refinery 1"
+},
+"assembling-machine__angels-gas-refinery-small-2": {
+"ru": "Газоперерабатывающий завод 2",
+"en": "Gas refinery 2"
+},
+"assembling-machine__angels-gas-refinery-small-3": {
+"ru": "Газоперерабатывающий завод 3",
+"en": "Gas refinery 3"
+},
+"assembling-machine__angels-gas-refinery-small-4": {
+"ru": "Газоперерабатывающий завод 4",
+"en": "Gas refinery 4"
+},
+"assembling-machine__angels-hydro-plant": {
+"ru": "Гидростанция",
+"en": "Hydro plant 1"
+},
+"assembling-machine__angels-hydro-plant-2": {
+"ru": "Гидростанция МК2",
+"en": "Hydro plant 2"
+},
+"assembling-machine__angels-hydro-plant-3": {
+"ru": "Гидростанция МК3",
+"en": "Hydro plant 3"
+},
+"assembling-machine__angels-hydro-plant-4": {
+"ru": "Гидрозавод 4",
+"en": "Hydro plant 4"
+},
+"assembling-machine__angels-induction-furnace": {
+"ru": "Индукционная печь MK1",
+"en": "Induction furnace 1"
+},
+"assembling-machine__angels-induction-furnace-2": {
+"ru": "Индукционная печь MK2",
+"en": "Induction furnace 2"
+},
+"assembling-machine__angels-induction-furnace-3": {
+"ru": "Индукционная печь MK3",
+"en": "Induction furnace 3"
+},
+"assembling-machine__angels-induction-furnace-4": {
+"ru": "Индукционная печь MK4",
+"en": "Induction furnace 4"
+},
+"assembling-machine__angels-liquifier": {
+"ru": "Разжижитель",
+"en": "Liquefier 1"
+},
+"assembling-machine__angels-liquifier-2": {
+"ru": "Разжижитель MK2",
+"en": "Liquefier 2"
+},
+"assembling-machine__angels-liquifier-3": {
+"ru": "Разжижитель MК3",
+"en": "Liquefier 3"
+},
+"assembling-machine__angels-liquifier-4": {
+"ru": "Разжижитель MК4",
+"en": "Liquefier 4"
+},
+"assembling-machine__angels-nutrient-extractor": {
+"ru": "Экстрактор питательных веществ",
+"en": "Nutrient extractor"
+},
+"assembling-machine__angels-nutrient-extractor-2": {
+"ru": "Экстрактор питательных веществ 2",
+"en": "Nutrient extractor 2"
+},
+"assembling-machine__angels-nutrient-extractor-3": {
+"ru": "Экстрактор питательных веществ 3",
+"en": "Nutrient extractor 3"
+},
+"assembling-machine__angels-oil-refinery-2": {
+"ru": "Нефтеперерабатывающий завод 2",
+"en": "Oil refinery 2"
+},
+"assembling-machine__angels-oil-refinery-3": {
+"ru": "Нефтеперерабатывающий завод 3",
+"en": "Oil refinery 3"
+},
+"assembling-machine__angels-oil-refinery-4": {
+"ru": "Нефтеперерабатывающий завод 4",
+"en": "Oil refinery 4"
+},
+"assembling-machine__angels-ore-crusher": {
+"ru": "Электрическая дробилка руды MК1",
+"en": "Ore crusher 1"
+},
+"assembling-machine__angels-ore-crusher-2": {
+"ru": "Электрическая дробилка руды MK2",
+"en": "Ore crusher 2"
+},
+"assembling-machine__angels-ore-crusher-3": {
+"ru": "Электрическая дробилка руды MК3",
+"en": "Ore crusher 3"
+},
+"assembling-machine__angels-ore-crusher-4": {
+"ru": "Дробилка руды 4",
+"en": "Ore crusher 4"
+},
+"assembling-machine__angels-ore-floatation-cell": {
+"ru": "Гидропромывочная станция руды",
+"en": "Flotation cell 1"
+},
+"assembling-machine__angels-ore-floatation-cell-2": {
+"ru": "Гидропромывочная станция руды MK2",
+"en": "Flotation cell 2"
+},
+"assembling-machine__angels-ore-floatation-cell-3": {
+"ru": "Гидропромывочная станция руды MК3",
+"en": "Flotation cell 3"
+},
+"assembling-machine__angels-ore-floatation-cell-4": {
+"ru": "Ячейка плавучести 4",
+"en": "Flotation cell 4"
+},
+"assembling-machine__angels-ore-leaching-plant": {
+"ru": "Кислото-травильный цех руды",
+"en": "Leaching plant 1"
+},
+"assembling-machine__angels-ore-leaching-plant-2": {
+"ru": "Кислото-травильный цех руды MK2",
+"en": "Leaching plant 2"
+},
+"assembling-machine__angels-ore-leaching-plant-3": {
+"ru": "Кислото-травильный цех руды MК3",
+"en": "Leaching plant 3"
+},
+"assembling-machine__angels-ore-leaching-plant-4": {
+"ru": "Выщелачивающий завод 4",
+"en": "Leaching plant 4"
+},
+"assembling-machine__angels-ore-processing-machine": {
+"ru": "Машина переработки руды MK1",
+"en": "Ore processor 1"
+},
+"assembling-machine__angels-ore-processing-machine-2": {
+"ru": "Машина переработки руды MK2",
+"en": "Ore processor 2"
+},
+"assembling-machine__angels-ore-processing-machine-3": {
+"ru": "Машина переработки руды MK3",
+"en": "Ore processor 3"
+},
+"assembling-machine__angels-ore-processing-machine-4": {
+"ru": "Машина переработки руды MK4",
+"en": "Ore processor 4"
+},
+"assembling-machine__angels-ore-refinery": {
+"ru": "Очистительный завод руды",
+"en": "Ore refinery 1"
+},
+"assembling-machine__angels-ore-refinery-2": {
+"ru": "Очистительный завод руды MK2",
+"en": "Ore refinery 2"
+},
+"assembling-machine__angels-ore-refinery-3": {
+"ru": "Очистительный завод руды MК3",
+"en": "Ore refinery 3"
+},
+"assembling-machine__angels-ore-sorting-facility": {
+"ru": "Сортировочный комбинат руды",
+"en": "Ore sorting facility 1"
+},
+"assembling-machine__angels-ore-sorting-facility-2": {
+"ru": "Сортировочный комбинат руды MK2",
+"en": "Ore sorting facility 2"
+},
+"assembling-machine__angels-ore-sorting-facility-3": {
+"ru": "Сортировочный комбинат руды MK3",
+"en": "Ore sorting facility 3"
+},
+"assembling-machine__angels-ore-sorting-facility-4": {
+"ru": "Сортировочный комбинат руды MK4",
+"en": "Ore sorting facility 4"
+},
+"assembling-machine__angels-ore-sorting-facility-5": {
+"ru": "Рудосортировочный комплекс 5",
+"en": "Ore sorting facility 5"
+},
+"assembling-machine__angels-pellet-press": {
+"ru": "Пресс-гранулятор MK1",
+"en": "Pellet press 1"
+},
+"assembling-machine__angels-pellet-press-2": {
+"ru": "Пресс-гранулятор MK2",
+"en": "Pellet press 2"
+},
+"assembling-machine__angels-pellet-press-3": {
+"ru": "Пресс-гранулятор MK3",
+"en": "Pellet press 3"
+},
+"assembling-machine__angels-pellet-press-4": {
+"ru": "Пресс-гранулятор MK4",
+"en": "Pellet press 4"
+},
+"assembling-machine__angels-powder-mixer": {
+"ru": "Смеситель порошка MK1",
+"en": "Powder mixer 1"
+},
+"assembling-machine__angels-powder-mixer-2": {
+"ru": "Смеситель порошка MK2",
+"en": "Powder mixer 2"
+},
+"assembling-machine__angels-powder-mixer-3": {
+"ru": "Смеситель порошка MK3",
+"en": "Powder mixer 3"
+},
+"assembling-machine__angels-powder-mixer-4": {
+"ru": "Смеситель порошка MK4",
+"en": "Powder mixer 4"
+},
+"assembling-machine__angels-powderizer": {
+"ru": "Рудно-порошковый измельчитель",
+"en": "Powderizer 1"
+},
+"assembling-machine__angels-powderizer-2": {
+"ru": "Рудно-порошковый измельчитель MK2",
+"en": "Powderizer 2"
+},
+"assembling-machine__angels-powderizer-3": {
+"ru": "Рудно-порошковый измельчитель MK3",
+"en": "Powderizer 3"
+},
+"assembling-machine__angels-salination-plant": {
+"ru": "Станция засоления",
+"en": "Salination plant 1"
+},
+"assembling-machine__angels-salination-plant-2": {
+"ru": "Станция засоления МК2",
+"en": "Salination plant 2"
+},
+"assembling-machine__angels-salination-plant-3": {
+"ru": "Соляная станция 3",
+"en": "Salination plant 3"
+},
+"assembling-machine__angels-seed-extractor": {
+"ru": "Экстрактор семян",
+"en": "Seed extractor"
+},
+"assembling-machine__angels-seed-extractor-2": {
+"ru": "Экстрактор семян 2",
+"en": "Seed extractor 2"
+},
+"assembling-machine__angels-seed-extractor-3": {
+"ru": "Экстрактор семян 3",
+"en": "Seed extractor 3"
+},
+"assembling-machine__angels-separator": {
+"ru": "Нефтевой и газовый  разделитель",
+"en": "Oil & gas separator 1"
+},
+"assembling-machine__angels-separator-2": {
+"ru": "Нефтевой и газовый  разделитель 2",
+"en": "Oil & gas separator 2"
+},
+"assembling-machine__angels-separator-3": {
+"ru": "Нефтевой и газовый  разделитель 3",
+"en": "Oil & gas separator 3"
+},
+"assembling-machine__angels-separator-4": {
+"ru": "Нефтевой и газовый  разделитель 4",
+"en": "Oil & gas separator 4"
+},
+"assembling-machine__angels-sintering-oven-4": {
+"ru": "Печь для спекания MK1",
+"en": "Sintering oven 1"
+},
+"assembling-machine__angels-sintering-oven-5": {
+"ru": "Печь для спекания MK2",
+"en": "Sintering oven 2"
+},
+"assembling-machine__angels-steam-cracker": {
+"ru": "Паровая крекинг установка",
+"en": "Steam cracker 1"
+},
+"assembling-machine__angels-steam-cracker-2": {
+"ru": "Паровая крекинг установка 2",
+"en": "Steam cracker 2"
+},
+"assembling-machine__angels-steam-cracker-3": {
+"ru": "Паровая крекинг установка 3",
+"en": "Steam cracker 3"
+},
+"assembling-machine__angels-steam-cracker-4": {
+"ru": "Паровая крекинг установка 4",
+"en": "Steam cracker 4"
+},
+"assembling-machine__angels-strand-casting-machine": {
+"ru": "Машина непрерывного литья MK1",
+"en": "Strand casting machine 1"
+},
+"assembling-machine__angels-strand-casting-machine-2": {
+"ru": "Машина непрерывного литья MK2",
+"en": "Strand casting machine 2"
+},
+"assembling-machine__angels-strand-casting-machine-3": {
+"ru": "Машина непрерывного литья MK3",
+"en": "Strand casting machine 3"
+},
+"assembling-machine__angels-strand-casting-machine-4": {
+"ru": "Машина непрерывного литья MK4",
+"en": "Strand casting machine 4"
+},
+"assembling-machine__angels-swamp-farm": {
+"ru": "Улучшенная ферма для болотистой зоны",
+"en": "Swamp-environment farm"
+},
+"assembling-machine__angels-swamp-farm-2": {
+"ru": "Ферма с болотистым климатом 2",
+"en": "Swamp-environment farm 2"
+},
+"assembling-machine__angels-swamp-farm-3": {
+"ru": "Ферма с болотистым климатом 3",
+"en": "Swamp-environment farm 3"
+},
+"assembling-machine__angels-temperate-farm": {
+"ru": "Улучшенная ферма для умеренной зоны",
+"en": "Temperate-environment farm"
+},
+"assembling-machine__angels-temperate-farm-2": {
+"ru": "Ферма с умеренным климатом 2",
+"en": "Temperate-environment farm 2"
+},
+"assembling-machine__angels-temperate-farm-3": {
+"ru": "Ферма с умеренным климатом 3",
+"en": "Temperate-environment farm 3"
+},
+"assembling-machine__angels-washing-plant": {
+"ru": "Промывочная установка",
+"en": "Washing plant 1"
+},
+"assembling-machine__angels-washing-plant-2": {
+"ru": "Промывочная установка МК2",
+"en": "Washing plant 2"
+},
+"assembling-machine__angels-washing-plant-3": {
+"ru": "Гидрометаллургический завод 3",
+"en": "Washing plant 3"
+},
+"assembling-machine__angels-washing-plant-4": {
+"ru": "Гидрометаллургический завод 4",
+"en": "Washing plant 4"
+},
+"assembling-machine__assembling-machine-1": {
+"ru": "Сборочный автомат 1",
+"en": "Assembling machine 1"
+},
+"assembling-machine__assembling-machine-2": {
+"ru": "Сборочный автомат 2",
+"en": "Assembling machine 2"
+},
+"assembling-machine__assembling-machine-3": {
+"ru": "Сборочный автомат 3",
+"en": "Assembling machine 3"
+},
+"assembling-machine__assembling-machine-7": {
+"ru": "Суперсборочный автомат 7",
+"en": "Assembling machine 7"
+},
+"assembling-machine__assembling-machine-8": {
+"ru": "Суперсборочный автомат 8",
+"en": "Assembling machine 8"
+},
+"assembling-machine__assembling-machine-9": {
+"ru": "Суперсборочный автомат 9",
+"en": "Assembling machine 9"
+},
+"assembling-machine__bi-arboretum": {
+"ru": "Терраформер",
+"en": "Terraformer"
+},
+"assembling-machine__bi-bio-farm": {
+"ru": "Биоферма",
+"en": "Bio farm"
+},
+"assembling-machine__bi-bio-farm-2": {
+"ru": "Биоферма МК2",
+"en": "Biofarm MK2"
+},
+"assembling-machine__bi-bio-farm-3": {
+"ru": "Биоферма МК3",
+"en": "Biofarm MK3"
+},
+"assembling-machine__bi-bio-garden": {
+"ru": "Биосад",
+"en": "Bio garden"
+},
+"assembling-machine__bi-bio-garden-huge": {
+"ru": "Биосад МК3",
+"en": "Huge Bio garden"
+},
+"assembling-machine__bi-bio-garden-large": {
+"ru": "Биосад МК2",
+"en": "Large Bio garden"
+},
+"assembling-machine__bi-bio-greenhouse": {
+"ru": "Теплица",
+"en": "Bio nursery"
+},
+"assembling-machine__bi-bio-greenhouse-2": {
+"ru": "Теплица MK2",
+"en": "Greenhouse MK2"
+},
+"assembling-machine__bi-bio-greenhouse-3": {
+"ru": "Теплица MK3",
+"en": "Greenhouse MK3"
+},
+"assembling-machine__bi-bio-reactor": {
+"ru": "Биореактор",
+"en": "Bio-reactor"
+},
+"assembling-machine__bi-bio-reactor-2": {
+"ru": "Биореактор МК2",
+"en": "Bioreactor MK2"
+},
+"assembling-machine__bi-bio-reactor-3": {
+"ru": "Биореактор МК3",
+"en": "Bioreactor MK3"
+},
+"assembling-machine__bi-cokery": {
+"ru": "Коксовая печь",
+"en": "Cokery"
+},
+"assembling-machine__bob-assembling-machine-4": {
+"ru": "Сборочный автомат 4",
+"en": "Assembling machine 4"
+},
+"assembling-machine__bob-assembling-machine-5": {
+"ru": "Сборочный автомат 5",
+"en": "Assembling machine 5"
+},
+"assembling-machine__bob-assembling-machine-6": {
+"ru": "Сборочный автомат 6",
+"en": "Assembling machine 6"
+},
+"assembling-machine__bob-centrifuge-2": {
+"ru": "Центрифуга 2",
+"en": "Centrifuge 2"
+},
+"assembling-machine__bob-centrifuge-3": {
+"ru": "Центрифуга 3",
+"en": "Centrifuge 3"
+},
+"assembling-machine__bob-electric-chemical-mixing-furnace": {
+"ru": "Электрическая печь для сплавов МК2",
+"en": "Electric filtering furnace 2"
+},
+"assembling-machine__bob-electric-chemical-mixing-furnace-2": {
+"ru": "Электрическая печь для сплавов МК3",
+"en": "Electric filtering furnace 3"
+},
+"assembling-machine__bob-electric-mixing-furnace": {
+"ru": "Электрическая печь для сплавов МК1",
+"en": "Electric filtering furnace 1"
+},
+"assembling-machine__bob-electronics-machine-1": {
+"ru": "Автомат для сборки электроники 1",
+"en": "Electronics assembling machine 1"
+},
+"assembling-machine__bob-electronics-machine-2": {
+"ru": "Автомат для сборки электроники 2",
+"en": "Electronics assembling machine 2"
+},
+"assembling-machine__bob-electronics-machine-3": {
+"ru": "Автомат для сборки электроники 3",
+"en": "Electronics assembling machine 3"
+},
+"assembling-machine__bob-steel-mixing-furnace": {
+"ru": "Стальная печь для сплавов",
+"en": "Steel filtering furnace"
+},
+"assembling-machine__bob-stone-mixing-furnace": {
+"ru": "Каменная печь для сплавов",
+"en": "Stone filtering furnace"
+},
+"assembling-machine__burner-assembling-machine": {
+"ru": "Твёрдотопливный сборочный автомат",
+"en": "Burner assembling machine"
+},
+"assembling-machine__centrifuge": {
+"ru": "Центрифуга",
+"en": "Centrifuge"
+},
+"assembling-machine__chemical-plant": {
+"ru": "Химический завод",
+"en": "Chemical plant 1"
+},
+"assembling-machine__clowns-sluicer": {
+"ru": "Шлюзовой промыватель MK1",
+"en": "Sluicer MK1"
+},
+"assembling-machine__clowns-sluicer-2": {
+"ru": "Шлюзовой промыватель MK2",
+"en": "Sluicer MK2"
+},
+"assembling-machine__deadlock-copper-lamp": {
+"ru": "Медная лампа",
+"en": "Copper Lamp"
+},
+"assembling-machine__dpa": {
+"ru": "Агрегатор точки росы",
+"en": "Dew Point Aggregator"
+},
+"assembling-machine__electronics-machine-4": {
+"ru": "Суперавтомат для сборки электроники 4",
+"en": "Electronics assembling machine 4"
+},
+"assembling-machine__electronics-machine-5": {
+"ru": "Суперавтомат для сборки электроники 5",
+"en": "Electronics assembling machine 5"
+},
+"assembling-machine__ground-auto-fabricator": {
+"ru": "Наземная фабрикаторная станция",
+"en": "Ground Fabricator Station"
+},
+"assembling-machine__ground-telescope": {
+"ru": "Наземная обсерватория",
+"en": "Ground Telescope"
+},
+"assembling-machine__industrial-furnace": {
+"ru": "Промышленная печь",
+"en": "Industrial furnace"
+},
+"assembling-machine__oil-refinery": {
+"ru": "Нефтеперерабатывающий завод",
+"en": "Oil refinery"
+},
+"assembling-machine__pd-relic-daedalus-workshop": {
+"ru": "Мастерская Дедала",
+"en": "Daedalus workshop"
+},
+"assembling-machine__pd-relic-xeno-incubator": {
+"ru": "Ксеноинкубатор",
+"en": "Xeno-incubator"
+},
+"assembling-machine__pd-relic-yggdrasil-sprout": {
+"ru": "Росток Иггдрасиля",
+"en": "Sprout of Yggdrasil"
+},
+"assembling-machine__rsc-silo-stage1": {
+"ru": "Строительная площадка ракетной шахты - Этап 1/6",
+"en": "Rocket Silo construction site - Stage 1/6"
+},
+"assembling-machine__salvaged-assembling-machine": {
+"ru": "Извлечённый сборочный автомат",
+"en": "Salvaged assembling machine"
+},
+"assembling-machine__space-telescope-uplink-station": {
+"ru": "Передающая станция для орбитальной обсерватории",
+"en": "Space Telescope Uplink Station"
+},
+"boiler__bi-bio-boiler": {
+"ru": "Биобойлер",
+"en": "Bio-boiler"
+},
+"boiler__bi-solar-boiler": {
+"ru": "Солнечная электростанция и бойлер - Бойлер",
+"en": "Solar power plant & boiler"
+},
+"boiler__bob-boiler-2": {
+"ru": "Бойлер 2",
+"en": "Boiler 2"
+},
+"boiler__bob-boiler-3": {
+"ru": "Бойлер 3",
+"en": "Boiler 3"
+},
+"boiler__bob-boiler-4": {
+"ru": "Бойлер 4",
+"en": "Boiler 4"
+},
+"boiler__bob-boiler-5": {
+"ru": "Бойлер 5",
+"en": "Boiler 5"
+},
+"boiler__bob-heat-exchanger-2": {
+"ru": "Теплообменник 2",
+"en": "Heat exchanger 2"
+},
+"boiler__bob-heat-exchanger-3": {
+"ru": "Теплообменник 3",
+"en": "Heat exchanger 3"
+},
+"boiler__bob-heat-exchanger-4": {
+"ru": "Теплообменник 4",
+"en": "Heat exchanger 4"
+},
+"boiler__boiler": {
+"ru": "Бойлер",
+"en": "Boiler"
+},
+"boiler__heat-exchanger": {
+"ru": "Теплообменник",
+"en": "Heat exchanger"
+},
+"boiler__oil-steam-boiler": {
+"ru": "Жидкотопливный котёл 165°С",
+"en": "Fluid-burning boiler 165°C"
+},
+"boiler__oil-steam-boiler-2": {
+"ru": "Жидкотопливный котёл 315°С",
+"en": "Fluid-burning boiler 315°C"
+},
+"boiler__oil-steam-boiler-3": {
+"ru": "Жидкотопливный котёл 465°С",
+"en": "Fluid-burning boiler 465°C"
+},
+"boiler__oil-steam-boiler-4": {
+"ru": "Жидкотопливный котёл 615°С",
+"en": "Fluid-burning boiler 615°C"
+},
+"boiler__oil-steam-boiler-5": {
+"ru": "Жидкотопливный котёл 765°С",
+"en": "Fluid-burning boiler 765°C"
+},
+"burner-generator__big-burner-generator": {
+"ru": "Большой топливный генератор",
+"en": "Big Burner Generator"
+},
+"burner-generator__burner-generator": {
+"ru": "Твердотопливный генератор",
+"en": "Burner Generator"
+},
+"burner-generator__burner-turbine": {
+"ru": "Твёрдотопливный турбогенератор",
+"en": "Burner turbine generator"
+},
+"burner-generator__torch": {
+"ru": "Факел",
+"en": "Torch"
+},
+"capsule__clowns-neurotoxin-capsule": {
+"ru": "Капсула с нейротоксином",
+"en": "Neurotoxin capsule"
+},
+"capsule__mirv-targeting-remote": {
+"ru": "Пульт управления M.I.R.V",
+"en": "M.I.R.V targeting remote"
+},
+"capsule__poison-capsule": {
+"ru": "Ядовитая капсула",
+"en": "Poison capsule"
+},
+"capsule__raw-fish": {
+"ru": "Рыба Факториана",
+"en": "Factorian fish"
+},
+"car__Schall-tank-F": {
+"ru": "Огнемётный танк",
+"en": "Flame tank"
+},
+"car__Schall-tank-F-mk1": {
+"ru": "Огнемётный танк MK1",
+"en": "Flame tank MK1"
+},
+"car__Schall-tank-F-mk2": {
+"ru": "Огнемётный танк MK2",
+"en": "Flame tank MK2"
+},
+"car__Schall-tank-H": {
+"ru": "Тяжёлый танк",
+"en": "Heavy tank"
+},
+"car__Schall-tank-H-mk1": {
+"ru": "Тяжёлый танк MK1",
+"en": "Heavy tank MK1"
+},
+"car__Schall-tank-H-mk2": {
+"ru": "Тяжёлый танк MK2",
+"en": "Heavy tank MK2"
+},
+"car__Schall-tank-L": {
+"ru": "Лёгкий танк",
+"en": "Light tank"
+},
+"car__Schall-tank-L-mk1": {
+"ru": "Лёгкий танк MK1",
+"en": "Light tank MK1"
+},
+"car__Schall-tank-L-mk2": {
+"ru": "Лёгкий танк MK2",
+"en": "Light tank MK2"
+},
+"car__Schall-tank-M": {
+"ru": "Средний танк",
+"en": "Medium tank"
+},
+"car__Schall-tank-M-mk1": {
+"ru": "Средний танк MK1",
+"en": "Medium tank MK1"
+},
+"car__Schall-tank-M-mk2": {
+"ru": "Средний танк MK2",
+"en": "Medium tank MK2"
+},
+"car__Schall-tank-SH": {
+"ru": "Сверхтяжёлый танк",
+"en": "Super-heavy tank"
+},
+"car__Schall-tank-SH-mk1": {
+"ru": "Сверхтяжёлый танк MK1",
+"en": "Super-heavy tank MK1"
+},
+"car__Schall-tank-SH-mk2": {
+"ru": "Сверхтяжёлый танк MK2",
+"en": "Super-heavy tank MK2"
+},
+"car__bob-tank-2": {
+"ru": "Танк MK2",
+"en": "Tank MK2"
+},
+"car__bob-tank-3": {
+"ru": "Танк MK3",
+"en": "Tank MK3"
+},
+"car__car": {
+"ru": "Автомобиль",
+"en": "Car"
+},
+"car__cargo-plane": {
+"ru": "Грузовой самолет",
+"en": "Cargo plane"
+},
+"car__flame_car": {
+"ru": "Автомобиль с огнеметом",
+"en": "Flamethrower Car"
+},
+"car__flying-fortress": {
+"ru": "Летающая крепость",
+"en": "Flying fortress"
+},
+"car__gunship": {
+"ru": "Боевой самолет",
+"en": "Gunship"
+},
+"car__jet": {
+"ru": "Реактивный самолет",
+"en": "Jet"
+},
+"car__tank": {
+"ru": "Танк",
+"en": "Tank"
+},
+"container__Schall-pickup-tower-R128": {
+"ru": "Башня сбора IV",
+"en": "Pickup tower IV"
+},
+"container__aai-big-ship-wreck-1": {
+"ru": "Обломки",
+"en": "Wreckage"
+},
+"container__crash-site-spaceship": {
+"ru": "Космический корабль",
+"en": "Spaceship"
+},
+"container__ic-control-post": {
+"ru": "Контрольный пост",
+"en": "Control post"
+},
+"container__memory-unit": {
+"ru": "Хранилище материопамяти",
+"en": "Memory unit"
+},
+"container__repair-turret": {
+"ru": "Защитная башня",
+"en": "Defense tower"
+},
+"container__warehouse-basic": {
+"ru": "Склад",
+"en": "Warehouse"
+},
+"container__zcs-trash-landfill": {
+"ru": "Свалка отходов",
+"en": "Trash landfill"
+},
+"electric-energy-interface__RITEG-1": {
+"ru": "РИТЭГ",
+"en": "RITEG"
+},
+"electric-energy-interface__salvaged-generator": {
+"ru": "Извлечённый корабельный генератор",
+"en": "Salvaged generator"
+},
+"electric-energy-interface__texugo-wind-turbine": {
+"ru": "Деревянный ветряной генератор",
+"en": "Wood wind generator"
+},
+"electric-energy-interface__texugo-wind-turbine2": {
+"ru": "Стальная ветряная турбина",
+"en": "Steel wind turbine"
+},
+"electric-energy-interface__texugo-wind-turbine3": {
+"ru": "Гигантская ветряная турбина",
+"en": "Huge wind turbine"
+},
+"electric-pole__bi-large-substation": {
+"ru": "Гигантская подстанция",
+"en": "Huge substation"
+},
+"electric-pole__bi-wooden-pole-big": {
+"ru": "Большой деревянный столб",
+"en": "Big wooden pole"
+},
+"electric-pole__bi-wooden-pole-huge": {
+"ru": "Гигантский электрический столб",
+"en": "Huge wooden pole"
+},
+"electric-pole__big-electric-pole": {
+"ru": "Большая опора ЛЭП",
+"en": "Big electric pole"
+},
+"electric-pole__bob-big-electric-pole-2": {
+"ru": "Большая опора ЛЭП 2",
+"en": "Big electric pole 2"
+},
+"electric-pole__bob-big-electric-pole-3": {
+"ru": "Большая опора ЛЭП 3",
+"en": "Big electric pole 3"
+},
+"electric-pole__bob-big-electric-pole-4": {
+"ru": "Большая опора ЛЭП 4",
+"en": "Big electric pole 4"
+},
+"electric-pole__bob-medium-electric-pole-2": {
+"ru": "Средняя опора ЛЭП 2",
+"en": "Medium electric pole 2"
+},
+"electric-pole__bob-medium-electric-pole-3": {
+"ru": "Средняя опора ЛЭП 3",
+"en": "Medium electric pole 3"
+},
+"electric-pole__bob-medium-electric-pole-4": {
+"ru": "Средняя опора ЛЭП 4",
+"en": "Medium electric pole 4"
+},
+"electric-pole__bob-substation-2": {
+"ru": "Подстанция 2",
+"en": "Substation 2"
+},
+"electric-pole__bob-substation-3": {
+"ru": "Подстанция 3",
+"en": "Substation 3"
+},
+"electric-pole__bob-substation-4": {
+"ru": "Подстанция 4",
+"en": "Substation 4"
+},
+"electric-pole__crystal-drain-pole-rampant": {
+"ru": "Кристаллический пилон",
+"en": "Crystal Pylon"
+},
+"electric-pole__factory-circuit-connector": {
+"ru": "Коннектор логической сети фабрики",
+"en": "Factory circuit connector"
+},
+"electric-pole__medium-electric-pole": {
+"ru": "Средняя опора ЛЭП",
+"en": "Medium electric pole"
+},
+"electric-pole__small-electric-pole": {
+"ru": "Малый деревянный электрический столб",
+"en": "Small wood electric pole"
+},
+"electric-pole__small-iron-electric-pole": {
+"ru": "Железная опора ЛЭП",
+"en": "Small iron electric pole"
+},
+"electric-pole__substation": {
+"ru": "Подстанция",
+"en": "Substation"
+},
+"electric-pole__ued-large-db": {
+"ru": "Огромный подземный электрощит",
+"en": "Large Underground Distribution Board"
+},
+"electric-pole__ued-long-distance-db": {
+"ru": "Опорный подземный электрощит",
+"en": "Long Distance Underground Distribution Board"
+},
+"electric-pole__ued-small-db": {
+"ru": "Средний подземный электрощит",
+"en": "Small Underground Distribution Board"
+},
+"electric-turret__bob-laser-turret-2": {
+"ru": "Лазерная турель 2",
+"en": "Laser turret MK2"
+},
+"electric-turret__bob-laser-turret-3": {
+"ru": "Лазерная турель 3",
+"en": "Laser turret MK3"
+},
+"electric-turret__bob-laser-turret-4": {
+"ru": "Лазерная турель 4",
+"en": "Laser turret MK4"
+},
+"electric-turret__bob-laser-turret-5": {
+"ru": "Лазерная турель 5",
+"en": "Laser turret MK5"
+},
+"electric-turret__bob-plasma-turret-1": {
+"ru": "Плазменная турель MK1",
+"en": "Plasma turret MK1"
+},
+"electric-turret__bob-plasma-turret-2": {
+"ru": "Плазменная турель MK2",
+"en": "Plasma turret MK2"
+},
+"electric-turret__bob-plasma-turret-3": {
+"ru": "Плазменная турель MK3",
+"en": "Plasma turret MK3"
+},
+"electric-turret__bob-plasma-turret-4": {
+"ru": "Плазменная турель MK4",
+"en": "Plasma turret MK4"
+},
+"electric-turret__bob-plasma-turret-5": {
+"ru": "Плазменная турель MK5",
+"en": "Plasma turret MK5"
+},
+"electric-turret__laser-turret": {
+"ru": "Лазерная турель",
+"en": "Laser turret"
+},
+"electric-turret__pd-relic-prism-turret": {
+"ru": "Призменная турель",
+"en": "Prism turret"
+},
+"electric-turret__w93-beam-turret": {
+"ru": "Гамма-лучевая турель (Передовая)",
+"en": "Beam turret (Frontline)"
+},
+"electric-turret__w93-beam-turret2": {
+"ru": "Гамма-лучевая турель (Тыловая)",
+"en": "Beam turret (Backline)"
+},
+"electric-turret__w93-plaser-turret": {
+"ru": "Импульсная лазерная турель (Передовая)",
+"en": "Pulse laser turret (Frontline)"
+},
+"electric-turret__w93-plaser-turret2": {
+"ru": "Импульсная лазерная турель (Тыловая)",
+"en": "Pulse laser turret (Backline)"
+},
+"electric-turret__w93-tlaser-turret": {
+"ru": "Термолазерная турель (Передовая)",
+"en": "Thermal laser turret (Frontline)"
+},
+"electric-turret__w93-tlaser-turret2": {
+"ru": "Термолазерная турель (Тыловая)",
+"en": "Thermal laser turret (Backline)"
+},
+"fluid__angels-alien-goo": {
+"ru": "Инопланетная слизь",
+"en": "Alien goo"
+},
+"fluid__angels-alien-spores": {
+"ru": "Инопланетные споры",
+"en": "Alien spores"
+},
+"fluid__angels-crystal-seedling": {
+"ru": "Кристаллическая затравка",
+"en": "Crystal seedling"
+},
+"fluid__angels-crystal-slurry": {
+"ru": "Кристаллический раствор",
+"en": "Crystal slurry"
+},
+"fluid__angels-gas-acetone": {
+"ru": "Ацетон",
+"en": "Acetone gas"
+},
+"fluid__angels-gas-acid": {
+"ru": "Высокосернистый газ",
+"en": "Acid gas"
+},
+"fluid__angels-gas-allylchlorid": {
+"ru": "Аллилхлорид",
+"en": "Allyl chloride gas"
+},
+"fluid__angels-gas-ammonia": {
+"ru": "Аммиак",
+"en": "Ammonia gas"
+},
+"fluid__angels-gas-ammonium-chloride": {
+"ru": "Хлорид аммония",
+"en": "Ammonium chloride gas"
+},
+"fluid__angels-gas-argon": {
+"ru": "Газ Аргон",
+"en": "Argon Gas"
+},
+"fluid__angels-gas-benzene": {
+"ru": "Бензол",
+"en": "Benzene gas"
+},
+"fluid__angels-gas-butadiene": {
+"ru": "Бутадиен",
+"en": "Butadiene gas"
+},
+"fluid__angels-gas-butane": {
+"ru": "Бутан",
+"en": "Butane gas"
+},
+"fluid__angels-gas-carbon-dioxide": {
+"ru": "Углекислый газ",
+"en": "Carbon dioxide"
+},
+"fluid__angels-gas-carbon-monoxide": {
+"ru": "Угарный газ",
+"en": "Carbon monoxide"
+},
+"fluid__angels-gas-chlor-methane": {
+"ru": "Хлорметан",
+"en": "Chloromethane gas"
+},
+"fluid__angels-gas-chlorine": {
+"ru": "Хлор",
+"en": "Chlorine gas"
+},
+"fluid__angels-gas-compressed-air": {
+"ru": "Сжатый воздух",
+"en": "Compressed air"
+},
+"fluid__angels-gas-deuterium": {
+"ru": "Дейтерий (газ)",
+"en": "Deuterium gas"
+},
+"fluid__angels-gas-dimethylamine": {
+"ru": "Диметиламин",
+"en": "Dimethylamine gas"
+},
+"fluid__angels-gas-dimethylhydrazine": {
+"ru": "Диметилгидразин",
+"en": "Dimethylhydrazine gas"
+},
+"fluid__angels-gas-dinitrogen-tetroxide": {
+"ru": "Тетраоксид диазота",
+"en": "Dinitrogen tetroxide gas"
+},
+"fluid__angels-gas-enriched-hydrogen-sulfide": {
+"ru": "Обогащённый сероводород",
+"en": "Enriched hydrogen sulfide gas"
+},
+"fluid__angels-gas-epichlorohydrin": {
+"ru": "Эпихлоргидрин",
+"en": "Epichlorohydrin gas"
+},
+"fluid__angels-gas-ethane": {
+"ru": "Этан",
+"en": "Ethane gas"
+},
+"fluid__angels-gas-ethanol": {
+"ru": "Этанол",
+"en": "Ethanol gas"
+},
+"fluid__angels-gas-ethylene": {
+"ru": "Этилен",
+"en": "Ethylene gas"
+},
+"fluid__angels-gas-formaldehyde": {
+"ru": "Формальдегид",
+"en": "Formaldehyde gas"
+},
+"fluid__angels-gas-hydrazine": {
+"ru": "Гидразин",
+"en": "Hydrazine gas"
+},
+"fluid__angels-gas-hydrogen": {
+"ru": "Водород",
+"en": "Hydrogen gas"
+},
+"fluid__angels-gas-hydrogen-chloride": {
+"ru": "Хлорид водорода",
+"en": "Hydrogen chloride gas"
+},
+"fluid__angels-gas-hydrogen-fluoride": {
+"ru": "Фтороводород",
+"en": "Hydrogen fluoride gas"
+},
+"fluid__angels-gas-hydrogen-sulfide": {
+"ru": "Сероводород",
+"en": "Hydrogen sulfide gas"
+},
+"fluid__angels-gas-melamine": {
+"ru": "Меламин",
+"en": "Melamine gas"
+},
+"fluid__angels-gas-methane": {
+"ru": "Метан",
+"en": "Methane gas"
+},
+"fluid__angels-gas-methanol": {
+"ru": "Метанол",
+"en": "Methanol gas"
+},
+"fluid__angels-gas-methylamine": {
+"ru": "Метиламин",
+"en": "Methylamine gas"
+},
+"fluid__angels-gas-monochloramine": {
+"ru": "Монохлорамин",
+"en": "Monochloramine gas"
+},
+"fluid__angels-gas-natural-1": {
+"ru": "Свободный газ",
+"en": "Natural gas"
+},
+"fluid__angels-gas-nitrogen": {
+"ru": "Азот",
+"en": "Nitrogen gas"
+},
+"fluid__angels-gas-nitrogen-dioxide": {
+"ru": "Диоксид азота",
+"en": "Nitrogen dioxide gas"
+},
+"fluid__angels-gas-nitrogen-monoxide": {
+"ru": "Mоноксид азота",
+"en": "Nitrogen monoxide gas"
+},
+"fluid__angels-gas-oxygen": {
+"ru": "Кислород",
+"en": "Oxygen gas"
+},
+"fluid__angels-gas-propene": {
+"ru": "Пропилен",
+"en": "Propene gas"
+},
+"fluid__angels-gas-puffer-atmosphere": {
+"ru": "Специальная атмосфера для фугу",
+"en": "Artificial puffer atmosphere"
+},
+"fluid__angels-gas-raw-1": {
+"ru": "Природный газ",
+"en": "Raw gas"
+},
+"fluid__angels-gas-residual": {
+"ru": "Остаточный газ",
+"en": "Residual gas"
+},
+"fluid__angels-gas-silane": {
+"ru": "Силан",
+"en": "Silane gas"
+},
+"fluid__angels-gas-sulfur-dioxide": {
+"ru": "Триоксид серы",
+"en": "Sulfur dioxide gas"
+},
+"fluid__angels-gas-synthesis": {
+"ru": "Синтез-газ",
+"en": "Synthesis gas"
+},
+"fluid__angels-gas-tungsten-hexachloride": {
+"ru": "Газ гексафторида вольфрама",
+"en": "Tungsten hexachloride gas"
+},
+"fluid__angels-gas-tungsten-hexafluoride": {
+"ru": "Гексафторид вольфрама",
+"en": "Tungsten hexafluoride gas"
+},
+"fluid__angels-gas-urea": {
+"ru": "Карбамидный газ",
+"en": "Urea gas"
+},
+"fluid__angels-liquid-acetic-acid": {
+"ru": "Уксусная кислота",
+"en": "Acetic acid"
+},
+"fluid__angels-liquid-acetic-anhydride": {
+"ru": "Уксусный ангидрид",
+"en": "Acetic anhydride"
+},
+"fluid__angels-liquid-aqueous-sodium-hydroxide": {
+"ru": "Раствор гидроксида натрия",
+"en": "Sodium hydroxide solution"
+},
+"fluid__angels-liquid-bisphenol-a": {
+"ru": "Бифенол-А",
+"en": "Bisphenol A liquid"
+},
+"fluid__angels-liquid-black-liquor": {
+"ru": "Чёрный ликвор",
+"en": "Black liquor"
+},
+"fluid__angels-liquid-brown-liquor": {
+"ru": "Коричневый ликвор",
+"en": "Brown liquor"
+},
+"fluid__angels-liquid-cellulose-acetate": {
+"ru": "Ацетил-целлюлоза",
+"en": "Cellulose acetate"
+},
+"fluid__angels-liquid-cellulose-acetate-mixture": {
+"ru": "Ацетат-целлюлозная смесь",
+"en": "Cellulose acetate mixture"
+},
+"fluid__angels-liquid-chlorauric-acid": {
+"ru": "Золотохлористоводородная кислота",
+"en": "Chlorauric acid"
+},
+"fluid__angels-liquid-concrete": {
+"ru": "Жидкий бетон",
+"en": "Concrete"
+},
+"fluid__angels-liquid-condensates": {
+"ru": "Газовые конденсаты",
+"en": "Gas condensates"
+},
+"fluid__angels-liquid-coolant": {
+"ru": "Охладитель",
+"en": "Coolant"
+},
+"fluid__angels-liquid-coolant-used": {
+"ru": "Использованный охладитель",
+"en": "Used coolant"
+},
+"fluid__angels-liquid-cupric-chloride-solution": {
+"ru": "Раствор хлорной меди",
+"en": "Cupric chloride solution"
+},
+"fluid__angels-liquid-ethylbenzene": {
+"ru": "Этилбензол",
+"en": "Ethylbenzene liquid"
+},
+"fluid__angels-liquid-fermentation-raw": {
+"ru": "Ферментационная основа",
+"en": "Fermentation base"
+},
+"fluid__angels-liquid-ferric-chloride-solution": {
+"ru": "Раствор хлорного железа",
+"en": "Ferric chloride solution"
+},
+"fluid__angels-liquid-fish-atmosphere": {
+"ru": "Специальная вода для рыб",
+"en": "Artificial fish water"
+},
+"fluid__angels-liquid-fish-oil": {
+"ru": "Рыбий жир",
+"en": "Fish oil"
+},
+"fluid__angels-liquid-fuel-oil": {
+"ru": "Горючее",
+"en": "Fuel oil"
+},
+"fluid__angels-liquid-glycerol": {
+"ru": "Глицерин",
+"en": "Glycerol liquid"
+},
+"fluid__angels-liquid-green-liquor": {
+"ru": "Зелёный ликвор",
+"en": "Green liquor"
+},
+"fluid__angels-liquid-hexachloroplatinic-acid": {
+"ru": "Платинохлористоводородная кислота",
+"en": "Hexachloroplatinic acid"
+},
+"fluid__angels-liquid-hexafluorosilicic-acid": {
+"ru": "Кремнефтористоводородная кислота",
+"en": "Hexafluorosilicic acid"
+},
+"fluid__angels-liquid-hydrochloric-acid": {
+"ru": "Соляная кислота",
+"en": "Hydrochloric acid"
+},
+"fluid__angels-liquid-hydrofluoric-acid": {
+"ru": "Фтороводородная кислота",
+"en": "Hydrofluoric acid"
+},
+"fluid__angels-liquid-mineral-oil": {
+"ru": "Минеральное масло",
+"en": "Base mineral oil"
+},
+"fluid__angels-liquid-molten-aluminium": {
+"ru": "Расплав алюминия",
+"en": "Molten aluminium"
+},
+"fluid__angels-liquid-molten-brass": {
+"ru": "Расплавленная латунь",
+"en": "Molten brass"
+},
+"fluid__angels-liquid-molten-bronze": {
+"ru": "Расплавленная бронза",
+"en": "Molten bronze"
+},
+"fluid__angels-liquid-molten-chrome": {
+"ru": "Расплав хрома",
+"en": "Molten chrome"
+},
+"fluid__angels-liquid-molten-cobalt": {
+"ru": "Расплав кобальта",
+"en": "Molten cobalt"
+},
+"fluid__angels-liquid-molten-cobalt-steel": {
+"ru": "Расплавленная кобальтовая сталь",
+"en": "Molten cobalt steel"
+},
+"fluid__angels-liquid-molten-copper": {
+"ru": "Расплав меди",
+"en": "Molten copper"
+},
+"fluid__angels-liquid-molten-glass": {
+"ru": "Расплав стекла",
+"en": "Molten Glass"
+},
+"fluid__angels-liquid-molten-gold": {
+"ru": "Расплав золота",
+"en": "Molten gold"
+},
+"fluid__angels-liquid-molten-gunmetal": {
+"ru": "Расплавленная пушечная бронза",
+"en": "Molten gunmetal"
+},
+"fluid__angels-liquid-molten-invar": {
+"ru": "Расплавленный инвар",
+"en": "Molten invar"
+},
+"fluid__angels-liquid-molten-iron": {
+"ru": "Расплав железа",
+"en": "Molten iron"
+},
+"fluid__angels-liquid-molten-lead": {
+"ru": "Расплав свинца",
+"en": "Molten lead"
+},
+"fluid__angels-liquid-molten-manganese": {
+"ru": "Расплав марганца",
+"en": "Molten manganese"
+},
+"fluid__angels-liquid-molten-nickel": {
+"ru": "Расплав никеля",
+"en": "Molten nickel"
+},
+"fluid__angels-liquid-molten-nitinol": {
+"ru": "Расплавленный нитинол",
+"en": "Molten nitinol"
+},
+"fluid__angels-liquid-molten-platinum": {
+"ru": "Расплав платины",
+"en": "Molten platinum"
+},
+"fluid__angels-liquid-molten-silicon": {
+"ru": "Расплав кремния",
+"en": "Molten silicon"
+},
+"fluid__angels-liquid-molten-silver": {
+"ru": "Расплав серебра",
+"en": "Molten silver"
+},
+"fluid__angels-liquid-molten-solder": {
+"ru": "Расплав припоя",
+"en": "Molten solder"
+},
+"fluid__angels-liquid-molten-steel": {
+"ru": "Расплав стали",
+"en": "Molten steel"
+},
+"fluid__angels-liquid-molten-tin": {
+"ru": "Расплав олова",
+"en": "Molten tin"
+},
+"fluid__angels-liquid-molten-titanium": {
+"ru": "Расплав титана",
+"en": "Molten titanium"
+},
+"fluid__angels-liquid-molten-zinc": {
+"ru": "Расплав цинка",
+"en": "Molten zinc"
+},
+"fluid__angels-liquid-multi-phase-oil": {
+"ru": "Многофазная нефть",
+"en": "Multi-phase oil"
+},
+"fluid__angels-liquid-naphtha": {
+"ru": "Мазут",
+"en": "Naphtha"
+},
+"fluid__angels-liquid-ngl": {
+"ru": "Сжиженный природный газ",
+"en": "Natural gas liquids"
+},
+"fluid__angels-liquid-nitric-acid": {
+"ru": "Азотная кислота",
+"en": "Nitric acid"
+},
+"fluid__angels-liquid-nutrient-pulp": {
+"ru": "Питательная целлюлоза",
+"en": "Nutrient pulp"
+},
+"fluid__angels-liquid-perchloric-acid": {
+"ru": "Хлорная кислота",
+"en": "Perchloric acid"
+},
+"fluid__angels-liquid-phenol": {
+"ru": "Фенол",
+"en": "Phenol liquid"
+},
+"fluid__angels-liquid-plastic": {
+"ru": "Жидкий пластик",
+"en": "Liquid plastic"
+},
+"fluid__angels-liquid-polluted-fish-atmosphere": {
+"ru": "Загрязненная вода для рыб",
+"en": "Polluted artificial fish water"
+},
+"fluid__angels-liquid-polyethylene": {
+"ru": "Полиэтилен",
+"en": "Polyethylene liquid"
+},
+"fluid__angels-liquid-propionic-acid": {
+"ru": "Пропионовая кислота",
+"en": "Propionic acid"
+},
+"fluid__angels-liquid-pulping-liquor": {
+"ru": "Целлюлозный ликвор",
+"en": "Pulping liquor"
+},
+"fluid__angels-liquid-raw-fish-oil": {
+"ru": "Сырой Рыбий Жир",
+"en": "Raw fish oil"
+},
+"fluid__angels-liquid-raw-vegetable-oil": {
+"ru": "Сырое растительное масло",
+"en": "Raw vegetable oil"
+},
+"fluid__angels-liquid-resin": {
+"ru": "Жидкая смола",
+"en": "Liquid resin"
+},
+"fluid__angels-liquid-rubber": {
+"ru": "Жидкая резина",
+"en": "Liquid rubber"
+},
+"fluid__angels-liquid-styrene": {
+"ru": "Стирол",
+"en": "Styrene liquid"
+},
+"fluid__angels-liquid-titanium-tetrachloride": {
+"ru": "Тетрахлорид титана",
+"en": "Titanium tetrachloride"
+},
+"fluid__angels-liquid-toluene": {
+"ru": "Толуол",
+"en": "Toluene liquid"
+},
+"fluid__angels-liquid-trichlorosilane": {
+"ru": "Трихлорсилан",
+"en": "Trichlorosilane"
+},
+"fluid__angels-liquid-tungstic-acid": {
+"ru": "Вольфрамовая кислота",
+"en": "Tungstic acid"
+},
+"fluid__angels-liquid-vegetable-oil": {
+"ru": "Растительное масло",
+"en": "Vegetable oil"
+},
+"fluid__angels-liquid-water-heavy": {
+"ru": "Тяжёлая вода",
+"en": "Heavy water"
+},
+"fluid__angels-liquid-water-semiheavy-1": {
+"ru": "7.5% полутяжёлая вода",
+"en": "7.5% Semiheavy water"
+},
+"fluid__angels-liquid-water-semiheavy-2": {
+"ru": "12.5% полутяжёлая вода",
+"en": "12.5% Semiheavy water"
+},
+"fluid__angels-liquid-water-semiheavy-3": {
+"ru": "15% полутяжёлая вода",
+"en": "15% Semiheavy water"
+},
+"fluid__angels-liquid-white-liquor": {
+"ru": "Белый ликвор",
+"en": "White liquor"
+},
+"fluid__angels-mineral-sludge": {
+"ru": "Минеральный осадок",
+"en": "Mineral sludge"
+},
+"fluid__angels-ore8-anode-sludge": {
+"ru": "Железосодержащий анодированный осадок",
+"en": "Anodized ferrous concentrate"
+},
+"fluid__angels-ore8-slime": {
+"ru": "Железосодержащая эссенция",
+"en": "Ferrous concentrate"
+},
+"fluid__angels-ore8-sludge": {
+"ru": "Железосодержащий осадок",
+"en": "Ferrous sludge"
+},
+"fluid__angels-ore8-solution": {
+"ru": "Железосодержащий раствор",
+"en": "Ferrous slurry"
+},
+"fluid__angels-ore9-anode-sludge": {
+"ru": "Медесодержащий анодированный осадок",
+"en": "Anodized cupric concentrate"
+},
+"fluid__angels-ore9-slime": {
+"ru": "Медесодержащая эссенция",
+"en": "Cupric concentrate"
+},
+"fluid__angels-ore9-sludge": {
+"ru": "Медесодержащий осадок",
+"en": "Cupric sludge"
+},
+"fluid__angels-ore9-solution": {
+"ru": "Медесодержащий раствор",
+"en": "Cupric slurry"
+},
+"fluid__angels-slag-slurry": {
+"ru": "Шлаковый раствор",
+"en": "Slag slurry"
+},
+"fluid__angels-thermal-water": {
+"ru": "Термальная вода",
+"en": "Thermal water"
+},
+"fluid__angels-water-concentrated-mud": {
+"ru": "Сильно-грязная вода",
+"en": "Concentrated mud water"
+},
+"fluid__angels-water-green-waste": {
+"ru": "Отработанная хлорная вода",
+"en": "Chloric waste water"
+},
+"fluid__angels-water-greenyellow-waste": {
+"ru": "Отработанная фтористая вода",
+"en": "Fluoric waste water"
+},
+"fluid__angels-water-heavy-mud": {
+"ru": "Вязкая грязная вода",
+"en": "Heavy mud water"
+},
+"fluid__angels-water-light-mud": {
+"ru": "Грязная вода",
+"en": "Light mud water"
+},
+"fluid__angels-water-mineralized": {
+"ru": "Минерализованная вода",
+"en": "Mineralized water"
+},
+"fluid__angels-water-purified": {
+"ru": "Дистиллированная вода",
+"en": "Purified water"
+},
+"fluid__angels-water-red-waste": {
+"ru": "Отработанная азотная вода",
+"en": "Nitric waste water"
+},
+"fluid__angels-water-saline": {
+"ru": "Солёная вода",
+"en": "Saline water"
+},
+"fluid__angels-water-thin-mud": {
+"ru": "Слабо-грязная вода",
+"en": "Thin mud water"
+},
+"fluid__angels-water-viscous-mud": {
+"ru": "Мутная донная взвесь",
+"en": "Viscous mud water"
+},
+"fluid__angels-water-yellow-waste": {
+"ru": "Отработанная серная вода",
+"en": "Sulfuric waste water"
+},
+"fluid__bi-biomass": {
+"ru": "Биомасса из водорослей",
+"en": "Algae biomass"
+},
+"fluid__bob-alien-acid": {
+"ru": "Инопланетная кислота",
+"en": "Alien acid fluid"
+},
+"fluid__bob-alien-explosive": {
+"ru": "Инопланетная взрывчатая жидкость",
+"en": "Alien explosive fluid"
+},
+"fluid__bob-alien-fire": {
+"ru": "Инопланетная горючая жидкость",
+"en": "Alien flame fluid"
+},
+"fluid__bob-alien-poison": {
+"ru": "Инопланетный яд",
+"en": "Alien poison fluid"
+},
+"fluid__bob-liquid-fuel": {
+"ru": "Жидкое топливо",
+"en": "Liquid fuel"
+},
+"fluid__bob-nitroglycerin": {
+"ru": "Нитроглицерин",
+"en": "Nitroglycerin"
+},
+"fluid__clowns-gas-fluorine": {
+"ru": "Фтор",
+"en": "Fluorine Gas"
+},
+"fluid__clowns-liquid-dimethylmercury": {
+"ru": "Диметилртуть",
+"en": "Dimethylmercury"
+},
+"fluid__clowns-liquid-mercury": {
+"ru": "Ртуть",
+"en": "Mercury"
+},
+"fluid__clowns-liquid-molten-magnesium": {
+"ru": "Расплав магния",
+"en": "Molten Magnesium"
+},
+"fluid__clowns-liquid-phosphoric-acid": {
+"ru": "Фосфорная кислота",
+"en": "Phosphoric Acid"
+},
+"fluid__clowns-liquid-thorium-solution": {
+"ru": "Раствор соли тория",
+"en": "Thorium Salt solution"
+},
+"fluid__clowns-water-radioactive-waste": {
+"ru": "Радиоактивные сточные воды",
+"en": "Radioactive Waste Water"
+},
+"fluid__crude-oil": {
+"ru": "Сырая нефть",
+"en": "Crude oil"
+},
+"fluid__diesel-fuel": {
+"ru": "Дизельное топливо",
+"en": "Diesel Fuel"
+},
+"fluid__fluid-tetraethyllead": {
+"ru": "Тетраэтилсвинец",
+"en": "Tetraethyllead"
+},
+"fluid__gas-acetylene": {
+"ru": "Ацетилен",
+"en": "Acetylene Gas"
+},
+"fluid__gas-chloroethane": {
+"ru": "Хлорэтан",
+"en": "Chloroethane"
+},
+"fluid__gas-hydrogen-cyanide": {
+"ru": "Синильная кислота",
+"en": "Hydrogen Cyanide Gas"
+},
+"fluid__gas-nitrous-oxide": {
+"ru": "Оксид азота",
+"en": "Nitrous Oxide Gas"
+},
+"fluid__gas-phosgene": {
+"ru": "Фосгеновый газ",
+"en": "Phosgene Gas"
+},
+"fluid__gas-vinyl-acetylene": {
+"ru": "Винилацетат",
+"en": "Vinyl Acetate Gas"
+},
+"fluid__gas-vinyl-chloride": {
+"ru": "Винилхлорид",
+"en": "Vinyl Chloride Gas"
+},
+"fluid__liquid-acetone-cyanohydrin": {
+"ru": "Ацетонциангидрин",
+"en": "Acetone Cyanohydrin"
+},
+"fluid__liquid-acrylonitrile": {
+"ru": "Акрилонитрил",
+"en": "Acrylonitrile"
+},
+"fluid__liquid-air": {
+"ru": "Сжатый воздух",
+"en": "Liquid air"
+},
+"fluid__liquid-chlorobutadiene": {
+"ru": "Хлорбутадиен (неопрен)",
+"en": "Chlorobutadiene (Neoprene)"
+},
+"fluid__liquid-dichlorobutene": {
+"ru": "Дихлорбутен",
+"en": "Dichlorobutene"
+},
+"fluid__liquid-lactic-acid": {
+"ru": "Раствор молочной кислоты",
+"en": "Lactic Acid Solution"
+},
+"fluid__liquid-methyl-methacrylate": {
+"ru": "Метилметакрилат",
+"en": "Methyl Methacrylate"
+},
+"fluid__liquid-rubber-masterbatch": {
+"ru": "Суперконцентрат резины",
+"en": "Rubber Masterbatch"
+},
+"fluid__liquid-rubber-pre": {
+"ru": "Резиновая смесь",
+"en": "Pre-Rubber Mixture"
+},
+"fluid__lubricant": {
+"ru": "Смазочная жидкость",
+"en": "Lubricant"
+},
+"fluid__nitrogen": {
+"ru": "Азот",
+"en": "Nitrogen"
+},
+"fluid__steam": {
+"ru": "Пар",
+"en": "Steam"
+},
+"fluid__sulfuric-acid": {
+"ru": "Серная кислота",
+"en": "Sulfuric acid"
+},
+"fluid__water": {
+"ru": "Вода",
+"en": "Water"
+},
+"fluid-turret__flamethrower-turret": {
+"ru": "Огнемётная турель",
+"en": "Flamethrower turret"
+},
+"fluid-turret__pd-fire-safety-turret": {
+"ru": "Пожарная турель",
+"en": "Fire safety turret"
+},
+"fluid-turret__pd-fire-safety-turret-mk2": {
+"ru": "Пожарная турель МК-2",
+"en": "Fire safety turret MK2"
+},
+"furnace__ic-refine-workshop": {
+"ru": "Мастерская доводки",
+"en": "Refinement workshop"
+},
+"furnace__recycler": {
+"ru": "Переработчик 4",
+"en": "Recycler 4"
+},
+"furnace__recycler-1": {
+"ru": "Переработчик 1",
+"en": "Recycler 1"
+},
+"furnace__recycler-2": {
+"ru": "Переработчик 2",
+"en": "Recycler 2"
+},
+"furnace__recycler-3": {
+"ru": "Переработчик 3",
+"en": "Recycler 3"
+},
+"generator__bob-steam-engine-2": {
+"ru": "Паровой двигатель 2",
+"en": "Steam engine 2"
+},
+"generator__bob-steam-engine-3": {
+"ru": "Паровой двигатель 3",
+"en": "Steam engine 3"
+},
+"generator__bob-steam-engine-4": {
+"ru": "Паровой двигатель 4",
+"en": "Steam engine 4"
+},
+"generator__bob-steam-engine-5": {
+"ru": "Паровой двигатель 5",
+"en": "Steam engine 5"
+},
+"generator__bob-steam-turbine-2": {
+"ru": "Паровая турбина 2",
+"en": "Steam turbine 2"
+},
+"generator__bob-steam-turbine-3": {
+"ru": "Паровая турбина 3",
+"en": "Steam turbine 3"
+},
+"generator__petroleum-generator": {
+"ru": "Дизель-генератор",
+"en": "Diesel Generator"
+},
+"generator__steam-engine": {
+"ru": "Паровой двигатель",
+"en": "Steam engine"
+},
+"generator__steam-turbine": {
+"ru": "Паровая турбина",
+"en": "Steam turbine"
+},
+"gun__Schall-sniper-rifle": {
+"ru": "Снайперская винтовка",
+"en": "Sniper rifle"
+},
+"gun__artillery-gun-prototype": {
+"ru": "Прототип артиллерийского орудия",
+"en": "Artillery gun prototype"
+},
+"gun__bi-dart-rifle": {
+"ru": "Дротиковая винтовка",
+"en": "Dart rifle"
+},
+"gun__bob-laser-rifle": {
+"ru": "Лазерный карабин",
+"en": "Laser rifle"
+},
+"gun__bob-rifle": {
+"ru": "Карабин",
+"en": "Rifle"
+},
+"gun__bob-sniper-rifle": {
+"ru": "Снайперская винтовка",
+"en": "Sniper rifle"
+},
+"gun__combat-shotgun": {
+"ru": "Боевой дробовик",
+"en": "Combat shotgun"
+},
+"gun__flamethrower": {
+"ru": "Огнемёт",
+"en": "Flamethrower"
+},
+"gun__gun-nano-emitter": {
+"ru": "Нано-пушка",
+"en": "Nanobot launcher"
+},
+"gun__pistol": {
+"ru": "Пистолет",
+"en": "Pistol"
+},
+"gun__rocket-launcher": {
+"ru": "Ракетница",
+"en": "Rocket launcher"
+},
+"gun__shotgun": {
+"ru": "Дробовик",
+"en": "Shotgun"
+},
+"gun__submachine-gun": {
+"ru": "Пистолет-пулемёт",
+"en": "Submachine gun"
+},
+"gun__w93-modular-gun-hmg": {
+"ru": "Тяжёлый пулемёт",
+"en": "Heavy MG"
+},
+"inserter__bob-express-bulk-inserter": {
+"ru": "Гипер Массовый манипулятор",
+"en": "Ultimate bulk inserter"
+},
+"inserter__bob-express-inserter": {
+"ru": "Гипер Манипулятор",
+"en": "Ultimate inserter"
+},
+"inserter__bob-red-bulk-inserter": {
+"ru": "Быстрый Массовый манипулятор",
+"en": "Fast bulk inserter"
+},
+"inserter__bob-red-inserter": {
+"ru": "Быстрый Манипулятор",
+"en": "Fast inserter"
+},
+"inserter__bob-steam-inserter": {
+"ru": "Паровой манипулятор Манипулятор",
+"en": "Steam powered inserter"
+},
+"inserter__bob-turbo-bulk-inserter": {
+"ru": "Турбо Массовый манипулятор",
+"en": "Turbo bulk inserter"
+},
+"inserter__bob-turbo-inserter": {
+"ru": "Турбо Манипулятор",
+"en": "Turbo inserter"
+},
+"inserter__bulk-inserter": {
+"ru": "Экспресс Массовый манипулятор",
+"en": "Express bulk inserter"
+},
+"inserter__burner-inserter": {
+"ru": "Твердотопливный манипулятор",
+"en": "Burner inserter"
+},
+"inserter__fast-inserter": {
+"ru": "Экспресс Манипулятор",
+"en": "Express inserter"
+},
+"inserter__inserter": {
+"ru": "Манипулятор",
+"en": "Inserter"
+},
+"inserter__long-handed-inserter": {
+"ru": "Длинный манипулятор",
+"en": "Long-handed inserter"
+},
+"inserter__nco-crane": {
+"ru": "Погрузочный кран",
+"en": "Loading Crane"
+},
+"inserter__nco-express-crane": {
+"ru": "Экспресс кран",
+"en": "Express Crane"
+},
+"inserter__nco-red-crane": {
+"ru": "Красный погрузочный кран",
+"en": "Red Loading Crane"
+},
+"inserter__nco-red-wide-crane": {
+"ru": "Широкий красный погрузочный кран",
+"en": "Wide Red Loading Crane"
+},
+"inserter__nco-turbo-crane": {
+"ru": "Турбо кран",
+"en": "Turbo Crane"
+},
+"inserter__nco-wide-crane": {
+"ru": "Широкий погрузочный кран",
+"en": "Wide Loading Crane"
+},
+"inserter__nco-wide-express-crane": {
+"ru": "Широкий экспресс кран",
+"en": "Wide Express Crane"
+},
+"inserter__nco-wide-turbo-crane": {
+"ru": "Широкий турбо кран",
+"en": "Wide Turbo Crane"
+},
+"inserter__w93-hardened-inserter": {
+"ru": "Бронированный манипулятор",
+"en": "Hardened inserter"
+},
+"item__advanced-circuit": {
+"ru": "Продвинутая схема",
+"en": "Advanced circuit"
+},
+"item__angels-bio-puffer-1": {
+"ru": "Газообразующий фугу",
+"en": "Gaseous puffer"
+},
+"item__angels-bio-puffer-2": {
+"ru": "Прогорклый фугу",
+"en": "Rancid puffer"
+},
+"item__angels-bio-puffer-3": {
+"ru": "Пылающий фугу",
+"en": "Blazing puffer"
+},
+"item__angels-bio-puffer-4": {
+"ru": "Кислотообразующий фугу",
+"en": "Acidic puffer"
+},
+"item__angels-bio-puffer-5": {
+"ru": "Разъедающий фугу",
+"en": "Corrosive puffer"
+},
+"item__angels-bio-puffer-egg-1": {
+"ru": "Яйцо Газообразующего фугу",
+"en": "Gaseous puffer egg"
+},
+"item__angels-bio-puffer-egg-2": {
+"ru": "Яйцо Прогорьклого фугу",
+"en": "Rancid puffer egg"
+},
+"item__angels-bio-puffer-egg-3": {
+"ru": "Яйцо Пылающего фугу",
+"en": "Blazing puffer egg"
+},
+"item__angels-bio-puffer-egg-4": {
+"ru": "Яйцо Кислотообразующего фугу",
+"en": "Acidic puffer egg"
+},
+"item__angels-bio-puffer-egg-5": {
+"ru": "Яйцо Разъедающего фугу",
+"en": "Corrosive puffer egg"
+},
+"item__angels-catalyst-metal-carrier": {
+"ru": "Рамка для катализатора",
+"en": "Metal-catalyst carrier"
+},
+"item__angels-cellulose-fiber": {
+"ru": "Целлюлозное волокно",
+"en": "Cellulose fiber"
+},
+"item__angels-coal-crushed": {
+"ru": "Дробленый уголь",
+"en": "Crushed coal"
+},
+"item__angels-crystal-dust": {
+"ru": "Кристаллическая пыль",
+"en": "Crystal dust"
+},
+"item__angels-deuterium-fuel-cell": {
+"ru": "Дейтериевая топливная ячейка",
+"en": "Deuterium fuel cell"
+},
+"item__angels-geode-blue": {
+"ru": "Синие кристаллы",
+"en": "Blue geode"
+},
+"item__angels-geode-purple": {
+"ru": "Фиолетовые кристаллы",
+"en": "Purple geode"
+},
+"item__angels-geode-red": {
+"ru": "Красные кристаллы",
+"en": "Red geode"
+},
+"item__angels-milling-drum": {
+"ru": "Дробильная насадка",
+"en": "Milling drum"
+},
+"item__angels-mixed-oxide-cell": {
+"ru": "МОКС-топливный элемент",
+"en": "Mixed-oxide (MOX) fuel cell"
+},
+"item__angels-nuclear-fuel": {
+"ru": "Плутониевое ядерное топливо",
+"en": "Plutonium nuclear fuel"
+},
+"item__angels-nuclear-fuel-2": {
+"ru": "Термоядерное топливо",
+"en": "Fusion nuclear fuel"
+},
+"item__angels-ore1": {
+"ru": "Сапфиритовая руда",
+"en": "Saphirite ore"
+},
+"item__angels-ore1-chunk": {
+"ru": "Концентрат сапфирита",
+"en": "Saphirite chunks"
+},
+"item__angels-ore1-crushed": {
+"ru": "Дроблёный сапфирит",
+"en": "Crushed saphirite"
+},
+"item__angels-ore1-crystal": {
+"ru": "Кристаллы сапфирита",
+"en": "Saphirite crystals"
+},
+"item__angels-ore1-pure": {
+"ru": "Сверхчистый сапфирит",
+"en": "Purified saphirite"
+},
+"item__angels-ore2": {
+"ru": "Дживолитовая руда",
+"en": "Jivolite ore"
+},
+"item__angels-ore2-chunk": {
+"ru": "Концентрат дживолита",
+"en": "Jivolite chunks"
+},
+"item__angels-ore2-crushed": {
+"ru": "Дроблёный дживолит",
+"en": "Crushed jivolite"
+},
+"item__angels-ore2-crystal": {
+"ru": "Кристаллы дживолита",
+"en": "Jivolite crystals"
+},
+"item__angels-ore2-pure": {
+"ru": "Сверхчистый дживолит",
+"en": "Purified jivolite"
+},
+"item__angels-ore3": {
+"ru": "Стиратитовая руда",
+"en": "Stiratite ore"
+},
+"item__angels-ore3-chunk": {
+"ru": "Концентрат стиратита",
+"en": "Stiratite chunks"
+},
+"item__angels-ore3-crushed": {
+"ru": "Дроблёный стиратит",
+"en": "Crushed stiratite"
+},
+"item__angels-ore3-crystal": {
+"ru": "Кристаллы стиратита",
+"en": "Stiratite crystals"
+},
+"item__angels-ore3-pure": {
+"ru": "Сверхчистый стиратит",
+"en": "Purified stiratite"
+},
+"item__angels-ore4": {
+"ru": "Кротиниумная руда",
+"en": "Crotinnium ore"
+},
+"item__angels-ore4-chunk": {
+"ru": "Концентрат кротиниума",
+"en": "Crotinnium chunks"
+},
+"item__angels-ore4-crushed": {
+"ru": "Дроблёный кротиниум",
+"en": "Crushed crotinnium"
+},
+"item__angels-ore4-crystal": {
+"ru": "Кристаллы кротиниума",
+"en": "Crotinnium crystals"
+},
+"item__angels-ore4-pure": {
+"ru": "Сверхчистый кротиниум",
+"en": "Purified crotinnium"
+},
+"item__angels-ore5": {
+"ru": "Рубитовая руда",
+"en": "Rubyte ore"
+},
+"item__angels-ore5-chunk": {
+"ru": "Концентрат рубита",
+"en": "Rubyte chunks"
+},
+"item__angels-ore5-crushed": {
+"ru": "Дроблёный рубит",
+"en": "Crushed rubyte"
+},
+"item__angels-ore5-crystal": {
+"ru": "Кристаллы рубита",
+"en": "Rubyte crystals"
+},
+"item__angels-ore5-pure": {
+"ru": "Сверхчистый рубит",
+"en": "Purified rubyte"
+},
+"item__angels-ore6": {
+"ru": "Бобмониумная руда",
+"en": "Bobmonium ore"
+},
+"item__angels-ore6-chunk": {
+"ru": "Концентрат бобмониума",
+"en": "Bobmonium chunks"
+},
+"item__angels-ore6-crushed": {
+"ru": "Дроблёный бобмониум",
+"en": "Crushed bobmonium"
+},
+"item__angels-ore6-crystal": {
+"ru": "Кристаллы бобмониума",
+"en": "Bobmonium crystals"
+},
+"item__angels-ore6-pure": {
+"ru": "Сверхчистый бобмониум",
+"en": "Purified bobmonium"
+},
+"item__angels-pellet-coke": {
+"ru": "Коксовые пеллеты",
+"en": "Coke pellet"
+},
+"item__angels-rocket-booster": {
+"ru": "Ракетный ускоритель",
+"en": "Rocket booster"
+},
+"item__angels-slag": {
+"ru": "Шлак",
+"en": "Slag"
+},
+"item__angels-solid-carbon": {
+"ru": "Углерод",
+"en": "Carbon"
+},
+"item__angels-solid-coke": {
+"ru": "Коксовый уголь",
+"en": "Coke"
+},
+"item__angels-solid-oil-residual": {
+"ru": "Остатки нефтепереработки",
+"en": "Oil residuals"
+},
+"item__angels-stone-crushed": {
+"ru": "Щебень",
+"en": "Crushed stone"
+},
+"item__angels-thorium-fuel-cell": {
+"ru": "Ториевый топливный элемент",
+"en": "Thorium fuel cell"
+},
+"item__angels-wood-bricks": {
+"ru": "Деревянные топливные брикеты",
+"en": "Wood bricks"
+},
+"item__angels-wood-charcoal": {
+"ru": "Древесный уголь",
+"en": "Charcoal"
+},
+"item__angels-wood-pellets": {
+"ru": "Древесные гранулы",
+"en": "Wood pellets"
+},
+"item__assembling-machine-1": {
+"ru": "Сборочный автомат 1",
+"en": "Assembling machine 1"
+},
+"item__barrel": {
+"ru": "Бочка",
+"en": "Barrel"
+},
+"item__bet-fuel-1-full": {
+"ru": "Заряженный аккумуляторный блок поезда",
+"en": "Charged train battery pack 1"
+},
+"item__bet-fuel-2-full": {
+"ru": "Заряженный аккумуляторный блок поезда МК2",
+"en": "Charged train battery pack 2"
+},
+"item__bet-fuel-3-full": {
+"ru": "Заряженный аккумуляторный блок поезда МК3",
+"en": "Charged train battery pack 3"
+},
+"item__bet-fuel-4-full": {
+"ru": "Заряженный аккумуляторный блок поезда МК4",
+"en": "Charged train battery pack 4"
+},
+"item__bi-dart-turret": {
+"ru": "Дротиковая турель",
+"en": "Dart turret"
+},
+"item__bi-seed": {
+"ru": "Семена",
+"en": "Tree seed"
+},
+"item__bi-wood-pipe": {
+"ru": "Деревянная труба",
+"en": "Wood pipe"
+},
+"item__bi-wood-pipe-to-ground": {
+"ru": "Подземная деревянная труба",
+"en": "Wood pipe to ground"
+},
+"item__bi-wooden-chest-giga": {
+"ru": "Огромный деревянный ящик",
+"en": "Huge wooden chest"
+},
+"item__bi-wooden-chest-huge": {
+"ru": "Большой деревянный ящик",
+"en": "Large wooden chest"
+},
+"item__bi-wooden-chest-large": {
+"ru": "Средний деревянный ящик",
+"en": "Medium wooden chest"
+},
+"item__bi-wooden-fence": {
+"ru": "Деревянный забор",
+"en": "Wooden fence"
+},
+"item__bi-wooden-pole-big": {
+"ru": "Большой деревянный столб",
+"en": "Big wooden pole"
+},
+"item__bi-wooden-pole-huge": {
+"ru": "Гигантский электрический столб",
+"en": "Huge wooden pole"
+},
+"item__bi-woodpulp": {
+"ru": "Древесные опилки",
+"en": "Wood pulp"
+},
+"item__big-lab": {
+"ru": "Биг-лаба",
+"en": "Big Lab"
+},
+"item__bob-advanced-processing-unit": {
+"ru": "Электронная вычислительная плата",
+"en": "Advanced processing unit"
+},
+"item__bob-alien-artifact": {
+"ru": "Инопланетный материал",
+"en": "Alien artifact"
+},
+"item__bob-alien-artifact-blue": {
+"ru": "Синий инопланетный материал",
+"en": "Blue alien artifact"
+},
+"item__bob-alien-artifact-green": {
+"ru": "Зелёный инопланетный материал",
+"en": "Green alien artifact"
+},
+"item__bob-alien-artifact-orange": {
+"ru": "Оранжевый инопланетный материал",
+"en": "Orange alien artifact"
+},
+"item__bob-alien-artifact-purple": {
+"ru": "Розовый инопланетный материал",
+"en": "Purple alien artifact"
+},
+"item__bob-alien-artifact-red": {
+"ru": "Красный инопланетный материал",
+"en": "Red alien artifact"
+},
+"item__bob-alien-artifact-yellow": {
+"ru": "Жёлтый инопланетный материал",
+"en": "Yellow alien artifact"
+},
+"item__bob-aluminium-plate": {
+"ru": "Алюминиевый слиток",
+"en": "Aluminium plate"
+},
+"item__bob-bauxite-ore": {
+"ru": "Алюминиевая руда",
+"en": "Aluminium ore"
+},
+"item__bob-cobalt-ore": {
+"ru": "Кобальт",
+"en": "Cobalt ore"
+},
+"item__bob-enriched-fuel": {
+"ru": "Обогащённое твёрдое топливо",
+"en": "Enriched fuel block"
+},
+"item__bob-gold-ore": {
+"ru": "Золотая руда",
+"en": "Gold ore"
+},
+"item__bob-lead-ore": {
+"ru": "Свинцовая руда",
+"en": "Lead ore"
+},
+"item__bob-module-contact": {
+"ru": "Контакты модуля",
+"en": "Module contact"
+},
+"item__bob-nickel-ore": {
+"ru": "Никелевая руда",
+"en": "Nickel ore"
+},
+"item__bob-nitinol-alloy": {
+"ru": "Нитиноловая пластина",
+"en": "Nitinol plate"
+},
+"item__bob-quartz": {
+"ru": "Кварц",
+"en": "Silicon ore"
+},
+"item__bob-rutile-ore": {
+"ru": "Титановая руда",
+"en": "Titanium ore"
+},
+"item__bob-silver-ore": {
+"ru": "Серебрянная руда",
+"en": "Silver ore"
+},
+"item__bob-small-alien-artifact": {
+"ru": "Малый инопланетный материал",
+"en": "Small alien artifact"
+},
+"item__bob-small-alien-artifact-blue": {
+"ru": "Малый синий инопланетный материал",
+"en": "Small blue alien artifact"
+},
+"item__bob-small-alien-artifact-green": {
+"ru": "Малый зелёный инопланетный материал",
+"en": "Small green alien artifact"
+},
+"item__bob-small-alien-artifact-orange": {
+"ru": "Малый оранжевый инопланетный материал",
+"en": "Small orange alien artifact"
+},
+"item__bob-small-alien-artifact-purple": {
+"ru": "Малый розовый инопланетный материал",
+"en": "Small purple alien artifact"
+},
+"item__bob-small-alien-artifact-red": {
+"ru": "Малый красный инопланетный материал",
+"en": "Small red alien artifact"
+},
+"item__bob-small-alien-artifact-yellow": {
+"ru": "Малый жёлтый инопланетный материал",
+"en": "Small yellow alien artifact"
+},
+"item__bob-solder": {
+"ru": "Припой",
+"en": "Solder"
+},
+"item__bob-steel-gear-wheel": {
+"ru": "Стальная шестерня",
+"en": "Steel gear wheel"
+},
+"item__bob-tin-ore": {
+"ru": "Оловянная руда",
+"en": "Tin ore"
+},
+"item__bob-titanium-plate": {
+"ru": "Титановая балка",
+"en": "Titanium plate"
+},
+"item__bob-zinc-ore": {
+"ru": "Цинковая руда",
+"en": "Zinc ore"
+},
+"item__burner-mining-drill": {
+"ru": "Твердотопливный бур",
+"en": "Burner mining drill"
+},
+"item__clowns-hypernuclear-fuel": {
+"ru": "Гиперъядерное топливо",
+"en": "Hypernuclear Fuel"
+},
+"item__clowns-radiothermal-fuel": {
+"ru": "Радиотермическое топливо",
+"en": "Radiothermal Fuel"
+},
+"item__clowns-superradiothermal-fuel": {
+"ru": "Суперрадиотермическое топливо",
+"en": "Superradiothermal Fuel"
+},
+"item__clowns-turbonuclear-fuel": {
+"ru": "Турбоядерное топливо",
+"en": "Turbonuclear Fuel"
+},
+"item__clowns-ultraradiothermal-fuel": {
+"ru": "Ультрарадиотермическое топливо",
+"en": "Ultraradiothermal Fuel"
+},
+"item__coal": {
+"ru": "Уголь",
+"en": "Coal"
+},
+"item__copper-ore": {
+"ru": "Медная руда",
+"en": "Copper ore"
+},
+"item__copper-plate": {
+"ru": "Медная плита",
+"en": "Copper plate"
+},
+"item__electronic-circuit": {
+"ru": "Электросхема",
+"en": "Electronic circuit"
+},
+"item__factory-1": {
+"ru": "Фабрика 1",
+"en": "Factory building 1"
+},
+"item__factory-4": {
+"ru": "Фабрика 4",
+"en": "Factory building 4"
+},
+"item__gun-turret": {
+"ru": "Пулемётная турель",
+"en": "Gun turret"
+},
+"item__high-octane-enriched-fuel": {
+"ru": "Высокооктановое обогащённое топливо",
+"en": "High Octane Enriched Fuel"
+},
+"item__ic-refine-workshop": {
+"ru": "Мастерская доводки",
+"en": "Refinement workshop"
+},
+"item__iron-chest": {
+"ru": "Железный сундук",
+"en": "Iron chest"
+},
+"item__iron-gear-wheel": {
+"ru": "Железная шестерня",
+"en": "Iron gear wheel"
+},
+"item__iron-ore": {
+"ru": "Железная руда",
+"en": "Iron ore"
+},
+"item__iron-plate": {
+"ru": "Железная плита",
+"en": "Iron plate"
+},
+"item__landfill": {
+"ru": "Отсыпка территории",
+"en": "Landfill"
+},
+"item__memory-unit": {
+"ru": "Хранилище материопамяти",
+"en": "Memory unit"
+},
+"item__mirv-rocket": {
+"ru": "РГЧ ИН",
+"en": "M.I.R.V"
+},
+"item__nuclear-fuel": {
+"ru": "Ядерное топливо",
+"en": "Nuclear fuel"
+},
+"item__paranoidal-beta8-hyper-lab": {
+"ru": "Гипер-лаба",
+"en": "Hyper Lab"
+},
+"item__processing-unit": {
+"ru": "Процессор",
+"en": "Processing unit"
+},
+"item__rocket-fuel": {
+"ru": "Ракетное топливо",
+"en": "Rocket fuel"
+},
+"item__rocket-part": {
+"ru": "Деталь ракеты",
+"en": "Rocket"
+},
+"item__satellite": {
+"ru": "Спутник",
+"en": "Satellite"
+},
+"item__seedling": {
+"ru": "Саженец",
+"en": "Sapling"
+},
+"item__small-electric-pole": {
+"ru": "Малый деревянный электрический столб",
+"en": "Small wood electric pole"
+},
+"item__solid-fuel": {
+"ru": "Твёрдое топливо",
+"en": "Solid fuel"
+},
+"item__steel-plate": {
+"ru": "Стальная балка",
+"en": "Steel plate"
+},
+"item__stone": {
+"ru": "Камень",
+"en": "Stone"
+},
+"item__teleporter": {
+"ru": "teleporter",
+"en": "teleporter"
+},
+"item__tungsten-ore": {
+"ru": "Вольфрамовая руда",
+"en": "Tungsten ore"
+},
+"item__uranium-235": {
+"ru": "Уран (80% U-235, оружейный)",
+"en": "Uranium (80% U-235, Weapons Grade)"
+},
+"item__uranium-238": {
+"ru": "Уран (0% U-235, обеднённый)",
+"en": "Uranium (0% U-235, Depleted)"
+},
+"item__uranium-fuel-cell": {
+"ru": "Урановый топливный элемент",
+"en": "Uranium-235 fuel cell"
+},
+"item__uranium-ore": {
+"ru": "Урановая руда",
+"en": "Uranium ore"
+},
+"item__wood": {
+"ru": "Древесина",
+"en": "Wood"
+},
+"item__wooden-chest": {
+"ru": "Деревянный сундук",
+"en": "Wooden chest"
+},
+"lab__big-lab": {
+"ru": "Биг-лаба",
+"en": "Big Lab"
+},
+"lab__bob-lab-2": {
+"ru": "Лаборатория 2",
+"en": "Lab 2"
+},
+"lab__bob-lab-alien": {
+"ru": "Лаборатория инопланетных материалов",
+"en": "Alien lab"
+},
+"lab__burner-lab": {
+"ru": "Твёрдотопливная Лаборатория",
+"en": "Burner lab"
+},
+"lab__erp-lab": {
+"ru": "Центр обработки данных",
+"en": "Data Processor"
+},
+"lab__lab": {
+"ru": "Электрическая лаборатория",
+"en": "Electric lab"
+},
+"lab__lab-module": {
+"ru": "Лаборатория модулей",
+"en": "Modules lab"
+},
+"lab__paranoidal-beta8-big-lab": {
+"ru": "Гиг-лаба",
+"en": "Big Lab"
+},
+"lab__paranoidal-beta8-hyper-lab": {
+"ru": "Гипер-лаба",
+"en": "Hyper Lab"
+},
+"lab__pd-relic-archive": {
+"ru": "Архив предтеч",
+"en": "Forerunner archive"
+},
+"lab__salvaged-lab": {
+"ru": "Извлечённая лаборатория",
+"en": "Salvaged lab"
+},
+"land-mine__teleporter": {
+"ru": "teleporter",
+"en": "teleporter"
+},
+"locomotive__bet-locomotive": {
+"ru": "Электровоз",
+"en": "Battery-electric locomotive"
+},
+"locomotive__bob-armoured-locomotive": {
+"ru": "Бронированный локомотив",
+"en": "Armoured locomotive"
+},
+"locomotive__bob-armoured-locomotive-2": {
+"ru": "Бронированный локомотив MK2",
+"en": "Armoured locomotive MK2"
+},
+"locomotive__bob-locomotive-2": {
+"ru": "Локомотив MK2",
+"en": "Locomotive MK2"
+},
+"locomotive__bob-locomotive-3": {
+"ru": "Локомотив MK3",
+"en": "Locomotive MK3"
+},
+"locomotive__hiend_loco": {
+"ru": "Локомотив на магнитной подушке",
+"en": "Maglev locomotive"
+},
+"locomotive__locomotive": {
+"ru": "Локомотив",
+"en": "Locomotive"
+},
+"locomotive__yir_usl": {
+"ru": "Локомотив МК0",
+"en": "Locomotive MK0"
+},
+"mining-drill__angels-thermal-bore": {
+"ru": "Экстрактор термальных вод",
+"en": "Thermal water bore"
+},
+"mining-drill__angels-thermal-extractor": {
+"ru": "Экстрактор термальных вод 2",
+"en": "Thermal water extractor"
+},
+"mining-drill__bob-area-mining-drill-1": {
+"ru": "Увеличенный электрический бур MK2",
+"en": "Electric large area mining drill 1"
+},
+"mining-drill__bob-area-mining-drill-2": {
+"ru": "Увеличенный электрический бур MK3",
+"en": "Electric large area mining drill 2"
+},
+"mining-drill__bob-area-mining-drill-3": {
+"ru": "Увеличенный электрический бур MK4",
+"en": "Electric large area mining drill 3"
+},
+"mining-drill__bob-area-mining-drill-4": {
+"ru": "Увеличенный электрический бур MK5",
+"en": "Electric large area mining drill 4"
+},
+"mining-drill__bob-mining-drill-1": {
+"ru": "Электрический бур 2",
+"en": "Electric mining drill 2"
+},
+"mining-drill__bob-mining-drill-2": {
+"ru": "Электрический бур 3",
+"en": "Electric mining drill 3"
+},
+"mining-drill__bob-mining-drill-3": {
+"ru": "Электрический бур 4",
+"en": "Electric mining drill 4"
+},
+"mining-drill__bob-mining-drill-4": {
+"ru": "Электрический бур 5",
+"en": "Electric mining drill 5"
+},
+"mining-drill__bob-pumpjack-1": {
+"ru": "Нефтяная вышка MK2",
+"en": "Pumpjack MK2"
+},
+"mining-drill__bob-pumpjack-2": {
+"ru": "Нефтяная вышка MK3",
+"en": "Pumpjack MK3"
+},
+"mining-drill__bob-pumpjack-3": {
+"ru": "Нефтяная вышка MK5",
+"en": "Pumpjack MK5"
+},
+"mining-drill__burner-mining-drill": {
+"ru": "Твердотопливный бур",
+"en": "Burner mining drill"
+},
+"mining-drill__electric-mining-drill": {
+"ru": "Электрический бур",
+"en": "Electric mining drill"
+},
+"mining-drill__paranoidal-pumpjack-4": {
+"ru": "Нефтяная вышка MK4",
+"en": "Pumpjack MK4"
+},
+"mining-drill__pd-relic-deep-drill": {
+"ru": "Глубинный бур",
+"en": "Deep drill"
+},
+"mining-drill__pumpjack": {
+"ru": "Нефтяная вышка",
+"en": "Pumpjack"
+},
+"module__bob-efficiency-module-4": {
+"ru": "Модуль эффективности 4",
+"en": "Efficiency Module 4"
+},
+"module__bob-efficiency-module-5": {
+"ru": "Модуль эффективности 5",
+"en": "Efficiency Module 5"
+},
+"module__bob-efficiency-module-6": {
+"ru": "Модуль эффективности 6",
+"en": "Efficiency Module 6"
+},
+"module__bob-efficiency-module-7": {
+"ru": "Модуль эффективности 7",
+"en": "Efficiency Module 7"
+},
+"module__bob-efficiency-module-8": {
+"ru": "Модуль эффективности 8",
+"en": "Efficiency Module 8"
+},
+"module__bob-god-module": {
+"ru": "Божественный модуль",
+"en": "God module"
+},
+"module__bob-pollution-clean-module-1": {
+"ru": "Модуль уменьшения загрязнения 1",
+"en": "Pollution Cleaning Module 1"
+},
+"module__bob-pollution-clean-module-2": {
+"ru": "Модуль уменьшения загрязнения 2",
+"en": "Pollution Cleaning Module 2"
+},
+"module__bob-pollution-clean-module-3": {
+"ru": "Модуль уменьшения загрязнения 3",
+"en": "Pollution Cleaning Module 3"
+},
+"module__bob-pollution-clean-module-4": {
+"ru": "Модуль уменьшения загрязнения 4",
+"en": "Pollution Cleaning Module 4"
+},
+"module__bob-pollution-clean-module-5": {
+"ru": "Модуль уменьшения загрязнения 5",
+"en": "Pollution Cleaning Module 5"
+},
+"module__bob-pollution-clean-module-6": {
+"ru": "Модуль уменьшения загрязнения 6",
+"en": "Pollution Cleaning Module 6"
+},
+"module__bob-pollution-clean-module-7": {
+"ru": "Модуль уменьшения загрязнения 7",
+"en": "Pollution Cleaning Module 7"
+},
+"module__bob-pollution-clean-module-8": {
+"ru": "Модуль уменьшения загрязнения 8",
+"en": "Pollution Cleaning Module 8"
+},
+"module__bob-pollution-create-module-1": {
+"ru": "Модуль увеличения загрязнения 1",
+"en": "Pollution Producing Module 1"
+},
+"module__bob-pollution-create-module-2": {
+"ru": "Модуль увеличения загрязнения 2",
+"en": "Pollution Producing Module 2"
+},
+"module__bob-pollution-create-module-3": {
+"ru": "Модуль увеличения загрязнения 3",
+"en": "Pollution Producing Module 3"
+},
+"module__bob-pollution-create-module-4": {
+"ru": "Модуль увеличения загрязнения 4",
+"en": "Pollution Producing Module 4"
+},
+"module__bob-pollution-create-module-5": {
+"ru": "Модуль увеличения загрязнения 5",
+"en": "Pollution Producing Module 5"
+},
+"module__bob-pollution-create-module-6": {
+"ru": "Модуль увеличения загрязнения 6",
+"en": "Pollution Producing Module 6"
+},
+"module__bob-pollution-create-module-7": {
+"ru": "Модуль увеличения загрязнения 7",
+"en": "Pollution Producing Module 7"
+},
+"module__bob-pollution-create-module-8": {
+"ru": "Модуль увеличения загрязнения 8",
+"en": "Pollution Producing Module 8"
+},
+"module__bob-productivity-module-4": {
+"ru": "Модуль продуктивности 4",
+"en": "Productivity Module 4"
+},
+"module__bob-productivity-module-5": {
+"ru": "Модуль продуктивности 5",
+"en": "Productivity Module 5"
+},
+"module__bob-productivity-module-6": {
+"ru": "Модуль продуктивности 6",
+"en": "Productivity Module 6"
+},
+"module__bob-productivity-module-7": {
+"ru": "Модуль продуктивности 7",
+"en": "Productivity Module 7"
+},
+"module__bob-productivity-module-8": {
+"ru": "Модуль продуктивности 8",
+"en": "Productivity Module 8"
+},
+"module__bob-quality-module-4": {
+"ru": "Модуль качества 4",
+"en": "Quality module 4"
+},
+"module__bob-quality-module-5": {
+"ru": "Модуль качества 5",
+"en": "Quality module 5"
+},
+"module__bob-speed-module-4": {
+"ru": "Модуль скорости 4",
+"en": "Speed Module 4"
+},
+"module__bob-speed-module-5": {
+"ru": "Модуль скорости 5",
+"en": "Speed Module 5"
+},
+"module__bob-speed-module-6": {
+"ru": "Модуль скорости 6",
+"en": "Speed Module 6"
+},
+"module__bob-speed-module-7": {
+"ru": "Модуль скорости 7",
+"en": "Speed Module 7"
+},
+"module__bob-speed-module-8": {
+"ru": "Модуль скорости 8",
+"en": "Speed Module 8"
+},
+"module__efficiency-module": {
+"ru": "Модуль эффективности 1",
+"en": "Efficiency Module 1"
+},
+"module__efficiency-module-2": {
+"ru": "Модуль эффективности 2",
+"en": "Efficiency Module 2"
+},
+"module__efficiency-module-3": {
+"ru": "Модуль эффективности 3",
+"en": "Efficiency Module 3"
+},
+"module__god-module-1": {
+"ru": "Квантовый модуль 1",
+"en": "Quantum module 1"
+},
+"module__god-module-2": {
+"ru": "Квантовый модуль 2",
+"en": "Quantum module 2"
+},
+"module__god-module-3": {
+"ru": "Квантовый модуль 3",
+"en": "Quantum module 3"
+},
+"module__god-module-4": {
+"ru": "Квантовый модуль 4",
+"en": "Quantum module 4"
+},
+"module__god-module-5": {
+"ru": "Квантовый модуль 5",
+"en": "Quantum module 5"
+},
+"module__green-module-1": {
+"ru": "Модуль эффективности с уменьшенным загрязнением 1",
+"en": "Green module 1"
+},
+"module__green-module-2": {
+"ru": "Модуль эффективности с уменьшенным загрязнением 2",
+"en": "Green module 2"
+},
+"module__green-module-3": {
+"ru": "Модуль эффективности с уменьшенным загрязнением 3",
+"en": "Green module 3"
+},
+"module__green-module-4": {
+"ru": "Модуль эффективности с уменьшенным загрязнением 4",
+"en": "Green module 4"
+},
+"module__green-module-5": {
+"ru": "Модуль эффективности с уменьшенным загрязнением 5",
+"en": "Green module 5"
+},
+"module__green-module-6": {
+"ru": "Модуль эффективности с уменьшенным загрязнением 6",
+"en": "Green module 6"
+},
+"module__green-module-7": {
+"ru": "Модуль эффективности с уменьшенным загрязнением 7",
+"en": "Green module 7"
+},
+"module__green-module-8": {
+"ru": "Модуль эффективности с уменьшенным загрязнением 8",
+"en": "Green module 8"
+},
+"module__productivity-module": {
+"ru": "Модуль продуктивности 1",
+"en": "Productivity Module 1"
+},
+"module__productivity-module-2": {
+"ru": "Модуль продуктивности 2",
+"en": "Productivity Module 2"
+},
+"module__productivity-module-3": {
+"ru": "Модуль продуктивности 3",
+"en": "Productivity Module 3"
+},
+"module__quality-module": {
+"ru": "Модуль качества",
+"en": "Quality module"
+},
+"module__quality-module-2": {
+"ru": "Модуль качества 2",
+"en": "Quality module 2"
+},
+"module__quality-module-3": {
+"ru": "Модуль качества 3",
+"en": "Quality module 3"
+},
+"module__raw-productivity-module-1": {
+"ru": "Модуль продуктивности+эффективности с уменьшенным загрязнением 1",
+"en": "Pure productivity module 1"
+},
+"module__raw-productivity-module-2": {
+"ru": "Модуль продуктивности+эффективности с уменьшенным загрязнением 2",
+"en": "Pure productivity module 2"
+},
+"module__raw-productivity-module-3": {
+"ru": "Модуль продуктивности+эффективности с уменьшенным загрязнением 3",
+"en": "Pure productivity module 3"
+},
+"module__raw-productivity-module-4": {
+"ru": "Модуль продуктивности+эффективности с уменьшенным загрязнением 4",
+"en": "Pure productivity module 4"
+},
+"module__raw-productivity-module-5": {
+"ru": "Модуль продуктивности+эффективности с уменьшенным загрязнением 5",
+"en": "Pure productivity module 5"
+},
+"module__raw-productivity-module-6": {
+"ru": "Модуль продуктивности+эффективности с уменьшенным загрязнением 6",
+"en": "Pure productivity module 6"
+},
+"module__raw-productivity-module-7": {
+"ru": "Модуль продуктивности+эффективности с уменьшенным загрязнением 7",
+"en": "Pure productivity module 7"
+},
+"module__raw-productivity-module-8": {
+"ru": "Модуль продуктивности+эффективности с уменьшенным загрязнением 8",
+"en": "Pure productivity module 8"
+},
+"module__raw-speed-module-1": {
+"ru": "Модуль скорости+эффективности 1",
+"en": "Pure speed module 1"
+},
+"module__raw-speed-module-2": {
+"ru": "Модуль скорости+эффективности 2",
+"en": "Pure speed module 2"
+},
+"module__raw-speed-module-3": {
+"ru": "Модуль скорости+эффективности 3",
+"en": "Pure speed module 3"
+},
+"module__raw-speed-module-4": {
+"ru": "Модуль скорости+эффективности 4",
+"en": "Pure speed module 4"
+},
+"module__raw-speed-module-5": {
+"ru": "Модуль скорости+эффективности 5",
+"en": "Pure speed module 5"
+},
+"module__raw-speed-module-6": {
+"ru": "Модуль скорости+эффективности 6",
+"en": "Pure speed module 6"
+},
+"module__raw-speed-module-7": {
+"ru": "Модуль скорости+эффективности 7",
+"en": "Pure speed module 7"
+},
+"module__raw-speed-module-8": {
+"ru": "Модуль скорости+эффективности 8",
+"en": "Pure speed module 8"
+},
+"module__speed-module": {
+"ru": "Модуль скорости 1",
+"en": "Speed Module 1"
+},
+"module__speed-module-2": {
+"ru": "Модуль скорости 2",
+"en": "Speed Module 2"
+},
+"module__speed-module-3": {
+"ru": "Модуль скорости 3",
+"en": "Speed Module 3"
+},
+"offshore-pump__angels-ground-water-pump": {
+"ru": "Скважина грунтовых вод",
+"en": "Ground water bore"
+},
+"offshore-pump__angels-seafloor-pump": {
+"ru": "Донный насос",
+"en": "Seafloor pump"
+},
+"offshore-pump__offshore-mk0-pump": {
+"ru": "Твердотопливный береговой насос",
+"en": "Burner Pump"
+},
+"offshore-pump__offshore-mk2-pump": {
+"ru": "Электрический береговой насос МК2",
+"en": "Electric Offshore Pump MK2"
+},
+"offshore-pump__offshore-mk3-pump": {
+"ru": "Электрический береговой насос МК3",
+"en": "Electric Offshore Pump MK3"
+},
+"offshore-pump__offshore-mk4-pump": {
+"ru": "Электрический береговой насос МК4",
+"en": "Electric Offshore Pump MK4"
+},
+"offshore-pump__offshore-pump": {
+"ru": "Электрический береговой насос МК1",
+"en": "Electric Offshore Pump MK1"
+},
+"offshore-pump__paranoidal-seafloor-pump-2": {
+"ru": "Донный насос МК2",
+"en": "Seafloor pump MK2"
+},
+"offshore-pump__paranoidal-seafloor-pump-3": {
+"ru": "Донный насос МК3",
+"en": "Seafloor pump MK3"
+},
+"quality__astral-t1": {
+"ru": "Лучезарное",
+"en": "Astral I"
+},
+"quality__astral-t2": {
+"ru": "Фантастическое",
+"en": "Astral II"
+},
+"quality__astral-t3": {
+"ru": "Сверхъестественное",
+"en": "Astral III"
+},
+"quality__astral-t4": {
+"ru": "Недосягаемое",
+"en": "Astral IV"
+},
+"quality__astral-t5": {
+"ru": "Астральное",
+"en": "Astral V"
+},
+"quality__epic": {
+"ru": "Надёжное",
+"en": "Uncommon III"
+},
+"quality__epic-t1": {
+"ru": "Элитное",
+"en": "Epic I"
+},
+"quality__epic-t2": {
+"ru": "Прецизионное",
+"en": "Epic II"
+},
+"quality__epic-t3": {
+"ru": "Безупречное",
+"en": "Epic III"
+},
+"quality__epic-t4": {
+"ru": "Идеальное",
+"en": "Epic IV"
+},
+"quality__epic-t5": {
+"ru": "Эпическое",
+"en": "Epic V"
+},
+"quality__extreme": {
+"ru": "Божественное",
+"en": "Extreme"
+},
+"quality__godly": {
+"ru": "Возвышенное",
+"en": "Godly"
+},
+"quality__ic-defect-1": {
+"ru": "−1: Нестандартное",
+"en": "−1: Substandard"
+},
+"quality__ic-defect-2": {
+"ru": "−2: Неудовлетворительное",
+"en": "−2: Unsatisfactory"
+},
+"quality__ic-defect-3": {
+"ru": "−3: Низкокачественное",
+"en": "−3: Poor"
+},
+"quality__ic-defect-4": {
+"ru": "−4: Дефектное",
+"en": "−4: Flawed"
+},
+"quality__ic-defect-5": {
+"ru": "−5: Бракованное",
+"en": "−5: Defective"
+},
+"quality__infernal-t1": {
+"ru": "Запредельное",
+"en": "Infernal"
+},
+"quality__infernal-t2": {
+"ru": "Нереальное",
+"en": "Demonic"
+},
+"quality__legendary": {
+"ru": "Отличное",
+"en": "Uncommon IV"
+},
+"quality__legendary-t1": {
+"ru": "Непревзойдённое",
+"en": "Legendary I"
+},
+"quality__legendary-t2": {
+"ru": "Феноменальное",
+"en": "Legendary II"
+},
+"quality__legendary-t3": {
+"ru": "Ошеломительное",
+"en": "Legendary III"
+},
+"quality__legendary-t4": {
+"ru": "Космическое",
+"en": "Legendary IV"
+},
+"quality__legendary-t5": {
+"ru": "Легендарное",
+"en": "Legendary V"
+},
+"quality__normal": {
+"ru": "Обычное",
+"en": "Normal"
+},
+"quality__quantum-t1": {
+"ru": "Безграничное",
+"en": "Quantum I"
+},
+"quality__quantum-t2": {
+"ru": "Всесовершенное",
+"en": "Quantum II"
+},
+"quality__quantum-t3": {
+"ru": "Непостижимое",
+"en": "Quantum III"
+},
+"quality__quantum-t4": {
+"ru": "Сингулярное",
+"en": "Quantum IV"
+},
+"quality__quantum-t5": {
+"ru": "Абсолютное",
+"en": "Quantum V"
+},
+"quality__rare": {
+"ru": "Добротное",
+"en": "Uncommon II"
+},
+"quality__rare-t1": {
+"ru": "Превосходное",
+"en": "Rare I"
+},
+"quality__rare-t2": {
+"ru": "Блестящее",
+"en": "Rare II"
+},
+"quality__rare-t3": {
+"ru": "Роскошное",
+"en": "Rare III"
+},
+"quality__rare-t4": {
+"ru": "Первоклассное",
+"en": "Rare IV"
+},
+"quality__rare-t5": {
+"ru": "Редкое",
+"en": "Rare V"
+},
+"quality__unbreakable": {
+"ru": "Ангельское",
+"en": "Unbreakable"
+},
+"quality__uncommon": {
+"ru": "Хорошее",
+"en": "Uncommon I"
+},
+"quality__uncommon-t5": {
+"ru": "Необычное",
+"en": "Uncommon V"
+},
+"quality__unique-t1": {
+"ru": "Уникальное",
+"en": "Unique I"
+},
+"quality__unique-t2": {
+"ru": "Неземное",
+"en": "Unique II"
+},
+"quality__unique-t3": {
+"ru": "Чудесное",
+"en": "Unique III"
+},
+"quality__unique-t4": {
+"ru": "Реликтовое",
+"en": "Unique IV"
+},
+"quality__unique-t5": {
+"ru": "Мифическое",
+"en": "Unique V"
+},
+"reactor__angels-burner-reactor": {
+"ru": "Быстрый топливный реактор",
+"en": "Fast burner reactor"
+},
+"reactor__bob-nuclear-reactor-2": {
+"ru": "Ториевый реактор",
+"en": "Thorium reactor"
+},
+"reactor__bob-nuclear-reactor-3": {
+"ru": "Дейтериевый реактор",
+"en": "Deuterium reactor"
+},
+"reactor__nuclear-reactor": {
+"ru": "Урановый реактор",
+"en": "Uranium reactor"
+},
+"recipe__angels-bio-puffer-egg-1": {
+"ru": "Разведение Газообразующих фугу",
+"en": "Gaseous puffer breeding"
+},
+"recipe__angels-bio-puffer-egg-2": {
+"ru": "Разведение Прогорклых фугу",
+"en": "Rancid puffer breeding"
+},
+"recipe__angels-bio-puffer-egg-3": {
+"ru": "Разведение Пылающих фугу",
+"en": "Blazing puffer breeding"
+},
+"recipe__angels-bio-puffer-egg-4": {
+"ru": "Разведение Кислотообразующих фугу",
+"en": "Acidic puffer breeding"
+},
+"recipe__angels-bio-puffer-egg-5": {
+"ru": "Разведение Разъедающих фугу",
+"en": "Corrosive puffer breeding"
+},
+"recipe__angels-ore1-crystal-processing": {
+"ru": "Сортировка кристалов сапфирита",
+"en": "Saphirite crystals sorting"
+},
+"recipe__autonomous-space-mining-drone": {
+"ru": "Автономный космический дрон-добытчик",
+"en": "Autonomous Mining Drone"
+},
+"recipe__bet-fuel-3-full": {
+"ru": "Заряженный аккумуляторный блок поезда МК3",
+"en": "Charged train battery pack 3"
+},
+"recipe__bet-fuel-4-full": {
+"ru": "Заряженный аккумуляторный блок поезда МК4",
+"en": "Charged train battery pack 4"
+},
+"recipe__bob-advanced-processing-unit": {
+"ru": "Электронная вычислительная плата",
+"en": "Advanced processing unit"
+},
+"recipe__bob-fission-reactor-equipment-3": {
+"ru": "Портативный термоядерный реактор MK3",
+"en": "Portable fission reactor MK3"
+},
+"recipe__bob-power-armor-mk4": {
+"ru": "Силовая броня MK4",
+"en": "Power armor MK4"
+},
+"recipe__bob-power-armor-mk5": {
+"ru": "Силовая броня MK5",
+"en": "Power armor MK5"
+},
+"recipe__intelligent-io": {
+"ru": "Интеллектуальное арифметико-логическое устройство",
+"en": "Intelligent I/O interface"
+},
+"recipe__orbital-fabricator-component": {
+"ru": "Компонент орбитального фабрикатора",
+"en": "Orbital Fabricator Component"
+},
+"recipe__predictive-io": {
+"ru": "Предсказательное арифметико-логическое устройство",
+"en": "Predictive I/O interface"
+},
+"recipe__random-dropship-unboxing": {
+"ru": "Распаковка случайного дропшипа",
+"en": "Random Dropship unboxing"
+},
+"recipe__refurbish-mining-shuttle": {
+"ru": "Техническое обслуживание добывающего шаттла",
+"en": "Refurbish Mining Shuttle"
+},
+"recipe__repurpose-fabricator-shuttle": {
+"ru": "Перепрофилировать фабрикаторный шаттл",
+"en": "Repurpose Fabricator Shuttle"
+},
+"recipe__repurpose-mining-shuttle": {
+"ru": "Перепрофилировать добывающий шаттл",
+"en": "Repurpose Mining Shuttle"
+},
+"recipe__repurpose-space-shuttle": {
+"ru": "Перепрофилировать космический шаттл",
+"en": "Repurpose Space Shuttle"
+},
+"recipe__repurpose-spy-shuttle": {
+"ru": "Перепрофилировать картографический шаттл",
+"en": "Repurpose Telescope Shuttle"
+},
+"recipe__sand-sluicing": {
+"ru": "Просеивание песка",
+"en": "Sand Sluicing"
+},
+"repair-tool__repair-pack": {
+"ru": "Ремонтный комплект",
+"en": "Repair pack"
+},
+"resource__angels-fissure": {
+"ru": "Разлом земной коры",
+"en": "Fissure"
+},
+"resource__angels-natural-gas": {
+"ru": "Газовая скважина",
+"en": "Gas well"
+},
+"resource__angels-ore1": {
+"ru": "Сапфирит",
+"en": "Saphirite"
+},
+"resource__angels-ore2": {
+"ru": "Дживолит",
+"en": "Jivolite"
+},
+"resource__angels-ore3": {
+"ru": "Стиратит",
+"en": "Stiratite"
+},
+"resource__angels-ore4": {
+"ru": "Кротиниум",
+"en": "Crotinnium"
+},
+"resource__angels-ore5": {
+"ru": "Рубит",
+"en": "Rubyte"
+},
+"resource__angels-ore6": {
+"ru": "Бобмониум",
+"en": "Bobmonium"
+},
+"resource__angels-sea-pump-resource": {
+"ru": "Вода",
+"en": "Water"
+},
+"resource__coal": {
+"ru": "Уголь",
+"en": "Coal"
+},
+"resource__crude-oil": {
+"ru": "Многофазная нефть",
+"en": "Oil well"
+},
+"resource__infinite-angels-ore1": {
+"ru": "Бесконечный кластер сапфирита",
+"en": "Infinite saphirite"
+},
+"resource__infinite-angels-ore2": {
+"ru": "Бесконечный кластер дживолита",
+"en": "Infinite jivolite"
+},
+"resource__infinite-angels-ore3": {
+"ru": "Бесконечный кластер стиратита",
+"en": "Infinite stiratite"
+},
+"resource__infinite-angels-ore4": {
+"ru": "Бесконечный кластер кротиниума",
+"en": "Infinite crotinnium"
+},
+"resource__infinite-angels-ore5": {
+"ru": "Бесконечный кластер рубита",
+"en": "Infinite rubyte"
+},
+"resource__infinite-angels-ore6": {
+"ru": "Бесконечный кластер бобмониума",
+"en": "Infinite bobmonium"
+},
+"resource__infinite-coal": {
+"ru": "Бесконечный кластер угля",
+"en": "Infinite coal"
+},
+"rocket-silo__rocket-silo": {
+"ru": "Ракетная шахта",
+"en": "Rocket silo"
+},
+"solar-panel__bi-bio-solar-farm": {
+"ru": "Био Солнечная ферма",
+"en": "Solar farm"
+},
+"solar-panel__bob-solar-panel-2": {
+"ru": "Солнечная батарея 2",
+"en": "Solar Panel 2"
+},
+"solar-panel__bob-solar-panel-3": {
+"ru": "Солнечная батарея 3",
+"en": "Solar Panel 3"
+},
+"solar-panel__bob-solar-panel-large": {
+"ru": "Большая солнечная батарея",
+"en": "Large Solar Panel"
+},
+"solar-panel__bob-solar-panel-large-2": {
+"ru": "Большая солнечная батарея 2",
+"en": "Large Solar Panel 2"
+},
+"solar-panel__bob-solar-panel-large-3": {
+"ru": "Большая солнечная батарея 3",
+"en": "Large Solar Panel 3"
+},
+"solar-panel__bob-solar-panel-small": {
+"ru": "Малая солнечная батарея",
+"en": "Small Solar Panel"
+},
+"solar-panel__bob-solar-panel-small-2": {
+"ru": "Малая солнечная батарея 2",
+"en": "Small Solar Panel 2"
+},
+"solar-panel__bob-solar-panel-small-3": {
+"ru": "Малая солнечная батарея 3",
+"en": "Small Solar Panel 3"
+},
+"solar-panel__solar-panel": {
+"ru": "Солнечная панель",
+"en": "Solar panel"
+},
+"spider-vehicle__bm-spidertron_1": {
+"ru": "Паукотрон 1",
+"en": "Spidertron 1"
+},
+"spider-vehicle__bm-spidertron_2": {
+"ru": "Паукотрон 2",
+"en": "Spidertron 2"
+},
+"spider-vehicle__bm-spidertron_3": {
+"ru": "Паукотрон 3",
+"en": "Spidertron 3"
+},
+"spider-vehicle__bm-spidertron_4": {
+"ru": "Паукотрон 4",
+"en": "Spidertron 4"
+},
+"spider-vehicle__bm-spidertron_5": {
+"ru": "Паукотрон 5",
+"en": "Spidertron 5"
+},
+"spider-vehicle__bob-antron": {
+"ru": "Антрон",
+"en": "Antron"
+},
+"spider-vehicle__bob-heavy-spidertron": {
+"ru": "Тяжелый Паукотрон",
+"en": "Heavy Spidertron"
+},
+"spider-vehicle__bob-logistic-spidertron": {
+"ru": "Логитрон",
+"en": "Logitron"
+},
+"spider-vehicle__bob-tankotron": {
+"ru": "Танкотрон",
+"en": "Tankotron"
+},
+"spider-vehicle__maf_flying_saucer_10": {
+"ru": "Летающая тарелка",
+"en": "Flying-saucer"
+},
+"spider-vehicle__spidertron": {
+"ru": "Паукотрон",
+"en": "Spidertron"
+},
+"storage-tank__factory-1": {
+"ru": "Фабрика 1",
+"en": "Factory building 1"
+},
+"storage-tank__factory-2": {
+"ru": "Фабрика 2",
+"en": "Factory building 2"
+},
+"storage-tank__factory-3": {
+"ru": "Фабрика 3",
+"en": "Factory building 3"
+},
+"storage-tank__factory-4": {
+"ru": "Фабрика 4",
+"en": "Factory building 4"
+},
+"storage-tank__fluid-memory-unit": {
+"ru": "Ёмкость материопамяти",
+"en": "Fluid memory unit"
+},
+"storage-tank__storage-tank": {
+"ru": "Резервуар",
+"en": "Storage tank"
+},
+"technology__JunkTrain_tech": {
+"ru": "Простейшие паровозы",
+"en": "Basic locomotives"
+},
+"technology__OilBurning": {
+"ru": "Сжигание жидкого и газообразного топлива 1",
+"en": "Fluid fuel burning 1"
+},
+"technology__Schall-tank-SH-0": {
+"ru": "Сверхтяжёлый танк 0",
+"en": "Super-heavy tank 0"
+},
+"technology__aai-loader": {
+"ru": "Электрический погрузчик",
+"en": "Electric loader"
+},
+"technology__afterburner": {
+"ru": "Форсажная камера",
+"en": "Afterburner"
+},
+"technology__angels-bio-arboretum-1": {
+"ru": "Дендрарий для деревьев 1",
+"en": "Tree arboretum 1"
+},
+"technology__angels-bio-refugium-puffer-1": {
+"ru": "Ферма фугу 1",
+"en": "Puffer farm 1"
+},
+"technology__angels-electric-boiler": {
+"ru": "Электро-бойлер",
+"en": "Electric boiler"
+},
+"technology__angels-flare-stack": {
+"ru": "Факельная стойка",
+"en": "Flare stack"
+},
+"technology__angels-gas-processing": {
+"ru": "Переработка газа",
+"en": "Gas processing"
+},
+"technology__angels-geode-processing-1": {
+"ru": "Переработка кристаллического сырья 1",
+"en": "Crystalline material processing 1"
+},
+"technology__angels-oil-processing": {
+"ru": "Переработка нефти",
+"en": "Oil processing"
+},
+"technology__angels-ore-crushing": {
+"ru": "Механическое дробление руды",
+"en": "Mechanical ore crushing"
+},
+"technology__angels-ore-floatation": {
+"ru": "Гидрообогащение руды",
+"en": "Ore hydro-refining"
+},
+"technology__angels-ore-leaching": {
+"ru": "Химическая обработка руды",
+"en": "Chemical ore processing"
+},
+"technology__angels-ore-refining": {
+"ru": "Термальное очищение руды",
+"en": "Thermal ore refining"
+},
+"technology__angels-slag-processing-1": {
+"ru": "Переработка шлака 1",
+"en": "Slag processing 1"
+},
+"technology__angels-strand-casting-1": {
+"ru": "Машины непрерывного литья заготовок (МНЛЗ) 1",
+"en": "Continuous casting machines 1"
+},
+"technology__angels-thorium-power": {
+"ru": "Ториево-плутониевая энергетика",
+"en": "Thorium-plutonium-based power systems"
+},
+"technology__angels-water-treatment": {
+"ru": "Очистка воды",
+"en": "Water treatment"
+},
+"technology__artillery": {
+"ru": "Артиллерия",
+"en": "Artillery"
+},
+"technology__astrometrics": {
+"ru": "Астрометрика",
+"en": "Astrometrics"
+},
+"technology__atomic-bomb": {
+"ru": "Атомная бомба",
+"en": "Atomic bomb"
+},
+"technology__automation": {
+"ru": "Автоматизация",
+"en": "Automation"
+},
+"technology__bi-tech-bio-farming": {
+"ru": "Теплица",
+"en": "Bio farm"
+},
+"technology__big-burner-generator": {
+"ru": "Большой топливный генератор",
+"en": "Big Burner Generator"
+},
+"technology__bob-artifact-radar": {
+"ru": "Наземный радар",
+"en": "Ground radar"
+},
+"technology__bob-atomic-artillery-shell": {
+"ru": "Атомный Артиллерийский Снаряд",
+"en": "Atomic artillery shell"
+},
+"technology__bob-boiler-5": {
+"ru": "Бойлер 5",
+"en": "Boiler 5"
+},
+"technology__bob-near-inserters": {
+"ru": "Смещение манипулятора",
+"en": "Near inserters"
+},
+"technology__bob-plasma-turrets-1": {
+"ru": "Плазменные турели 1",
+"en": "Plasma turrets 1"
+},
+"technology__bob-power-armor-5": {
+"ru": "Силовая броня 5",
+"en": "Power armor 5"
+},
+"technology__burner-mechanics": {
+"ru": "Твердотопливная механизация",
+"en": "Burner mechanics"
+},
+"technology__cargo-planes": {
+"ru": "Грузовые самолёты",
+"en": "Cargo planes"
+},
+"technology__cybersyn-train-network": {
+"ru": "Сеть поездов Cybersyn",
+"en": "Cybersyn train network"
+},
+"technology__elevated-rail": {
+"ru": "Надземные рельсы",
+"en": "Elevated rail"
+},
+"technology__factory-architecture-t1": {
+"ru": "Архитектура 1",
+"en": "Architecture 1"
+},
+"technology__factory-architecture-t4": {
+"ru": "Архитектура 4",
+"en": "Architecture 4"
+},
+"technology__factory-recursion-t1": {
+"ru": "Рекурсия 1",
+"en": "Recursion 1"
+},
+"technology__fluid-memory-storage": {
+"ru": "Ёмкость материопамяти",
+"en": "Fluid memory storage"
+},
+"technology__ftl-propulsion": {
+"ru": "Сверхсветовой двигатель",
+"en": "Faster than light propulsion systems"
+},
+"technology__ftl-theory-A": {
+"ru": "Сверхсветовая теория A",
+"en": "Faster than light theory A"
+},
+"technology__ftl-theory-B": {
+"ru": "Сверхсветовая теория B",
+"en": "Faster than light theory B"
+},
+"technology__ftl-theory-C": {
+"ru": "Сверхсветовая теория C",
+"en": "Faster than light theory C"
+},
+"technology__ftl-theory-D": {
+"ru": "Сверхсветовая теория D",
+"en": "Faster than light theory D"
+},
+"technology__ftl-theory-D1": {
+"ru": "Сверхсветовая теория D1",
+"en": "Faster than light theory D1"
+},
+"technology__ftl-theory-D2": {
+"ru": "Сверхсветовая теория D2",
+"en": "Faster than light theory D2"
+},
+"technology__fusion-reactor": {
+"ru": "Термоядерный реактор",
+"en": "Fusion Reactor"
+},
+"technology__heavy-armor": {
+"ru": "Тяжёлая броня",
+"en": "Heavy armor"
+},
+"technology__hiend_train": {
+"ru": "Поезда на магнитной подушке",
+"en": "Maglev trains"
+},
+"technology__ic-defect-control-1": {
+"ru": "Контроль качества 1",
+"en": "Quality control 1"
+},
+"technology__ic-defect-control-10": {
+"ru": "Контроль качества 10",
+"en": "Quality control 10"
+},
+"technology__laboratory-productivity-1": {
+"ru": "Продуктивность исследований 1",
+"en": "Research Productivity 1"
+},
+"technology__laser": {
+"ru": "Лазерные технологии",
+"en": "Laser"
+},
+"technology__memory-unit": {
+"ru": "Хранилище материопамяти",
+"en": "Memory storage"
+},
+"technology__mirv-technology": {
+"ru": "РГЧ ИН",
+"en": "M.I.R.V"
+},
+"technology__modules": {
+"ru": "Модульные компоненты I",
+"en": "Module components I"
+},
+"technology__multiple-unit-train-control": {
+"ru": "Система многих единиц для поездов",
+"en": "Multiple Unit Train Control"
+},
+"technology__nanobots": {
+"ru": "Наноботы",
+"en": "Nanobots"
+},
+"technology__nuclear-power": {
+"ru": "Ядерная энергия",
+"en": "Nuclear power"
+},
+"technology__orbital-ai-core": {
+"ru": "Орбитальное AI-ядро данных",
+"en": "Orbital AI Data Core"
+},
+"technology__orbital-autonomous-fabricators": {
+"ru": "Автономный орбитальный фабрикатор",
+"en": "Orbital Autonomous Fabricators"
+},
+"technology__ore-radar": {
+"ru": "Геологический радар",
+"en": "Ore Radar"
+},
+"technology__qol-crafting-speed-1-1": {
+"ru": "Начальная скорость крафта 1",
+"en": "Basic Crafting Speed 1"
+},
+"technology__quality-module": {
+"ru": "Модуль качества 1",
+"en": "Quality module 1"
+},
+"technology__railway": {
+"ru": "Железные дороги",
+"en": "Railway"
+},
+"technology__recycling": {
+"ru": "Переработчик 4",
+"en": "Recycler 4"
+},
+"technology__remelting-alloy-mixer-1": {
+"ru": "Продвинутое смешивание металлов 1",
+"en": "Advanced Alloy Mixing 1"
+},
+"technology__repair-turret-speed-1": {
+"ru": "Скорость ремонта защитных башен 1",
+"en": "Defense tower repair speed 1"
+},
+"technology__research-speed-1": {
+"ru": "Скорость лабораторий 1",
+"en": "Lab research speed 1"
+},
+"technology__robotics": {
+"ru": "Робототехника",
+"en": "Robotics"
+},
+"technology__rocket-failure-revision": {
+"ru": "Усовершенствование конструкции ракеты",
+"en": "Rocket failure revision"
+},
+"technology__rocket-silo": {
+"ru": "Ракетная шахта",
+"en": "Rocket silo"
+},
+"technology__solar-energy": {
+"ru": "Солнечная энергия",
+"en": "Solar energy"
+},
+"technology__space-construction": {
+"ru": "Строительство в космосе",
+"en": "Space Construction"
+},
+"technology__space-lab": {
+"ru": "Космическая лаборатория",
+"en": "Space Lab"
+},
+"technology__space-telescope": {
+"ru": "Космическая обсерватория-телескоп",
+"en": "Space Telescope"
+},
+"technology__spaceship-command": {
+"ru": "Командный центр космического корабля",
+"en": "Spaceship Command"
+},
+"technology__steam-power": {
+"ru": "Паровая электростанция",
+"en": "Steam power"
+},
+"technology__teleporter": {
+"ru": "teleporter",
+"en": "teleporter"
+},
+"technology__texugo-wind-turbine3": {
+"ru": "Гигантская ветряная турбина",
+"en": "Huge wind turbine"
+},
+"technology__thermonuclear-bomb": {
+"ru": "Термоядерная бомба",
+"en": "Thermonuclear bomb"
+},
+"technology__toolbelt": {
+"ru": "Пояс для инструментов",
+"en": "Toolbelt"
+},
+"technology__w93-modular-turrets": {
+"ru": "Модульные турели",
+"en": "Modular turrets"
+},
+"technology__w93-modular-turrets-hcannon": {
+"ru": "Тяжёлые пушки",
+"en": "Heavy cannon turrets"
+},
+"technology__warehouse-research": {
+"ru": "Складирование",
+"en": "Warehousing"
+},
+"technology__worker-robots-speed-1": {
+"ru": "Скорость рабочего дрона 1",
+"en": "Worker robot speed 1"
+},
+"tool__angels-token-bio": {
+"ru": "Образец чужеродного растения",
+"en": "Alien plant-life sample"
+},
+"tool__automation-science-pack": {
+"ru": "Автоматизационный исследовательский пакет",
+"en": "Automation science pack"
+},
+"tool__bob-advanced-logistic-science-pack": {
+"ru": "Транспортный исследовательский пакет",
+"en": "Transport science pack"
+},
+"tool__bob-alien-science-pack": {
+"ru": "Инопланетный исследовательский пакет",
+"en": "Alien science pack"
+},
+"tool__bob-alien-science-pack-blue": {
+"ru": "Голубой инопланетный научный пакет",
+"en": "Blue alien science pack"
+},
+"tool__bob-alien-science-pack-green": {
+"ru": "Зелёный инопланетный научный пакет",
+"en": "Green alien science pack"
+},
+"tool__bob-alien-science-pack-orange": {
+"ru": "Оранжевый инопланетный научный пакет",
+"en": "Orange alien science pack"
+},
+"tool__bob-alien-science-pack-purple": {
+"ru": "Розовый инопланетный научный пакет",
+"en": "Purple alien science pack"
+},
+"tool__bob-alien-science-pack-red": {
+"ru": "Красный инопланетный научный пакет",
+"en": "Red alien science pack"
+},
+"tool__bob-alien-science-pack-yellow": {
+"ru": "Жёлтый инопланетный научный пакет",
+"en": "Yellow alien science pack"
+},
+"tool__bob-efficiency-processor": {
+"ru": "Схема модуля эффективности",
+"en": "Efficiency circuit board"
+},
+"tool__bob-module-case": {
+"ru": "Корпус модуля",
+"en": "Module case"
+},
+"tool__bob-module-circuit-board": {
+"ru": "Плата контроллера модуля",
+"en": "Module main board"
+},
+"tool__bob-pollution-clean-processor": {
+"ru": "Схема модуля уменьшения загрязнения",
+"en": "Pollution cleaning circuit board"
+},
+"tool__bob-pollution-create-processor": {
+"ru": "Схема модуля увеличения загрязнения",
+"en": "Pollution producing circuit board"
+},
+"tool__bob-productivity-processor": {
+"ru": "Схема модуля продуктивности",
+"en": "Productivity circuit board"
+},
+"tool__bob-science-pack-gold": {
+"ru": "Золотой исследовательский пакет",
+"en": "Gold science pack"
+},
+"tool__bob-speed-processor": {
+"ru": "Схема модуля скорости",
+"en": "Speed circuit board"
+},
+"tool__chemical-science-pack": {
+"ru": "Химический исследовательский пакет",
+"en": "Chemical science pack"
+},
+"tool__logistic-science-pack": {
+"ru": "Логистический исследовательский пакет",
+"en": "Logistic science pack"
+},
+"tool__military-science-pack": {
+"ru": "Военный исследовательский пакет",
+"en": "Military science pack"
+},
+"tool__module-combining-case": {
+"ru": "Корпус для комбинирования модулей",
+"en": "Module combining case"
+},
+"tool__planetary-data": {
+"ru": "Данные со спутника",
+"en": "Satellite Data"
+},
+"tool__production-science-pack": {
+"ru": "Производственный исследовательский пакет",
+"en": "Production science pack"
+},
+"tool__space-science-pack": {
+"ru": "Космический исследовательский пакет",
+"en": "Space science pack"
+},
+"tool__station-science": {
+"ru": "Данные с космической станции",
+"en": "Station Data"
+},
+"tool__utility-science-pack": {
+"ru": "Вспомогательный исследовательский пакет",
+"en": "Utility science pack"
+},
+"transport-belt__bob-basic-transport-belt": {
+"ru": "Медленный Конвейер",
+"en": "Basic transport belt"
+},
+"transport-belt__bob-ultimate-transport-belt": {
+"ru": "Гипер Конвейер",
+"en": "Ultimate transport belt"
+},
+"transport-belt__express-transport-belt": {
+"ru": "Экспресс-конвейер",
+"en": "Express transport belt"
+},
+"transport-belt__fast-transport-belt": {
+"ru": "Быстрый конвейер",
+"en": "Fast transport belt"
+},
+"transport-belt__transport-belt": {
+"ru": "Конвейер",
+"en": "Transport belt"
+},
+"transport-belt__turbo-transport-belt": {
+"ru": "Турбо Конвейер",
+"en": "Turbo transport belt"
+},
+"underground-belt__bob-basic-underground-belt": {
+"ru": "Медленный Подземный конвейер",
+"en": "Basic underground belt"
+},
+"underground-belt__bob-ultimate-underground-belt": {
+"ru": "Гипер Подземный конвейер",
+"en": "Ultimate underground belt"
+},
+"underground-belt__express-subterranean-belt": {
+"ru": "Экспресс сверхдлинный подземный конвейер",
+"en": "Express subterranean belt"
+},
+"underground-belt__express-underground-belt": {
+"ru": "Подземный экспресс-конвейер",
+"en": "Express underground belt"
+},
+"underground-belt__fast-subterranean-belt": {
+"ru": "Быстрый сверхдлинный подземный конвейер",
+"en": "Fast subterranean belt"
+},
+"underground-belt__fast-underground-belt": {
+"ru": "Быстрый подземный конвейер",
+"en": "Fast underground belt"
+},
+"underground-belt__subterranean-belt": {
+"ru": "Сверхдлинный подземный конвейер",
+"en": "Subterranean belt"
+},
+"underground-belt__turbo-underground-belt": {
+"ru": "Турбо Подземный конвейер",
+"en": "Turbo underground belt"
+},
+"underground-belt__underground-belt": {
+"ru": "Подземный конвейер",
+"en": "Underground belt"
+},
+"unit__acid-biter-v1-t10-rampant": {
+"ru": "КислотныйКусака:ур.10",
+"en": "AcidicBiter:Lvl.10"
+},
+"unit__arachnids-biter-v1-t10-rampant": {
+"ru": "Арахниды,Кусака:ур.10",
+"en": "ArachnidsBiter:Lvl.10"
+},
+"unit__arachnids-flyer-v1-t10-rampant-hour-boss-from-t10": {
+"ru": "Арахниды,Летун:ур.10",
+"en": "ArachnidsFlyer:Lvl.10"
+},
+"unit__behemoth-biter": {
+"ru": "Чудовищный кусака",
+"en": "Behemoth biter"
+},
+"unit__big-biter": {
+"ru": "Большой кусака",
+"en": "Big biter"
+},
+"unit__biterzilla15": {
+"ru": "АДСКИЙ ЛЕВИАФАН",
+"en": "Giant of Hell"
+},
+"unit__biterzilla25": {
+"ru": "СИНИЙ ЛЕВИАФАН",
+"en": "Giant Blue"
+},
+"unit__biterzilla35": {
+"ru": "КАМЕНИСТЫЙ ЛЕВИАФАН",
+"en": "Rock Beast"
+},
+"unit__bm-motherbiterzilla5": {
+"ru": "КОРОЛЕВА-МАТКА",
+"en": "Brood Mother"
+},
+"unit__bm_fake_human_boss_cannon_explosive_10": {
+"ru": "Босс с разрывной пушкой 10",
+"en": "Boss with explosive cannon 10"
+},
+"unit__bm_fake_human_boss_cluster_grenade_10": {
+"ru": "Босс с кассетной гранатой 10",
+"en": "Boss with cluster grenade 10"
+},
+"unit__bm_fake_human_boss_electric_10": {
+"ru": "Босс с электрической винтовкой 10",
+"en": "Boss with electric rifle 10"
+},
+"unit__bm_fake_human_boss_flamethrower_10": {
+"ru": "Босс с огнемётом 10",
+"en": "Boss with flamethrower 10"
+},
+"unit__bm_fake_human_boss_grenade_10": {
+"ru": "Босс с гранатой 10",
+"en": "Boss with grenade 10"
+},
+"unit__bm_fake_human_boss_laser_10": {
+"ru": "Босс с лазерной винтовкой 10",
+"en": "Boss with laser rifle 10"
+},
+"unit__bm_fake_human_boss_machine_gunner_10": {
+"ru": "Босс с пулемётом 10",
+"en": "Boss with machine gun 10"
+},
+"unit__bm_fake_human_boss_nuke_rocket_10": {
+"ru": "Босс с ядерной бомбой 10",
+"en": "Boss with nuke bomb 10"
+},
+"unit__bm_fake_human_boss_pistol_gunner_10": {
+"ru": "Босс с пистолетом 10",
+"en": "Boss with pistol 10"
+},
+"unit__bm_fake_human_boss_rocket_10": {
+"ru": "Босс с ракетомётом 10",
+"en": "Boss with rocket launcher 10"
+},
+"unit__bm_fake_human_boss_sniper_10": {
+"ru": "Босс с снайперской винтовкой 10",
+"en": "Boss with sniper rifle 10"
+},
+"unit__bm_fake_human_melee_1": {
+"ru": "Человек с киркой 1",
+"en": "Human with pickaxe 1"
+},
+"unit__bm_fake_human_nuke_rocket_10": {
+"ru": "Человек с ядерной бомбой 10",
+"en": "Human with nuke bomb 10"
+},
+"unit__bm_fake_human_sniper_5": {
+"ru": "Человек с снайперской винтовкой 5",
+"en": "Human with sniper rifle 5"
+},
+"unit__bm_fake_human_ultimate_boss_cannon_20": {
+"ru": "Главный босс с пушкой 20",
+"en": "Ultimate Boss with cannon 20"
+},
+"unit__bob-leviathan-acid-biter": {
+"ru": "Кислотный кусака-левиафан",
+"en": "Leviathan acid biter"
+},
+"unit__bob-leviathan-biter": {
+"ru": "Циклопический кусака",
+"en": "Leviathan biter"
+},
+"unit__bob-leviathan-electric-biter": {
+"ru": "Электрический кусака-левиафан",
+"en": "Leviathan electric biter"
+},
+"unit__bob-leviathan-explosive-biter": {
+"ru": "Взрывной кусака-левиафан",
+"en": "Leviathan explosive biter"
+},
+"unit__bob-leviathan-fire-biter": {
+"ru": "Огненный кусака-левиафан",
+"en": "Leviathan fire biter"
+},
+"unit__bob-leviathan-piercing-biter": {
+"ru": "Бронебойный кусака-левиафан",
+"en": "Leviathan piercing biter"
+},
+"unit__bob-leviathan-poison-biter": {
+"ru": "Ядовитый кусака-левиафан",
+"en": "Leviathan poison biter"
+},
+"unit__electric-biter-v1-t10-rampant": {
+"ru": "ЭлектрическийКусака:ур.10",
+"en": "ElectricBiter:Lvl.10"
+},
+"unit__energy-thief-biter-v1-t10-rampant": {
+"ru": "Энерговор-Кусака:ур.10",
+"en": "SapperBiter:Lvl.10"
+},
+"unit__fast-biter-v1-t10-rampant": {
+"ru": "БыстрыйКусака:ур.10",
+"en": "FastBiter:Lvl.10"
+},
+"unit__fire-biter-v1-t10-rampant": {
+"ru": "ОгненныйКусака:ур.10",
+"en": "FireBiter:Lvl.10"
+},
+"unit__inferno-spitter-v1-t10-rampant": {
+"ru": "АдскийПлевака:ур.10",
+"en": "InfernoSpitter:Lvl.10"
+},
+"unit__juggernaut-biter-v1-t10-rampant": {
+"ru": "Джаггернаут-Кусака:ур.10",
+"en": "JuggernautBiter:Lvl.10"
+},
+"unit__juggernaut-biter-v1-t10-rampant-hour-boss-from-t10": {
+"ru": "Джаггернаут-Кусака:ур.10",
+"en": "JuggernautBiter:Lvl.10"
+},
+"unit__juggernaut-flyer-v1-t10-rampant-hour-boss-from-t10": {
+"ru": "Джаггернаут-Летун:ур.10",
+"en": "JuggernautFlyer:Lvl.10"
+},
+"unit__laser-biter-v1-t10-rampant": {
+"ru": "ЛазерныйКусака:ур.10",
+"en": "LaserBiter:Lvl.10"
+},
+"unit__maf-boss-biter-10": {
+"ru": "КОРОЛЬ КУСАК 10",
+"en": "Boss Biter 10"
+},
+"unit__maf-giant-acid-spitter5": {
+"ru": "КОРОЛЬ КИСЛОТНЫХ ПЛЕВАК",
+"en": "Monster Acid Spitter"
+},
+"unit__maf-giant-fire-spitter5": {
+"ru": "КОРОЛЬ ОГНЕННЫХ ПЛЕВАК",
+"en": "Incendiary Spitter Monster"
+},
+"unit__medium-biter": {
+"ru": "Средний кусака",
+"en": "Medium biter"
+},
+"unit__neutral-biter-v1-t10-rampant": {
+"ru": "ОбычныйКусака:ур.10",
+"en": "CommonBiter:Lvl.10"
+},
+"unit__nuclear-biter-v1-t10-rampant": {
+"ru": "ЯдерныйКусака:ур.10",
+"en": "NuclearBiter:Lvl.10"
+},
+"unit__physical-biter-v1-t10-rampant": {
+"ru": "БронированныйКусака:ур.10",
+"en": "ArmoredBiter:Lvl.10"
+},
+"unit__poison-biter-v1-t10-rampant": {
+"ru": "ЯдовитыйКусака:ур.10",
+"en": "PoisonBiter:Lvl.10"
+},
+"unit__small-biter": {
+"ru": "Малый кусака",
+"en": "Small biter"
+},
+"unit__spawner-spitter-v1-t10-rampant": {
+"ru": "Породитель-Плевака:ур.10",
+"en": "SpawnerSpitter:Lvl.10"
+},
+"unit__suicide-biter-v1-t10-rampant": {
+"ru": "Камикадзе,Кусака:ур.10",
+"en": "SuicideBiter:Lvl.10"
+},
+"unit__troll-biter-v1-t10-rampant": {
+"ru": "РегенерирующийКусака:ур.10",
+"en": "RegenerativeBiter:Lvl.10"
+},
+"unit__troll-flyer-v1-t10-rampant-hour-boss-from-t10": {
+"ru": "РегенерирующийЛетун:ур.10",
+"en": "RegenerativeFlyer:Lvl.10"
+},
+"unit__wasp-spitter-v1-t10-rampant": {
+"ru": "Оса,Плевака:ур.10",
+"en": "WaspSpitter:Lvl.10"
+},
+"unit-spawner__biter-spawner": {
+"ru": "Улей кусак",
+"en": "Devitalized biter spawner"
+},
+"unit-spawner__neutral-super-hive-v1-t10-rampant": {
+"ru": "ОбычныйСупер-улей:ур.10",
+"en": "CommonSuper-hive:Lvl.10"
+},
+"sprite:factory-1": {
+"ru": "Фабрика 1",
+"en": "Factory building 1"
+},
+"sprite:factory-3": {
+"ru": "Фабрика 3",
+"en": "Factory building 3"
+},
+"sprite:factory-4": {
+"ru": "Фабрика 4",
+"en": "Factory building 4"
+},
+"sprite:memory-unit": {
+"ru": "Хранилище материопамяти",
+"en": "Memory unit"
+},
+"sprite:fluid-memory-unit": {
+"ru": "Ёмкость материопамяти",
+"en": "Fluid memory unit"
+},
+"sprite:texugo-wind-turbine3": {
+"ru": "Гигантская ветряная турбина",
+"en": "Huge wind turbine"
+},
+"sprite:RITEG-1": {
+"ru": "РИТЭГ",
+"en": "RITEG"
+},
+"sprite:ic-refine-workshop": {
+"ru": "Мастерская доводки",
+"en": "Refinement workshop"
+},
+"sprite:ic-control-post": {
+"ru": "Контрольный пост",
+"en": "Control post"
+},
+"sprite:crash-site-spaceship": {
+"ru": "Космический корабль",
+"en": "Spaceship"
+},
+"sprite:rocket-silo": {
+"ru": "Ракетная шахта",
+"en": "Rocket silo"
+},
+"sprite:rsc-silo-stage1": {
+"ru": "Строительная площадка ракетной шахты - Этап 1/6",
+"en": "Rocket Silo construction site - Stage 1/6"
+},
+"sprite:paranoidal-beta8-hyper-lab": {
+"ru": "Гипер-лаба",
+"en": "Hyper Lab"
+},
+"sprite:burner-lab": {
+"ru": "Твёрдотопливная Лаборатория",
+"en": "Burner lab"
+},
+"sprite:salvaged-lab": {
+"ru": "Извлечённая лаборатория",
+"en": "Salvaged lab"
+},
+"sprite:lab": {
+"ru": "Электрическая лаборатория",
+"en": "Electric lab"
+},
+"sprite:yir_usl": {
+"ru": "Локомотив МК0",
+"en": "Locomotive MK0"
+},
+"sprite:hiend_loco": {
+"ru": "Локомотив на магнитной подушке",
+"en": "Maglev locomotive"
+},
+"sprite:bet-locomotive": {
+"ru": "Электровоз",
+"en": "Battery-electric locomotive"
+},
+"sprite:Schall-tank-SH": {
+"ru": "Сверхтяжёлый танк",
+"en": "Super-heavy tank"
+},
+"sprite:flying-fortress": {
+"ru": "Летающая крепость",
+"en": "Flying fortress"
+},
+"sprite:gunship": {
+"ru": "Боевой самолет",
+"en": "Gunship"
+},
+"sprite:w93-hcannon-turret2": {
+"ru": "Тяжёлая пушечная турель (Тыловая)",
+"en": "Heavy cannon turret (Backline)"
+},
+"sprite:bob-plasma-turret-5": {
+"ru": "Плазменная турель MK5",
+"en": "Plasma turret MK5"
+},
+"sprite:bi-dart-turret": {
+"ru": "Дротиковая турель",
+"en": "Dart turret"
+},
+"sprite:biterzilla35": {
+"ru": "КАМЕНИСТЫЙ ЛЕВИАФАН",
+"en": "Rock Beast"
+},
+"sprite:bm-motherbiterzilla5": {
+"ru": "КОРОЛЕВА-МАТКА",
+"en": "Brood Mother"
+},
+"sprite:maf-giant-fire-spitter5": {
+"ru": "КОРОЛЬ ОГНЕННЫХ ПЛЕВАК",
+"en": "Incendiary Spitter Monster"
+},
+"sprite:bm_fake_human_boss_nuke_rocket_10": {
+"ru": "Босс с ядерной бомбой 10",
+"en": "Boss with nuke bomb 10"
+},
+"sprite:juggernaut-biter-v1-t10-rampant": {
+"ru": "Джаггернаут-Кусака:ур.10",
+"en": "JuggernautBiter:Lvl.10"
+},
+"sprite:behemoth-biter": {
+"ru": "Чудовищный кусака",
+"en": "Behemoth biter"
+},
+"sprite:small-biter": {
+"ru": "Малый кусака",
+"en": "Small biter"
+},
+"sprite:neutral-super-hive-v1-t10-rampant": {
+"ru": "ОбычныйСупер-улей:ур.10",
+"en": "CommonSuper-hive:Lvl.10"
+},
+"sprite:boiler": {
+"ru": "Бойлер",
+"en": "Boiler"
+},
+"sprite:bob-boiler-5": {
+"ru": "Бойлер 5",
+"en": "Boiler 5"
+},
+"sprite:oil-steam-boiler-5": {
+"ru": "Жидкотопливный котёл 765°С",
+"en": "Fluid-burning boiler 765°C"
+},
+"sprite:burner-generator": {
+"ru": "Твердотопливный генератор",
+"en": "Burner Generator"
+},
+"sprite:big-burner-generator": {
+"ru": "Большой топливный генератор",
+"en": "Big Burner Generator"
+},
+"sprite:steam-engine": {
+"ru": "Паровой двигатель",
+"en": "Steam engine"
+},
+"sprite:nuclear-reactor": {
+"ru": "Урановый реактор",
+"en": "Uranium reactor"
+},
+"sprite:angels-burner-reactor": {
+"ru": "Быстрый топливный реактор",
+"en": "Fast burner reactor"
+},
+"sprite:burner-mining-drill": {
+"ru": "Твердотопливный бур",
+"en": "Burner mining drill"
+},
+"sprite:bob-area-mining-drill-4": {
+"ru": "Увеличенный электрический бур MK5",
+"en": "Electric large area mining drill 4"
+},
+"sprite:angels-ore-crusher": {
+"ru": "Электрическая дробилка руды MК1",
+"en": "Ore crusher 1"
+},
+"sprite:angels-ore-sorting-facility": {
+"ru": "Сортировочный комбинат руды",
+"en": "Ore sorting facility 1"
+},
+"sprite:angels-ore-floatation-cell": {
+"ru": "Гидропромывочная станция руды",
+"en": "Flotation cell 1"
+},
+"sprite:angels-ore-leaching-plant": {
+"ru": "Кислото-травильный цех руды",
+"en": "Leaching plant 1"
+},
+"sprite:angels-ore-refinery": {
+"ru": "Очистительный завод руды",
+"en": "Ore refinery 1"
+},
+"sprite:angels-flare-stack": {
+"ru": "Факельная стойка",
+"en": "Flare stack"
+},
+"sprite:angels-clarifier": {
+"ru": "Отстойник",
+"en": "Clarifier"
+},
+"sprite:angels-algae-farm": {
+"ru": "Ферма водорослей MK1",
+"en": "Algae farm 1"
+},
+"sprite:bi-bio-farm": {
+"ru": "Биоферма",
+"en": "Bio farm"
+},
+"sprite:angels-bio-refugium-puffer": {
+"ru": "Заповедник фугу",
+"en": "Puffer refugium"
+},
+"sprite:Schall-pickup-tower-R128": {
+"ru": "Башня сбора IV",
+"en": "Pickup tower IV"
+},
+"sprite:repair-turret": {
+"ru": "Защитная башня",
+"en": "Defense tower"
+},
+"sprite:zcs-trash-landfill": {
+"ru": "Свалка отходов",
+"en": "Trash landfill"
+},
+"sprite:warehouse-basic": {
+"ru": "Склад",
+"en": "Warehouse"
+},
+"sprite:angels-electrolyser": {
+"ru": "Электролизер",
+"en": "Electrolyser 1"
+},
+"sprite:angels-gas-refinery": {
+"ru": "Улучшенный газоперерабатывающий завод",
+"en": "Advanced gas refinery 1"
+},
+"sprite:bi-bio-garden-huge": {
+"ru": "Биосад МК3",
+"en": "Huge Bio garden"
+},
+"sprite:aai-big-ship-wreck-1": {
+"ru": "Обломки",
+"en": "Wreckage"
+},
+"sprite:bm-spidertron_5": {
+"ru": "Паукотрон 5",
+"en": "Spidertron 5"
+},
+"sprite:maf_flying_saucer_10": {
+"ru": "Летающая тарелка",
+"en": "Flying-saucer"
+},
+"sprite:salvaged-assembling-machine": {
+"ru": "Извлечённый сборочный автомат",
+"en": "Salvaged assembling machine"
+},
+"sprite:salvaged-generator": {
+"ru": "Извлечённый корабельный генератор",
+"en": "Salvaged generator"
+},
+"sprite:bi-solar-boiler": {
+"ru": "Солнечная электростанция и бойлер - Бойлер",
+"en": "Solar power plant & boiler"
+},
+"sprite:bi-bio-accumulator": {
+"ru": "Аккумулятор огромной емкости",
+"en": "Huge accumulator"
+},
+"sprite:character": {
+"ru": "Персонаж",
+"en": "Character"
+},
+"sprite:pumpjack": {
+"ru": "Нефтяная вышка",
+"en": "Pumpjack"
+},
+"sprite:stone-furnace": {
+"ru": "Каменная печь",
+"en": "Stone furnace"
+},
+"sprite:assembling-machine-1": {
+"ru": "Сборочный автомат 1",
+"en": "Assembling machine 1"
+},
+"sprite:angels-thermal-bore": {
+"ru": "Экстрактор термальных вод",
+"en": "Thermal water bore"
+},
+"sprite:storage-tank": {
+"ru": "Резервуар",
+"en": "Storage tank"
+},
+"sprite:w93-plaser-turret2": {
+"ru": "Импульсная лазерная турель (Тыловая)",
+"en": "Pulse laser turret (Backline)"
+},
+"sprite:Schall-tank-H": {
+"ru": "Тяжёлый танк",
+"en": "Heavy tank"
+},
+"sprite:bob-heavy-spidertron": {
+"ru": "Тяжелый Паукотрон",
+"en": "Heavy Spidertron"
+},
+"sprite:big-lab": {
+"ru": "Биг-лаба",
+"en": "Big Lab"
+},
+"sprite:paranoidal-beta8-big-lab": {
+"ru": "Гиг-лаба",
+"en": "Big Lab"
+},
+"sprite:bob-lab-2": {
+"ru": "Лаборатория 2",
+"en": "Lab 2"
+},
+"sprite:bob-lab-alien": {
+"ru": "Лаборатория инопланетных материалов",
+"en": "Alien lab"
+},
+"sprite:lab-module": {
+"ru": "Лаборатория модулей",
+"en": "Modules lab"
+},
+"sprite:erp-lab": {
+"ru": "Центр обработки данных",
+"en": "Data Processor"
+}
+}
