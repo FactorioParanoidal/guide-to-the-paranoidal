@@ -37,7 +37,7 @@
       var list = mode ? G.data.records.top_products : G.data.records.top_ingredients, max = list[0].recipes;
       el.innerHTML = '<div class="wbar"><button class="fbtn ' + (!mode ? 'go' : '') + '" data-m="0">' + G.t('Чаще всего нужно', 'Most needed') + '</button><button class="fbtn ' + (mode ? 'go' : '') + '" data-m="1">' + G.t('Чаще всего получается', 'Most produced') + '</button></div>' +
         list.map(function (r, i) { return '<div class="sl-row vk"><span class="sl-q">' + G.iconImg(r) + (i + 1) + '. ' + G.esc(G.nm(r)) + '</span><span class="sl-bar"><i style="width:' + (r.recipes / max * 100) + '%"></i></span><b>' + r.recipes + '</b></div>'; }).join('') +
-        '<p class="muted small-note">' + G.t('Число рецептов, где предмет стоит ингредиентом (или продуктом). Учтены только доступные игроку рецепты, без переработки, бочек и утилизации.', 'Number of recipes where the item is an ingredient (or product). Only recipes available to the player, excluding recycling, barrels and voiding.') + '</p>';
+        '<p class="muted small-note">' + (mode ? G.t('Число рецептов, которые производят этот предмет.', 'Number of recipes that produce this item.') : G.t('Число рецептов, где этот предмет нужен как ингредиент.', 'Number of recipes that need this item as an ingredient.')) + ' ' + G.t('Учтены только доступные игроку рецепты, без переработки, бочек и утилизации.', 'Only recipes available to the player, excluding recycling, barrels and voiding.') + '</p>';
       el.querySelectorAll('[data-m]').forEach(function (b) { b.onclick = function () { mode = +b.getAttribute('data-m'); render(); }; });
     }
     render(); G.onLang(render);

@@ -80,7 +80,7 @@ html[data-lang="en"] .ru-only{display:none}
 .belt{height:60px;background:#1a1918 url(assets/static/ui/belt-tile.png) 0 50% / 52px 60px repeat-x;border:0;
   box-shadow:inset 0 2px 0 #000,inset 0 -2px 0 #000;animation:beltMove 1.08s linear infinite;image-rendering:auto}
 .belt .track{top:9px;gap:8px;animation-duration:60s}
-.belt .track img{width:42px;height:42px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.7))}
+.belt .track img{flex:none;width:42px;height:42px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.7))}
 @keyframes beltMove{from{background-position-x:0}to{background-position-x:-52px}}
 
 /* ---- mobile ---- */
@@ -172,3 +172,25 @@ kbd.kbd-link:hover{border-color:var(--orange);box-shadow:inset 0 1px 0 rgba(255,
 .ftable td{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
 [data-widget=solid-fuels] td:first-child{min-width:190px}
 .table-wrap.open .ftable th{position:sticky;top:calc(var(--top-h) + 6px);z-index:3;box-shadow:0 2px 0 #000}
+
+/* ---- tank fire: real game fire (base fire-flame-01, 90 frames) and big explosion (47 frames) ---- */
+.tf-stage .tf-fire{width:220px;height:170px;bottom:46px}
+.tf-stage .tf-fire i{position:absolute;bottom:0;width:84px;height:130px;border-radius:0;filter:none;opacity:1;
+  background:url(assets/static/fx/fire-flame.webp) 0 0 / 7560px 130px no-repeat;animation:tfFlame 1.5s steps(90) infinite}
+.tf-stage .tf-fire i:nth-child(1){left:0;bottom:6px;transform:scale(.8);animation-delay:-.2s}
+.tf-stage .tf-fire i:nth-child(2){left:40px;height:130px;animation-delay:-.7s}
+.tf-stage .tf-fire i:nth-child(3){left:72px;bottom:18px;height:130px;transform:scale(1.15);animation-delay:-1.1s}
+.tf-stage .tf-fire i:nth-child(4){left:104px;animation-delay:-.4s}
+.tf-stage .tf-fire i:nth-child(5){left:136px;bottom:4px;height:130px;transform:scale(.85);animation-delay:-.9s}
+.tf-stage .tf-fire i:nth-child(6){left:58px;bottom:40px;transform:scale(.7);animation-delay:-1.3s}
+@keyframes tfFlame{to{background-position-x:-7560px}}
+.tf-stage .tf-boom{inset:auto;left:50%;bottom:0;width:0;height:0;background:none;animation:none}
+.tf-stage .tf-boom i{position:absolute;left:-98px;bottom:-20px;width:197px;height:245px;transform-origin:50% 100%;transform:scale(1.5);
+  background:url(assets/static/fx/big-explosion.webp) 0 0 / 9259px 245px no-repeat;animation:tfBoom 1.6s steps(47) forwards}
+.tf-stage .tf-boom i:nth-child(2){left:-180px;transform:scale(1);animation-delay:.25s;animation-fill-mode:both}
+@keyframes tfBoom{to{background-position-x:-9259px}}
+
+/* ---- fluid wall: named tiles ---- */
+.fw2{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:4px;margin-top:10px}
+.fw2-c{display:flex;align-items:center;gap:8px;padding:4px 8px;background:var(--deep2);border-radius:2px;box-shadow:inset 0 0 0 1px #000;font-size:14px;line-height:1.2}
+.fw2-c .ic{width:28px;height:28px;flex:none;margin:0}

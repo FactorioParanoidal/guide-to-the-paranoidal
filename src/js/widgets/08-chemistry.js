@@ -2,16 +2,21 @@
    fluid-wall : all visible fluids (records.fluids_all) with search and gas/liquid filter
    tank-fire  : interactive tank overheat (Flammable_Oils_QUICKFIX PARANOIDAL-CHANGES.md: burns 60 s, drained below 25% → goes out, else explosion) */
 (function (G) {
+  /* fluid-wall: every fluid as a named tile (icon + name), alphabetical, search, gases/liquids filter, first 36 + "show all" */
   G.widget('fluid-wall', function (el) {
-    var F = G.data.records.fluids_all, q = '', f = 'all';
-    el.innerHTML = '<div class="wbar"><input class="fsel" type="search" data-q style="flex:1;min-width:200px"><span data-btns></span><b class="out" data-c></b></div><div class="wall fw"></div>';
-    var wall = el.querySelector('.wall'), inp = el.querySelector('[data-q]');
+    var F = G.data.records.fluids_all, q = '', f = 'all', all = false, SHORT = 36;
+    el.innerHTML = '<div class="wbar"><input class="fsel" type="search" data-q style="flex:1;min-width:200px"><span data-btns></span><b class="out" data-c></b></div><div class="fw2"></div><div class="wbar" data-more></div>';
+    var wall = el.querySelector('.fw2'), inp = el.querySelector('[data-q]');
     function render() {
-      inp.placeholder = G.t('Найти жидкость…', 'Find a fluid…');
+      inp.placeholder = G.t('Найти жидкость или газ: ртуть, нафта, водород…', 'Find a fluid or gas: mercury, naphtha, hydrogen…');
       el.querySelector('[data-btns]').innerHTML = [['all', 'Все', 'All'], ['liquid', 'Жидкости', 'Liquids'], ['gas', 'Газы', 'Gases']].map(function (b) { return '<button class="fbtn ' + (f === b[0] ? 'go' : '') + '" data-f="' + b[0] + '">' + G.t(b[1], b[2]) + '</button>'; }).join(' ');
-      var list = F.filter(function (x) { return (f === 'all' || (f === 'gas') === !!x.gas) && (!q || (x.ru + ' ' + x.en).toLowerCase().indexOf(q) >= 0); });
-      wall.innerHTML = list.map(function (x) { return G.iconImg(x, ''); }).join('') || '<span class="muted">' + G.t('Такой жидкости нет. Пока.', 'No such fluid. Yet.') + '</span>';
+      var list = F.filter(function (x) { return (f === 'all' || (f === 'gas') === !!x.gas) && (!q || (x.ru + ' ' + x.en).toLowerCase().indexOf(q) >= 0); })
+        .sort(function (a, b) { return G.nm(a).localeCompare(G.nm(b), G.lang); });
+      var shown = all || q ? list : list.slice(0, SHORT);
+      wall.innerHTML = shown.map(function (x) { return '<span class="fw2-c">' + G.iconImg(x) + '<span>' + G.esc(G.nm(x)) + '</span></span>'; }).join('') || '<span class="muted">' + G.t('Такой жидкости нет. Пока.', 'No such fluid. Yet.') + '</span>';
       el.querySelector('[data-c]').textContent = list.length + ' / ' + F.length;
+      el.querySelector('[data-more]').innerHTML = !q && list.length > SHORT ? '<button class="fbtn">' + (all ? G.t('Свернуть', 'Show less') : G.t('Показать все', 'Show all') + ' ' + list.length) + '</button>' : '';
+      var mb = el.querySelector('[data-more] .fbtn'); if (mb) mb.onclick = function () { all = !all; render(); };
       el.querySelectorAll('[data-f]').forEach(function (b) { b.onclick = function () { f = b.getAttribute('data-f'); render(); }; });
     }
     inp.oninput = function () { q = inp.value.trim().toLowerCase(); render(); };
@@ -23,9 +28,9 @@
     function paint() {
       var fireOn = state === 'burning';
       el.innerHTML = '<div class="panel-title"><img class="ic" src="' + G.icon('technology__angels-oil-processing') + '" alt="">' + G.t('Резервуар с нафтой, 25 000 единиц', 'Naphtha tank, 25,000 units') + '</div>' +
-        '<div class="tf-stage ' + state + '"><img class="tf-tank" src="assets/sprites/storage-tank.webp" alt="">' + (fireOn ? '<div class="tf-fire"><i></i><i></i><i></i><i></i><i></i></div><div class="tf-smoke"></div>' : '') +
-        (state === 'boom' ? '<div class="tf-boom"></div>' : '') + '<div class="tf-level"><i style="height:' + level + '%"></i><b>' + Math.round(level) + '%</b><em></em></div></div>' +
-        '<div class="tf-timer"><i style="width:' + (t / BURN * 100) + '%"></i><span>' + (state === 'burning' ? G.t('До взрыва: ', 'Until explosion: ') + Math.max(0, Math.ceil(BURN - t)) + ' ' + G.t('с', 's') : '') + '</span></div>' +
+        '<div class="tf-stage ' + state + '"><img class="tf-tank" src="assets/sprites/storage-tank.webp" alt="">' + (fireOn ? '<div class="tf-fire"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="tf-smoke"></div>' : '') +
+        (state === 'boom' ? '<div class="tf-boom"><i></i><i></i></div>' : '') + '<div class="tf-level"><i style="height:' + level + '%"></i><b>' + Math.round(level) + '%</b><em></em></div></div>' +
+        '<div class="tf-timer"><i style="width:' + (t / BURN * 100) + '%"></i><span>' + (state === 'burning' ? G.t('До взрыва: ', 'Until explosion: ') + Math.max(0, Math.ceil(BURN - t)) + ' ' + G.t('с игрового времени (здесь ускорено в 8 раз)', 's of game time (8× faster here)') : '') + '</span></div>' +
         '<div class="wbar">' + (state === 'idle' ? '<button class="fbtn danger" data-ign>' + G.t('🔥 Попасть шальной пулей', '🔥 Hit it with a stray bullet') + '</button>' : '') +
         (state === 'burning' ? '<button class="fbtn go" data-drain>' + G.t('💧 Откачивать! (жмите быстрее)', '💧 Drain it! (click faster)') + '</button>' : '') +
         (state === 'out' || state === 'boom' ? '<button class="fbtn" data-reset>' + G.t('↺ Ещё раз', '↺ Again') + '</button>' : '') + '</div>' +
@@ -49,7 +54,7 @@
         if (state !== 'burning') return clearInterval(timer);
         if (t >= BURN) { state = 'boom'; clearInterval(timer); el.classList.add('shake'); setTimeout(function () { el.classList.remove('shake'); }, 700); G.achieve('kaboom', 'Химик-подрывник', 'Demolition chemist', G.icon('technology__angels-oil-processing'), 'Взорвать резервуар', 'Blow up a tank'); }
         var bar = el.querySelector('.tf-timer i'), sp = el.querySelector('.tf-timer span');
-        if (state === 'burning' && bar) { bar.style.width = (t / BURN * 100) + '%'; sp.textContent = G.t('До взрыва: ', 'Until explosion: ') + Math.max(0, Math.ceil(BURN - t)) + ' ' + G.t('с', 's'); }
+        if (state === 'burning' && bar) { bar.style.width = (t / BURN * 100) + '%'; sp.textContent = G.t('До взрыва: ', 'Until explosion: ') + Math.max(0, Math.ceil(BURN - t)) + ' ' + G.t('с игрового времени (здесь ускорено в 8 раз)', 's of game time (8× faster here)'); }
         else paint();
       }, 100);
     }

@@ -7,10 +7,15 @@
     ['fuels_solid', 'science_packs', 'modules', 'turrets', 'drills', 'boilers', 'top_ingredients', 'top_products', 'belts', 'labs', 'assemblers_fastest', 'burner_machines', 'cars', 'reactors', 'solar']
       .forEach(function (k) { (R[k] || []).forEach(function (r) { if (r.icon) pool.push(r); }); });
     (R.ore_decoder || []).forEach(function (o) { pool.push(o.ore); o.stages.forEach(function (s) { s.outputs.forEach(function (x) { pool.push(x); }); }); });
+    var seen = {}; pool = pool.filter(function (r) { if (seen[r.icon]) return false; seen[r.icon] = 1; return true; });
     pool.sort(function () { return Math.random() - .5; });
     var pick = pool.slice(0, 40), track = el.querySelector('.track');
-    var h = pick.map(function (r) { return G.iconImg(r, ''); }).join('');
+    // eager loading (lazy images inside a moving strip sometimes stayed broken) + one retry on error
+    var h = pick.map(function (r) { return G.iconImg(r, '').replace(' loading="lazy"', ' onerror="if(!this.dataset.r){this.dataset.r=1;this.src=this.src}"'); }).join('');
     track.innerHTML = h + h; // duplicated for a seamless loop
+    // items ride at the belt speed: the belt texture moves 52 px per 1.08 s (60-unified.css .belt)
+    var BELT_PX_PER_S = 52 / 1.08;
+    track.style.animationDuration = (track.scrollWidth / 2 / BELT_PX_PER_S).toFixed(2) + 's';
   });
 
   G.widget('vs-bars', function (el) {
