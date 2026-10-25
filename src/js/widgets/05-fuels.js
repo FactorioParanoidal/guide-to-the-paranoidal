@@ -26,15 +26,30 @@
       [0.1, 0.3, 1, 3, 10].forEach(function (v) { s += '<line x1="' + L + '" x2="' + (W - Rr) + '" y1="' + Y(v) + '" y2="' + Y(v) + '" class="fs-grid"/><text x="' + (L - 8) + '" y="' + (Y(v) + 4) + '" class="fs-ax" text-anchor="end">×' + G.fmt(v) + '</text>'; });
       s += '<text x="' + ((L + W) / 2) + '" y="' + (H - 10) + '" class="fs-lab">' + G.t('теплотворность, кДж за единицу →', 'heat value, kJ per unit →') + '</text>';
       s += '<text transform="translate(16 ' + ((T + H - B) / 2) + ') rotate(-90)" class="fs-lab">' + G.t('← чище · множитель загрязнения · грязнее →', '← cleaner · emission multiplier · dirtier →') + '</text>';
+      // positions first, then greedy labels: notable fluids first, a label is drawn only if it hits no other label or point
+      var pos = pts.map(function (f, i) { return { f: f, x: X(f.kj), y: Y(Math.max(0.07, f.emissions)) + ((i * 37) % 9 - 4) * 1.2 }; });
+      var boxes = [], labels = '';
+      function hit(b) {
+        if (b.x0 < L || b.x1 > W - 4 || b.y0 < T - 6 || b.y1 > H - B) return true;
+        for (var k = 0; k < boxes.length; k++) { var o = boxes[k]; if (b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0) return true; }
+        return pos.some(function (q) { return q.x + 8 > b.x0 && q.x - 8 < b.x1 && q.y + 8 > b.y0 && q.y - 8 < b.y1; });
+      }
+      pos.slice().sort(function (a, b) { return (notable[b.f.id] ? 1 : 0) - (notable[a.f.id] ? 1 : 0) || b.f.kj - a.f.kj; }).forEach(function (p) {
+        var name = G.nm(p.f), w = name.length * 6.6 + 4, y0 = p.y - 8, y1 = p.y + 7;
+        var right = { x0: p.x + 10, x1: p.x + 10 + w, y0: y0, y1: y1 }, left = { x0: p.x - 10 - w, x1: p.x - 10, y0: y0, y1: y1 };
+        var b = !hit(right) ? right : !hit(left) ? left : null;
+        if (!b) return;
+        boxes.push(b);
+        labels += '<text x="' + (b === right ? p.x + 11 : p.x - 11) + '" y="' + (p.y + 4) + '" class="fs-name"' + (b === left ? ' text-anchor="end"' : '') + '>' + G.esc(name) + '</text>';
+      });
       pts.forEach(function (f, i) {
-        var jitter = ((i * 37) % 9 - 4) * 1.2, cx = X(f.kj), cy = Y(Math.max(0.07, f.emissions)) + jitter;
+        var cx = pos[i].x, cy = pos[i].y;
         var tip = '<div class="tt-title"><img src="' + G.icon(f.icon) + '" alt="">' + G.esc(G.nm(f)) + '</div>' + G.t('Теплотворность', 'Heat value') + ': <b>' + G.fmt(f.kj) + ' ' + G.t('кДж', 'kJ') + '</b><br>' + G.t('Загрязнение', 'Emissions') + ': <b>×' + G.fmt(f.emissions) + '</b><br>' + (f.gas ? G.t('газ', 'gas') : G.t('жидкость', 'liquid'));
         var shape = f.gas ? '<rect x="' + (cx - 7) + '" y="' + (cy - 7) + '" width="14" height="14" transform="rotate(45 ' + cx + ' ' + cy + ')"' : '<circle cx="' + cx + '" cy="' + cy + '" r="8"';
         s += '<g class="fs-pt" data-tip-ru="' + G.esc(tip) + '" data-tip-en="' + G.esc(tip) + '">' + shape + ' fill="' + col(f.base_color) + '" stroke="#000" stroke-width="1.5"/>';
-        if (notable[f.id]) s += cx > W - 190 ? '<text x="' + (cx - 11) + '" y="' + (cy + 4) + '" class="fs-name" text-anchor="end">' + G.esc(G.nm(f)) + '</text>' : '<text x="' + (cx + 11) + '" y="' + (cy + 4) + '" class="fs-name">' + G.esc(G.nm(f)) + '</text>';
         s += '</g>';
       });
-      s += '</svg>';
+      s += labels + '</svg>';
       el.innerHTML = '<div class="wbar">' + [['all', 'Все', 'All'], ['liquid', 'Жидкости ●', 'Liquids ●'], ['gas', 'Газы ◆', 'Gases ◆']].map(function (b) { return '<button class="fbtn ' + (filt === b[0] ? 'go' : '') + '" data-f="' + b[0] + '">' + G.t(b[1], b[2]) + '</button>'; }).join('') + '<span class="muted">' + G.t('Точек: ', 'Points: ') + pts.length + '</span></div>' + s;
       el.querySelectorAll('[data-f]').forEach(function (b) { b.onclick = function () { filt = b.getAttribute('data-f'); render(); }; });
     }
@@ -43,16 +58,17 @@
 
   G.widget('solid-fuels', function (el) {
     var F = G.data.records.fuels_solid.filter(function (f) { return f.category !== 'bet-fuel-battery'; });
-    var key = 'mj', dir = -1;
+    var key = 'mj', dir = -1, all = false, SHORT = 12;
     var cols = [['mj', 'МДж', 'MJ'], ['emissions', 'Дым ×', 'Smoke ×'], ['acceleration', 'Разгон ×', 'Accel. ×'], ['top_speed', 'Скорость ×', 'Speed ×']];
     function render() {
-      var rows = F.slice().sort(function (a, b) { return (a[key] - b[key]) * dir; });
-      el.innerHTML = '<div class="panel-title"><img class="ic" src="' + G.icon('item__coal') + '" alt="">' + G.t('Всё, что горит', 'Everything that burns') + ' (' + rows.length + ')</div><div class="table-wrap"><table class="ftable sortable"><tr><th>' + G.t('Топливо', 'Fuel') + '</th>' +
+      var sorted = F.slice().sort(function (a, b) { return (a[key] - b[key]) * dir; }), rows = all ? sorted : sorted.slice(0, SHORT);
+      el.innerHTML = '<div class="panel-title"><img class="ic" src="' + G.icon('item__coal') + '" alt="">' + G.t('Всё, что горит', 'Everything that burns') + ' (' + sorted.length + ')</div><div class="table-wrap open"><table class="ftable sortable"><tr><th>' + G.t('Топливо', 'Fuel') + '</th>' +
         cols.map(function (c) { return '<th data-k="' + c[0] + '" class="' + (key === c[0] ? 'on' : '') + '">' + G.t(c[1], c[2]) + (key === c[0] ? (dir < 0 ? ' ▼' : ' ▲') : '') + '</th>'; }).join('') + '</tr>' +
         rows.map(function (f) {
           var mj = f.mj >= 1000 ? G.fmt(f.mj / 1000, { maximumFractionDigits: 2 }) + ' ' + G.t('ГДж', 'GJ') : G.fmt(f.mj, { maximumFractionDigits: 2 });
           return '<tr class="' + (f.emissions < 0 ? 'neg' : f.emissions >= 3 ? 'dirty' : '') + '"><td>' + G.iconImg(f) + ' ' + G.esc(G.nm(f)) + '</td><td class="n">' + mj + '</td><td class="n">' + G.fmt(f.emissions) + '</td><td class="n">' + G.fmt(f.acceleration) + '</td><td class="n">' + G.fmt(f.top_speed) + '</td></tr>';
-        }).join('') + '</table></div><p class="muted small-note">' + G.t('Нажмите на заголовок столбца, чтобы отсортировать. Зелёным — топливо с отрицательным загрязнением.', 'Click a column header to sort. Green: fuel with negative emissions.') + '</p>';
+        }).join('') + '</table></div>' + (sorted.length > SHORT ? '<div class="wbar"><button class="fbtn" data-all>' + (all ? G.t('Свернуть', 'Show less') : G.t('Показать все', 'Show all') + ' ' + sorted.length) + '</button></div>' : '') + '<p class="muted small-note">' + G.t('Нажмите на заголовок столбца, чтобы отсортировать. Зелёным — топливо с отрицательным загрязнением.', 'Click a column header to sort. Green: fuel with negative emissions.') + '</p>';
+      var ab = el.querySelector('[data-all]'); if (ab) ab.onclick = function () { all = !all; render(); };
       el.querySelectorAll('th[data-k]').forEach(function (th) { th.onclick = function () { var k = th.getAttribute('data-k'); if (k === key) dir = -dir; else { key = k; dir = -1; } render(); }; });
     }
     render(); G.onLang(render);
