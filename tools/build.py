@@ -120,6 +120,36 @@ def expand(text, fname):
         problems.append('%s: unexpanded %s' % (fname, x))
     return text
 
+# ---------------------------------------------------------------- self-links
+# A link that leads to where the reader already is gets unwrapped to plain text (user rule):
+#  - a link to an id inside the same h3 block (or to the h3 itself, or to its own chapter);
+#  - a glossary link to a term that is the topic of the block (term stem found in the h3 title), e.g. "slag" under "Slag: ...".
+def _plain(h):
+    return re.sub(r'<[^>]+>', ' ', h).lower()
+_gloss_src = open(os.path.join(SRC, 'sections', '21-glossary.html'), encoding='utf-8').read()
+GLOSS_STEMS = {}
+for m in re.finditer(r'<dt id="(g-[^"]+)">(.*?)</dt>', _gloss_src, re.S):
+    words = re.findall(r'[\w-]+', _plain(m.group(2)))
+    GLOSS_STEMS[m.group(1)] = {w[:max(4, len(w) - 2)] for w in words if len(w) >= 4}
+UNSELFED = []
+def unself(raw, chapter_id):
+    if chapter_id == 'glossary':
+        return raw
+    out = []
+    for blk in re.split(r'(?=<h3 )', raw):
+        ids = set(re.findall(r'id="([^"]+)"', blk)) | {chapter_id}
+        h3 = re.match(r'<h3[^>]*>(.*?)</h3>', blk, re.S)
+        title = _plain(h3.group(1)) if h3 else ''
+        def fix(m):
+            target, text = m.group(1), m.group(2)
+            topic = target in GLOSS_STEMS and title and any(st in title for st in GLOSS_STEMS[target])
+            if target in ids or topic:
+                UNSELFED.append('%s #%s' % (chapter_id, target))
+                return text
+            return m.group(0)
+        out.append(re.sub(r'<a class="x[^"]*" href="#([^"]+)">(.*?)</a>', fix, blk, flags=re.S))
+    return ''.join(out)
+
 # ---------------------------------------------------------------- sections
 parts = []
 for entry in registry['sections']:
@@ -134,6 +164,7 @@ for entry in registry['sections']:
     raw = open(path, encoding='utf-8').read()
     if 'id="%s"' % entry['id'] not in raw:
         problems.append('%s: no element with id="%s"' % (entry['file'], entry['id']))
+    raw = unself(raw, entry['id'])
     parts.append('\n<!-- ===== section: %s (%s) ===== -->\n' % (entry['id'], entry['file']) + expand(raw, entry['file']))
 
 css = '\n'.join('/* ---- %s ---- */\n' % os.path.basename(f) + open(f, encoding='utf-8').read()
@@ -171,6 +202,7 @@ page = page.replace('<!--@META-->', 'built %s · guide %s · data %s (%s)' % (me
 
 out = os.path.join(ROOT, '_preview.html' if args.only else 'index.html')
 open(out, 'w', encoding='utf-8', newline='\n').write(page)
+print('self-links unwrapped: %d' % len(UNSELFED))
 print('index.html: %d KB, %d sections, %d problems' % (len(page.encode('utf-8')) // 1024, len(parts), len(problems)))
 for p in problems:
     print('  !', p)
