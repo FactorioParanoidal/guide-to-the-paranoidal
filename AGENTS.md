@@ -117,8 +117,11 @@ Illustrative widgets must say so on the page (season curve, smog damage threshol
 - **Icons without corner badges**: `collect_assets.py` drops floating layers, tech level markers, `constants` badges and
   Rampant tier letters. Prefer vanilla-looking icons over Angel's ore/fluid “blob” icons (the user finds them ugly).
 - **Chapter header** hazard band spans the whole content column; content width ~1132 px (`--gut`).
+- **Effects from game textures**: fire = `assets/static/fx/fire-flame.webp` (base fire-flame-01, 90 frames, 1.5 s),
+  explosion = `fx/big-explosion.webp` (47 frames); both are sprite sheets converted to strips by `assets-config.json`
+  `strip: [w, h, cols, frames]` and animated with CSS `steps()`. Prefer such textures over drawn CSS effects.
 - **Hero**: transparent animated logo (`paranoidal-animated-alpha.webp`, `keyout` in assets-config), real belt tile moving left
-  in the same direction as the items. Capitalise the first letter of every label/option.
+  in the same direction as the items; items ride exactly at the belt speed (duration computed in `hero-belt`). Capitalise the first letter of every label/option.
 - **Dark mode**: `<meta name="color-scheme" content="dark">` + `<meta name="darkreader-lock">` so Dark Reader-like extensions
   leave the page alone. Keep both.
 - Hotkeys in text (`<kbd>`) link to the keyboard in “Quality of life” (`#qol-keys`) automatically (core.js).
@@ -127,7 +130,12 @@ Illustrative widgets must say so on the page (season curve, smog damage threshol
 ## 6. Content rules learned from the user's review
 
 - Do not write about the map preset, VRAM, or “almost certainly” when something certainly breaks.
-- No self-links (a term linked inside its own section). Glossary terms are linked from other chapters.
+- No self-links: `build.py` unwraps links to the same h3 block / own chapter and glossary links whose term is the topic
+  of the block (stem of the glossary term found in the h3 title); it prints `self-links unwrapped: N`. Every glossary term
+  still needs a link from another chapter (check.py warns otherwise).
+- No meaningless tag rows: a chip/tag must name a real thing (prefer an in-game icon + its locale name).
+- A timer must say what time it shows (game time vs real time) and any speed-up.
+- Wording in EN: avoid literal calques (“eats power” → “consumes power”).
 - Names exactly as in the modpack locale (`data/names.json`): «Стальная балка», «фугу», «Божественное», etc.
   Both languages follow the switch — never hard-code one language in a widget (`G.nm` inside `render`, or `G.bi`).
 - There are no stone or iron ore deposits; stone comes from rocks and crushed-ore gravel. Check such claims in the dump.

@@ -1,5 +1,16 @@
 # Changelog — Guide to the Paranoidal
 
+## 1.3.3 — 2026-10-25
+
+- Self-links removed automatically at build time (links to the current block, glossary terms in their own section);
+  glossary terms linked from other chapters instead.
+- Tank fire: real game fire and big explosion textures; the timer says it is game time, 8× faster.
+- Fluid wall: named tiles in alphabetical order, first 36 + "Show all"; exotic chemistry shows real fluids with icons.
+- Most used/produced materials: the note follows the selected tab.
+- Hero belt: items move at the belt speed, icons load eagerly with a retry; icons rendered without more overlay badges
+  (reskins tier numbers/letters, Angel's num-N, molecule badges, Mk marks, Clowns % badges).
+- Spiders card uses the vanilla spidertron picture; fire safety turret note winks at water on oil.
+
 ## 1.3.2 — 2026-10-25
 
 - EN wording: "eats power" replaced; mining chapter: unclear "two fluids" warning and "soil geology" tag removed.
