@@ -3,6 +3,7 @@
 Usage (from the guide folder):
     python -I tools/build.py            # build index.html
     python -I tools/build.py --check    # build, then run tools/check.py
+    python -I tools/build.py --single   # also write the one-file release dist/Guide_to_the_Paranoidal.html (tools/release.py)
 
 Sources:
     src/page.html              page shell with placeholders  <!--@CSS-->  <!--@SECTIONS-->  <!--@JS-->  <!--@STATS-->  <!--@META-->
@@ -22,7 +23,7 @@ Section micro-syntax (expanded here, so fragments stay short):
     {{fmt:records.boilers.0.effectivity|pct}}  -> formatted value: pct, int, mw, kj, raw
 Everything else is plain HTML.
 """
-import argparse, glob, html, json, os, re, subprocess, sys, time
+import argparse, base64, glob, html, json, os, re, subprocess, sys, time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -31,6 +32,8 @@ SRC = os.path.join(ROOT, 'src')
 ap = argparse.ArgumentParser()
 ap.add_argument('--check', action='store_true')
 ap.add_argument('--only', help='comma list of section ids (preview build; writes _preview.html, ignores missing files)')
+ap.add_argument('--single', nargs='?', const=os.path.join(ROOT, 'dist', 'Guide_to_the_Paranoidal.html'), metavar='OUT',
+                help='also write the one-file guide (every asset embedded; default dist/Guide_to_the_Paranoidal.html)')
 args = ap.parse_args()
 
 stats = json.load(open(os.path.join(ROOT, 'data', 'stats.json'), encoding='utf-8'))
@@ -183,7 +186,9 @@ ach = []
 for m in re.finditer(r"G\.achieve\('([\w-]+)', '([^']*)', '([^']*)', ([^,]+(?:\([^)]*\))?), '([^']*)', '([^']*)'\)", js):
     icon_expr = m.group(4).strip()
     km = re.match(r"G\.icon\('([^']+)'\)", icon_expr)
-    icon = 'assets/icons/%s.webp' % km.group(1) if km else (icon_expr.strip("'") if icon_expr.startswith("'") else 'assets/icons/technology__automation.webp')
+    ka = re.match(r"G\.asset\('([^']+)'\)", icon_expr)
+    icon = ('assets/icons/%s.webp' % km.group(1) if km else ka.group(1) if ka else
+            icon_expr.strip("'") if icon_expr.startswith("'") else 'assets/icons/technology__automation.webp')
     if m.group(1) not in [a['id'] for a in ach]:
         ach.append({'id': m.group(1), 'ru': m.group(2), 'en': m.group(3), 'icon': icon, 'dru': m.group(5), 'den': m.group(6)})
 meta['widget_achievements'] = ach
@@ -193,6 +198,10 @@ cpath = os.path.join(ROOT, 'data', 'icon-colors.json')
 stats_out['icon_colors'] = json.load(open(cpath, encoding='utf-8')) if os.path.exists(cpath) else {}
 
 page = expand(open(os.path.join(SRC, 'page.html'), encoding='utf-8').read(), 'page.html')  # shell only; CSS/JS are inserted verbatim
+# the version is read by the Paranoidal Launcher from the first bytes of the one-file guide: keep it right after <meta charset>
+if '<meta charset="utf-8">' not in page:
+    problems.append('page.html: no <meta charset="utf-8">')
+page = page.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta name="guide-version" content="%s">' % meta['guide_version'], 1)
 page = page.replace('<!--@CSS-->', '<style>\n' + css + '\n</style>')
 page = page.replace('<!--@SECTIONS-->', '\n'.join(parts))
 page = page.replace('<!--@STATS-->', '<script id="guide-data" type="application/json">' +
@@ -200,10 +209,91 @@ page = page.replace('<!--@STATS-->', '<script id="guide-data" type="application/
 page = page.replace('<!--@JS-->', '<script>\n' + js + '\n</script>')
 page = page.replace('<!--@META-->', 'built %s · guide %s · data %s (%s)' % (meta['built'], meta['guide_version'], stats['meta'].get('dump'), stats['meta'].get('generated')))
 
+# ---------------------------------------------------------------- one-file guide
+# The same page with every asset inside, for the Paranoidal Launcher and offline reading (no assets/ folder next to it).
+#  - CSS url(assets/..) and the favicon become data: URLs (each file is used once or twice there);
+#  - every other asset file is stored once in <script id="guide-assets"> (path -> base64); window.GuideAssets(path)
+#    turns it into a blob: URL on first use, so an icon shown a hundred times is decoded and kept once;
+#  - src/href="assets/.." attributes of the markup become data-asset-src/-href and are resolved before core.js runs,
+#    data-icon="assets/.." is resolved in place; JS builds its paths through G.asset()/G.icon() (check.py enforces it).
+MIME = {'.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.gif': 'image/gif',
+        '.svg': 'image/svg+xml', '.ttf': 'font/ttf', '.woff2': 'font/woff2'}
+SHIM = r"""<script>
+/* one-file guide: assets embedded by tools/build.py --single */
+(function () {
+  var A = JSON.parse(document.getElementById('guide-assets').textContent), U = {};
+  window.GuideAssets = function (p) {
+    if (U[p]) return U[p];
+    var a = A[p];
+    if (!a) return p;
+    var bin = atob(a[1]), u8 = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) u8[i] = bin.charCodeAt(i);
+    return (U[p] = URL.createObjectURL(new Blob([u8], { type: a[0] })));
+  };
+  [['data-asset-src', 'src'], ['data-asset-href', 'href']].forEach(function (x) {
+    document.querySelectorAll('[' + x[0] + ']').forEach(function (e) { e.setAttribute(x[1], window.GuideAssets(e.getAttribute(x[0]))); e.removeAttribute(x[0]); });
+  });
+  document.querySelectorAll('[data-icon^="assets/"]').forEach(function (e) { e.setAttribute('data-icon', window.GuideAssets(e.getAttribute('data-icon'))); });
+})();
+</script>
+"""
+
+def asset_bytes(rel):
+    path = os.path.join(ROOT, *rel.split('/'))
+    if not os.path.isfile(path):
+        problems.append('single: missing asset %s' % rel)
+        return None, None
+    mime = MIME.get(os.path.splitext(rel)[1].lower())
+    if not mime:
+        problems.append('single: unknown asset type %s' % rel)
+        return None, None
+    return mime, open(path, 'rb').read()
+
+def data_url(rel):
+    mime, data = asset_bytes(rel)
+    return rel if data is None else 'data:%s;base64,%s' % (mime, base64.b64encode(data).decode('ascii'))
+
+def make_single(page):
+    cut = page.index('<script id="guide-data"')
+    body, tail = page[:cut], page[cut:]
+    css_refs = set(re.findall(r'url\((assets/[^)"\']+)\)', body))
+    body = re.sub(r'url\((assets/[^)"\']+)\)', lambda m: 'url("%s")' % data_url(m.group(1)), body)
+    body = re.sub(r'(<link rel="icon" href=")(assets/[^"]+)"', lambda m: m.group(1) + data_url(m.group(2)) + '"', body)
+    body = re.sub(r'(?<![-\w])(src|href)="(assets/[^"]+)"', r'data-asset-\1="\2"', body)
+    # every asset file except fonts/backgrounds that only CSS uses (already inlined above)
+    files = []
+    for sub in ('icons', 'sprites', 'static'):
+        for dirpath, _, names in os.walk(os.path.join(ROOT, 'assets', sub)):
+            for n in names:
+                rel = os.path.relpath(os.path.join(dirpath, n), ROOT).replace('\\', '/')
+                if os.path.splitext(n)[1].lower() in MIME:
+                    files.append(rel)
+    rest = body.replace('url(', '') + tail
+    table = {}
+    for rel in sorted(files):
+        if rel in css_refs and rel not in rest:
+            continue
+        mime, data = asset_bytes(rel)
+        if data is not None:
+            table[rel] = [mime, base64.b64encode(data).decode('ascii')]
+    js_at = tail.index('<script>\n/* ---- js/core.js')
+    blob = '<script id="guide-assets" type="application/json">' + json.dumps(table, separators=(',', ':')) + '</script>\n'
+    single = body + tail[:js_at] + blob + SHIM + tail[js_at:]
+    left = re.findall(r'(?<![-\w])(?:src|href)="assets/|url\(assets/', single)
+    if left:
+        problems.append('single: %d asset references left outside the embedded table' % len(left))
+    return single, len(table)
+
 out = os.path.join(ROOT, '_preview.html' if args.only else 'index.html')
 open(out, 'w', encoding='utf-8', newline='\n').write(page)
 print('self-links unwrapped: %d' % len(UNSELFED))
 print('index.html: %d KB, %d sections, %d problems' % (len(page.encode('utf-8')) // 1024, len(parts), len(problems)))
+if args.single and not args.only:
+    single, n_assets = make_single(page)
+    sout = os.path.abspath(args.single)
+    os.makedirs(os.path.dirname(sout), exist_ok=True)
+    open(sout, 'w', encoding='utf-8', newline='\n').write(single)
+    print('%s: %.1f MB, %d embedded assets, %d problems' % (os.path.basename(sout), len(single.encode('utf-8')) / 1048576, n_assets, len(problems)))
 for p in problems:
     print('  !', p)
 if args.check:

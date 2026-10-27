@@ -22,7 +22,7 @@
         en: function () { var s = S['salvaged-lab']; return 'Salvaged lab: research speed ' + G.fmt(s.research_speed) + '. Yes, more than six times slower than a normal one. Yes, it is still better than nothing.'; } }
     ];
     el.innerHTML = '<div class="panel-title">' + G.bi('Нажмите на обломок', 'Click a wreck') + '</div><div class="wf-grid">' +
-      items.map(function (it, i) { return '<button class="wf-item" data-i="' + i + '"><img src="assets/sprites/' + it.sp + '.webp" alt=""><span>' + (function (r) { return G.bi(G.esc(r.ru || r.en), G.esc(r.en || r.ru)); })(S[it.k] || { ru: it.k, en: it.k }) + '</span></button>'; }).join('') +
+      items.map(function (it, i) { return '<button class="wf-item" data-i="' + i + '"><img src="' + G.asset('assets/sprites/' + it.sp + '.webp') + '" alt=""><span>' + (function (r) { return G.bi(G.esc(r.ru || r.en), G.esc(r.en || r.ru)); })(S[it.k] || { ru: it.k, en: it.k }) + '</span></button>'; }).join('') +
       '</div><div class="wf-card deep">' + G.bi('Обломки ждут кирку.', 'The wrecks are waiting for a pickaxe.') + '</div>';
     var card = el.querySelector('.wf-card'), opened = {};
     function show(i) {
@@ -30,7 +30,7 @@
       card.innerHTML = '<b>' + G.nm(S[it.k] || { ru: it.k, en: it.k }) + '</b><br>' + G.t(it.ru(), it.en());
       el.querySelectorAll('.wf-item').forEach(function (b, j) { b.classList.toggle('on', j === i); });
       opened[i] = 1;
-      if (Object.keys(opened).length === items.length) G.achieve('scavenger', 'Мародёр', 'Scavenger', 'assets/sprites/crash-site-spaceship.webp', 'Осмотреть все обломки', 'Inspect every wreck');
+      if (Object.keys(opened).length === items.length) G.achieve('scavenger', 'Мародёр', 'Scavenger', G.asset('assets/sprites/crash-site-spaceship.webp'), 'Осмотреть все обломки', 'Inspect every wreck');
     }
     el.querySelectorAll('.wf-item').forEach(function (b) { b.onclick = function () { show(+b.getAttribute('data-i')); }; });
     G.onLang(function () { var on = el.querySelector('.wf-item.on'); if (on) show(+on.getAttribute('data-i')); });

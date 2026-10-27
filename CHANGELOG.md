@@ -1,5 +1,12 @@
 # Changelog — Guide to the Paranoidal
 
+## 1.3.4 — 2026-10-27
+
+- One-file guide `Guide_to_the_Paranoidal.html` (every picture and the font inside, works offline without `assets/`):
+  built by `tools/build.py --single`, published as a GitHub Release for every new `guide_version`
+  (`.github/workflows/release.yml`); the Paranoidal Launcher downloads it next to the game.
+- The page carries its version in `<meta name="guide-version">`; widgets build asset paths through `G.asset()`.
+
 ## 1.3.3 — 2026-10-25
 
 - Self-links removed automatically at build time (links to the current block, glossary terms in their own section);

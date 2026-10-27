@@ -23,7 +23,7 @@
       el.innerHTML = '<div class="wbar"><button class="fbtn go" data-go>' + G.t('🏁 Старт!', '🏁 Go!') + '</button><span class="muted">' + G.t('Максимальная скорость, км/ч', 'Top speed, km/h') + '</span></div>' +
         L.map(function (l) {
           var t = (max / l.max_speed_kmh * 2.2).toFixed(2);
-          var img = spr[l.id] ? '<img class="tr-spr" src="assets/sprites/' + spr[l.id] + '.webp" alt="">' : '<img class="tr-ic" src="' + G.icon(l.icon) + '" alt="">';
+          var img = spr[l.id] ? '<img class="tr-spr" src="' + G.asset('assets/sprites/' + spr[l.id] + '.webp') + '" alt="">' : '<img class="tr-ic" src="' + G.icon(l.icon) + '" alt="">';
           return '<div class="tr-row"><span class="tr-name">' + G.esc(G.nm(l)) + '</span><div class="tr-track"><div class="tr-car' + (go ? ' go' : '') + '" style="transition-duration:' + t + 's" data-ru="' + G.esc(l.ru) + '" data-en="' + G.esc(l.en) + '" src="' + G.icon(l.icon) + '">' + img + '</div></div><b>' + G.fmt(l.max_speed_kmh) + '</b></div>';
         }).join('');
       el.querySelector('[data-go]').onclick = function () { render(false); requestAnimationFrame(function () { requestAnimationFrame(function () { el.querySelectorAll('.tr-car').forEach(function (c) { c.classList.add('go'); }); }); }); };

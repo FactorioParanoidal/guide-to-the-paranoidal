@@ -159,24 +159,25 @@
   /* qc-loop: production → control post → accepted; defects go down to the refinement workshop and come back.
      Real belt tile (assets/static/ui/belt-tile.png, animated pattern) and inserter icons; dots = item quality. */
   G.widget('qc-loop', function (el) {
-    var A = 'assets/sprites/', I = 'assets/icons/';
+    function A(f) { return G.asset('assets/sprites/' + f); }
+    function I(f) { return G.asset('assets/icons/' + f); }
     function belt(x, y, len, rot) {
       // a belt piece drawn horizontally in its own frame; rot 0 = to the right, 90 = down, -90 = up
       return '<g transform="translate(' + x + ' ' + y + ') rotate(' + rot + ')"><rect x="0" y="-13" width="' + len + '" height="26" fill="url(#qcl-belt)"/></g>';
     }
-    function ins(x, y) { return '<image href="' + I + 'inserter__inserter.webp" x="' + x + '" y="' + y + '" width="30" height="30"/>'; }
+    function ins(x, y) { return '<image href="' + I('inserter__inserter.webp') + '" x="' + x + '" y="' + y + '" width="30" height="30"/>'; }
     function render() {
       el.innerHTML = '<svg class="qcl" viewBox="0 60 900 300" role="img">' +
         '<defs><pattern id="qcl-belt" patternUnits="userSpaceOnUse" width="26" height="26" x="0" y="-13">' +
-        '<image href="assets/static/ui/belt-tile.png" x="-26" y="0" width="26" height="26" preserveAspectRatio="none" transform="scale(-1 1)"/>' +
+        '<image href="' + G.asset('assets/static/ui/belt-tile.png') + '" x="-26" y="0" width="26" height="26" preserveAspectRatio="none" transform="scale(-1 1)"/>' +
         '<animateTransform attributeName="patternTransform" type="translate" from="0 0" to="26 0" dur="0.9s" repeatCount="indefinite"/></pattern></defs>' +
         belt(166, 145, 206, 0) + belt(564, 145, 188, 0) + belt(440, 197, 58, 90) + belt(496, 255, 58, -90) +
         '<path id="qp1" d="M166 145 L372 145" fill="none"/><path id="qp2" d="M564 145 L752 145" fill="none"/>' +
         '<path id="qp3" d="M440 197 L440 255" fill="none"/><path id="qp4" d="M496 255 L496 197" fill="none"/>' +
-        '<image href="' + A + 'assembling-machine-1.webp" x="20" y="92" width="110" height="110"/>' +
-        '<image href="' + A + 'ic-control-post.webp" x="408" y="95" width="120" height="100"/>' +
-        '<image href="' + A + 'ic-refine-workshop.webp" x="408" y="256" width="120" height="96"/>' +
-        '<image href="' + I + 'item__iron-chest.webp" x="790" y="117" width="56" height="56"/>' +
+        '<image href="' + A('assembling-machine-1.webp') + '" x="20" y="92" width="110" height="110"/>' +
+        '<image href="' + A('ic-control-post.webp') + '" x="408" y="95" width="120" height="100"/>' +
+        '<image href="' + A('ic-refine-workshop.webp') + '" x="408" y="256" width="120" height="96"/>' +
+        '<image href="' + I('item__iron-chest.webp') + '" x="790" y="117" width="56" height="56"/>' +
         ins(134, 130) + ins(374, 130) + ins(532, 130) + ins(756, 130) +
         dots() +
         '<text x="75" y="228" class="qcl-t">' + G.t('Производство', 'Production') + '</text>' +

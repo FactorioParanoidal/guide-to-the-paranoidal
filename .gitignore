@@ -3,3 +3,4 @@ _preview.html
 _jscheck.html
 __pycache__/
 *.pyc
+dist/

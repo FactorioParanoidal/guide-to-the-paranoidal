@@ -8,7 +8,7 @@
     function chance() { var a = Math.pow(A, rev), b = Math.pow(B, launched); return 0.5 * (0.1 * a + 0.1 * b + 0.8 * a * b); }
     function render(state) {
       var c = chance();
-      el.innerHTML = '<div class="rl-pad ' + (state || '') + '"><div class="rl-rocket">🚀</div><div class="rl-fx"></div><img src="assets/sprites/rocket-silo.webp" alt="" class="rl-silo"></div>' +
+      el.innerHTML = '<div class="rl-pad ' + (state || '') + '"><div class="rl-rocket">🚀</div><div class="rl-fx"></div><img src="' + G.asset('assets/sprites/rocket-silo.webp') + '" alt="" class="rl-silo"></div>' +
         '<div class="qc-form"><label>' + G.t('Исследований надёжности', 'Reliability revisions') + ': <b>' + rev + ' / 7</b><input class="frange" type="range" min="0" max="7" value="' + rev + '" data-r></label>' +
         '<label>' + G.t('Уже запущено ракет', 'Rockets already launched') + ': <b>' + launched + '</b><input class="frange" type="range" min="0" max="60" value="' + launched + '" data-l></label></div>' +
         '<div class="qc-big"><span>' + G.t('Шанс взрыва при старте', 'Chance of exploding at launch') + '</span><b style="color:' + (c > .25 ? '#ff5a4a' : c > .08 ? '#ffd25a' : '#8de06a') + '">' + G.fmt(c * 100, { maximumFractionDigits: 1 }) + '%</b></div>' +

@@ -6,6 +6,7 @@
      Guide.t(ru, en)       pick text for current language
      Guide.nm(rec)         RU/EN name of a stats record ({ru,en})
      Guide.fmt(n, opts)    locale number format
+     Guide.asset(path)     URL of a file under assets/ (path from the guide root); every asset path in JS goes through it
      Guide.icon(key)       URL of an icon by key "type__name"
      Guide.el(tag, attrs, html)  tiny DOM helper
      Guide.widget(name, fn)      register widget; fn(el, Guide) runs when el[data-widget=name] nears the viewport
@@ -34,7 +35,11 @@
     if (q.defect) { var g = +q.id.slice(-1); return ['#9b928a', '#8a7a6c', '#7a6352', '#6d4f3e', '#62402f'][g - 1] || '#777'; }
     return q.color || '#b2b2b2';
   };
-  G.icon = function (key) { return 'assets/icons/' + key + '.webp'; };
+  /* The one-file release (tools/build.py --single) embeds every asset and defines window.GuideAssets(path) -> data: URL;
+     the normal page loads the files next to index.html. A bare asset path string in JS would break the one-file guide:
+     tools/check.py reports any asset literal that is not passed straight to G.asset(). */
+  G.asset = function (p) { return window.GuideAssets ? window.GuideAssets(p) : p; };
+  G.icon = function (key) { return G.asset('assets/icons/' + key + '.webp'); };
   G.el = function (tag, attrs, inner) {
     var e = document.createElement(tag);
     if (attrs) for (var k in attrs) { if (k === 'class') e.className = attrs[k]; else if (k === 'style') e.style.cssText = attrs[k]; else e.setAttribute(k, attrs[k]); }
@@ -354,7 +359,7 @@
     G.defineAchievement('spoiler-addict', 'Спойлероголик', 'Spoiler addict', G.icon('technology__astrometrics'), 'Открыть 8 спойлеров', 'Open 8 spoilers');
     G.defineAchievement('trivia', 'Знаток мелочей', 'Trivia nerd', G.icon('technology__research-speed-1'), 'Прочитать 5 случайных фактов', 'Read 5 random facts');
     G.defineAchievement('seeker', 'Искатель', 'Seeker', G.icon('technology__ore-radar'), 'Воспользоваться поиском', 'Use the search');
-    (D.meta.widget_achievements || []).forEach(function (a) { G.defineAchievement(a.id, a.ru, a.en, a.icon, a.dru, a.den); });
+    (D.meta.widget_achievements || []).forEach(function (a) { G.defineAchievement(a.id, a.ru, a.en, G.asset(a.icon), a.dru, a.den); });
     /* every hotkey in the text is a link to the keyboard of the QoL chapter */
     document.querySelectorAll('main kbd').forEach(function (k) {
       if (k.closest('#qol-keys, [data-widget]')) return;

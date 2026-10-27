@@ -33,7 +33,7 @@
   G.widget('factory-zoom', function (el) {
     var depth = 0;
     function render() {
-      el.innerHTML = '<div class="fz"><img src="assets/sprites/factory-1.webp" alt=""><img src="assets/sprites/factory-3.webp" alt=""><img src="assets/sprites/factory-4.webp" alt=""><img src="assets/sprites/factory-1.webp" alt=""></div>' +
+      el.innerHTML = '<div class="fz"><img src="' + G.asset('assets/sprites/factory-1.webp') + '" alt=""><img src="' + G.asset('assets/sprites/factory-3.webp') + '" alt=""><img src="' + G.asset('assets/sprites/factory-4.webp') + '" alt=""><img src="' + G.asset('assets/sprites/factory-1.webp') + '" alt=""></div>' +
         '<div class="wbar"><button class="fbtn go" data-d>' + G.t('Зайти глубже', 'Go deeper') + '</button><span class="out">' + G.t('Уровень вложенности: ', 'Nesting level: ') + depth + '</span></div>';
       el.querySelector('[data-d]').onclick = function () { depth++; render(); if (depth === 5) G.achieve('inception', 'Начало', 'Inception', G.icon('item__factory-1'), 'Зайти на 5 уровней вглубь фабрики', 'Go 5 levels deep into a factory'); };
     }

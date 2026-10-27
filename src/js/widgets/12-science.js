@@ -37,7 +37,7 @@
       var H = 300, scale = Math.min(48, (H - 40) / t[1], 560 / t[0]);
       function box(x, label, isBase) {
         var tt = x.tiles || [3, 3], w = tt[0] * scale, h = tt[1] * scale;
-        return '<div class="ls-item' + (isBase && scale < 12 ? ' tiny' : '') + '"><div class="ls-fp" style="width:' + w + 'px;height:' + h + 'px"><img src="assets/sprites/' + x.id + '.webp" alt=""></div><span>' + label + '</span></div>';
+        return '<div class="ls-item' + (isBase && scale < 12 ? ' tiny' : '') + '"><div class="ls-fp" style="width:' + w + 'px;height:' + h + 'px"><img src="' + G.asset('assets/sprites/' + x.id + '.webp') + '" alt=""></div><span>' + label + '</span></div>';
       }
       var stage = box(l, G.esc(G.nm(l)) + ' · ' + t[0] + '×' + t[1]) + (sel !== 'lab' ? box(base, G.t('обычная', 'regular') + ' · 3×3', true) : '');
       el.innerHTML = '<div class="ls-pick">' + labs.map(function (x) {

@@ -8,10 +8,12 @@ Checks:
   4. every <img src> / CSS url() under assets/ exists;
   5. every data-widget="x" has a registered widget Guide.widget('x', ...);
   6. every section in src/sections.json is present;
-  7. reports glossary terms (#g-*) that nothing links to, and chapters with few cross-links (wiki density).
-Exit code 1 when errors (1-6) are found; warnings (7) do not fail.
+  7. reports glossary terms (#g-*) that nothing links to, and chapters with few cross-links (wiki density);
+  8. JS builds asset paths only through G.asset()/G.icon() (the one-file guide resolves them from its embedded table);
+  9. guide_version of sections.json = <meta name="guide-version"> of the page = the top CHANGELOG.md section.
+Exit code 1 when errors (1-6, 8, 9) are found; warnings (7) do not fail.
 """
-import json, os, re, sys
+import glob, json, os, re, sys
 from html.parser import HTMLParser
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -102,6 +104,25 @@ reg = json.load(open(os.path.join(ROOT, 'src', 'sections.json'), encoding='utf-8
 for e in reg['sections']:
     if e.get('status') != 'disabled' and e['id'] not in ids:
         errors.append('section %s from sections.json is missing in the page' % e['id'])
+
+# 8. the one-file release resolves assets at run time: JS must build every asset path through G.asset()/G.icon()
+for f in [os.path.join(ROOT, 'src', 'js', 'core.js')] + sorted(glob.glob(os.path.join(ROOT, 'src', 'js', 'widgets', '*.js'))):
+    for n, line in enumerate(open(f, encoding='utf-8'), 1):
+        for m in re.finditer(r"""(['"])assets/""", line):
+            if not line[:m.start()].endswith('G.asset('):
+                errors.append('%s:%d: asset path not passed to G.asset() (breaks the one-file guide)' % (os.path.relpath(f, ROOT), n))
+        for m in re.finditer(r"""(?:src|href)="assets/""", line):
+            errors.append('%s:%d: literal src/href="assets/.." in JS (use G.asset())' % (os.path.relpath(f, ROOT), n))
+
+# 9. version: the page, sections.json and the top CHANGELOG section agree (tools/release.py publishes this version)
+m = re.search(r'<meta name="guide-version" content="([^"]+)">', page[:4096])
+top = re.search(r'^## (\S+)', open(os.path.join(ROOT, 'CHANGELOG.md'), encoding='utf-8').read(), re.M)
+if not re.fullmatch(r'\d+\.\d+\.\d+', str(reg.get('guide_version'))):
+    errors.append('sections.json guide_version must look like 1.2.3')
+if not m or m.group(1) != reg.get('guide_version'):
+    errors.append('<meta name="guide-version"> is missing from the first 4 KB or differs from sections.json')
+if not top or top.group(1) != reg.get('guide_version'):
+    errors.append('CHANGELOG.md must start with "## %s" (guide_version of sections.json)' % reg.get('guide_version'))
 
 # warnings: glossary usage and link density
 linked = {t for t, _ in hrefs}

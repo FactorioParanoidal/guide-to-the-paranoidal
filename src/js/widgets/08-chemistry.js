@@ -28,7 +28,7 @@
     function paint() {
       var fireOn = state === 'burning';
       el.innerHTML = '<div class="panel-title"><img class="ic" src="' + G.icon('technology__angels-oil-processing') + '" alt="">' + G.t('Резервуар с нафтой, 25 000 единиц', 'Naphtha tank, 25,000 units') + '</div>' +
-        '<div class="tf-stage ' + state + '"><img class="tf-tank" src="assets/sprites/storage-tank.webp" alt="">' + (fireOn ? '<div class="tf-fire"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="tf-smoke"></div>' : '') +
+        '<div class="tf-stage ' + state + '"><img class="tf-tank" src="' + G.asset('assets/sprites/storage-tank.webp') + '" alt="">' + (fireOn ? '<div class="tf-fire"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="tf-smoke"></div>' : '') +
         (state === 'boom' ? '<div class="tf-boom"><i></i><i></i></div>' : '') + '<div class="tf-level"><i style="height:' + level + '%"></i><b>' + Math.round(level) + '%</b><em></em></div></div>' +
         '<div class="tf-timer"><i style="width:' + (t / BURN * 100) + '%"></i><span>' + (state === 'burning' ? G.t('До взрыва: ', 'Until explosion: ') + Math.max(0, Math.ceil(BURN - t)) + ' ' + G.t('с игрового времени (здесь ускорено в 8 раз)', 's of game time (8× faster here)') : '') + '</span></div>' +
         '<div class="wbar">' + (state === 'idle' ? '<button class="fbtn danger" data-ign>' + G.t('🔥 Попасть шальной пулей', '🔥 Hit it with a stray bullet') + '</button>' : '') +
