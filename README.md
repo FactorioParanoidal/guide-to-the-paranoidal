@@ -10,7 +10,7 @@ Interactive illustrated guide to the Factorio **PARANOIDAL** modpack for vanilla
 
 Двойной щелчок по `index.html` (рядом должна лежать папка `assets/`). Работает без сервера и интернета. Язык — кнопки RU/EN или `index.html?lang=en`.
 
-**Одним файлом:** [Releases](../../releases/latest) → `Guide_to_the_Paranoidal.html` (~16 МБ, все картинки и шрифт внутри).
+**Одним файлом:** [Releases](../../releases/latest) → `Guide_to_the_Paranoidal.html` (~11 МБ, все картинки и шрифт внутри).
 Его же скачивает Paranoidal Launcher и кладёт рядом с игрой. Собрать самому: `python -I tools/release.py` → `dist/`.
 
 ## Что где

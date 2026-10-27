@@ -1,5 +1,15 @@
 # Changelog — Guide to the Paranoidal
 
+## 1.3.5 — 2026-10-28
+
+- Every picture re-encoded from lossless renders of the game graphics: per file the smallest WebP that keeps
+  PSNR ≥ 32 dB at the size the page shows it (pingo/beeim in the workspace; `tools/collect_assets.py`, settings in
+  `assets-config.json` `encoding`). Circuit boards and Angel's machines are sharp again (were down to ~21 dB),
+  icons 3.3 → 2.7 MB, sprites (tuned for 2K monitors) 3.0 → 2.0 MB; PNG interface tiles optimized losslessly.
+- 8 unused static files removed (2.3 MB): the one-file guide is about 7 MB smaller.
+- `collect_assets.py`: `--extra-mods` for mods of the dump that left the build; an icon with no layer file is no
+  longer written as an empty picture.
+
 ## 1.3.4 — 2026-10-27
 
 - One-file guide `Guide_to_the_Paranoidal.html` (every picture and the font inside, works offline without `assets/`):
