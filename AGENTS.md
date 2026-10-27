@@ -134,6 +134,8 @@ Illustrative widgets must say so on the page (season curve, smog damage threshol
 - **Dark mode**: `<meta name="color-scheme" content="dark">` + `<meta name="darkreader-lock">` so Dark Reader-like extensions
   leave the page alone. Keep both.
 - Hotkeys in text (`<kbd>`) link to the keyboard in “Quality of life” (`#qol-keys`) automatically (core.js).
+- **Same animations for everybody** (user, 2026-10-28): no `prefers-reduced-motion` overrides. A rule setting animations
+  to 0.01 ms kept them `infinite` and made the cover spin ~100 000 times per second where Windows animations are off.
 - Mobile (≤640 px) overrides live at the end of 60-unified.css; check every new widget at 500 px width.
 
 ## 6. Content rules learned from the user's review

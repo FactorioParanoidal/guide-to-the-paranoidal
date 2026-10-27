@@ -1,6 +1,6 @@
 {
   "_doc": "Ordered chapter registry. build.py assembles sections in this order. Fields: id (= id of the <section> in the file), file (src/sections/), ru/en (short TOC titles), status (draft|ready|disabled), sources (where the facts come from — re-check them when the modpack changes), verified (modpack/data state the text was checked against), achievement_ru/en (toast when the reader reaches the chapter).",
-  "guide_version": "1.3.5",
+  "guide_version": "1.3.6",
   "sections": [
     {"id": "hero", "file": "00-hero.html", "ru": "Обложка", "en": "Cover", "status": "ready", "sources": ["data/stats.json counts"], "verified": "dump guide-dump-20261025"},
     {"id": "intro", "file": "01-intro.html", "ru": "Что такое Paranoidal", "en": "What is Paranoidal", "status": "ready", "sources": ["ParanoidalModpack-master/README.md", "docs/Recommendations.md", "stats.json"], "verified": "dump ore-icon-remap-20261023b", "achievement_ru": "Добро пожаловать в ад", "achievement_en": "Welcome to hell"},

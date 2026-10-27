@@ -1,5 +1,11 @@
 # Changelog — Guide to the Paranoidal
 
+## 1.3.6 — 2026-10-28
+
+- Fixed the crazy-fast cover (belt, items, background) on PCs where Windows animations are off: the page had a
+  reduced-motion rule that set every animation to 0.01 ms while keeping it infinite. The rule is removed: every reader
+  sees the same animations at their designed speed, whatever the system setting.
+
 ## 1.3.5 — 2026-10-28
 
 - Every picture re-encoded from lossless renders of the game graphics: per file the smallest WebP that keeps

@@ -165,7 +165,6 @@ a.x.g{border-bottom-style:dashed}
 /* ---- reveal on scroll ---- */
 .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
 /* ---- conveyor belt strip (animated) ---- */
 .belt{position:relative;height:64px;overflow:hidden;background:#2a2826;border-top:4px solid #111;border-bottom:4px solid #111;
