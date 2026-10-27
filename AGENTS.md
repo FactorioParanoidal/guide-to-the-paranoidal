@@ -158,7 +158,8 @@ Illustrative widgets must say so on the page (season curve, smog damage threshol
    permission, via `python -I ../test-runs/_tools/factorio_check.py sync` then `… dump <RUN>` (limit 180 s, isolated profile,
    working saves/settings untouched; see `../agent-context/procedures/TESTING.md`). Do not touch a running game of the user.
 2. Save the old numbers: `cp data/stats.json data/history/stats-<oldrun>.json`.
-3. `bash tools/update.sh ../test-runs/<RUN>` (≈10 min, mostly icons). It ends with build --check and jscheck RU/EN.
+3. `bash tools/update.sh ../test-runs/<RUN>` (≈10 min, mostly icons; extra arguments go to `collect_assets.py`, e.g.
+   `--extra-mods work/dump-mods`, see «Image encoding» below). It ends with build --check and jscheck RU/EN.
 4. Diff old/new `stats.json` (counts and record lengths) and fix texts whose wording depends on numbers
    (“almost a thousand”, “from 5%”…). Re-read changed mods' changelogs (`git log <old>..HEAD` in the modpack).
 5. Set `verified` of touched chapters in `sections.json` to the new dump; bump `guide_version`; add a CHANGELOG entry
@@ -167,6 +168,23 @@ Illustrative widgets must say so on the page (season curve, smog damage threshol
 
 New icon? Add `[type, name]` to `assets-config.json` `icons` (or `technology_icons`, `sprites`, `static`), run
 `collect_assets.py --only icons|sprites|static` and `extract_stats.py` (names). build.py reports missing icons.
+
+**Image encoding** (since guide 1.3.5). `collect_assets.py` renders every image losslessly into `work/assets-src/` and
+encodes it once with the workspace tools (`../tools-external/css-ig/`, pingo + beeim; method and numbers in its
+README): per file the smallest WebP whose PSNR at the size the page shows it is ≥ `encoding.min_psnr` of
+`assets-config.json` (32 dB; scales: icons 0.75, sprites 0.8 = 2K monitors, static 1.0; user decision 2026-10-28;
+an entry may set `web_scale`). PNG outputs get `pingo -s4 -lossless` (pixels checked unchanged). The animated logo and
+lossy WebP/JPEG sources are not re-encoded. `manifest.json` records the encoding of every file (`B60 33.0 dB at scale
+0.75`: beeim lossy q60; `L`: lossless; `N100`: near-lossless; `P`: pingo auto). Full run ≈3.5 min.
+- Never re-compress files in `assets/` themselves (they are already lossy) and never run pingo over finished WebPs
+  (it turns the lossless pixel-art files lossy): always regenerate from the dump.
+- pingo/beeim must never enter this repository or CI (licence: private use, only the images are published). A PC
+  without them: `--no-optimize` (Pillow WebP q90, worse per byte) — do not publish such a build without saying so.
+- Mods that the dump used but the working build no longer has (2026-10-28: `zzzparanoidal-shipwreck`, removed for the
+  BnL start): `git -C ../ParanoidalModpack-master archive <dump git.head> mods/<mod> | tar -x -C work/dump-mods --strip-components=1`
+  and pass `--extra-mods work/dump-mods`. Without it such icons are reported missing and the old files stay
+  (`collect_assets.py` never writes an icon none of whose layer files was found).
+- Any change of the images is a page change: new `guide_version` (§8).
 
 ## 8. Checks and publishing
 

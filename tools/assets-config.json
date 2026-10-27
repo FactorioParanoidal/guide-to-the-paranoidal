@@ -1,5 +1,14 @@
 {
  "_doc": "Extra assets for tools/collect_assets.py. icons: [type,name]; technology_icons: names; sprites: {key,type,name,path?,max?,shadows?}; static: {src (workspace-relative or __mod__/ path), dst, note, crop?, resize?, keyout? [lo,hi] = make a dark background transparent, strip? [w,h,cols,frames] = sprite sheet to a horizontal strip}",
+ "encoding": {
+  "_doc": "WebP encoding by tools/collect_assets.py (../tools-external/css-ig/README.md, recipe 1): per file the smallest pingo/beeim WebP with PSNR >= min_psnr after downscaling to the size the page shows it. min_psnr 32 and sprites for 2K monitors (2560x1440 at 100-125%) are the user decision of 2026-10-28. A static or sprite entry may set its own web_scale.",
+  "min_psnr": 32,
+  "scale": {
+   "icons": 0.75,
+   "sprites": 0.8,
+   "static": 1.0
+  }
+ },
  "icons": [
   [
    "fluid",
@@ -909,48 +918,9 @@
    "quality": 82
   },
   {
-   "src": "__base__/graphics/terrain/hazard-concrete-left/refined-hazard-concrete-left.png",
-   "dst": "bg/hazard-refined.webp",
-   "note": "refined hazard concrete tile",
-   "crop": [
-    0,
-    0,
-    512,
-    512
-   ],
-   "quality": 88
-  },
-  {
-   "src": "__base__/graphics/terrain/hazard-concrete-left/hazard-concrete-left.png",
-   "dst": "bg/hazard.webp",
-   "note": "hazard concrete tile",
-   "crop": [
-    0,
-    0,
-    512,
-    512
-   ],
-   "quality": 88
-  },
-  {
-   "src": "review/splash-anim/out/variant1/preview.webp",
-   "dst": "logo/paranoidal-animated.webp",
-   "note": "Paranoidal animated splash logo (variant 1)"
-  },
-  {
-   "src": "splash-screen-image.webp",
-   "dst": "logo/factorio-paranoidal.webp",
-   "note": "Factorio PARANOIDAL logo"
-  },
-  {
    "src": "paranoidal.png",
    "dst": "logo/paranoidal-circuit.png",
    "note": "PARANOIDAL circuit logo"
-  },
-  {
-   "src": "factory-4.webp",
-   "dst": "art/factory-4.webp",
-   "note": "Factorissimo building 4 art"
   },
   {
    "src": "__core__/graphics/icons/alerts/danger-icon.png",
@@ -965,21 +935,6 @@
   {
    "src": "__core__/graphics/icons/alerts/fuel-icon-red.png",
    "dst": "ui/fuel-red.png",
-   "note": "alert icon"
-  },
-  {
-   "src": "__core__/graphics/icons/alerts/electricity-icon-unplugged.png",
-   "dst": "ui/unplugged.png",
-   "note": "alert icon"
-  },
-  {
-   "src": "__core__/graphics/icons/alerts/ammo-icon-red.png",
-   "dst": "ui/ammo-red.png",
-   "note": "alert icon"
-  },
-  {
-   "src": "__core__/graphics/icons/alerts/destroyed-icon.png",
-   "dst": "ui/destroyed.png",
    "note": "alert icon"
   },
   {

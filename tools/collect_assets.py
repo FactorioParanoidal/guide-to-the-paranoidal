@@ -1,7 +1,16 @@
 """Render in-game icons/sprites and copy static art for the guide.
 
 Usage (from the guide folder):
-    python -I tools/collect_assets.py --dump <data-raw-dump.json>
+    python -I tools/collect_assets.py --dump <data-raw-dump.json> [--extra-mods <folder>] [--no-optimize]
+
+Encoding (default): every image is rendered losslessly to work/assets-src/ and encoded once by the workspace image tools
+(../tools-external/css-ig, pingo + beeim; method: its README, recipe 1): per file the smallest WebP whose PSNR at the
+size the page shows it stays >= encoding.min_psnr of assets-config.json (scales: icons / sprites / static); PNG outputs
+get `pingo -s4 -lossless` (pixel-identical). Animated WebP and lossy sources (WebP/JPEG copied as is) are not
+re-encoded. The tools are not in this repository (their licence forbids it): --no-optimize writes Pillow WebP q90
+instead (lower quality per byte; for a PC without the tools). manifest.json records the chosen encoding per file.
+--extra-mods: folders with mod folders that the dump used but the working build no longer has (e.g. a `git archive` of
+the dump commit, see AGENTS.md section 7); without them such icons are reported missing and the old files stay.
 
 Inputs:
     data/icon-requests.json   - [type, name] pairs produced by tools/extract_stats.py
@@ -15,7 +24,7 @@ Outputs:
 Reads the game data folder and the mod folders; writes only inside the guide folder.
 Mods that are zip archives are skipped (none are enabled in the 2.0 profile).
 """
-import argparse, glob, hashlib, json, os, re, shutil, sys
+import argparse, csv, glob, hashlib, json, os, re, shutil, subprocess, sys
 from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -26,14 +35,52 @@ ap.add_argument('--dump', required=True)
 ap.add_argument('--mods', default=os.path.join(WS, 'ParanoidalModpack-master', 'mods'))
 ap.add_argument('--game', default='C:/Games/Factorio 2.077 - QUILITY/data')
 ap.add_argument('--only', help='comma list of output kinds: icons,sprites,static')
-ap.add_argument('--quality', type=int, default=90, help='WebP quality for icons and sprites')
+ap.add_argument('--quality', type=int, default=90, help='Pillow WebP quality with --no-optimize')
+ap.add_argument('--extra-mods', action='append', default=[], help='folder with more mod folders (mods of the dump commit)')
+ap.add_argument('--css-ig', default=os.path.join(WS, 'tools-external', 'css-ig'), help='workspace image tools (pingo, beeim, scripts)')
+ap.add_argument('--no-optimize', action='store_true', help='Pillow WebP q90 instead of the per-file pingo/beeim encoding')
 args = ap.parse_args()
-def save_webp(img, path):
-    img.save(path, 'WEBP', quality=args.quality, method=6)
 kinds = set((args.only or 'icons,sprites,static').split(','))
 
 D = json.load(open(args.dump, encoding='utf-8'))
 cfg = json.load(open(os.path.join(HERE, 'assets-config.json'), encoding='utf-8'))
+ENC = cfg.get('encoding', {})
+OPT = not args.no_optimize
+PINGO = os.path.join(args.css_ig, 'pingo', 'pingo.exe')
+WEBP_BEST = os.path.join(args.css_ig, 'scripts', 'webp_best.py')
+if OPT and not (os.path.exists(PINGO) and os.path.exists(WEBP_BEST) and os.path.exists(os.path.join(args.css_ig, 'beeim', 'beeim.exe'))):
+    sys.exit('image tools not found in %s (see ../tools-external/css-ig/README.md); run with --no-optimize to write Pillow WebP' % args.css_ig)
+ASSETS = os.path.join(ROOT, 'assets')
+STAGE = os.path.join(ROOT, 'work', 'assets-src')   # lossless sources of this run (git-ignored)
+if OPT:
+    shutil.rmtree(STAGE, ignore_errors=True)
+WEBP_SCALES = set()   # scales with staged WebP sources: STAGE/webp-<scale>/<path under assets>.png
+PNG_STAGED = []       # (staged png, final path) for PNG outputs
+
+def save_webp(img, path, scale):
+    """A WebP output: staged as lossless PNG and encoded at the end (or Pillow WebP with --no-optimize)."""
+    if not OPT:
+        img.save(path, 'WEBP', quality=args.quality, method=6)
+        return
+    rel = os.path.relpath(path, ASSETS)
+    png = os.path.join(STAGE, 'webp-%g' % scale, os.path.splitext(rel)[0] + '.png')
+    os.makedirs(os.path.dirname(png), exist_ok=True)
+    img.convert('RGBA').save(png, 'PNG')
+    WEBP_SCALES.add(scale)
+
+def save_png(img, path):
+    """A PNG output (the page needs PNG): staged and optimized losslessly at the end."""
+    if not OPT:
+        img.save(path, 'PNG')
+        return
+    png = os.path.join(STAGE, 'png', os.path.relpath(path, ASSETS))
+    os.makedirs(os.path.dirname(png), exist_ok=True)
+    img.save(png, 'PNG')
+    PNG_STAGED.append((png, path))
+
+SCALE = ENC.get('scale', {})
+def scale_of(kind, entry=None):
+    return float((entry or {}).get('web_scale') or SCALE.get(kind, 1.0))
 manifest_path = os.path.join(ROOT, 'assets', 'manifest.json')
 manifest = json.load(open(manifest_path, encoding='utf-8')) if os.path.exists(manifest_path) else {}
 
@@ -44,6 +91,12 @@ for f in glob.glob(os.path.join(args.mods, '*', 'info.json')):
         MODDIR[json.load(open(f, encoding='utf-8-sig'))['name']] = os.path.dirname(f)
     except Exception:
         pass
+for extra in args.extra_mods:
+    for f in glob.glob(os.path.join(extra, '*', 'info.json')):
+        try:
+            MODDIR.setdefault(json.load(open(f, encoding='utf-8-sig'))['name'], os.path.dirname(f))
+        except Exception:
+            pass
 for m in ('base', 'core', 'quality', 'elevated-rails', 'space-age'):
     MODDIR[m] = os.path.join(args.game, m)
 
@@ -56,6 +109,12 @@ def resolve(path):
         return None
     p = os.path.join(base, m.group(2))
     return p if os.path.exists(p) else None
+
+def webp_lossless_still(p):
+    """A still, losslessly encoded WebP (VP8L): safe to decode and re-encode."""
+    with open(p, 'rb') as f:
+        h = f.read(64)
+    return h[12:16] == b'VP8L'
 
 _sha = {}
 def sha(p):
@@ -187,11 +246,12 @@ if 'icons' in kinds:
     reqs += [('technology', t) for t in cfg.get('technology_icons', [])]
     for typ, name in sorted(set(reqs)):
         img, srcs = icon_for(typ, name)
-        if img is None:
+        if img is None or not srcs:
+            # no layer file found (e.g. a mod removed since the dump): never overwrite the icon with an empty picture
             missing.append([typ, name])
             continue
         outp = os.path.join(ROOT, 'assets', 'icons', key(typ, name) + '.webp')
-        save_webp(img, outp)
+        save_webp(img, outp, scale_of('icons'))
         manifest['icons/' + key(typ, name) + '.webp'] = {'from': 'icon of %s/%s' % (typ, name), 'sources': [rel(s) + '#' + sha(s) for s in srcs]}
         made += 1
 
@@ -307,7 +367,7 @@ if 'sprites' in kinds:
             missing.append(['sprite', e['name']])
             continue
         outp = os.path.join(ROOT, 'assets', 'sprites', e['key'] + '.webp')
-        save_webp(img, outp)
+        save_webp(img, outp, scale_of('sprites', e))
         manifest['sprites/' + e['key'] + '.webp'] = {'from': 'first frame of %s/%s %s' % (e['type'], e['name'], '/'.join(map(str, e.get('path', [])))),
                                                      'sources': [rel(s) + '#' + sha(s) for s in srcs]}
         made += 1
@@ -330,7 +390,10 @@ if 'static' in kinds:
             for i in range(n):
                 x, y = (i % cols) * fw, (i // cols) * fh
                 out.paste(sheet.crop((x, y, x + fw, y + fh)), (i * fw, 0))
-            out.save(dst, quality=e.get('quality', 82), method=4)
+            if OPT:
+                save_webp(out, dst, scale_of('static', e))
+            else:
+                out.save(dst, quality=e.get('quality', 82), method=4)
         elif e.get('keyout'):
             # make a dark background transparent in every frame (animated WebP logo): alpha = (max(r,g,b) - lo) / (hi - lo)
             from PIL import ImageSequence
@@ -351,11 +414,55 @@ if 'static' in kinds:
                 im = im.crop(tuple(e['crop']))
             if e.get('resize'):
                 im.thumbnail(tuple(e['resize']), Image.LANCZOS)
-            im.save(dst, quality=e.get('quality', 85), method=6) if dst.endswith('.webp') else im.save(dst, quality=e.get('quality', 85))
+            if dst.endswith('.webp'):
+                if OPT:
+                    save_webp(im, dst, scale_of('static', e))
+                else:
+                    im.save(dst, quality=e.get('quality', 85), method=6)
+            elif dst.endswith('.png'):
+                save_png(im, dst)
+            else:
+                im.save(dst, quality=e.get('quality', 85))
+        elif dst.endswith('.png') and src_abs.lower().endswith('.png'):
+            save_png(Image.open(src_abs), dst)
+        elif OPT and dst.endswith('.webp') and src_abs.lower().endswith('.webp') and webp_lossless_still(src_abs):
+            save_webp(Image.open(src_abs), dst, scale_of('static', e))
         else:
+            # fonts, texts, animated or lossy WebP/JPEG sources: copied as they are (re-encoding loss on loss)
             shutil.copyfile(src_abs, dst)
         manifest['static/' + e['dst']] = {'from': e.get('note', 'copy'), 'sources': [rel(src_abs) + '#' + sha(src_abs)]}
         made += 1
+
+# ---------------------------------------------------------------- encoding (tools-external/css-ig, README recipe 1 and 2)
+ENCODED = {}
+if OPT and WEBP_SCALES:
+    min_psnr = float(ENC.get('min_psnr', 32))
+    for sc in sorted(WEBP_SCALES):
+        src = os.path.join(STAGE, 'webp-%g' % sc)
+        rep = os.path.join(STAGE, 'report-%g.csv' % sc)
+        print('encoding %s at scale %g, PSNR >= %g dB ...' % (os.path.relpath(src, ROOT), sc, min_psnr), flush=True)
+        r = subprocess.run([sys.executable, '-I', WEBP_BEST, src, ASSETS, '--scale', str(sc), '--min-psnr', str(min_psnr), '--report', rep])
+        if r.returncode:
+            sys.exit('webp_best failed (scale %g)' % sc)
+        for row in csv.DictReader(open(rep, encoding='utf-8')):
+            k = os.path.splitext(row['file'].replace('\\', '/'))[0] + '.webp'
+            ENCODED[k] = '%s %s dB at scale %g' % (row['mode'], row['psnr'], sc)
+if OPT and PNG_STAGED:
+    import numpy as np
+    def visible(p):   # RGBA with the colour of fully transparent pixels ignored (pingo zeroes it)
+        a = np.asarray(Image.open(p).convert('RGBA')).copy()
+        a[a[..., 3] == 0] = 0
+        return a
+    before = {png: visible(png) for png, _ in PNG_STAGED}
+    subprocess.run([PINGO, '-s4', '-lossless', '-quiet', os.path.join(STAGE, 'png')], capture_output=True, timeout=1800)
+    for png, dst in PNG_STAGED:
+        if not np.array_equal(visible(png), before[png]):
+            sys.exit('pingo -lossless changed the pixels of %s' % png)
+        shutil.copyfile(png, dst)
+        ENCODED[os.path.relpath(dst, ASSETS).replace('\\', '/')] = 'pingo -s4 -lossless'
+for k, v in ENCODED.items():
+    if k in manifest:
+        manifest[k]['encoding'] = v
 
 # average visible colour of every icon (used by widgets for map/ore colours; canvas sampling is blocked on file://)
 if 'icons' in kinds:
