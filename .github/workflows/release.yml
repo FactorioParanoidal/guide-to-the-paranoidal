@@ -1,0 +1,46 @@
+# One-file guide release for the Paranoidal Launcher.
+# On every push to main: build index.html and dist/Guide_to_the_Paranoidal.html from the sources and run the checks.
+#  - guide_version (src/sections.json) has no release yet -> create GitHub Release v<version> with the one-file guide,
+#    release.json (the manifest the launcher reads) and the CHANGELOG section as notes; it becomes "latest".
+#  - the release exists and the page is the same -> nothing to do (README/tools edits).
+#  - the release exists but the page changed -> fail: raise guide_version and add a CHANGELOG section.
+#  - the committed index.html does not match the sources (GitHub Pages serves it) -> fail: rebuild and commit it.
+# GitHub Pages keeps serving index.html from the branch root; this workflow does not touch it.
+name: Release the one-file guide
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: guide-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build and check
+        run: python -I tools/release.py --ci
+      - name: Publish a new guide_version
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          V=$(python -I -c "import json; print(json.load(open('dist/release.json'))['version'])")
+          if gh release view "v$V" >/dev/null 2>&1; then
+            mkdir -p work
+            gh release download "v$V" -p release.json -O work/published-release.json --clobber
+            python -I tools/release.py --compare work/published-release.json
+            exit 0
+          fi
+          gh release create "v$V" dist/Guide_to_the_Paranoidal.html dist/release.json \
+            --title "Guide to the Paranoidal $V" --notes-file dist/release-notes.md --target "$GITHUB_SHA" --latest

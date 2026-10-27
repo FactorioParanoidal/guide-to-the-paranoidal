@@ -10,6 +10,9 @@ Interactive illustrated guide to the Factorio **PARANOIDAL** modpack for vanilla
 
 Двойной щелчок по `index.html` (рядом должна лежать папка `assets/`). Работает без сервера и интернета. Язык — кнопки RU/EN или `index.html?lang=en`.
 
+**Одним файлом:** [Releases](../../releases/latest) → `Guide_to_the_Paranoidal.html` (~16 МБ, все картинки и шрифт внутри).
+Его же скачивает Paranoidal Launcher и кладёт рядом с игрой. Собрать самому: `python -I tools/release.py` → `dist/`.
+
 ## Что где
 
 | Путь | Что это |
@@ -18,7 +21,8 @@ Interactive illustrated guide to the Factorio **PARANOIDAL** modpack for vanilla
 | `src/` | Исходники: оболочка, главы, стили, виджеты, реестр глав. |
 | `data/` | Сгенерированные данные из дампа игры: числа, названия, цвета иконок. |
 | `assets/` | Иконки, спрайты, шрифт и элементы интерфейса из игры и модов + `manifest.json` с источниками. |
-| `tools/` | Извлечение данных, сборка ассетов, сборка страницы, проверки, скриншоты. |
+| `tools/` | Извлечение данных, сборка ассетов, сборка страницы, проверки, скриншоты, релиз одним файлом. |
+| `.github/workflows/release.yml` | При пуше в `main` с новой `guide_version` создаёт релиз с `Guide_to_the_Paranoidal.html`. |
 | `AGENTS.md` | **Инструкция для агентов**: как устроен гайд, правила фактов и дизайна, обновление и публикация. |
 | `CHANGELOG.md`, `IDEAS.md` | История версий и идеи развития. |
 

@@ -30,6 +30,8 @@ modpack (Quality + Elevated Rails, **no Space Age**). Priorities, in order:
 
 ```
 index.html              BUILT page (never edit by hand) — what GitHub Pages serves
+dist/                   git-ignored: Guide_to_the_Paranoidal.html (one-file guide, every asset inside), release.json
+.github/workflows/release.yml  CI: on push to main builds dist/ and creates GitHub Release v<guide_version> (§8)
 assets/                 icons/ sprites/ static/ (fonts, gui tiles, belt tile, logos, ui icons) + manifest.json (provenance)
 data/                   stats.json (all numbers), names.json (RU/EN names of icons), icon-colors.json,
                         icon-requests.json, history/ (old stats.json snapshots for diffs)
@@ -44,9 +46,13 @@ src/js/widgets/NN-*.js  widgets of chapter NN: Guide.widget('name', fn)
 tools/extract_stats.py  dump -> data/stats.json, names.json, icon-requests.json
 tools/collect_assets.py dump + game/mod graphics -> assets/ (icons, sprites, static) + manifest
 tools/assets-config.json extra icons, technology icons, sprites, static files (crop / resize / keyout)
-tools/build.py          src + data -> index.html (--check runs tools/check.py; --only ids -> _preview.html)
-tools/check.py          dead links, duplicate ids, RU/EN pairing, missing images, widgets, glossary use, spoiler/dossier EN labels
+tools/build.py          src + data -> index.html (--check runs tools/check.py; --only ids -> _preview.html;
+                        --single -> also dist/Guide_to_the_Paranoidal.html)
+tools/check.py          dead links, duplicate ids, RU/EN pairing, missing images, widgets, glossary use, spoiler/dossier EN labels,
+                        asset paths in JS only through G.asset(), guide_version = page meta = top CHANGELOG section
 tools/jscheck.sh        headless Chrome: renders every widget, opens spoilers, switches language; must print ERRS:[] EMPTY:[]
+                        (`jscheck.sh ru dist/Guide_to_the_Paranoidal.html` tests the one-file guide alone, also LOCAL:[])
+tools/release.py        one-file guide + dist/release.json + release notes; --ci / --compare (used by the workflow)
 tools/shot.sh           headless Chrome screenshots -> work/peek/<name>_N.png (LANGQ="?lang=en" for English)
 tools/update.sh         full pipeline after a modpack change (extract -> assets -> build -> checks)
 tools/modsettings_diff.py read-only reader/diff of mod-settings.dat
@@ -82,10 +88,13 @@ dump (mod settings, scripts) may be hard-coded — name the source in the chapte
 })(window.Guide);
 ```
 HTML: `<div class="panel" data-widget="my-widget"></div>`. API: `G.data`, `G.t`, `G.bi` (both spans, no re-render needed),
-`G.nm(record)`, `G.fmt`, `G.icon(key)`, `G.iconImg(rec)`, `G.qColor(q)`, `G.esc`, `G.achieve(id, ru, en, icon, dru, den)`
+`G.nm(record)`, `G.fmt`, `G.asset(path)`, `G.icon(key)`, `G.iconImg(rec)`, `G.qColor(q)`, `G.esc`, `G.achieve(id, ru, en, icon, dru, den)`
 (build.py collects these calls into the achievements list — keep the literal call form), `G.toast`, `G.tip`.
 Tooltips: `data-tip-ru/-en` or `img[data-ru][data-en]`. Sliders may be re-rendered freely: core.js drives the drag.
 No libraries, no CDN, works from `file://`. One widget = one CSS block with a comment.
+**Every asset path in JS goes through `G.asset('assets/...')` (or `G.icon(key)`)**: the one-file guide has no `assets/`
+folder and resolves the paths from its embedded table; check.py fails on a bare `'assets/...'` literal or
+`src="assets/..."` in JS. Static `src`/`href`/`data-icon` in sections and CSS `url()` are converted by build.py.
 
 Formulas and their sources (keep in sync when mods change):
 - `defect-sim` — `ic-more-qualities/scripts/defects/model.lua` `M.distribution`; chests sorted by grade, hidden on phones.
@@ -152,7 +161,8 @@ Illustrative widgets must say so on the page (season curve, smog damage threshol
 3. `bash tools/update.sh ../test-runs/<RUN>` (≈10 min, mostly icons). It ends with build --check and jscheck RU/EN.
 4. Diff old/new `stats.json` (counts and record lengths) and fix texts whose wording depends on numbers
    (“almost a thousand”, “from 5%”…). Re-read changed mods' changelogs (`git log <old>..HEAD` in the modpack).
-5. Set `verified` of touched chapters in `sections.json` to the new dump; bump `guide_version`; add a CHANGELOG entry.
+5. Set `verified` of touched chapters in `sections.json` to the new dump; bump `guide_version`; add a CHANGELOG entry
+   (`## x.y.z — YYYY-MM-DD`, check.py requires it to match).
 6. Screenshots of changed chapters (RU, EN, 500 px), then publish (§8).
 
 New icon? Add `[type, name]` to `assets-config.json` `icons` (or `technology_icons`, `sprites`, `static`), run
@@ -160,8 +170,21 @@ New icon? Add `[type, name]` to `assets-config.json` `icons` (or `technology_ico
 
 ## 8. Checks and publishing
 
-Before every handover: `python -I tools/build.py --check` → `RESULT: OK` with 0 warnings; `bash tools/jscheck.sh ru` and `en`
-→ `ERRS:[] EMPTY:[]`; screenshots of what changed. Report in Russian: what changed, what was checked, what was not
+Before every handover: `python -I tools/release.py` (build --check --single) → `RESULT: OK` with 0 warnings;
+`bash tools/jscheck.sh ru` and `en` → `ERRS:[] EMPTY:[]`; `bash tools/jscheck.sh ru dist/Guide_to_the_Paranoidal.html`
+→ also `LOCAL:[]`; screenshots of what changed.
+
+**Versions and the one-file release.** Any change of the built page (text, data, CSS, JS, assets) = a new
+`guide_version` in `src/sections.json` (patch for fixes, minor for new chapters/widgets) + a CHANGELOG section on top.
+On every push to `main`, `.github/workflows/release.yml` rebuilds the page from the sources and:
+- fails if the committed `index.html` is stale (rebuild and commit it);
+- creates GitHub Release `v<guide_version>` with `Guide_to_the_Paranoidal.html` + `release.json` (marked latest) when
+  that version has no release yet;
+- fails if the release exists but the page changed (`digest` in release.json): raise `guide_version`.
+README/tools-only commits pass without a release. The Paranoidal Launcher (`../paranoidal-updater`) reads
+`releases/latest/download/release.json`, downloads the file next to the game and offers it with the build update:
+the file name, the release asset names and `<meta name="guide-version">` in the first 4 KB are its contract — do not
+rename them. After a push, check the Actions run and the release (`gh run list`, `gh release view`). Report in Russian: what changed, what was checked, what was not
 (real phone, in-game behaviour).
 
 Publishing (only when the user asks; the user approved this repository):
