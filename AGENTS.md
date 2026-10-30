@@ -102,6 +102,8 @@ Formulas and their sources (keep in sync when mods change):
   (module 1 on normal = +2.04%); modes 1/3/10 rolls (tip `zzz-quality-modes`); slots chosen by hover/tap, 1–8.
 - `workshop-sim` — tip `zzz-defects-workshop`. `qc-loop` — real belt tile + inserter icons, illustrative.
 - `kpd-calc`, `boiler-ladder` — dump effectivity/power/pollution. `wind-sim` — Wind-Turbines-Reforged README formula.
+- `season-dial` — NightBrightness `season.lua` (`parameters`: cos phase, tilt ±0.15, solar, min brightness); season steps of wind
+  (`Wind-Turbines-Reforged/control.lua` `SEASON_MULTIPLIERS`) and wire losses (`ElectricResistance2/seasons.lua`).
 - `memory-calc` — deep-storage-unit README. `evolution-calc` — `research_evolution_factor/parameters.lua`.
 - `threat-board` — Rampant nest types: `RampantFixed/libs/Constants.lua` `acceptRate[1]` → `libs/BaseUtils.lua`
   `evoToTierMapping`; bug levels: `prototypes/SwarmUtils.lua` `unitSetToProbabilityTable` (tierEnd 10);

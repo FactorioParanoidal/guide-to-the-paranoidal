@@ -1,5 +1,14 @@
 # Changelog — Guide to the Paranoidal
 
+## 1.3.7 — 2026-10-30
+
+- Seasons (chapter 15): the season dial uses the real dusk/dawn shift of NightBrightness (±0.15, was half of it), so
+  midwinter has 2.4 hours of full daylight instead of 6; it also shows full daylight hours, the seasonal wind and the
+  wire losses. The text tells about the midnight season change in the chat, the step change of wind (×1.33 in winter,
+  ×0.9 in summer) and wire losses (3 / 2 / 1.5 kW per pole), colder winter nights, the EvoUI season line, the season
+  name styles and the "Old-Timer" achievement.
+- Power (chapter 04): wire losses per pole were stated as 1 kW; the build uses 2 kW, and now they follow the season.
+
 ## 1.3.6 — 2026-10-28
 
 - Fixed the crazy-fast cover (belt, items, background) on PCs where Windows animations are off: the page had a

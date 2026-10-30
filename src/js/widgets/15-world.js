@@ -1,5 +1,6 @@
 /* Chapter 15 widgets (world).
-   season-dial : 24-day year; solar 50–100% and night brightness 5–15% by season (NightBrightness README ranges; the curve shape is an illustration)
+   season-dial : 24-day year; NightBrightness season.lua: phase = cos(2π·day/24), dusk/dawn tilt ±0.15, solar 50–100%,
+                 night brightness 5–15%; season steps: wind ×0.9/1/1.33/1 (Wind-Turbines-Reforged), wire losses 3/2/1.5/2 kW (ElectricResistance2)
    smog-scene  : pollution slider over a small base scene (illustration of visible smog, solar penalty and toxic damage)
    ruins-map   : random map with the ruin counts from AbandonedRuins-paranoidal (87 small, 57 medium, 26 large + 150 base) */
 (function (G) {
@@ -9,7 +10,7 @@
     var ring = el.querySelector('.sd-ring'), info = el.querySelector('.sd-info'), cv = el.querySelector('canvas'), ctx = cv.getContext('2d'), rng = el.querySelector('[data-d]');
     function season(d) { return (1 + Math.cos(2 * Math.PI * d / 24)) / 2; }
     function bright(s, x) { // x: time of day 0..1, 0 = noon (Factorio convention)
-      var tilt = (s - 0.5) * 0.3, dusk = 0.2 + tilt / 2, eve = 0.3 + tilt / 2, morn = 0.7 - tilt / 2, dawn = 0.8 - tilt / 2, night = 0.05 + 0.10 * s;
+      var tilt = (s - 0.5) * 0.3, dusk = 0.2 + tilt, eve = 0.3 + tilt, morn = 0.7 - tilt, dawn = 0.8 - tilt, night = 0.05 + 0.10 * s;
       if (x < dusk || x > dawn) return 1;
       if (x < eve) return 1 - (1 - night) * (x - dusk) / (eve - dusk);
       if (x < morn) return night;
@@ -17,14 +18,16 @@
     }
     function draw() {
       var s = season(day), solar = 0.5 + 0.5 * s, night = 0.05 + 0.1 * s;
-      var names = [['Лето', 'Summer'], ['Осень', 'Autumn'], ['Зима', 'Winter'], ['Весна', 'Spring']], si = Math.floor(((day + 3) % 24) / 6);
+      var names = [['Лето', 'Summer'], ['Осень', 'Autumn'], ['Зима', 'Winter'], ['Весна', 'Spring']], si = Math.floor(((Math.floor(day) + 3) % 24) / 6);
+      var wind = ['0,9', '1', '1,33', '1'], windEn = ['0.9', '1', '1.33', '1'], wires = ['3', '2', '1,5', '2'], wiresEn = ['3', '2', '1.5', '2'];
+      var tilt = (s - 0.5) * 0.3, light = Math.round((0.4 + 2 * tilt) * 240) / 10;
       var svg = '<circle cx="120" cy="120" r="92" fill="none" stroke="#000" stroke-width="22"/>';
       for (var i = 0; i < 24; i++) { var a = i / 24 * 2 * Math.PI - Math.PI / 2, sv = season(i), c = 'hsl(' + (40 * sv + 200 * (1 - sv)) + ',70%,' + (35 + 25 * sv) + '%)'; svg += '<path d="' + arc(120, 120, 92, a, a + 2 * Math.PI / 24 - 0.03) + '" stroke="' + c + '" stroke-width="20" fill="none"/>'; }
       var pa = day / 24 * 2 * Math.PI - Math.PI / 2;
       svg += '<line x1="120" y1="120" x2="' + (120 + 70 * Math.cos(pa)) + '" y2="' + (120 + 70 * Math.sin(pa)) + '" stroke="#ffa020" stroke-width="4"/><circle cx="120" cy="120" r="8" fill="#ffa020"/>';
       svg += '<text x="120" y="24" class="sd-t">' + G.t('лето', 'summer') + '</text><text x="120" y="226" class="sd-t">' + G.t('зима', 'winter') + '</text>';
       ring.innerHTML = svg;
-      info.innerHTML = '<div class="out">' + G.t(names[si][0], names[si][1]) + '</div><p>' + G.t('День года', 'Day of year') + ': <b>' + (Math.floor(day) + 1) + ' / 24</b></p><p>' + G.t('Выработка солнца', 'Solar output') + ': <b>' + Math.round(solar * 100) + '%</b></p><p>' + G.t('Яркость ночи', 'Night brightness') + ': <b>' + Math.round(night * 100) + '%</b></p>';
+      info.innerHTML = '<div class="out">' + G.t(names[si][0], names[si][1]) + '</div><p>' + G.t('День года', 'Day of year') + ': <b>' + (Math.floor(day) + 1) + ' / 24</b></p><p>' + G.t('Выработка солнца', 'Solar output') + ': <b>' + Math.round(solar * 100) + '%</b></p><p>' + G.t('Яркость ночи', 'Night brightness') + ': <b>' + Math.round(night * 100) + '%</b></p><p>' + G.t('Полный свет', 'Full daylight') + ': <b>' + G.fmt(light, { maximumFractionDigits: 1 }) + ' ' + G.t('ч', 'h') + '</b></p><p>' + G.t('Ветер', 'Wind') + ': <b>×' + G.t(wind[si], windEn[si]) + '</b> · ' + G.t('провода', 'wires') + ': <b>' + G.t(wires[si], wiresEn[si]) + ' ' + G.t('кВт/опору', 'kW/pole') + '</b></p>';
       var W = cv.width, H = cv.height;
       for (var x = 0; x < W; x++) { var tod = (x / W + 0.5) % 1, b = bright(s, tod); ctx.fillStyle = 'rgb(' + Math.round(20 + 220 * b) + ',' + Math.round(22 + 180 * b) + ',' + Math.round(40 + 120 * b) + ')'; ctx.fillRect(x, 0, 1, H); }
       var cx = ((t + 0.5) % 1) * W; ctx.fillStyle = '#ffa020'; ctx.fillRect(cx - 1, 0, 3, H);
