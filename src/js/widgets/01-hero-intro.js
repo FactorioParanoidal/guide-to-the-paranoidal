@@ -46,7 +46,7 @@
             '<i class="p" style="width:' + (sc(r[1]) * 100).toFixed(2) + '%"><em>' + G.fmt(r[1]) + '</em></i></span>' +
             '<span class="vsb-x">×' + G.fmt(mult, { maximumFractionDigits: mult < 10 ? 1 : 0 }) + '</span></a>';
         }).join('') +
-        '<p class="muted small-note">' + G.t('Ванильные значения: Factorio с дополнениями «Качество» и «Надземные рельсы». Рецепты и технологии посчитаны по прототипам игры примерно.', 'Vanilla values: Factorio with the Quality and Elevated rails add-ons. Recipes and technologies are approximate counts of the game prototypes.') + '</p>';
+        '<p class="muted small-note">' + G.t('Ванильные значения: Factorio ' + G.esc(G.data.meta.data.engine || '') + ' с дополнениями «Качество», «Надземные рельсы» и «Переработчик». Рецепты, технологии и достижения посчитаны по файлам игры, без сгенерированных рецептов вроде бочек.', 'Vanilla values: Factorio ' + G.esc(G.data.meta.data.engine || '') + ' with the Quality, Elevated rails and Recycler add-ons. Recipes, technologies and achievements are counted in the game files, without generated recipes such as barrels.') + '</p>';
       el.querySelectorAll('[data-s]').forEach(function (b) { b.onclick = function () { log = b.getAttribute('data-s') === 'log'; draw(); }; });
       requestAnimationFrame(function () { el.classList.add('drawn'); });
     }

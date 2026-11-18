@@ -1,5 +1,31 @@
 # Changelog — Guide to the Paranoidal
 
+## 2.0.1 — 2026-11-18
+
+The whole guide was checked claim by claim against the 2.1 dump, mod code, locale and default settings (modpack
+`pre_release_2.1` 8f08d8abba, Factorio 2.1.24 data). Fixes:
+
+- Vanilla comparisons: the vanilla behemoth biter has 3,000 HP (25,000 is the modpack value from Bob's Enemies), so the
+  toughest enemy is 4800 vanilla behemoths and the HP ladder compares against 3,000; the vanilla express belt is 45 items/s
+  (60 in the modpack); vanilla recipe/technology/achievement counts are taken from the 2.1.24 game data with the Recycler
+  add-on (204 / 200 / 59).
+- BnL start: a water barrel puts out fires within 2 tiles (not 4); burning cargo loses a grade every 40–70 s of fire with
+  a 20% chance to lose a stack; wrecks take 3 / 6 s and the starliner 12 s to mine; the geologist's kit (ore radar and
+  three burner drills in hand, charted surroundings, double hand-mined ore at 50%) and the mechanic's (quality control
+  1–4 researched, 5 half, twice the repair packs).
+- Defects: modules and equipment never get defects. Evolution: vanilla evolution is switched off, research is the only
+  driver; the tooltip text is quoted in full. Protomolecule, giants and the citadel stay away on peaceful maps (FAQ).
+- Robot crashes: from 50 busy robots, 10× for robots queuing to charge, swarm safety per 500 robots, explosives always
+  go off. Artillery reveals the map only for destroyed nests, worms and turrets. Radiation also from a nearby uranium
+  deposit. Planes fly on 7–10% of the fuel (the flying fortress 23%). Rocket reliability: failed launches, pad and
+  silo quality bonuses.
+- Exact in-game names: «Месторождения RSO (все)», «Директива Квантрин-R», «Ядерный чемоданчик для гаубицы», Rampant
+  factions (породители, самоубийцы, сапёры), «Легендарные руины: ярость», «Розовый инопланетный материал»; EN names
+  Extreme, Frontline/Backline, Rocket failure revision, Directive 99-99: Frugal Research, UC-A2 (Unicomp) and others.
+- Smaller: Yuoki catalytic centrifuge (8 pieces) and the real transmutation inputs, "pure" speed/productivity modules,
+  pole count includes lamp versions, midwinter solar.
+- Tools: extract_stats stores the real vanilla HP of the vanilla biters and counts the vanilla references in the game data.
+
 ## 2.0.0 — 2026-11-18
 
 The guide is rewritten for Paranoidal 2.1 (Factorio 2.1.24 with Quality, Elevated rails and Recycler). Every chapter was

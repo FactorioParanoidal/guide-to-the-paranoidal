@@ -10,7 +10,7 @@
         var dur = 40 * (max / b.items_per_s) / 24 * 1.0; // seconds for the slowest ~40 s, fastest ~1.7 s
         var dots = ''; for (var i = 0; i < 6; i++) dots += '<img src="' + G.icon(item) + '" alt="" style="animation-duration:' + dur.toFixed(2) + 's;animation-delay:-' + (dur * i / 6).toFixed(2) + 's">';
         return '<div class="br-row"><span class="br-name">' + G.iconImg(b) + G.esc(G.nm(b)) + '</span><div class="br-belt" style="--sp:' + (0.6 * max / b.items_per_s).toFixed(2) + 's">' + dots + '</div><b>' + G.fmt(b.items_per_s) + ' ' + G.t('/с', '/s') + '</b></div>';
-      }).join('') + '<p class="muted small-note">' + G.t('Скорости в анимации пропорциональны реальным. Ванильный максимум, экспресс-конвейер, везёт 60 предметов в секунду. Дальше начинается Paranoidal.', 'Animation speeds are proportional to the real ones. The vanilla maximum is the express belt at 60 items per second; beyond that is Paranoidal.') + '</p>';
+      }).join('') + '<p class="muted small-note">' + G.t('Скорости в анимации пропорциональны реальным. Ванильный максимум, экспресс-конвейер, везёт 45 предметов в секунду. В сборке он ускорен до 60, а дальше начинается Paranoidal.', 'Animation speeds are proportional to the real ones. In vanilla the express belt is the top at 45 items per second; the modpack speeds it up to 60, and beyond that is Paranoidal.') + '</p>';
     }
     render(); G.onLang(render);
   });

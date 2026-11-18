@@ -1,6 +1,6 @@
 {
  "_doc": "Ordered chapter registry. build.py assembles sections in this order. Fields: id (= id of the <section> in the file), file (src/sections/), ru/en (short TOC titles), status (draft|ready|disabled), sources (where the facts come from: re-check them when the modpack changes), verified (modpack/data state the text was checked against), achievement_ru/en (toast when the reader reaches the chapter).",
- "guide_version": "2.0.0",
+ "guide_version": "2.0.1",
  "sections": [
   {
    "id": "hero",

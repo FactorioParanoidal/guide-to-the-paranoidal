@@ -7,17 +7,19 @@
   G.widget('hp-ladder', function (el) {
     function render() {
       var R = G.data.records, seen = {}, list = [];
-      R.vanilla_biters.forEach(function (u) { list.push({ r: u, hp: u.health, tag: G.t('ваниль', 'vanilla') }); });
+      R.vanilla_biters.forEach(function (u) { list.push({ r: u, hp: u.vanilla_health || u.health, tag: G.t('ваниль', 'vanilla') }); });
+      var bh = R.vanilla_biters.filter(function (u) { return u.id === 'behemoth-biter'; })[0];
+      if (bh && bh.vanilla_health && bh.health !== bh.vanilla_health) list.push({ r: bh, hp: bh.health, tag: 'Bob' });
       R.rampant_faction_units.filter(function (u) { return u.faction === 'juggernaut'; }).forEach(function (u) { list.push({ r: u, hp: u.health, tag: 'Rampant' }); });
       R.bob_breeds.slice(0, 1).forEach(function (u) { list.push({ r: u, hp: u.health, tag: 'Bob' }); });
       R.big_monsters.forEach(function (u) { list.push({ r: u, hp: u.health, tag: 'Big Monsters' }); });
       R.enemy_toughest.slice(0, 2).forEach(function (u) { list.push({ r: u, hp: u.health, tag: u.source === 'humans' ? G.t('люди', 'humans') : 'Rampant' }); });
-      list = list.filter(function (x) { var k = G.nm(x.r); if (seen[k]) return false; seen[k] = 1; return true; }).sort(function (a, b) { return a.hp - b.hp; });
-      var max = Math.log10(list[list.length - 1].hp), beh = 25000;
+      list = list.filter(function (x) { var k = G.nm(x.r) + '|' + x.tag; if (seen[k]) return false; seen[k] = 1; return true; }).sort(function (a, b) { return a.hp - b.hp; });
+      var max = Math.log10(list[list.length - 1].hp), beh = (bh && bh.vanilla_health) || 3000;
       el.innerHTML = list.map(function (x) {
         var w = Math.log10(x.hp) / max * 100, isV = x.tag === G.t('ваниль', 'vanilla');
         return '<div class="hp-row' + (isV ? ' van' : '') + '"><span class="sl-q">' + G.iconImg(x.r) + G.esc(G.nm(x.r)) + ' <small class="badge">' + x.tag + '</small></span><span class="sl-bar"><i style="width:' + w + '%"></i></span><b>' + G.fmt(x.hp) + '</b><em>' + (x.hp > beh ? '×' + G.fmt(x.hp / beh, { maximumFractionDigits: 0 }) : '') + '</em></div>';
-      }).join('') + '<p class="muted small-note">' + G.t('Логарифмическая шкала. Справа показано, во сколько раз здоровье больше, чем у ванильного чудовища (25 000).', 'Log scale. On the right: how many times the HP exceeds a vanilla behemoth (25,000).') + '</p>';
+      }).join('') + '<p class="muted small-note">' + G.t('Логарифмическая шкала. Справа показано, во сколько раз здоровье больше, чем у ванильного чудовища (' + G.fmt(beh) + '). Bob\'s Enemies поднимает ванильным жукам здоровье: в сборке у того же чудовища ' + G.fmt(bh ? bh.health : beh) + '.', 'Log scale. On the right: how many times the HP exceeds a vanilla behemoth (' + G.fmt(beh) + '). Bob\'s Enemies raises the health of the vanilla bugs: in the modpack the same behemoth has ' + G.fmt(bh ? bh.health : beh) + '.') + '</p>';
     }
     render(); G.onLang(render);
   });
@@ -55,8 +57,8 @@
     var evo = 0.3;
     var FAC = [
       [0, 'neutral', 'Обычные', 'Common'], [0.10, 'acid', 'Кислотные', 'Acidic'],
-      [0.17, 'laser', 'Лазерные', 'Laser'], [0.17, 'electric', 'Электрические', 'Electric'], [0.17, 'suicide', 'Камикадзе', 'Suicide'], [0.17, 'fast', 'Быстрые', 'Fast'],
-      [0.27, 'wasp', 'Осы', 'Wasp'], [0.27, 'spawner', 'Породители', 'Spawner'], [0.27, 'troll', 'Регенерирующие', 'Regenerative'], [0.27, 'energy-thief', 'Энерговоры', 'Sapper'],
+      [0.17, 'laser', 'Лазерные', 'Laser'], [0.17, 'electric', 'Электрические', 'Electric'], [0.17, 'suicide', 'Самоубийцы', 'Suicide'], [0.17, 'fast', 'Быстрые', 'Fast'],
+      [0.27, 'wasp', 'Осы', 'Wasp'], [0.27, 'spawner', 'Породители', 'Spawner'], [0.27, 'troll', 'Регенерирующие', 'Regenerative'], [0.27, 'energy-thief', 'Сапёры', 'Sapper'],
       [0.37, 'fire', 'Огненные', 'Fire'], [0.37, 'arachnids', 'Арахниды', 'Arachnids'],
       [0.47, 'physical', 'Бронированные', 'Armored'],
       [0.56, 'inferno', 'Адские', 'Inferno'], [0.56, 'poison', 'Ядовитые', 'Poison'],

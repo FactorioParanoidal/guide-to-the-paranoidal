@@ -1,8 +1,8 @@
 <!-- CHAPTER 21 — Statistics (2.1 rewrite 2026-11-18). Widgets: stat-dashboard (counts), recipe-kinds (counts.recipes_*), records-board (records.*).
      #facts-list feeds the “Random fact” button in the top bar: keep every <li> bilingual and true (numbers via n: placeholders).
      Facts (dump 2.1): ~5.55 M packs for all finite technologies = 64 days at one pack per second; longest recipe: refurbishing the mining
-     shuttle 2400 s; most ingredients: intelligent I/O 15; fastest crafting machine: Biosad MK3 ×64; toughest enemy 14.4 M HP = 576 vanilla
-     behemoths; deepest chain 65 steps to «Автономный орбитальный фабрикатор»; locomotive efficiencies 20–45 %, gunship 7 %; poles 1.5–3 kW
+     shuttle 2400 s; most ingredients: intelligent I/O 15; fastest crafting machine: Biosad MK3 ×64; toughest enemy 14.4 M HP = 4800 vanilla
+     behemoths (3000 HP in the engine data; 25000 in the modpack, Bob's Enemies); deepest chain 65 steps to «Автономный орбитальный фабрикатор»; locomotive efficiencies 20–45 %, gunship 7 %; poles 1.5–3 kW
      by season; 22 legendary ruins (paranoidal-ruins); hero ranks ×2 at «Легендарный» (HeroTurretRedux); achievements 1064 vs 59 vanilla. -->
 <section id="stats" class="chapter" data-num="21" data-icon="assets/icons/technology__space-lab.webp" data-toc="Статистика|Statistics">
   <header class="ch-head">
@@ -40,13 +40,13 @@
     <li><ru>Стартовый котёл работает с КПД 50%: половина угля улетает в трубу. Пятый котёл уже даёт 98%.</ru><en>The starter boiler runs at 50% efficiency: half of the coal goes up the chimney. Boiler five reaches 98%.</en></li>
     <li><ru>На планете нет ни железной руды, ни медной, ни камня. Всё добывается из шести «сложных» руд.</ru><en>The planet has no iron ore, no copper ore and no stone. Everything comes from six “compound” ores.</en></li>
     <li><ru>Пока не изучен «<a class="x g" href="#g-control">Контроль качества</a> 10», зелёной науки не будет.</ru><en>Until “<a class="x g" href="#g-control">Quality control</a> 10” is researched, there is no green science.</en></li>
-    <li><ru>Ступеней качества в сборке {{n:counts.qualities}}, включая 5 ступеней брака. Самая высокая называется «Божественное».</ru><en>The modpack has {{n:counts.qualities}} quality grades, including 5 defect grades. The highest one is called “Divine”.</en></li>
-    <li><ru>Фиолетовый инопланетный артефакт при сжигании очищает воздух: множитель загрязнения −1,9.</ru><en>A purple alien artifact cleans the air when burnt: its emission multiplier is −1.9.</en></li>
+    <li><ru>Ступеней качества в сборке {{n:counts.qualities}}, включая 5 ступеней брака. Самая высокая называется «Божественное».</ru><en>The modpack has {{n:counts.qualities}} quality grades, including 5 defect grades. The highest one is called “Extreme”.</en></li>
+    <li><ru>{{name:item/bob-alien-artifact-purple}} при сжигании очищает воздух: множитель загрязнения −1,9.</ru><en>The {{name:item/bob-alien-artifact-purple}} cleans the air when burnt: its emission multiplier is −1.9.</en></li>
     <li><ru>Локомотив использует четверть энергии топлива, маглев меньше половины, а боевой самолёт всего 7%.</ru><en>A locomotive uses a quarter of its fuel's energy, the maglev less than half, and the gunship only 7%.</en></li>
     <li><ru>Гипер-лаба занимает 98×78 клеток, ест 1 ГВт и исследует в 128 раз быстрее обычной лаборатории.</ru><en>The hyper lab covers 98×78 tiles, eats 1 GW and researches 128 times faster than a regular lab.</en></li>
     <li><ru>Первая ракета взрывается на старте с вероятностью 50%.</ru><en>The first rocket explodes at launch with a 50% chance.</en></li>
     <li><ru>Среди врагов {{n:counts.enemy_humans}} видов людей, вплоть до бойцов с ядерными ракетами.</ru><en>Among the enemies are {{n:counts.enemy_humans}} kinds of humans, up to soldiers with nuclear rockets.</en></li>
-    <li><ru>У самого толстого врага {{fmt:records.enemy_toughest.0.health|int}} здоровья, в 576 раз больше, чем у ванильного чудовища.</ru><en>The toughest enemy has {{fmt:records.enemy_toughest.0.health|int}} HP, 576 times a vanilla behemoth.</en></li>
+    <li><ru>У самого толстого врага {{fmt:records.enemy_toughest.0.health|int}} здоровья, в 4800 раз больше, чем у ванильного чудовища.</ru><en>The toughest enemy has {{fmt:records.enemy_toughest.0.health|int}} HP, 4800 times a vanilla behemoth.</en></li>
     <li><ru>Эволюция врагов растёт от ваших исследований. Учиться вредно.</ru><en>Enemy evolution grows with your research. Learning is bad for you.</en></li>
     <li><ru>Шлак производят {{n:records.ways.@angels-slag.produced_by}} разных рецептов.</ru><en>Slag is produced by {{n:records.ways.@angels-slag.produced_by}} different recipes.</en></li>
     <li><ru>Стальная балка (так в сборке зовут стальную пластину) нужна в {{n:records.top_ingredients.@steel-plate.recipes}} рецептах.</ru><en>The steel plate is needed in {{n:records.top_ingredients.@steel-plate.recipes}} recipes.</en></li>
@@ -56,7 +56,7 @@
     <li><ru><a class="x g" href="#g-factorissimo">Здание фабрики</a> 20×20 снаружи вмещает 90×90 внутри. И внутрь можно поставить ещё одну фабрику.</ru><en>A 20×20 <a class="x g" href="#g-factorissimo">factory building</a> holds 90×90 inside. And you can put another factory inside it.</en></li>
     <li><ru>Блок материопамяти хранит бесконечное количество одного предмета, но при разрушении теряет всё.</ru><en>A memory unit stores an infinite amount of one item but loses everything when destroyed.</en></li>
     <li><ru><a class="x g" href="#g-hero">Турели получают звания</a> за убийства: на последнем, «Легендарном», они бьют вдвое сильнее. Для этого в игре {{n:counts.hero_turret_ranks}} «ранговых» вариантов турелей.</ru><en><a class="x g" href="#g-hero">Turrets earn ranks</a> for kills: at the last one, “Legendary”, they hit twice as hard. The game has {{n:counts.hero_turret_ranks}} “ranked” turret variants for that.</en></li>
-    <li><ru>Год на планете длится 24 игровых дня. Зимой солнечные панели дают вдвое меньше, а дождей нет.</ru><en>A year on the planet lasts 24 game days. In winter solar panels give half as much, and it never rains.</en></li>
+    <li><ru>Год на планете длится 24 игровых дня. В разгар зимы солнечные панели дают вдвое меньше, а дождей зимой нет.</ru><en>A year on the planet lasts 24 game days. In midwinter solar panels give half as much, and it never rains in winter.</en></li>
     <li><ru>Загоревшийся резервуар можно спасти, если за минуту откачать горючее ниже 25%.</ru><en>A burning tank can be saved if you drain the fuel below 25% within a minute.</en></li>
     <li><ru>Бракованный бур «−5» выедает месторождение в шесть раз быстрее.</ru><en>A “−5” defective drill eats a deposit six times faster.</en></li>
     <li><ru>В сборке {{n:counts.achievements}} достижений, в 18 раз больше, чем в ванили.</ru><en>The modpack has {{n:counts.achievements}} achievements, 18 times more than vanilla.</en></li>

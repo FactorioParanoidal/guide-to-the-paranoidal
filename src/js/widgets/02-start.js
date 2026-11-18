@@ -6,11 +6,11 @@
     var S = G.data.records.spot;
     var items = [
       { k: 'crash-site-spaceship', sp: 'crash-site-spaceship',
-        ru: function () { return 'Лайнер «Аксиома-7». 80 слотов добра, добывается 6 секунд. Горит с самой посадки: сначала бочка воды, потом кирка.'; },
-        en: function () { return 'The Axiom-7 starliner. 80 slots of loot, 6 seconds to mine. It burns from the landing: water barrel first, pickaxe second.'; } },
+        ru: function () { return 'Лайнер «Аксиома-7». 80 слотов добра, добывается 12 секунд. Горит с самой посадки: сначала бочка воды, потом кирка.'; },
+        en: function () { return 'The Axiom-7 starliner. 80 slots of loot, 12 seconds to mine. It burns from the landing: water barrel first, pickaxe second.'; } },
       { k: 'aai-big-ship-wreck-1', sp: 'aai-big-ship-wreck-1',
-        ru: function () { return 'Большой обломок. Три секунды киркой, а внутри материалы, детали и груз, который любит взрываться в огне.'; },
-        en: function () { return 'A big wreck. Three seconds of pickaxe work, and inside are materials, parts and cargo that likes to explode in a fire.'; } },
+        ru: function () { return 'Большой обломок. Шесть секунд киркой, а внутри материалы, детали и груз, который любит взрываться в огне.'; },
+        en: function () { return 'A big wreck. Six seconds of pickaxe work, and inside are materials, parts and cargo that likes to explode in a fire.'; } },
       { k: 'salvaged-generator', sp: 'salvaged-generator',
         ru: function () { var s = S['salvaged-generator']; return 'Корабельный генератор: ' + G.fmt(s.production_w / 1e3) + ' кВт без топлива и буфер ' + G.fmt(s.buffer_j / 1e6) + ' МДж. Электричество до первого котла. Качество генератора умножает мощность.'; },
         en: function () { var s = S['salvaged-generator']; return 'Salvaged generator: ' + G.fmt(s.production_w / 1e3) + ' kW with no fuel and a ' + G.fmt(s.buffer_j / 1e6) + ' MJ buffer. Electricity before your first boiler. Its quality multiplies the power.'; } },
