@@ -3,7 +3,7 @@
 # Usage: bash tools/update.sh <run-dir-with-dump> [collect_assets.py options, e.g. --extra-mods work/dump-mods]
 # Images are encoded by ../tools-external/css-ig (pingo/beeim, workspace only; AGENTS.md "Image encoding").
 #   <run-dir-with-dump> = a test-runs/<RUN> folder that has write-data/script-output/data-raw-dump.json and inputs.json
-#   Example: bash tools/update.sh ../test-runs/ore-icon-remap-20261023b
+#   Example: bash tools/update.sh ../test-runs/sa-review-mainref-20261118
 # Steps: extract stats -> render icons/sprites/static -> build index.html -> link/i18n check -> JS smoke test (RU, EN).
 # The script never launches Factorio and never writes outside the guide folder. Getting a fresh dump is a separate,
 # explicitly permitted action (see AGENTS.md §6).

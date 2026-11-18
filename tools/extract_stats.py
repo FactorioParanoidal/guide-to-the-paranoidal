@@ -8,7 +8,7 @@ Writes:
     data/icon-requests.json - list of [type, name] whose icons tools/collect_assets.py renders
 
 Nothing in mods/ or the game is modified. The dump is read-only input.
-Locale: game data (core/base/quality/elevated-rails) + every mod folder locale/<lang>/*.cfg,
+Locale: game data (core/base/elevated-rails/quality/recycler) + every mod folder locale/<lang>/*.cfg,
 alphabetical order, later files override earlier ones (approximation of load order;
 zzz* mods win, which matches the modpack in practice).
 """
@@ -17,12 +17,13 @@ import math, argparse, collections, glob, hashlib, json, os, re, sys, time
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 WS = os.path.dirname(ROOT)
-DEFAULT_MODS = os.path.join(WS, 'ParanoidalModpack-master', 'mods')
-DEFAULT_GAME = 'C:/Games/Factorio 2.077 - QUILITY/data'
+DEFAULT_MODS = os.path.join(WS, 'ParanoidalModpack', 'mods')   # branch pre_release_2.1
+DEFAULT_GAME = 'C:/Games/Factorio 2.1.24/data'
 
 ap = argparse.ArgumentParser()
 ap.add_argument('--dump', required=True)
 ap.add_argument('--inputs', help='inputs.json of the dump run (enabled mods list)')
+ap.add_argument('--commit', help='modpack commit of the dumped mods when inputs.json has no git head (a profile copied from it)')
 ap.add_argument('--mods', default=DEFAULT_MODS)
 ap.add_argument('--game', default=DEFAULT_GAME)
 args = ap.parse_args()
@@ -50,7 +51,7 @@ def parse_cfg(path, store):
 L = {}
 for lang in ('en', 'ru'):
     s = {}
-    roots = [os.path.join(args.game, m) for m in ('core', 'base', 'elevated-rails', 'quality')]
+    roots = [os.path.join(args.game, m) for m in ('core', 'base', 'elevated-rails', 'quality', 'recycler')]
     roots += sorted(glob.glob(os.path.join(args.mods, '*', '')), key=lambda p: os.path.basename(p.rstrip('/\\')).lower())
     for r in roots:
         for f in sorted(glob.glob(os.path.join(r, 'locale', lang, '*.cfg'))):
@@ -163,6 +164,19 @@ def energy(s):
 vis = lambda p: not p.get('hidden')
 S = {'meta': {}, 'counts': {}, 'records': {}}
 
+# Factorio 2.1 format: recipe `categories` (array, default {"crafting"}) and item `fuel_categories` (array);
+# 2.0 dumps had single `category` / `fuel_category`. Both are read so an old dump still works.
+def rcats(r):
+    c = r.get('categories')
+    if c:
+        return list(c)
+    return [r['category']] if r.get('category') else ['crafting']
+def fcats(p):
+    c = p.get('fuel_categories')
+    if c:
+        return list(c)
+    return [p['fuel_category']] if p.get('fuel_category') else []
+
 # ---------------------------------------------------------------- meta
 inputs = json.load(open(args.inputs, encoding='utf-8')) if args.inputs else {}
 enabled = inputs.get('enabled_mods', [])
@@ -172,7 +186,7 @@ S['meta'] = {
     'dump_sha256': dump_sha,
     'engine': inputs.get('engine', {}).get('version'),
     'dlc': inputs.get('dlc_enabled_in_list'),
-    'git': inputs.get('git'),
+    'git': inputs.get('git') if (inputs.get('git') or {}).get('head') or not args.commit else {'branch': 'pre_release_2.1', 'head': args.commit},
     'mods_enabled': len(enabled),
 }
 
@@ -214,16 +228,16 @@ reach = {}
 for n, r in R.items():
     if not recipe_reachable(n, r):
         continue
-    cat = r.get('category', 'crafting')
-    kind = 'recycling' if cat.startswith('recycling') or n.endswith('-recycling') else \
+    cats = rcats(r)
+    kind = 'recycling' if any(c.startswith('recycling') for c in cats) or n.endswith('-recycling') else \
            'barrel' if re.search(r'(^|-)(empty|fill)-.*barrel|barrel-(empty|fill)', n) else \
-           'void' if 'void' in cat or 'void' in n else 'main'
+           'void' if any('void' in c for c in cats) or 'void' in n else 'main'
     rec_cat[kind] += 1
     reach[n] = kind
 S['counts']['recipes_total_prototypes'] = len(R)
 S['counts']['recipes_reachable'] = len(reach)
 S['counts']['recipes_main'] = rec_cat['main']
-S['counts']['recipes_recycling'] = sum(1 for r in R.values() if (r.get('category') or '').startswith('recycling'))
+S['counts']['recipes_recycling'] = sum(1 for r in R.values() if any(c.startswith('recycling') for c in rcats(r)))
 S['counts']['recipes_barrel'] = rec_cat['barrel']
 S['counts']['recipes_void'] = rec_cat['void']
 S['counts']['recipe_categories'] = len(D['recipe-category'])
@@ -256,7 +270,7 @@ S['counts']['custom_inputs'] = len(D['custom-input'])
 
 # vanilla reference (counted in game prototypes, approximate, see AGENTS-GUIDE)
 S['vanilla_reference'] = {
-    'note': 'Factorio 2.0 base + quality + elevated-rails without Space Age. recipes/technologies: count of type="recipe"/"technology" in the game prototypes (approx.); the rest: well-known vanilla values. Update by hand only if the vanilla game changes.',
+    'note': 'Vanilla Factorio base + quality + elevated-rails (values measured on 2.0, approximate for 2.1). recipes/technologies: count of type="recipe"/"technology" in the game prototypes (approx.); the rest: well-known vanilla values. Update by hand only if the vanilla game changes.',
     'recipes': 201, 'technologies': 200, 'qualities': 5, 'science_packs': 7, 'enemy_units': 2, 'spawners': 2,
     'belt_tiers': 3, 'modules': 12, 'ores': 5, 'fluids': 8, 'turrets': 4, 'boiler_efficiency': 1.0, 'labs': 1,
     'assemblers': 3, 'locomotives': 1, 'boilers': 1, 'drills': 2, 'inserters': 5, 'achievements': 59}
@@ -279,7 +293,13 @@ S['counts']['hero_turret_ranks'] = sum(1 for t in ['ammo-turret', 'electric-turr
 lab_inputs = set()
 for p in D['lab'].values():
     lab_inputs.update(p.get('inputs', []))
-packs = [n for n in D['tool'] if n in lab_inputs and vis(D['tool'][n])]
+# 2.1: lab inputs are ItemIDs (vanilla packs are plain `item`s), 2.0: `tool`s
+PACK_TYPE = {}
+for t in ITEM_TYPES:
+    for n, p in D.get(t, {}).items():
+        if n in lab_inputs and vis(p) and n not in PACK_TYPE:
+            PACK_TYPE[n] = t
+packs = list(PACK_TYPE)
 MODULE_TOKENS = {n for n in packs if n.startswith(('bob-module', 'module-combining')) or n.endswith('-processor')}
 pack_use = collections.Counter()
 pack_total = collections.Counter()
@@ -295,7 +315,7 @@ for n, t in T.items():
         am = ing[1] if isinstance(ing, list) else ing.get('amount', 1)
         pack_use[nm] += 1
         pack_total[nm] += cnt * am
-S['records']['science_packs'] = [ent('tool', n, techs=pack_use[n], total_for_all_finite=pack_total[n]) for n in packs]
+S['records']['science_packs'] = [ent(PACK_TYPE[n], n, techs=pack_use[n], total_for_all_finite=pack_total[n]) for n in packs]
 S['counts']['science_packs'] = len(packs) - len(MODULE_TOKENS)
 S['counts']['module_research_tokens'] = len(MODULE_TOKENS)
 for r in S['records']['science_packs']:
@@ -414,8 +434,8 @@ S['records']['spiders'] = [ent('spider-vehicle', n, health=p.get('max_health')) 
 fuels = []
 for t in ITEM_TYPES:
     for n, p in D.get(t, {}).items():
-        if p.get('fuel_value') and vis(p) and not n.endswith('barrel') and p.get('fuel_category') not in ('ic-repair-resource',):
-            fuels.append(ent(t, n, category=p.get('fuel_category'), mj=energy(p['fuel_value']) / 1e6,
+        if p.get('fuel_value') and vis(p) and not n.endswith('barrel') and 'ic-repair-resource' not in fcats(p):
+            fuels.append(ent(t, n, category=(fcats(p) or [None])[0], categories=fcats(p), mj=energy(p['fuel_value']) / 1e6,
                              emissions=p.get('fuel_emissions_multiplier', 1), acceleration=p.get('fuel_acceleration_multiplier', 1),
                              top_speed=p.get('fuel_top_speed_multiplier', 1), stack=p.get('stack_size'),
                              burnt=p.get('burnt_result')))
@@ -456,7 +476,7 @@ for n, p in D['resource'].items():
     if mc and max(mc.get('r', 0), mc.get('g', 0), mc.get('b', 0)) <= 1: mc = {k: v * 255 for k, v in mc.items()}
     res_.append(ent('resource', n, map_color='#%02x%02x%02x' % (int(mc.get('r', 128)), int(mc.get('g', 128)), int(mc.get('b', 128))),
                     infinite=bool(p.get('infinite')), fluid=mi.get('required_fluid'), fluid_amount=mi.get('fluid_amount'),
-                    results=[r.get('name') for r in mi.get('results', [])], category=p.get('category')))
+                    results=[r.get('name') for r in mi.get('results', [])], category=p.get('category') or 'basic-solid'))
 S['records']['resources'] = res_
 for r in res_:
     if r['fluid']:
@@ -515,7 +535,8 @@ for n, r in R.items():
         outs = []
         for x in r.get('results') or []:
             t = 'fluid' if x.get('type') == 'fluid' else (find(x['name'], ITEM_TYPES)[0] or 'item')
-            outs.append(ent(t, x['name'], probability=x.get('probability', 1), amount=x.get('amount')))
+            # 2.1 results carry independent_probability (2.0: probability)
+            outs.append(ent(t, x['name'], probability=x.get('probability', x.get('independent_probability', 1)), amount=x.get('amount')))
         puff.append(ent('recipe', n, outputs=outs))
 S['records']['puffer_breeding'] = puff
 
@@ -564,8 +585,11 @@ for n, p in D['quality'].items():
         c = [c.get('r', 0), c.get('g', 0), c.get('b', 0)]
     if c and max(c) <= 1:
         c = [x * 255 for x in c]
+    # 2.1: chance of the next grade = quality effect x next_probability (a module 1 = 0.01 effect, normal = 2.04 -> 2.04 %);
+    # chain_probability (default next_probability x 0.1) = chance of one more grade in the same operation.
     Q.append(ent('quality', n, level=p.get('level', 0), color='#%02x%02x%02x' % tuple(int(x) for x in c[:3]) if c else None,
-                 next_probability=p.get('next_probability'), defect=n.startswith('ic-defect')))
+                 next_probability=p.get('next_probability'), chain_probability=p.get('chain_probability'),
+                 defect=n.startswith('ic-defect')))
 # defects first (−5..−1), then normal, then positive in chain order
 chain = []
 cur = 'ic-defect-5'
@@ -588,6 +612,8 @@ def source_of(n):
     if 'rampant' in n: return 'rampant'
     if n.startswith('bm_fake_human'): return 'humans'
     if n.startswith(('biterzilla', 'bm-motherbiterzilla', 'maf-')): return 'big_monsters'
+    if n.startswith('replicator-'): return 'replicators'
+    if n.startswith('beast-'): return 'protomolecule'
     if n.startswith('bob-') or '-from-bob-' in n: return 'bob'
     if n in ('small-biter', 'medium-biter', 'big-biter', 'behemoth-biter', 'small-spitter', 'medium-spitter', 'big-spitter', 'behemoth-spitter'): return 'vanilla'
     return 'other'
@@ -599,9 +625,14 @@ def enemy_kind(n):
     k = re.sub(r'-v\d+-t\d+-rampant$', '-rampant', k)
     k = re.sub(r'^bob-' + _SIZES + '-', 'bob-', k)
     k = re.sub(r'^' + _SIZES + '-', '', k)
+    k = re.sub(r'-mk\d+(-(balanced|chemical|energy|kinetic))?$', '', k)   # replicator droid marks and armour kinds
     return re.sub(r'[_-]?\d+$', '', k)
 def technical_unit(n):
-    return 'chunk-scanner' in n or 'DummySetter' in n or n.startswith('bob-robot-')
+    # 2.1: only hostile units count. Player units (Robot Army droids, Bob's drones: flag player-creation) and
+    # neutral helpers (Д-ОК contaminant markers: no placeable-enemy flag) are not enemies.
+    fl = set(U[n].get('flags') or [])
+    return ('chunk-scanner' in n or 'DummySetter' in n or n.startswith('bob-robot-')
+            or 'player-creation' in fl or 'placeable-enemy' not in fl)
 kinds = collections.defaultdict(set)
 src = collections.defaultdict(lambda: {'units': 0, 'hp_max': 0, 'champions': 0, 'bosses': 0})
 for n, p in U.items():

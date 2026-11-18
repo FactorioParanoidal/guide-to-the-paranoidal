@@ -22,7 +22,7 @@ Outputs:
     assets/manifest.json              (every output -> source path + source sha256)
 
 Reads the game data folder and the mod folders; writes only inside the guide folder.
-Mods that are zip archives are skipped (none are enabled in the 2.0 profile).
+Mods that are zip archives are skipped (none are enabled in the 2.1 build).
 """
 import argparse, csv, glob, hashlib, json, os, re, shutil, subprocess, sys
 from PIL import Image
@@ -32,8 +32,8 @@ ROOT = os.path.dirname(HERE)
 WS = os.path.dirname(ROOT)
 ap = argparse.ArgumentParser()
 ap.add_argument('--dump', required=True)
-ap.add_argument('--mods', default=os.path.join(WS, 'ParanoidalModpack-master', 'mods'))
-ap.add_argument('--game', default='C:/Games/Factorio 2.077 - QUILITY/data')
+ap.add_argument('--mods', default=os.path.join(WS, 'ParanoidalModpack', 'mods'))   # branch pre_release_2.1
+ap.add_argument('--game', default='C:/Games/Factorio 2.1.24/data')
 ap.add_argument('--only', help='comma list of output kinds: icons,sprites,static')
 ap.add_argument('--quality', type=int, default=90, help='Pillow WebP quality with --no-optimize')
 ap.add_argument('--extra-mods', action='append', default=[], help='folder with more mod folders (mods of the dump commit)')
@@ -97,7 +97,7 @@ for extra in args.extra_mods:
             MODDIR.setdefault(json.load(open(f, encoding='utf-8-sig'))['name'], os.path.dirname(f))
         except Exception:
             pass
-for m in ('base', 'core', 'quality', 'elevated-rails', 'space-age'):
+for m in ('base', 'core', 'quality', 'elevated-rails', 'recycler', 'space-age'):
     MODDIR[m] = os.path.join(args.game, m)
 
 def resolve(path):
@@ -394,6 +394,26 @@ if 'static' in kinds:
                 save_webp(out, dst, scale_of('static', e))
             else:
                 out.save(dst, quality=e.get('quality', 82), method=4)
+        elif e.get('anim'):
+            # animated source with alpha (GIF/WebP) -> animated WebP: every frame cropped and resized; anim.every = keep
+            # every Nth frame (the dropped frames' time goes to the kept one, the loop length stays), anim.height in px
+            from PIL import ImageSequence
+            a = e['anim']
+            frames, durs = [], []
+            for i, f in enumerate(ImageSequence.Iterator(Image.open(src_abs))):
+                d = f.info.get('duration', 50)
+                if i % a.get('every', 1):
+                    durs[-1] += d
+                    continue
+                fr = f.convert('RGBA')
+                if e.get('crop'):
+                    fr = fr.crop(tuple(e['crop']))
+                if a.get('height'):
+                    fr = fr.resize((round(fr.width * a['height'] / fr.height), a['height']), Image.LANCZOS)
+                frames.append(fr)
+                durs.append(d)
+            frames[0].save(dst, save_all=True, append_images=frames[1:], duration=durs, loop=0, method=4,
+                           quality=a.get('quality', 80), alpha_quality=a.get('alpha_quality', 90))
         elif e.get('keyout'):
             # make a dark background transparent in every frame (animated WebP logo): alpha = (max(r,g,b) - lo) / (hi - lo)
             from PIL import ImageSequence

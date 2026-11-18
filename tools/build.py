@@ -21,6 +21,9 @@ Section micro-syntax (expanded here, so fragments stay short):
     {{icon-lg:technology/rocket-silo}}   -> large icon
     {{sprite:boiler}}                    -> entity sprite (assets/sprites/<key>.webp)
     {{fmt:records.boilers.0.effectivity|pct}}  -> formatted value: pct, int, mw, kj, raw
+    {{name:item/iron-plate}}             -> the in-game RU/EN name (names.json) as <ru>..</ru><en>..</en>: names in the text
+                                            always match the game locale
+    {{chip:item/iron-plate}}             -> chapter chip: <span> icon + in-game name </span> (for .ch-tags)
 Everything else is plain HTML.
 """
 import argparse, base64, glob, html, json, os, re, subprocess, sys, time
@@ -89,6 +92,20 @@ def expand(text, fname):
             return '?'
     text = re.sub(r'\{\{fmt:([^}]+)\}\}', fmt, text)
 
+    def loc_name(spec):
+        typ, _, name = spec.partition('/')
+        k = icon_key(typ, name)
+        nm = names.get(k)
+        if not nm:
+            alt = [v for kk, v in names.items() if kk.endswith('__' + icon_key('', name)[2:])]
+            nm = alt[0] if alt else None
+        if not nm:
+            problems.append('%s: no in-game name for %s (add it to tools/assets-config.json "icons", run extract_stats.py)' % (fname, spec))
+            nm = {'ru': name, 'en': name}
+        return '<ru>%s</ru><en>%s</en>' % (html.escape(nm['ru']), html.escape(nm['en']))
+    text = re.sub(r'\{\{name:([^}]+)\}\}', lambda m: loc_name(m.group(1)), text)
+    text = re.sub(r'\{\{chip:([^}]+)\}\}', lambda m: '<span>{{icon:%s}}%s</span>' % (m.group(1), loc_name(m.group(1))), text)
+
     def icon(m):
         size = m.group(1)
         typ, _, name = m.group(2).partition('/')
@@ -129,7 +146,8 @@ def expand(text, fname):
 #  - a glossary link to a term that is the topic of the block (term stem found in the h3 title), e.g. "slag" under "Slag: ...".
 def _plain(h):
     return re.sub(r'<[^>]+>', ' ', h).lower()
-_gloss_src = open(os.path.join(SRC, 'sections', '21-glossary.html'), encoding='utf-8').read()
+_gloss_file = [e['file'] for e in registry['sections'] if e['id'] == 'glossary'][0]
+_gloss_src = open(os.path.join(SRC, 'sections', _gloss_file), encoding='utf-8').read()
 GLOSS_STEMS = {}
 for m in re.finditer(r'<dt id="(g-[^"]+)">(.*?)</dt>', _gloss_src, re.S):
     words = re.findall(r'[\w-]+', _plain(m.group(2)))
