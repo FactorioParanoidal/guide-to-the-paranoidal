@@ -6,12 +6,13 @@ Reply to the user in **Russian**; code, comments and this file are in English.
 - Live site: https://factorioparanoidal.github.io/guide-to-the-paranoidal/
 - Repository: https://github.com/FactorioParanoidal/guide-to-the-paranoidal (GitHub Pages from `main`, root)
 - Local folder: `<workspace>/Guide to the Paranoidal/` (= this repository; workspace = the PARANOIDAL folder).
-  The modpack lives next to it in `..\ParanoidalModpack-master\` (its own Git repo and rules — `..\AGENTS.md`).
+  The modpack lives next to it in `..\ParanoidalModpack\` (branch `pre_release_2.1`, Factorio 2.1.24; its own Git repo
+  and rules — `..\AGENTS.md`). The 2.0 build is closed and has no local tree.
 
 ## 1. What the guide is and what “good” means
 
-One long page (`index.html`) that makes a player who only knows vanilla Factorio want to play the Paranoidal 2.0
-modpack (Quality + Elevated Rails, **no Space Age**). Priorities, in order:
+One long page (`index.html`) that makes a player who only knows vanilla Factorio want to play the Paranoidal 2.1
+modpack (Factorio 2.1.24 with Quality, Elevated Rails and Recycler, **no Space Age**). Priorities, in order:
 
 1. **True facts** from primary sources: the data dump, mod code/README/changelog/locale, in-game tips,
    `docs/FAQ.md`, `docs/Recommendations.md`, user decisions in `agent-context/playthrough/`. Never from memory.
@@ -25,6 +26,17 @@ modpack (Quality + Elevated Rails, **no Space Age**). Priorities, in order:
 5. **Wiki-like**: many internal links, glossary tooltips, search, random facts, reader achievements.
 6. **Secrets**: reveal mechanics that change how you play; hide wonders behind spoilers/teasers
    (finale, enemy humans, quality summits, refugium bugs, legendary ruins details), but say that they exist.
+
+User decisions of 2026-11-18 (rewrite for 2.1, guide 2.x):
+- The whole guide is rewritten for the current 2.1 build, chapter by chapter against the 2.1 dump and mod code; the page
+  engine (search, glossary, achievements, widgets) stays and is repaired, the approved Factorio look (§5) stays and is
+  polished. The 2.0 guide stays published until the 2.1 one is ready. EN stays a full translation.
+- **Space Age is never mentioned** (not even as "not included"): it gets a separate guide later.
+- Tone: mechanics first, plus a little humorous BnL/WALL-E lore; more irony and sarcasm than before, without overdoing
+  it. A joke never hides the exact rule (joke + exact mechanic, `../agent-context/lore/00-quick-reference.md`).
+  Protomolecule (`Paranoidal-Protomolecule-Beast`) is described by its mechanics only and never mixed with BnL lore.
+- Russian text: write it, then edit it with the humanizer-ru skill (scanner, hard bans: no em/en dashes as connectors);
+  English: the same rules by hand. Design changes follow the frontend-design skill within §5.
 
 ## 2. File map
 
@@ -45,7 +57,7 @@ src/js/core.js          runtime: language, TOC/scrollspy, tooltips, search, spoi
 src/js/widgets/NN-*.js  widgets of chapter NN: Guide.widget('name', fn)
 tools/extract_stats.py  dump -> data/stats.json, names.json, icon-requests.json
 tools/collect_assets.py dump + game/mod graphics -> assets/ (icons, sprites, static) + manifest
-tools/assets-config.json extra icons, technology icons, sprites, static files (crop / resize / keyout)
+tools/assets-config.json extra icons, technology icons, sprites, static files (crop / resize / keyout / anim)
 tools/build.py          src + data -> index.html (--check runs tools/check.py; --only ids -> _preview.html;
                         --single -> also dist/Guide_to_the_Paranoidal.html)
 tools/check.py          dead links, duplicate ids, RU/EN pairing, missing images, widgets, glossary use, spoiler/dossier EN labels,
@@ -59,8 +71,13 @@ tools/modsettings_diff.py read-only reader/diff of mod-settings.dat
 work/                   scratch, git-ignored, delete any time
 ```
 
-Paths that are machine-specific: game data `C:/Games/Factorio 2.077 - QUILITY/data` (`--game`), Chrome in
-`C:/Program Files/Google/Chrome/Application/chrome.exe`, mods in `../ParanoidalModpack-master/mods`, dumps in `../test-runs/`.
+Paths that are machine-specific: game data `C:/Games/Factorio 2.1.24/data` (`--game`), Chrome in
+`C:/Program Files/Google/Chrome/Application/chrome.exe`, mods in `../ParanoidalModpack/mods`, dumps in `../test-runs/`.
+
+Factorio 2.1 data format (handled by `extract_stats.py`, keep in mind in widgets): lab inputs are items (vanilla packs
+are plain `item`s, not `tool`s); recipes have `categories` (array) and items `fuel_categories` (array); quality
+`next_probability` is the chance at a 100 % quality effect (normal 2.04) and a quality module 1 has effect 0.01, so the
+chance of the next grade = effect × next_probability (2.04 %); `chain_probability` = one more grade in the same craft.
 
 ## 3. Section micro-syntax (expanded by tools/build.py)
 
@@ -72,6 +89,8 @@ Paths that are machine-specific: game data `C:/Games/Factorio 2.077 - QUILITY/da
 | `{{fmt:path\|pct}}` | `pct`, `int`, `mw`, `kj`, `raw` |
 | `{{icon:item/iron-plate}}`, `{{icon-lg:technology/x}}` | game icon with RU/EN tooltip (must exist in assets/icons) |
 | `{{sprite:key}}`, `{{sprite:key\|md}}` | entity picture from assets/sprites |
+| `{{name:item/iron-plate}}` | the exact in-game RU/EN name (names.json); use it for every in-game name in prose |
+| `{{chip:item/iron-plate}}` | chapter chip in `.ch-tags`: in-game icon + name (no bare words in capitals) |
 
 Game numbers must come through `{{n:}}`/`{{fmt:}}` or `G.data` so they update with the dump. Numbers that are not in the
 dump (mod settings, scripts) may be hard-coded — name the source in the chapter header comment.
@@ -98,20 +117,27 @@ folder and resolves the paths from its embedded table; check.py fails on a bare 
 
 Formulas and their sources (keep in sync when mods change):
 - `defect-sim` — `ic-more-qualities/scripts/defects/model.lua` `M.distribution`; chests sorted by grade, hidden on phones.
-- `quality-calc` — in-game tooltip value = module effect × 10 × `next_probability` of the ingredient quality
-  (module 1 on normal = +2.04%); modes 1/3/10 rolls (tip `zzz-quality-modes`); slots chosen by hover/tap, 1–8.
-- `workshop-sim` — tip `zzz-defects-workshop`. `qc-loop` — real belt tile + inserter icons, illustrative.
+- `quality-calc` — chance = module quality effect × `next_probability` of the ingredient quality (2.1 units: module 1
+  = 0.01, normal 2.04 → +2.04%); one more grade = `chain_probability` of the reached grade; modes 1/3/10 rolls (tip
+  `zzz-quality-modes`); slots chosen by hover/tap, 1–8.
+- `workshop-sim` — tip `zzz-defects-workshop`. (`qc-loop` removed in 2.0.0: the control post no longer loops defects.)
+- `district-calc` — `paranoidal-power-districts` `shared.lua` (nominal, bonus, LIMIT 1.25, IDLE 0.0025) and `engine.lua`
+  (main grid pays load / (1 + bonus) + idle in the green zone 90–110 %, no bonus outside).
 - `kpd-calc`, `boiler-ladder` — dump effectivity/power/pollution. `wind-sim` — Wind-Turbines-Reforged README formula.
 - `season-dial` — NightBrightness `season.lua` (`parameters`: cos phase, tilt ±0.15, solar, min brightness); season steps of wind
   (`Wind-Turbines-Reforged/control.lua` `SEASON_MULTIPLIERS`) and wire losses (`ElectricResistance2/seasons.lua`).
-- `memory-calc` — deep-storage-unit README. `evolution-calc` — `research_evolution_factor/parameters.lua`.
+- `memory-calc` — `paranoidal-deep-storage` README. `evolution-calc` — `research_evolution_factor/parameters.lua`
+  (0.12 % per technology, 0.15 % per 1000 packs; evolution = 1 − e^(−exponent)).
 - `threat-board` — Rampant nest types: `RampantFixed/libs/Constants.lua` `acceptRate[1]` → `libs/BaseUtils.lua`
   `evoToTierMapping`; bug levels: `prototypes/SwarmUtils.lua` `unitSetToProbabilityTable` (tierEnd 10);
   special attacks: Big Monsters with Paranoidal defaults (every 100 game days, soldiers 20%, giants 40%,
-  spidertrons/saucers 80%; volcano/invasion/worms have chance 0 and are NOT shown); flyers ≥10% (ПР-063).
-- `hero-ranks` — HeroTurretRedux PARANOIDAL-CHANGES.md. `rocket-launch` — RocketExplosions2. `xp-curve` — PMRPGsystem.
-- Enemy count = enemy **kinds**: tiers, sizes, numbered stages, champions, hour-bosses collapsed; Rampant scanners/dummies
-  and Bob's player drones excluded (`extract_stats.py`, `enemy_kind`). Never show the raw 1 649 unit prototypes.
+  spidertrons/saucers 80%; volcano/invasion/worms have chance 0 and are NOT shown); flyers ≥10% (ПР-063);
+  Replicator Citadel 50 % (`robotarmy-citadel`).
+- `hero-ranks` — HeroTurretRedux PARANOIDAL-CHANGES.md. `rocket-launch` — RocketExplosions2. `research-summit` —
+  `records.tech_most_expensive`. `xp-curve` — `paranoidal-CodexRPG` control.lua.
+- Enemy count = enemy **kinds**: tiers, sizes, numbered stages, replicator marks, champions, hour-bosses collapsed; only
+  hostile units count (flag `placeable-enemy`, no `player-creation`: Robot Army droids, Bob's drones and Д-ОК's markers
+  are not enemies; Rampant scanners/dummies excluded) (`extract_stats.py`, `enemy_kind`). Never show raw unit counts.
 - `lab-scale` — `records.labs[].tiles` from collision boxes.
 Illustrative widgets must say so on the page (season curve, smog damage threshold, ruins map, survey shapes, factory zoom).
 
@@ -132,13 +158,20 @@ Illustrative widgets must say so on the page (season curve, smog damage threshol
   explosion = `fx/big-explosion.webp` (47 frames); both are sprite sheets converted to strips by `assets-config.json`
   `strip: [w, h, cols, frames]` and animated with CSS `steps()`. Prefer such textures over drawn CSS effects.
 - **Hero**: transparent animated logo (`paranoidal-animated-alpha.webp`, `keyout` in assets-config), real belt tile moving left
-  in the same direction as the items; items ride exactly at the belt speed (duration computed in `hero-belt`). Capitalise the first letter of every label/option.
+  in the same direction as the items; items ride exactly at the belt speed (duration computed in `hero-belt`).
+- **PARANOIDAL plate** (top bar 23 px, footer 30 px): `logo/paranoidal-plate.webp` from the workspace `paranoidal.gif`
+  (user source 2026-11-18; animated, transparent; `anim` entry: cropped to the letters, every 2nd frame, 64 px high). Capitalise the first letter of every label/option.
 - **Dark mode**: `<meta name="color-scheme" content="dark">` + `<meta name="darkreader-lock">` so Dark Reader-like extensions
   leave the page alone. Keep both.
 - Hotkeys in text (`<kbd>`) link to the keyboard in “Quality of life” (`#qol-keys`) automatically (core.js).
 - **Same animations for everybody** (user, 2026-10-28): no `prefers-reduced-motion` overrides. A rule setting animations
   to 0.01 ms kept them `infinite` and made the cover spin ~100 000 times per second where Windows animations are off.
 - Mobile (≤640 px) overrides live at the end of 60-unified.css; check every new widget at 500 px width.
+- **2.1 polish (2026-11-18, frontend-design within these rules)**: labels in sentence case (no tracked ALL CAPS: TOC
+  title, chapter number «Глава N», hero kicker, table heads, toasts); chapter chips are `{{chip:type/name}}` (icon + game
+  name) or plain counters, never bare words in capitals; prose in the main column ≤ 75ch; `.card` = small inset panel with
+  a title; no emoji in buttons and labels (functional marks only: skull on the ruins map, rocket in the launch scene,
+  trophy in the achievements list); one BnL fine-print line on the cover (`.hero-fine`).
 
 ## 6. Content rules learned from the user's review
 
@@ -156,11 +189,13 @@ Illustrative widgets must say so on the page (season curve, smog damage threshol
 
 ## 7. Updating after a modpack change
 
-1. **Dump.** Reuse the newest dump of the shared 2.0 profile (`../test-runs/<RUN>/write-data/script-output/data-raw-dump.json`,
-   its `inputs.json`: profile `_profile-2.0`, no `--enable/--disable`, DLC quality + elevated-rails, `git.head` = current
-   `pre_release_2.0`). `yuoki-*` stands are not the modpack. A new dump **launches the game**: only with the user's
-   permission, via `python -I ../test-runs/_tools/factorio_check.py sync` then `… dump <RUN>` (limit 180 s, isolated profile,
-   working saves/settings untouched; see `../agent-context/procedures/TESTING.md`). Do not touch a running game of the user.
+1. **Dump.** Reuse the newest dump of the current 2.1 build (`../test-runs/<RUN>/write-data/script-output/data-raw-dump.json`,
+   its `inputs.json`: target 2.1, no `--enable/--disable`, DLC quality + elevated-rails + recycler, the mods equal to the
+   current `pre_release_2.1` commit; a dump of a profile copied from a commit has an empty `git` — check the mods against
+   the working tree and pass that commit to `extract_stats.py --commit`). `yuoki-*` stands are not the modpack. A new dump
+   **launches the game**: only with the user's permission, via `python -B ../test-runs/_tools/factorio_check.py sync` then
+   `… dump <RUN>` (limit 180 s, isolated profile, working saves/settings untouched; see
+   `../agent-context/procedures/TESTING.md`). Do not touch a running game of the user.
 2. Save the old numbers: `cp data/stats.json data/history/stats-<oldrun>.json`.
 3. `bash tools/update.sh ../test-runs/<RUN>` (≈10 min, mostly icons; extra arguments go to `collect_assets.py`, e.g.
    `--extra-mods work/dump-mods`, see «Image encoding» below). It ends with build --check and jscheck RU/EN.
@@ -185,7 +220,7 @@ lossy WebP/JPEG sources are not re-encoded. `manifest.json` records the encoding
 - pingo/beeim must never enter this repository or CI (licence: private use, only the images are published). A PC
   without them: `--no-optimize` (Pillow WebP q90, worse per byte) — do not publish such a build without saying so.
 - Mods that the dump used but the working build no longer has (2026-10-28: `zzzparanoidal-shipwreck`, removed for the
-  BnL start): `git -C ../ParanoidalModpack-master archive <dump git.head> mods/<mod> | tar -x -C work/dump-mods --strip-components=1`
+  BnL start): `git -C ../ParanoidalModpack archive <dump git.head> mods/<mod> | tar -x -C work/dump-mods --strip-components=1`
   and pass `--extra-mods work/dump-mods`. Without it such icons are reported missing and the old files stay
   (`collect_assets.py` never writes an icon none of whose layer files was found).
 - Any change of the images is a page change: new `guide_version` (§8).
