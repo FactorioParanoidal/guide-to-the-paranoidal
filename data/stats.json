@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-11-18 13:05",
+  "generated": "2026-11-18 15:42",
   "dump": "test-runs/sa-review-mainref-20261118/write-data/script-output/data-raw-dump.json",
   "dump_sha256": "10ddc90dcbdfc4ba70fa25fe0f68759f5f653f5a166a4e8d23c0b20471b4a0cf",
   "engine": "2.1.24",
@@ -13038,7 +13038,8 @@
     "ru": "Малый кусака",
     "en": "Small biter",
     "icon": "unit__small-biter",
-    "health": 15
+    "health": 15,
+    "vanilla_health": 15.0
    },
    {
     "id": "medium-biter",
@@ -13046,7 +13047,8 @@
     "ru": "Средний кусака",
     "en": "Medium biter",
     "icon": "unit__medium-biter",
-    "health": 75
+    "health": 75,
+    "vanilla_health": 75.0
    },
    {
     "id": "big-biter",
@@ -13054,7 +13056,8 @@
     "ru": "Большой кусака",
     "en": "Big biter",
     "icon": "unit__big-biter",
-    "health": 250
+    "health": 250,
+    "vanilla_health": 375.0
    },
    {
     "id": "behemoth-biter",
@@ -13062,7 +13065,8 @@
     "ru": "Чудовищный кусака",
     "en": "Behemoth biter",
     "icon": "unit__behemoth-biter",
-    "health": 25000
+    "health": 25000,
+    "vanilla_health": 3000.0
    }
   ],
   "turrets": [
@@ -15315,8 +15319,8 @@
   ]
  },
  "vanilla_reference": {
-  "note": "Vanilla Factorio base + quality + elevated-rails (values measured on 2.0, approximate for 2.1). recipes/technologies: count of type=\"recipe\"/\"technology\" in the game prototypes (approx.); the rest: well-known vanilla values. Update by hand only if the vanilla game changes.",
-  "recipes": 201,
+  "note": "Vanilla Factorio base + quality + elevated-rails + recycler of the --game data. recipes/technologies/achievements: definitions (type = \"...\") counted in the Lua prototypes of these folders (approx.: generated recipes such as barrels are not counted); the rest: well-known vanilla values, update by hand if the vanilla game changes.",
+  "recipes": 204,
   "technologies": 200,
   "qualities": 5,
   "science_packs": 7,

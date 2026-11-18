@@ -270,10 +270,18 @@ S['counts']['custom_inputs'] = len(D['custom-input'])
 
 # vanilla reference (counted in game prototypes, approximate, see AGENTS-GUIDE)
 S['vanilla_reference'] = {
-    'note': 'Vanilla Factorio base + quality + elevated-rails (values measured on 2.0, approximate for 2.1). recipes/technologies: count of type="recipe"/"technology" in the game prototypes (approx.); the rest: well-known vanilla values. Update by hand only if the vanilla game changes.',
-    'recipes': 201, 'technologies': 200, 'qualities': 5, 'science_packs': 7, 'enemy_units': 2, 'spawners': 2,
+    'note': 'Vanilla Factorio base + quality + elevated-rails + recycler of the --game data. recipes/technologies/achievements: '
+            'definitions (type = "...") counted in the Lua prototypes of these folders (approx.: generated recipes such as '
+            'barrels are not counted); the rest: well-known vanilla values, update by hand if the vanilla game changes.',
+    'recipes': 204, 'technologies': 200, 'qualities': 5, 'science_packs': 7, 'enemy_units': 2, 'spawners': 2,
     'belt_tiers': 3, 'modules': 12, 'ores': 5, 'fluids': 8, 'turrets': 4, 'boiler_efficiency': 1.0, 'labs': 1,
     'assemblers': 3, 'locomotives': 1, 'boilers': 1, 'drills': 2, 'inserters': 5, 'achievements': 59}
+_vc = {'recipes': r'type = "recipe"', 'technologies': r'type = "technology"', 'achievements': r'type = "[a-z-]*achievement"'}
+_vf = [f for d in ('base', 'quality', 'elevated-rails', 'recycler') for f in glob.glob(os.path.join(args.game, d, '**', '*.lua'), recursive=True)]
+if _vf:
+    _vt = ''.join(open(f, encoding='utf-8', errors='replace').read() for f in _vf)
+    for _k, _rx in _vc.items():
+        S['vanilla_reference'][_k] = len(re.findall(_rx, _vt))
 
 # ---------------------------------------------------------------- machines (visible, placeable)
 def placeable(typ):
@@ -694,7 +702,13 @@ for n in ['bm_fake_human_melee_1', 'bm_fake_human_sniper_5', 'bm_fake_human_nuke
 S['records']['big_monsters'] = bm
 S['records']['enemy_spiders'] = [ent('spider-vehicle', n, health=p.get('max_health')) for n, p in D['spider-vehicle'].items() if n.startswith(('maf_flying_saucer_10', 'bm-spidertron_5'))]
 vanilla_biters = ['small-biter', 'medium-biter', 'big-biter', 'behemoth-biter']
-S['records']['vanilla_biters'] = [ent('unit', n, health=U[n].get('max_health')) for n in vanilla_biters if n in U]
+# health in the modpack (Bob's Enemies rebalances the vanilla biters) and in the real vanilla game (engine data enemies.lua)
+VAN_HP = {}
+_en = os.path.join(args.game, 'base', 'prototypes', 'entity', 'enemies.lua')
+if os.path.exists(_en):
+    for _m in re.finditer(r'name = "([\w-]+)",(?:(?!\n\s*name = ").)*?max_health = ([\d.]+)', open(_en, encoding='utf-8').read(), re.S):
+        VAN_HP.setdefault(_m.group(1), float(_m.group(2)))
+S['records']['vanilla_biters'] = [ent('unit', n, health=U[n].get('max_health'), vanilla_health=VAN_HP.get(n)) for n in vanilla_biters if n in U]
 
 # turrets (base, not hero ranks)
 tur = []
