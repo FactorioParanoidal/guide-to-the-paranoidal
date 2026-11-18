@@ -1,199 +1,199 @@
 {
  "meta": {
-  "generated": "2026-10-25 02:14",
-  "dump": "test-runs/guide-dump-20261025/write-data/script-output/data-raw-dump.json",
-  "dump_sha256": "6e7624007a116eac9431809e033a6d2e06c68a2f250bb9ec23195fa8e60836d8",
-  "engine": "2.0.77",
+  "generated": "2026-11-18 13:05",
+  "dump": "test-runs/sa-review-mainref-20261118/write-data/script-output/data-raw-dump.json",
+  "dump_sha256": "10ddc90dcbdfc4ba70fa25fe0f68759f5f653f5a166a4e8d23c0b20471b4a0cf",
+  "engine": "2.1.24",
   "dlc": [
    "quality",
-   "elevated-rails"
+   "elevated-rails",
+   "recycler"
   ],
   "git": {
-   "branch": "pre_release_2.0",
-   "head": "b2e4443de7284de90d0d1d25ef82883a95767bb6",
-   "status_short": []
+   "branch": "pre_release_2.1",
+   "head": "8f08d8abba24832abf3c4f5494f169e362c1b0f1"
   },
-  "mods_enabled": 189
+  "mods_enabled": 172
  },
  "counts": {
-  "mods_enabled": 189,
-  "mods_libraries": 17,
+  "mods_enabled": 172,
+  "mods_libraries": 12,
   "mods_local_tweaks_excluded": [
    "local-speed-toggle"
   ],
-  "mods_gameplay": 171,
-  "prototypes_total": 29976,
-  "prototype_types": 232,
-  "items_total": 3008,
-  "items_visible": 2646,
-  "fluids_visible": 192,
-  "recipes_total_prototypes": 9322,
-  "recipes_reachable": 3260,
-  "recipes_main": 2865,
-  "recipes_recycling": 2613,
-  "recipes_barrel": 161,
+  "mods_gameplay": 159,
+  "prototypes_total": 36705,
+  "prototype_types": 234,
+  "items_total": 3497,
+  "items_visible": 3111,
+  "fluids_visible": 202,
+  "recipes_total_prototypes": 9608,
+  "recipes_reachable": 3782,
+  "recipes_main": 3377,
+  "recipes_recycling": 3057,
+  "recipes_barrel": 170,
   "recipes_void": 234,
-  "recipe_categories": 168,
-  "technologies_visible": 1342,
-  "technologies_infinite": 32,
-  "technologies_trigger": 0,
-  "achievements": 1043,
+  "recipe_categories": 230,
+  "technologies_visible": 1400,
+  "technologies_infinite": 20,
+  "technologies_trigger": 3,
+  "achievements": 1064,
   "achievement_kinds": 25,
-  "enemy_spawners": 605,
+  "enemy_spawners": 606,
   "worms": 230,
   "qualities": 46,
   "qualities_positive": 40,
   "qualities_defect": 5,
   "modules": 74,
-  "trees": 87,
-  "tiles": 79,
-  "decoratives": 41,
-  "locale_ru": 22255,
-  "locale_en": 22984,
-  "item_groups": 45,
-  "item_subgroups": 1220,
+  "trees": 422,
+  "tiles": 244,
+  "decoratives": 233,
+  "locale_ru": 30278,
+  "locale_en": 29606,
+  "item_groups": 44,
+  "item_subgroups": 1579,
   "sounds_ambient": 51,
-  "tips": 19,
-  "shortcuts": 67,
-  "custom_inputs": 175,
+  "tips": 104,
+  "shortcuts": 73,
+  "custom_inputs": 193,
   "placeable_by_type": {
-   "assembling-machine": 233,
+   "assembling-machine": 282,
    "furnace": 31,
-   "mining-drill": 18,
+   "mining-drill": 17,
    "lab": 11,
    "boiler": 16,
-   "generator": 9,
-   "burner-generator": 4,
+   "generator": 18,
+   "burner-generator": 5,
    "reactor": 4,
-   "solar-panel": 10,
-   "accumulator": 11,
-   "electric-pole": 39,
+   "solar-panel": 13,
+   "accumulator": 14,
+   "electric-pole": 40,
    "inserter": 21,
    "transport-belt": 6,
    "underground-belt": 9,
    "splitter": 6,
    "loader-1x1": 0,
    "loader": 0,
-   "container": 64,
-   "logistic-container": 34,
-   "storage-tank": 28,
-   "pipe": 11,
-   "pipe-to-ground": 12,
-   "pump": 4,
-   "offshore-pump": 9,
+   "container": 60,
+   "logistic-container": 38,
+   "storage-tank": 67,
+   "pipe": 13,
+   "pipe-to-ground": 14,
+   "pump": 5,
+   "offshore-pump": 8,
    "roboport": 23,
-   "locomotive": 8,
-   "cargo-wagon": 7,
-   "fluid-wagon": 6,
+   "locomotive": 9,
+   "cargo-wagon": 8,
+   "fluid-wagon": 9,
    "artillery-wagon": 3,
    "car": 24,
    "spider-vehicle": 10,
-   "ammo-turret": 23,
-   "electric-turret": 17,
+   "ammo-turret": 30,
+   "electric-turret": 19,
    "fluid-turret": 3,
    "artillery-turret": 5,
-   "radar": 23,
+   "radar": 25,
    "lamp": 8,
    "beacon": 3,
-   "wall": 6,
+   "wall": 7,
    "gate": 4,
    "valve": 6
   },
-  "buildings_placeable": 769,
-  "hero_turret_ranks": 473,
-  "science_packs": 19,
+  "buildings_placeable": 894,
+  "hero_turret_ranks": 572,
+  "science_packs": 20,
   "module_research_tokens": 8,
-  "science_packs_total_all_finite": 69192268,
-  "tech_max_depth": 72,
-  "fuels_solid": 61,
-  "fuels_fluid": 65,
-  "hotkeys_mod": 109,
-  "absorbers": 61,
+  "science_packs_total_all_finite": 5547996,
+  "tech_max_depth": 65,
+  "fuels_solid": 77,
+  "fuels_fluid": 67,
+  "hotkeys_mod": 114,
+  "absorbers": 62,
   "module_categories": 10,
-  "enemy_units": 84,
+  "enemy_units": 101,
   "enemy_champions": 432,
   "enemy_bosses": 573,
   "enemy_humans": 27,
   "enemy_flyers": 360,
   "rampant_factions": 17,
-  "turrets": 48,
+  "turrets": 57,
   "guns": 14,
-  "ammo": 98,
-  "ammo_categories": 26,
-  "armors": 12,
-  "equipment": 153,
-  "capsules": 18
+  "ammo": 145,
+  "ammo_categories": 40,
+  "armors": 18,
+  "equipment": 156,
+  "capsules": 19
  },
  "records": {
   "science_packs": [
    {
     "id": "automation-science-pack",
-    "type": "tool",
+    "type": "item",
     "ru": "Автоматизационный исследовательский пакет",
     "en": "Automation science pack",
-    "icon": "tool__automation-science-pack",
-    "techs": 1063,
-    "total_for_all_finite": 16295253,
+    "icon": "item__automation-science-pack",
+    "techs": 1159,
+    "total_for_all_finite": 961290,
     "module_token": false
    },
    {
     "id": "logistic-science-pack",
-    "type": "tool",
+    "type": "item",
     "ru": "Логистический исследовательский пакет",
     "en": "Logistic science pack",
-    "icon": "tool__logistic-science-pack",
-    "techs": 963,
-    "total_for_all_finite": 14304923,
+    "icon": "item__logistic-science-pack",
+    "techs": 1056,
+    "total_for_all_finite": 970698,
     "module_token": false
    },
    {
     "id": "chemical-science-pack",
-    "type": "tool",
+    "type": "item",
     "ru": "Химический исследовательский пакет",
     "en": "Chemical science pack",
-    "icon": "tool__chemical-science-pack",
-    "techs": 670,
-    "total_for_all_finite": 12245454,
+    "icon": "item__chemical-science-pack",
+    "techs": 762,
+    "total_for_all_finite": 911504,
     "module_token": false
    },
    {
     "id": "military-science-pack",
-    "type": "tool",
+    "type": "item",
     "ru": "Военный исследовательский пакет",
     "en": "Military science pack",
-    "icon": "tool__military-science-pack",
-    "techs": 197,
-    "total_for_all_finite": 4571340,
+    "icon": "item__military-science-pack",
+    "techs": 244,
+    "total_for_all_finite": 107040,
     "module_token": false
    },
    {
     "id": "production-science-pack",
-    "type": "tool",
+    "type": "item",
     "ru": "Производственный исследовательский пакет",
     "en": "Production science pack",
-    "icon": "tool__production-science-pack",
-    "techs": 286,
-    "total_for_all_finite": 5985071,
+    "icon": "item__production-science-pack",
+    "techs": 338,
+    "total_for_all_finite": 803561,
     "module_token": false
    },
    {
     "id": "utility-science-pack",
-    "type": "tool",
+    "type": "item",
     "ru": "Вспомогательный исследовательский пакет",
     "en": "Utility science pack",
-    "icon": "tool__utility-science-pack",
-    "techs": 204,
-    "total_for_all_finite": 6128450,
+    "icon": "item__utility-science-pack",
+    "techs": 238,
+    "total_for_all_finite": 767750,
     "module_token": false
    },
    {
     "id": "space-science-pack",
-    "type": "tool",
+    "type": "item",
     "ru": "Космический исследовательский пакет",
     "en": "Space science pack",
-    "icon": "tool__space-science-pack",
-    "techs": 40,
-    "total_for_all_finite": 4022400,
+    "icon": "item__space-science-pack",
+    "techs": 26,
+    "total_for_all_finite": 646050,
     "module_token": false
    },
    {
@@ -202,8 +202,8 @@
     "ru": "Данные с космической станции",
     "en": "Station Data",
     "icon": "tool__station-science",
-    "techs": 5,
-    "total_for_all_finite": 4010,
+    "techs": 3,
+    "total_for_all_finite": 1110,
     "module_token": false
    },
    {
@@ -222,8 +222,8 @@
     "ru": "Транспортный исследовательский пакет",
     "en": "Transport science pack",
     "icon": "tool__bob-advanced-logistic-science-pack",
-    "techs": 73,
-    "total_for_all_finite": 5315050,
+    "techs": 64,
+    "total_for_all_finite": 40950,
     "module_token": false
    },
    {
@@ -232,8 +232,8 @@
     "ru": "Золотой исследовательский пакет",
     "en": "Gold science pack",
     "icon": "tool__bob-science-pack-gold",
-    "techs": 53,
-    "total_for_all_finite": 10050,
+    "techs": 55,
+    "total_for_all_finite": 12350,
     "module_token": false
    },
    {
@@ -242,8 +242,8 @@
     "ru": "Инопланетный исследовательский пакет",
     "en": "Alien science pack",
     "icon": "tool__bob-alien-science-pack",
-    "techs": 26,
-    "total_for_all_finite": 7350,
+    "techs": 29,
+    "total_for_all_finite": 9750,
     "module_token": false
    },
    {
@@ -252,8 +252,8 @@
     "ru": "Голубой инопланетный научный пакет",
     "en": "Blue alien science pack",
     "icon": "tool__bob-alien-science-pack-blue",
-    "techs": 15,
-    "total_for_all_finite": 2750,
+    "techs": 18,
+    "total_for_all_finite": 5150,
     "module_token": false
    },
    {
@@ -262,8 +262,8 @@
     "ru": "Оранжевый инопланетный научный пакет",
     "en": "Orange alien science pack",
     "icon": "tool__bob-alien-science-pack-orange",
-    "techs": 15,
-    "total_for_all_finite": 2750,
+    "techs": 18,
+    "total_for_all_finite": 5150,
     "module_token": false
    },
    {
@@ -272,8 +272,8 @@
     "ru": "Розовый инопланетный научный пакет",
     "en": "Purple alien science pack",
     "icon": "tool__bob-alien-science-pack-purple",
-    "techs": 15,
-    "total_for_all_finite": 3150,
+    "techs": 17,
+    "total_for_all_finite": 4950,
     "module_token": false
    },
    {
@@ -282,8 +282,8 @@
     "ru": "Жёлтый инопланетный научный пакет",
     "en": "Yellow alien science pack",
     "icon": "tool__bob-alien-science-pack-yellow",
-    "techs": 16,
-    "total_for_all_finite": 3250,
+    "techs": 18,
+    "total_for_all_finite": 5050,
     "module_token": false
    },
    {
@@ -292,8 +292,8 @@
     "ru": "Зелёный инопланетный научный пакет",
     "en": "Green alien science pack",
     "icon": "tool__bob-alien-science-pack-green",
-    "techs": 15,
-    "total_for_all_finite": 3350,
+    "techs": 16,
+    "total_for_all_finite": 4350,
     "module_token": false
    },
    {
@@ -303,7 +303,7 @@
     "en": "Red alien science pack",
     "icon": "tool__bob-alien-science-pack-red",
     "techs": 15,
-    "total_for_all_finite": 3350,
+    "total_for_all_finite": 4250,
     "module_token": false
    },
    {
@@ -312,8 +312,18 @@
     "ru": "Образец чужеродного растения",
     "en": "Alien plant-life sample",
     "icon": "tool__angels-token-bio",
-    "techs": 54,
-    "total_for_all_finite": 4207,
+    "techs": 55,
+    "total_for_all_finite": 6932,
+    "module_token": false
+   },
+   {
+    "id": "bnl-flight-recorder",
+    "type": "tool",
+    "ru": "Бортовой самописец «Аксиомы-7»",
+    "en": "Axiom-7 flight recorder",
+    "icon": "tool__bnl-flight-recorder",
+    "techs": 1,
+    "total_for_all_finite": 1,
     "module_token": false
    },
    {
@@ -399,94 +409,6 @@
   ],
   "tech_most_expensive": [
    {
-    "id": "ftl-propulsion",
-    "type": "technology",
-    "ru": "Сверхсветовой двигатель",
-    "en": "Faster than light propulsion systems",
-    "icon": "technology__ftl-propulsion",
-    "packs_total": 16000000,
-    "packs_kinds": 8,
-    "count": 2000000,
-    "time": 60
-   },
-   {
-    "id": "ftl-theory-D",
-    "type": "technology",
-    "ru": "Сверхсветовая теория D",
-    "en": "Faster than light theory D",
-    "icon": "technology__ftl-theory-D",
-    "packs_total": 10000000,
-    "packs_kinds": 5,
-    "count": 2000000,
-    "time": 60
-   },
-   {
-    "id": "ftl-theory-D2",
-    "type": "technology",
-    "ru": "Сверхсветовая теория D2",
-    "en": "Faster than light theory D2",
-    "icon": "technology__ftl-theory-D2",
-    "packs_total": 8000000,
-    "packs_kinds": 4,
-    "count": 2000000,
-    "time": 60
-   },
-   {
-    "id": "ftl-theory-D1",
-    "type": "technology",
-    "ru": "Сверхсветовая теория D1",
-    "en": "Faster than light theory D1",
-    "icon": "technology__ftl-theory-D1",
-    "packs_total": 8000000,
-    "packs_kinds": 4,
-    "count": 2000000,
-    "time": 60
-   },
-   {
-    "id": "ftl-theory-C",
-    "type": "technology",
-    "ru": "Сверхсветовая теория C",
-    "en": "Faster than light theory C",
-    "icon": "technology__ftl-theory-C",
-    "packs_total": 6000000,
-    "packs_kinds": 3,
-    "count": 2000000,
-    "time": 60
-   },
-   {
-    "id": "ftl-theory-B",
-    "type": "technology",
-    "ru": "Сверхсветовая теория B",
-    "en": "Faster than light theory B",
-    "icon": "technology__ftl-theory-B",
-    "packs_total": 4000000,
-    "packs_kinds": 2,
-    "count": 2000000,
-    "time": 60
-   },
-   {
-    "id": "ftl-theory-A",
-    "type": "technology",
-    "ru": "Сверхсветовая теория A",
-    "en": "Faster than light theory A",
-    "icon": "technology__ftl-theory-A",
-    "packs_total": 2000000,
-    "packs_kinds": 1,
-    "count": 2000000,
-    "time": 60
-   },
-   {
-    "id": "spaceship-command",
-    "type": "technology",
-    "ru": "Командный центр космического корабля",
-    "en": "Spaceship Command",
-    "icon": "technology__spaceship-command",
-    "packs_total": 1920000,
-    "packs_kinds": 8,
-    "count": 240000,
-    "time": 60
-   },
-   {
     "id": "orbital-autonomous-fabricators",
     "type": "technology",
     "ru": "Автономный орбитальный фабрикатор",
@@ -498,113 +420,213 @@
     "time": 100
    },
    {
-    "id": "astrometrics",
+    "id": "space-shuttle",
     "type": "technology",
-    "ru": "Астрометрика",
-    "en": "Astrometrics",
-    "icon": "technology__astrometrics",
-    "packs_total": 980000,
-    "packs_kinds": 7,
-    "count": 140000,
-    "time": 60
+    "ru": "Космический челнок",
+    "en": "Space Shuttle",
+    "icon": "technology__space-shuttle",
+    "packs_total": 600000,
+    "packs_kinds": 6,
+    "count": 100000,
+    "time": 80
    },
    {
-    "id": "fusion-reactor",
+    "id": "asteroid-mining",
     "type": "technology",
-    "ru": "Термоядерный реактор",
-    "en": "Fusion Reactor",
-    "icon": "technology__fusion-reactor",
-    "packs_total": 960000,
-    "packs_kinds": 8,
-    "count": 120000,
-    "time": 60
+    "ru": "Добыча ресурсов на астероидах",
+    "en": "Asteroid Mining",
+    "icon": "technology__asteroid-mining",
+    "packs_total": 600000,
+    "packs_kinds": 6,
+    "count": 100000,
+    "time": 80
    },
    {
-    "id": "space-construction",
+    "id": "orbital-assembler-power-problem",
     "type": "technology",
-    "ru": "Строительство в космосе",
-    "en": "Space Construction",
-    "icon": "technology__space-construction",
-    "packs_total": 840000,
-    "packs_kinds": 7,
-    "count": 120000,
-    "time": 60
+    "ru": "Проблема потребляемой мощности орбитальных сборщиков",
+    "en": "Orbital Assembler Power Problem",
+    "icon": "technology__orbital-assembler-power-problem",
+    "packs_total": 450000,
+    "packs_kinds": 6,
+    "count": 75000,
+    "time": 100
+   },
+   {
+    "id": "space-assembler-theory",
+    "type": "technology",
+    "ru": "Теория создания космического сборщика",
+    "en": "Space Assembler Theory",
+    "icon": "technology__space-assembler-theory",
+    "packs_total": 300000,
+    "packs_kinds": 6,
+    "count": 50000,
+    "time": 120
+   },
+   {
+    "id": "shuttle-repurposing",
+    "type": "technology",
+    "ru": "Перепрофилирование шаттлов",
+    "en": "Shuttle Repurposing",
+    "icon": "technology__shuttle-repurposing",
+    "packs_total": 240000,
+    "packs_kinds": 6,
+    "count": 40000,
+    "time": 80
+   },
+   {
+    "id": "god-module-5",
+    "type": "technology",
+    "ru": "Квантовые модули V",
+    "en": "Quantum modules V",
+    "icon": "technology__god-module-5",
+    "packs_total": 95000,
+    "packs_kinds": 6,
+    "count": 5000,
+    "time": 120
+   },
+   {
+    "id": "autonomous-space-mining-drones",
+    "type": "technology",
+    "ru": "Автономные астероидные дроны-добытчики",
+    "en": "Autonomous Space Mining Drones",
+    "icon": "technology__autonomous-space-mining-drones",
+    "packs_total": 90000,
+    "packs_kinds": 6,
+    "count": 15000,
+    "time": 80
+   },
+   {
+    "id": "observation-satellite",
+    "type": "technology",
+    "ru": "Спутник наблюдения",
+    "en": "Observation Satellite",
+    "icon": "technology__observation-satellite",
+    "packs_total": 60000,
+    "packs_kinds": 6,
+    "count": 10000,
+    "time": 40
+   },
+   {
+    "id": "mirv-technology",
+    "type": "technology",
+    "ru": "РГЧ ИН",
+    "en": "M.I.R.V",
+    "icon": "technology__mirv-technology",
+    "packs_total": 60000,
+    "packs_kinds": 6,
+    "count": 10000,
+    "time": 45
+   },
+   {
+    "id": "CW-air-filtering-6",
+    "type": "technology",
+    "ru": "Очистители загрязнения воздуха 6",
+    "en": "Air filtering 6",
+    "icon": "technology__CW-air-filtering-6",
+    "packs_total": 52500,
+    "packs_kinds": 6,
+    "count": 2500,
+    "time": 180
+   },
+   {
+    "id": "god-module-4",
+    "type": "technology",
+    "ru": "Квантовые модули IV",
+    "en": "Quantum modules IV",
+    "icon": "technology__god-module-4",
+    "packs_total": 47500,
+    "packs_kinds": 6,
+    "count": 2500,
+    "time": 120
    }
   ],
   "tech_deepest": [
    {
-    "id": "orbital-ai-core",
+    "id": "orbital-autonomous-fabricators",
     "type": "technology",
-    "ru": "Орбитальное AI-ядро данных",
-    "en": "Orbital AI Data Core",
-    "icon": "technology__orbital-ai-core",
-    "depth": 72
+    "ru": "Автономный орбитальный фабрикатор",
+    "en": "Orbital Autonomous Fabricators",
+    "icon": "technology__orbital-autonomous-fabricators",
+    "depth": 65
    },
    {
-    "id": "ftl-propulsion",
+    "id": "vacuum-smelting",
     "type": "technology",
-    "ru": "Сверхсветовой двигатель",
-    "en": "Faster than light propulsion systems",
-    "icon": "technology__ftl-propulsion",
-    "depth": 71
+    "ru": "Вакуумная плавка",
+    "en": "Vacuum Smelting",
+    "icon": "technology__vacuum-smelting",
+    "depth": 64
    },
    {
-    "id": "ftl-theory-D2",
+    "id": "orbital-assembler-power-problem",
     "type": "technology",
-    "ru": "Сверхсветовая теория D2",
-    "en": "Faster than light theory D2",
-    "icon": "technology__ftl-theory-D2",
-    "depth": 70
+    "ru": "Проблема потребляемой мощности орбитальных сборщиков",
+    "en": "Orbital Assembler Power Problem",
+    "icon": "technology__orbital-assembler-power-problem",
+    "depth": 64
    },
    {
-    "id": "ftl-theory-D1",
+    "id": "space-assembler-theory",
     "type": "technology",
-    "ru": "Сверхсветовая теория D1",
-    "en": "Faster than light theory D1",
-    "icon": "technology__ftl-theory-D1",
-    "depth": 70
+    "ru": "Теория создания космического сборщика",
+    "en": "Space Assembler Theory",
+    "icon": "technology__space-assembler-theory",
+    "depth": 63
    },
    {
-    "id": "ftl-theory-D",
+    "id": "shuttle-repurposing",
     "type": "technology",
-    "ru": "Сверхсветовая теория D",
-    "en": "Faster than light theory D",
-    "icon": "technology__ftl-theory-D",
-    "depth": 69
+    "ru": "Перепрофилирование шаттлов",
+    "en": "Shuttle Repurposing",
+    "icon": "technology__shuttle-repurposing",
+    "depth": 63
    }
   ],
   "tech_by_pack_kinds": [
    [
     1,
-    157
+    134
    ],
    [
     2,
-    288
+    295
    ],
    [
     3,
-    334
+    336
    ],
    [
     4,
-    289
+    325
    ],
    [
     5,
-    175
+    208
    ],
    [
     6,
-    78
+    84
    ],
    [
     7,
-    13
+    7
    ],
    [
     8,
-    8
+    5
+   ],
+   [
+    10,
+    1
+   ],
+   [
+    12,
+    1
+   ],
+   [
+    15,
+    1
    ]
   ],
   "recipe_most_ingredients": [
@@ -631,6 +653,79 @@
      "predictive-io",
      "bob-gilded-copper-cable",
      "bob-solder"
+    ]
+   },
+   {
+    "id": "TN-warhead-big--2",
+    "type": "recipe",
+    "ru": "Трёхступенчатая термоядерная боеголовка (компактная)",
+    "en": "3-stage atomic warhead (compact)",
+    "icon": "recipe__TN-warhead-big--2",
+    "ingredients": 15,
+    "list": [
+     "steel-plate",
+     "copper-plate",
+     "low-density-structure",
+     "bob-superior-circuit-board",
+     "copper-cable",
+     "FOGBANK",
+     "heat-pipe",
+     "neutron-reflector",
+     "explosives",
+     "uranium-238",
+     "bob-plutonium-239",
+     "bob-fission-reactor-equipment-2",
+     "bob-speed-module-5",
+     "bob-productivity-module-5",
+     "bob-efficiency-module-5"
+    ]
+   },
+   {
+    "id": "TN-warhead-big--1",
+    "type": "recipe",
+    "ru": "Трёхступенчатая термоядерная боеголовка",
+    "en": "3-stage atomic warhead",
+    "icon": "recipe__TN-warhead-big--1",
+    "ingredients": 14,
+    "list": [
+     "steel-plate",
+     "copper-plate",
+     "bob-superior-circuit-board",
+     "copper-cable",
+     "FOGBANK",
+     "heat-pipe",
+     "neutron-reflector",
+     "explosives",
+     "uranium-238",
+     "bob-plutonium-239",
+     "bob-fission-reactor-equipment-2",
+     "bob-speed-module-5",
+     "bob-productivity-module-5",
+     "bob-efficiency-module-5"
+    ]
+   },
+   {
+    "id": "TN-warhead-big--3",
+    "type": "recipe",
+    "ru": "Трёхступенчатая термоядерная боеголовка (сверхкомпактная)",
+    "en": "3-stage atomic warhead (very compact)",
+    "icon": "recipe__TN-warhead-big--3",
+    "ingredients": 14,
+    "list": [
+     "copper-plate",
+     "low-density-structure",
+     "bob-superior-circuit-board",
+     "copper-cable",
+     "FOGBANK",
+     "heat-pipe",
+     "neutron-reflector",
+     "explosives",
+     "uranium-238",
+     "bob-plutonium-239",
+     "bob-fission-reactor-equipment-2",
+     "bob-speed-module-5",
+     "bob-productivity-module-5",
+     "bob-efficiency-module-5"
     ]
    },
    {
@@ -714,66 +809,6 @@
      "satellite-thruster",
      "bob-express-bulk-inserter"
     ]
-   },
-   {
-    "id": "bob-power-armor-mk4",
-    "type": "recipe",
-    "ru": "Силовая броня MK4",
-    "en": "Power armor MK4",
-    "icon": "recipe__bob-power-armor-mk4",
-    "ingredients": 10,
-    "list": [
-     "bob-power-armor-mk3",
-     "processing-unit",
-     "bob-advanced-processing-unit",
-     "bob-titanium-plate",
-     "bob-silicon-nitride",
-     "bob-alien-artifact-yellow",
-     "bob-alien-artifact-purple",
-     "planetary-data",
-     "bob-efficiency-module-6",
-     "bob-speed-module-6"
-    ]
-   },
-   {
-    "id": "bob-power-armor-mk5",
-    "type": "recipe",
-    "ru": "Силовая броня MK5",
-    "en": "Power armor MK5",
-    "icon": "recipe__bob-power-armor-mk5",
-    "ingredients": 10,
-    "list": [
-     "bob-power-armor-mk4",
-     "processing-unit",
-     "bob-advanced-processing-unit",
-     "bob-copper-tungsten-alloy",
-     "bob-nitinol-alloy",
-     "bob-alien-artifact-red",
-     "bob-alien-artifact-green",
-     "station-science",
-     "bob-efficiency-module-8",
-     "bob-speed-module-8"
-    ]
-   },
-   {
-    "id": "bob-fission-reactor-equipment-3",
-    "type": "recipe",
-    "ru": "Портативный термоядерный реактор MK3",
-    "en": "Portable fission reactor MK3",
-    "icon": "recipe__bob-fission-reactor-equipment-3",
-    "ingredients": 10,
-    "list": [
-     "bob-fission-reactor-equipment-2",
-     "bob-advanced-processing-unit",
-     "tungsten-carbide",
-     "lithium-plate",
-     "bob-alien-artifact-yellow",
-     "bob-alien-artifact-green",
-     "angels-thorium-fuel-cell",
-     "bob-efficiency-module-6",
-     "bob-speed-module-6",
-     "bob-productivity-module-6"
-    ]
    }
   ],
   "recipe_longest": [
@@ -794,19 +829,19 @@
     "seconds": 1911
    },
    {
+    "id": "y-fame",
+    "type": "recipe",
+    "ru": "Репутация",
+    "en": "Reputation",
+    "icon": "recipe__y-fame",
+    "seconds": 1800
+   },
+   {
     "id": "repurpose-space-shuttle",
     "type": "recipe",
     "ru": "Перепрофилировать космический шаттл",
     "en": "Repurpose Space Shuttle",
     "icon": "recipe__repurpose-space-shuttle",
-    "seconds": 1600
-   },
-   {
-    "id": "repurpose-spy-shuttle",
-    "type": "recipe",
-    "ru": "Перепрофилировать картографический шаттл",
-    "en": "Repurpose Telescope Shuttle",
-    "icon": "recipe__repurpose-spy-shuttle",
     "seconds": 1600
    },
    {
@@ -915,8 +950,8 @@
     "ru": "Железная плита",
     "en": "Iron plate",
     "icon": "item__iron-plate",
-    "produced_by": 5,
-    "used_in": 87
+    "produced_by": 7,
+    "used_in": 98
    },
    {
     "id": "copper-plate",
@@ -924,8 +959,8 @@
     "ru": "Медная плита",
     "en": "Copper plate",
     "icon": "item__copper-plate",
-    "produced_by": 5,
-    "used_in": 59
+    "produced_by": 7,
+    "used_in": 62
    },
    {
     "id": "steel-plate",
@@ -933,8 +968,8 @@
     "ru": "Стальная балка",
     "en": "Steel plate",
     "icon": "item__steel-plate",
-    "produced_by": 3,
-    "used_in": 252
+    "produced_by": 5,
+    "used_in": 285
    },
    {
     "id": "stone",
@@ -942,7 +977,7 @@
     "ru": "Камень",
     "en": "Stone",
     "icon": "item__stone",
-    "produced_by": 2,
+    "produced_by": 3,
     "used_in": 9
    },
    {
@@ -951,8 +986,8 @@
     "ru": "Вода",
     "en": "Water",
     "icon": "fluid__water",
-    "produced_by": 3,
-    "used_in": 120
+    "produced_by": 4,
+    "used_in": 157
    },
    {
     "id": "angels-gas-hydrogen",
@@ -970,7 +1005,7 @@
     "en": "Electronic circuit",
     "icon": "item__electronic-circuit",
     "produced_by": 1,
-    "used_in": 134
+    "used_in": 140
    },
    {
     "id": "sulfuric-acid",
@@ -978,8 +1013,8 @@
     "ru": "Серная кислота",
     "en": "Sulfuric acid",
     "icon": "fluid__sulfuric-acid",
-    "produced_by": 2,
-    "used_in": 47
+    "produced_by": 4,
+    "used_in": 49
    },
    {
     "id": "angels-slag",
@@ -987,8 +1022,8 @@
     "ru": "Шлак",
     "en": "Slag",
     "icon": "item__angels-slag",
-    "produced_by": 56,
-    "used_in": 3
+    "produced_by": 67,
+    "used_in": 6
    },
    {
     "id": "coal",
@@ -996,8 +1031,8 @@
     "ru": "Уголь",
     "en": "Coal",
     "icon": "item__coal",
-    "produced_by": 3,
-    "used_in": 23
+    "produced_by": 4,
+    "used_in": 28
    },
    {
     "id": "wood",
@@ -1005,8 +1040,8 @@
     "ru": "Древесина",
     "en": "Wood",
     "icon": "item__wood",
-    "produced_by": 9,
-    "used_in": 37
+    "produced_by": 12,
+    "used_in": 40
    }
   ],
   "top_ingredients": [
@@ -1016,7 +1051,7 @@
     "ru": "Стальная балка",
     "en": "Steel plate",
     "icon": "item__steel-plate",
-    "recipes": 252
+    "recipes": 285
    },
    {
     "id": "advanced-circuit",
@@ -1024,7 +1059,7 @@
     "ru": "Продвинутая схема",
     "en": "Advanced circuit",
     "icon": "item__advanced-circuit",
-    "recipes": 161
+    "recipes": 186
    },
    {
     "id": "processing-unit",
@@ -1032,23 +1067,7 @@
     "ru": "Процессор",
     "en": "Processing unit",
     "icon": "item__processing-unit",
-    "recipes": 149
-   },
-   {
-    "id": "electronic-circuit",
-    "type": "item",
-    "ru": "Электросхема",
-    "en": "Electronic circuit",
-    "icon": "item__electronic-circuit",
-    "recipes": 134
-   },
-   {
-    "id": "bob-titanium-plate",
-    "type": "item",
-    "ru": "Титановая балка",
-    "en": "Titanium plate",
-    "icon": "item__bob-titanium-plate",
-    "recipes": 130
+    "recipes": 165
    },
    {
     "id": "water",
@@ -1056,7 +1075,23 @@
     "ru": "Вода",
     "en": "Water",
     "icon": "fluid__water",
-    "recipes": 120
+    "recipes": 157
+   },
+   {
+    "id": "electronic-circuit",
+    "type": "item",
+    "ru": "Электросхема",
+    "en": "Electronic circuit",
+    "icon": "item__electronic-circuit",
+    "recipes": 140
+   },
+   {
+    "id": "bob-titanium-plate",
+    "type": "item",
+    "ru": "Титановая балка",
+    "en": "Titanium plate",
+    "icon": "item__bob-titanium-plate",
+    "recipes": 132
    },
    {
     "id": "bob-advanced-processing-unit",
@@ -1064,7 +1099,7 @@
     "ru": "Электронная вычислительная плата",
     "en": "Advanced processing unit",
     "icon": "item__bob-advanced-processing-unit",
-    "recipes": 119
+    "recipes": 118
    },
    {
     "id": "barrel",
@@ -1072,15 +1107,7 @@
     "ru": "Бочка",
     "en": "Barrel",
     "icon": "item__barrel",
-    "recipes": 94
-   },
-   {
-    "id": "bob-aluminium-plate",
-    "type": "item",
-    "ru": "Алюминиевый слиток",
-    "en": "Aluminium plate",
-    "icon": "item__bob-aluminium-plate",
-    "recipes": 93
+    "recipes": 106
    },
    {
     "id": "iron-plate",
@@ -1088,7 +1115,15 @@
     "ru": "Железная плита",
     "en": "Iron plate",
     "icon": "item__iron-plate",
-    "recipes": 87
+    "recipes": 98
+   },
+   {
+    "id": "bob-aluminium-plate",
+    "type": "item",
+    "ru": "Алюминиевый слиток",
+    "en": "Aluminium plate",
+    "icon": "item__bob-aluminium-plate",
+    "recipes": 95
    },
    {
     "id": "bob-solder",
@@ -1112,7 +1147,7 @@
     "ru": "Стальная шестерня",
     "en": "Steel gear wheel",
     "icon": "item__bob-steel-gear-wheel",
-    "recipes": 59
+    "recipes": 63
    },
    {
     "id": "copper-plate",
@@ -1120,7 +1155,7 @@
     "ru": "Медная плита",
     "en": "Copper plate",
     "icon": "item__copper-plate",
-    "recipes": 59
+    "recipes": 62
    },
    {
     "id": "bob-nitinol-alloy",
@@ -1128,7 +1163,7 @@
     "ru": "Нитиноловая пластина",
     "en": "Nitinol plate",
     "icon": "item__bob-nitinol-alloy",
-    "recipes": 57
+    "recipes": 62
    }
   ],
   "top_products": [
@@ -1138,7 +1173,15 @@
     "ru": "Шлак",
     "en": "Slag",
     "icon": "item__angels-slag",
-    "recipes": 56
+    "recipes": 67
+   },
+   {
+    "id": "y-unicomp-a2",
+    "type": "item",
+    "ru": "УниКомпозит A2",
+    "en": "UC-A2 (Unicomp)",
+    "icon": "item__y-unicomp-a2",
+    "recipes": 38
    },
    {
     "id": "angels-catalyst-metal-carrier",
@@ -1154,7 +1197,7 @@
     "ru": "Использованный охладитель",
     "en": "Used coolant",
     "icon": "fluid__angels-liquid-coolant-used",
-    "recipes": 33
+    "recipes": 34
    },
    {
     "id": "angels-water-yellow-waste",
@@ -1170,7 +1213,7 @@
     "ru": "Железная руда",
     "en": "Iron ore",
     "icon": "item__iron-ore",
-    "recipes": 23
+    "recipes": 24
    },
    {
     "id": "copper-ore",
@@ -1178,7 +1221,7 @@
     "ru": "Медная руда",
     "en": "Copper ore",
     "icon": "item__copper-ore",
-    "recipes": 23
+    "recipes": 24
    },
    {
     "id": "angels-water-purified",
@@ -1186,7 +1229,15 @@
     "ru": "Дистиллированная вода",
     "en": "Purified water",
     "icon": "fluid__angels-water-purified",
-    "recipes": 23
+    "recipes": 24
+   },
+   {
+    "id": "uranium-238",
+    "type": "item",
+    "ru": "Уран (0% U-235, обеднённый)",
+    "en": "Uranium (0% U-235, Depleted)",
+    "icon": "item__uranium-238",
+    "recipes": 22
    },
    {
     "id": "angels-gas-acid",
@@ -1205,11 +1256,11 @@
     "recipes": 20
    },
    {
-    "id": "uranium-238",
+    "id": "y_greensign",
     "type": "item",
-    "ru": "Уран (0% U-235, обеднённый)",
-    "en": "Uranium (0% U-235, Depleted)",
-    "icon": "item__uranium-238",
+    "ru": "Знак природы",
+    "en": "Nature Sign",
+    "icon": "item__y_greensign",
     "recipes": 19
    },
    {
@@ -1221,36 +1272,20 @@
     "recipes": 17
    },
    {
+    "id": "steam",
+    "type": "fluid",
+    "ru": "Пар",
+    "en": "Steam",
+    "icon": "fluid__steam",
+    "recipes": 16
+   },
+   {
     "id": "angels-stone-crushed",
     "type": "item",
     "ru": "Щебень",
     "en": "Crushed stone",
     "icon": "item__angels-stone-crushed",
-    "recipes": 16
-   },
-   {
-    "id": "angels-gas-hydrogen",
-    "type": "fluid",
-    "ru": "Водород",
-    "en": "Hydrogen gas",
-    "icon": "fluid__angels-gas-hydrogen",
     "recipes": 15
-   },
-   {
-    "id": "angels-gas-oxygen",
-    "type": "fluid",
-    "ru": "Кислород",
-    "en": "Oxygen gas",
-    "icon": "fluid__angels-gas-oxygen",
-    "recipes": 14
-   },
-   {
-    "id": "angels-milling-drum",
-    "type": "item",
-    "ru": "Дробильная насадка",
-    "en": "Milling drum",
-    "icon": "item__angels-milling-drum",
-    "recipes": 14
    }
   ],
   "boilers": [
@@ -1478,7 +1513,7 @@
     "ru": "Дизель-генератор",
     "en": "Diesel Generator",
     "icon": "generator__petroleum-generator",
-    "effectivity": 1,
+    "effectivity": 0.85,
     "power_w": 4000000.0000000196,
     "max_temperature": 1000,
     "burns_fluid": true,
@@ -1555,6 +1590,114 @@
     "max_temperature": 765,
     "burns_fluid": false,
     "pollution": null
+   },
+   {
+    "id": "y-obninsk-turbine",
+    "type": "generator",
+    "ru": "Турбина Ренсуира",
+    "en": "Rensuir Turbine",
+    "icon": "generator__y-obninsk-turbine",
+    "effectivity": 1,
+    "power_w": 11640000,
+    "max_temperature": 500,
+    "burns_fluid": null,
+    "pollution": null
+   },
+   {
+    "id": "y-notfall-generator-s2",
+    "type": "generator",
+    "ru": "Малый турбогенератор-S",
+    "en": "Small Turbine Generator-S",
+    "icon": "generator__y-notfall-generator-s2",
+    "effectivity": 1,
+    "power_w": 1350000.0,
+    "max_temperature": 165,
+    "burns_fluid": null,
+    "pollution": null
+   },
+   {
+    "id": "y-seg",
+    "type": "generator",
+    "ru": "Малый генератор-S",
+    "en": "Small Generator-S",
+    "icon": "generator__y-seg",
+    "effectivity": 0.95,
+    "power_w": 102805.20000000001,
+    "max_temperature": 150,
+    "burns_fluid": null,
+    "pollution": null
+   },
+   {
+    "id": "y-seg-p",
+    "type": "generator",
+    "ru": "Малый генератор-P",
+    "en": "Small Generator-P",
+    "icon": "generator__y-seg-p",
+    "effectivity": 0.95,
+    "power_w": 102805.20000000001,
+    "max_temperature": 150,
+    "burns_fluid": null,
+    "pollution": null
+   },
+   {
+    "id": "y-meg-s",
+    "type": "generator",
+    "ru": "Средний генератор-S",
+    "en": "Medium Generator-S",
+    "icon": "generator__y-meg-s",
+    "effectivity": 0.95,
+    "power_w": 205200.10259999995,
+    "max_temperature": 150,
+    "burns_fluid": null,
+    "pollution": null
+   },
+   {
+    "id": "y-beg",
+    "type": "generator",
+    "ru": "Большой генератор-S",
+    "en": "Big Generator-S",
+    "icon": "generator__y-beg",
+    "effectivity": 0.9200000000000002,
+    "power_w": 372600.00000000006,
+    "max_temperature": 150,
+    "burns_fluid": null,
+    "pollution": null
+   },
+   {
+    "id": "y-heg",
+    "type": "generator",
+    "ru": "Огромный генератор-S",
+    "en": "Huge Generator-S",
+    "icon": "generator__y-heg",
+    "effectivity": 0.8800000000000001,
+    "power_w": 534600.0000000001,
+    "max_temperature": 150,
+    "burns_fluid": null,
+    "pollution": null
+   },
+   {
+    "id": "ye_tfmw_generator-s",
+    "type": "generator",
+    "ru": "TMFW-Gen-50 - S",
+    "en": "TMFW-Gen-50 - S",
+    "icon": "generator__ye_tfmw_generator-s",
+    "effectivity": 0.89,
+    "power_w": 1644720.0,
+    "max_temperature": 400,
+    "burns_fluid": null,
+    "pollution": null
+   },
+   {
+    "id": "ye_tfmw_turbine-s",
+    "type": "generator",
+    "ru": "TMFW-TUR-72 - S",
+    "en": "TMFW-TUR-72 - S",
+    "icon": "generator__ye_tfmw_turbine-s",
+    "effectivity": 0.97,
+    "power_w": 72500310.36,
+    "max_temperature": 1000,
+    "burns_fluid": null,
+    "pollution": null
    }
   ],
   "burner_generators": [
@@ -1577,6 +1720,16 @@
     "effectivity": 0.5,
     "power_w": 50000000.0,
     "pollution": 1000
+   },
+   {
+    "id": "y_bg-1",
+    "type": "burner-generator",
+    "ru": "Твердотопливный генератор",
+    "en": "Burner Generator",
+    "icon": "burner-generator__y_bg-1",
+    "effectivity": 0.5,
+    "power_w": 1800000.0,
+    "pollution": 5
    },
    {
     "id": "burner-turbine",
@@ -1723,6 +1876,30 @@
     "power_w": 1706880.0
    },
    {
+    "id": "y-stirling-solar-dish",
+    "type": "solar-panel",
+    "ru": "Солнечный двигатель Стирлинга",
+    "en": "Sun-Powered Stirling Solar Engine",
+    "icon": "solar-panel__y-stirling-solar-dish",
+    "power_w": 30000.0
+   },
+   {
+    "id": "y_alien_solar",
+    "type": "solar-panel",
+    "ru": "Крошечный коллектор потока Sol-Ray",
+    "en": "Tiny Sol-Ray Stream Collector",
+    "icon": "solar-panel__y_alien_solar",
+    "power_w": 1500000.0
+   },
+   {
+    "id": "y_alien_solar2",
+    "type": "solar-panel",
+    "ru": "Малый коллектор потока Sol-Ray",
+    "en": "Small Sol-Ray Stream Collector",
+    "icon": "solar-panel__y_alien_solar2",
+    "power_w": 3000000.0
+   },
+   {
     "id": "bi-bio-solar-farm",
     "type": "solar-panel",
     "ru": "Био Солнечная ферма",
@@ -1813,6 +1990,30 @@
     "buffer_j": 64000000.0
    },
    {
+    "id": "y-accumulator-b-tx",
+    "type": "accumulator",
+    "ru": "Аккумулятор AQE",
+    "en": "AQE Accumulator",
+    "icon": "accumulator__y-accumulator-b-tx",
+    "buffer_j": 200000000.0
+   },
+   {
+    "id": "y-accumulator-crystal-m",
+    "type": "accumulator",
+    "ru": "Квантриновый аккумулятор",
+    "en": "Quantrinum Accumulator",
+    "icon": "accumulator__y-accumulator-crystal-m",
+    "buffer_j": 600000000.0
+   },
+   {
+    "id": "y_compensator_25",
+    "type": "accumulator",
+    "ru": "Компенсатор потока Mk4",
+    "en": "Flux Compensator Mk4",
+    "icon": "accumulator__y_compensator_25",
+    "buffer_j": 50000000.0
+   },
+   {
     "id": "bi-bio-accumulator",
     "type": "accumulator",
     "ru": "Аккумулятор огромной емкости",
@@ -1830,7 +2031,7 @@
     "icon": "locomotive__locomotive",
     "power_w": 800000.0,
     "max_speed_kmh": 259.2,
-    "effectivity": 0.8,
+    "effectivity": 0.25,
     "fuel": [
      "chemical",
      "processed-chemical"
@@ -1844,7 +2045,7 @@
     "icon": "locomotive__bet-locomotive",
     "power_w": 1000000.0,
     "max_speed_kmh": 432,
-    "effectivity": null,
+    "effectivity": 0.4,
     "fuel": [
      "bet-fuel-battery"
     ]
@@ -1855,9 +2056,9 @@
     "ru": "Локомотив MK2",
     "en": "Locomotive MK2",
     "icon": "locomotive__bob-locomotive-2",
-    "power_w": 900000.0,
+    "power_w": 1100000.0,
     "max_speed_kmh": 367.2,
-    "effectivity": 1.2,
+    "effectivity": 0.3,
     "fuel": [
      "chemical",
      "processed-chemical"
@@ -1869,9 +2070,9 @@
     "ru": "Локомотив MK3",
     "en": "Locomotive MK3",
     "icon": "locomotive__bob-locomotive-3",
-    "power_w": 1200000.0,
+    "power_w": 1350000.0,
     "max_speed_kmh": 432,
-    "effectivity": 1.4,
+    "effectivity": 0.35,
     "fuel": [
      "chemical",
      "processed-chemical"
@@ -1885,7 +2086,7 @@
     "icon": "locomotive__bob-armoured-locomotive",
     "power_w": 750000.0,
     "max_speed_kmh": 216,
-    "effectivity": 1,
+    "effectivity": 0.225,
     "fuel": [
      "chemical",
      "processed-chemical"
@@ -1899,7 +2100,7 @@
     "icon": "locomotive__bob-armoured-locomotive-2",
     "power_w": 1000000.0,
     "max_speed_kmh": 324.0,
-    "effectivity": 1.2,
+    "effectivity": 0.275,
     "fuel": [
      "chemical",
      "processed-chemical"
@@ -1913,9 +2114,23 @@
     "icon": "locomotive__hiend_loco",
     "power_w": 1800000.0,
     "max_speed_kmh": 432,
-    "effectivity": 2,
+    "effectivity": 0.45,
     "fuel": [
      "bet-fuel-battery"
+    ]
+   },
+   {
+    "id": "bob-armoured-locomotive-3",
+    "type": "locomotive",
+    "ru": "Бронированный локомотив MK3",
+    "en": "Armoured locomotive MK3",
+    "icon": "locomotive__bob-armoured-locomotive-3",
+    "power_w": 1600000.0,
+    "max_speed_kmh": 345.6,
+    "effectivity": 0.325,
+    "fuel": [
+     "chemical",
+     "processed-chemical"
     ]
    },
    {
@@ -1926,7 +2141,7 @@
     "icon": "locomotive__yir_usl",
     "power_w": 200000.0,
     "max_speed_kmh": 54.0,
-    "effectivity": 0.5,
+    "effectivity": 0.2,
     "fuel": [
      "chemical"
     ]
@@ -2258,12 +2473,32 @@
   ],
   "fuels_solid": [
    {
+    "id": "bnl-advertising-flyer",
+    "type": "item",
+    "ru": "Рекламная листовка BnL",
+    "en": "BnL advertising flyer",
+    "icon": "item__bnl-advertising-flyer",
+    "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
+    "mj": 0.3,
+    "emissions": 1,
+    "acceleration": 1,
+    "top_speed": 1,
+    "stack": 200,
+    "burnt": null
+   },
+   {
     "id": "bi-seed",
     "type": "item",
     "ru": "Семена",
     "en": "Tree seed",
     "icon": "item__bi-seed",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 0.5,
     "emissions": 1.3,
     "acceleration": 1,
@@ -2278,6 +2513,9 @@
     "en": "Sapling",
     "icon": "item__seedling",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 0.5,
     "emissions": 1.3,
     "acceleration": 1,
@@ -2292,8 +2530,11 @@
     "en": "Wood pulp",
     "icon": "item__bi-woodpulp",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 1.0,
-    "emissions": 1.4,
+    "emissions": 2,
     "acceleration": 1,
     "top_speed": 1,
     "stack": 800,
@@ -2306,8 +2547,11 @@
     "en": "Cellulose fiber",
     "icon": "item__angels-cellulose-fiber",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 1.0,
-    "emissions": 1.4,
+    "emissions": 1.85,
     "acceleration": 1,
     "top_speed": 1,
     "stack": 200,
@@ -2320,8 +2564,11 @@
     "en": "Wood",
     "icon": "item__wood",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 2.0,
-    "emissions": 1.75,
+    "emissions": 2.5,
     "acceleration": 1,
     "top_speed": 1,
     "stack": 200,
@@ -2334,11 +2581,31 @@
     "en": "Small wood electric pole",
     "icon": "item__small-electric-pole",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 2.0,
     "emissions": 1.25,
     "acceleration": 1,
     "top_speed": 1,
     "stack": 50,
+    "burnt": null
+   },
+   {
+    "id": "ye_corn_b",
+    "type": "item",
+    "ru": "Вугарный тростник",
+    "en": "Vuger Cane",
+    "icon": "item__ye_corn_b",
+    "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
+    "mj": 2.0,
+    "emissions": 1,
+    "acceleration": 1,
+    "top_speed": 1,
+    "stack": 800,
     "burnt": null
    },
    {
@@ -2348,6 +2615,9 @@
     "en": "Wood pipe",
     "icon": "item__bi-wood-pipe",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 2.0,
     "emissions": 1.3,
     "acceleration": 1,
@@ -2362,6 +2632,9 @@
     "en": "Small purple alien artifact",
     "icon": "item__bob-small-alien-artifact-purple",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 2.5,
     "emissions": -1.9,
     "acceleration": 1,
@@ -2376,6 +2649,9 @@
     "en": "Crushed coal",
     "icon": "item__angels-coal-crushed",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 2.5,
     "emissions": 2,
     "acceleration": 1,
@@ -2390,6 +2666,9 @@
     "en": "Wooden chest",
     "icon": "item__wooden-chest",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 3.0,
     "emissions": 1.25,
     "acceleration": 1,
@@ -2404,11 +2683,31 @@
     "en": "Small blue alien artifact",
     "icon": "item__bob-small-alien-artifact-blue",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 3.0,
     "emissions": -1.5,
     "acceleration": 1,
     "top_speed": 1,
     "stack": 500,
+    "burnt": null
+   },
+   {
+    "id": "y-coal-dust",
+    "type": "item",
+    "ru": "Угольная пыль",
+    "en": "Coal Dust",
+    "icon": "item__y-coal-dust",
+    "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
+    "mj": 3.0,
+    "emissions": 1,
+    "acceleration": 1,
+    "top_speed": 1,
+    "stack": 100,
     "burnt": null
    },
    {
@@ -2418,6 +2717,9 @@
     "en": "Coke",
     "icon": "item__angels-solid-coke",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 3.0,
     "emissions": 1.25,
     "acceleration": 1,
@@ -2432,6 +2734,9 @@
     "en": "Coal",
     "icon": "item__coal",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 4.0,
     "emissions": 3,
     "acceleration": 1,
@@ -2446,6 +2751,9 @@
     "en": "Small alien artifact",
     "icon": "item__bob-small-alien-artifact",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 4.0,
     "emissions": 0.8,
     "acceleration": 1,
@@ -2460,6 +2768,9 @@
     "en": "Small red alien artifact",
     "icon": "item__bob-small-alien-artifact-red",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 4.0,
     "emissions": 0.5,
     "acceleration": 1,
@@ -2474,6 +2785,9 @@
     "en": "Small orange alien artifact",
     "icon": "item__bob-small-alien-artifact-orange",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 4.0,
     "emissions": 0,
     "acceleration": 1,
@@ -2488,6 +2802,9 @@
     "en": "Small yellow alien artifact",
     "icon": "item__bob-small-alien-artifact-yellow",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 4.0,
     "emissions": -0.5,
     "acceleration": 1,
@@ -2502,11 +2819,31 @@
     "en": "Small green alien artifact",
     "icon": "item__bob-small-alien-artifact-green",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 4.0,
     "emissions": -1,
     "acceleration": 1,
     "top_speed": 1,
     "stack": 500,
+    "burnt": null
+   },
+   {
+    "id": "y-mixed-fuel",
+    "type": "item",
+    "ru": "Блок смешанного твёрдого топлива",
+    "en": "Mixed Solid Fuel Block",
+    "icon": "item__y-mixed-fuel",
+    "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
+    "mj": 4.0,
+    "emissions": 1,
+    "acceleration": 1,
+    "top_speed": 1,
+    "stack": 400,
     "burnt": null
    },
    {
@@ -2516,6 +2853,9 @@
     "en": "Carbon",
     "icon": "item__angels-solid-carbon",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 4.0,
     "emissions": 0.9,
     "acceleration": 1,
@@ -2530,6 +2870,9 @@
     "en": "Wooden fence",
     "icon": "item__bi-wooden-fence",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 4.0,
     "emissions": 1.3,
     "acceleration": 1,
@@ -2544,6 +2887,9 @@
     "en": "Charcoal",
     "icon": "item__angels-wood-charcoal",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 5.0,
     "emissions": 1.25,
     "acceleration": 1,
@@ -2558,6 +2904,9 @@
     "en": "Big wooden pole",
     "icon": "item__bi-wooden-pole-big",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 7.0,
     "emissions": 1,
     "acceleration": 1,
@@ -2572,6 +2921,9 @@
     "en": "Oil residuals",
     "icon": "item__angels-solid-oil-residual",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 8.0,
     "emissions": 9,
     "acceleration": 1,
@@ -2586,6 +2938,9 @@
     "en": "Wood pipe to ground",
     "icon": "item__bi-wood-pipe-to-ground",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 8.0,
     "emissions": 1.3,
     "acceleration": 1,
@@ -2600,8 +2955,11 @@
     "en": "Wood pellets",
     "icon": "item__angels-wood-pellets",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 8.0,
-    "emissions": 1,
+    "emissions": 1.5,
     "acceleration": 1,
     "top_speed": 1,
     "stack": 200,
@@ -2614,6 +2972,9 @@
     "en": "Rocket booster",
     "icon": "item__angels-rocket-booster",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 10.0,
     "emissions": 1,
     "acceleration": 1.8,
@@ -2628,6 +2989,9 @@
     "en": "Huge wooden pole",
     "icon": "item__bi-wooden-pole-huge",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 10.0,
     "emissions": 1,
     "acceleration": 1,
@@ -2642,10 +3006,13 @@
     "en": "Solid fuel",
     "icon": "item__solid-fuel",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 12.0,
     "emissions": 1.2,
-    "acceleration": 1.05,
-    "top_speed": 1,
+    "acceleration": 1.1,
+    "top_speed": 1.05,
     "stack": 100,
     "burnt": null
    },
@@ -2656,6 +3023,9 @@
     "en": "Coke pellet",
     "icon": "item__angels-pellet-coke",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 15.0,
     "emissions": 1.05,
     "acceleration": 1.1,
@@ -2670,11 +3040,31 @@
     "en": "Dart rifle",
     "icon": "gun__bi-dart-rifle",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 15.0,
     "emissions": 1.5,
     "acceleration": 1,
     "top_speed": 1,
     "stack": 5,
+    "burnt": null
+   },
+   {
+    "id": "y-battery-single-use2",
+    "type": "item",
+    "ru": "Заряженный элемент батареи",
+    "en": "Full Battery Cell",
+    "icon": "item__y-battery-single-use2",
+    "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
+    "mj": 18.0,
+    "emissions": 1,
+    "acceleration": 1,
+    "top_speed": 1,
+    "stack": 250,
     "burnt": null
    },
    {
@@ -2684,6 +3074,9 @@
     "en": "Dart turret",
     "icon": "item__bi-dart-turret",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 20.0,
     "emissions": 1.5,
     "acceleration": 1,
@@ -2698,6 +3091,9 @@
     "en": "Wood bricks",
     "icon": "item__angels-wood-bricks",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 20.0,
     "emissions": 1.05,
     "acceleration": 1,
@@ -2712,6 +3108,9 @@
     "en": "Purple alien artifact",
     "icon": "item__bob-alien-artifact-purple",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 30.0,
     "emissions": -1.9,
     "acceleration": 1,
@@ -2726,11 +3125,31 @@
     "en": "Medium wooden chest",
     "icon": "item__bi-wooden-chest-large",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 32.0,
     "emissions": 1.3,
     "acceleration": 1,
     "top_speed": 1,
-    "stack": 48,
+    "stack": 50,
+    "burnt": null
+   },
+   {
+    "id": "y-battery-single-use3",
+    "type": "item",
+    "ru": "Блок элементов батареи",
+    "en": "Blocked Battery Cells",
+    "icon": "item__y-battery-single-use3",
+    "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
+    "mj": 38.0,
+    "emissions": 1,
+    "acceleration": 1,
+    "top_speed": 1,
+    "stack": 250,
     "burnt": null
    },
    {
@@ -2740,11 +3159,31 @@
     "en": "Blue alien artifact",
     "icon": "item__bob-alien-artifact-blue",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 40.0,
     "emissions": -1.5,
     "acceleration": 1,
     "top_speed": 1,
     "stack": 500,
+    "burnt": null
+   },
+   {
+    "id": "y-mixed-fuel-loaded",
+    "type": "item",
+    "ru": "Обогащённый топливный блок",
+    "en": "Enriched Fuel Block",
+    "icon": "item__y-mixed-fuel-loaded",
+    "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
+    "mj": 40.0,
+    "emissions": 1,
+    "acceleration": 1,
+    "top_speed": 1,
+    "stack": 250,
     "burnt": null
    },
    {
@@ -2754,6 +3193,9 @@
     "en": "High Octane Enriched Fuel",
     "icon": "item__high-octane-enriched-fuel",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 40.0,
     "emissions": 1.8,
     "acceleration": 1.9,
@@ -2768,6 +3210,9 @@
     "en": "Green alien artifact",
     "icon": "item__bob-alien-artifact-green",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 50.0,
     "emissions": -1,
     "acceleration": 1,
@@ -2782,6 +3227,9 @@
     "en": "Enriched fuel block",
     "icon": "item__bob-enriched-fuel",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 50.0,
     "emissions": 0.7,
     "acceleration": 1.5,
@@ -2796,6 +3244,9 @@
     "en": "Yellow alien artifact",
     "icon": "item__bob-alien-artifact-yellow",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 60.0,
     "emissions": -0.5,
     "acceleration": 1,
@@ -2810,6 +3261,9 @@
     "en": "Orange alien artifact",
     "icon": "item__bob-alien-artifact-orange",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 70.0,
     "emissions": 0,
     "acceleration": 1,
@@ -2824,11 +3278,48 @@
     "en": "Red alien artifact",
     "icon": "item__bob-alien-artifact-red",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 80.0,
     "emissions": 0.5,
     "acceleration": 1,
     "top_speed": 1,
     "stack": 500,
+    "burnt": null
+   },
+   {
+    "id": "y-infused-mud",
+    "type": "item",
+    "ru": "Насыщенная грязь",
+    "en": "Infused Mud",
+    "icon": "item__y-infused-mud",
+    "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
+    "mj": 80.0,
+    "emissions": 1,
+    "acceleration": 1,
+    "top_speed": 1,
+    "stack": 600,
+    "burnt": null
+   },
+   {
+    "id": "ye_biomixed",
+    "type": "item",
+    "ru": "Рабио",
+    "en": "Rabio",
+    "icon": "item__ye_biomixed",
+    "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
+    "mj": 80.0,
+    "emissions": 1,
+    "acceleration": 1,
+    "top_speed": 1,
+    "stack": 150,
     "burnt": null
    },
    {
@@ -2838,6 +3329,9 @@
     "en": "Alien artifact",
     "icon": "item__bob-alien-artifact",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 90.0,
     "emissions": 0.8,
     "acceleration": 1,
@@ -2852,6 +3346,9 @@
     "en": "Rocket fuel",
     "icon": "item__rocket-fuel",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 100.0,
     "emissions": 2,
     "acceleration": 1.2,
@@ -2866,11 +3363,31 @@
     "en": "Large wooden chest",
     "icon": "item__bi-wooden-chest-huge",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 200.0,
     "emissions": 1.3,
     "acceleration": 1,
     "top_speed": 1,
-    "stack": 32,
+    "stack": 25,
+    "burnt": null
+   },
+   {
+    "id": "y-fuel-reactor",
+    "type": "item",
+    "ru": "Топливная ячейка Обнинска",
+    "en": "Obninsk Reactor Cell",
+    "icon": "item__y-fuel-reactor",
+    "category": "yfusion",
+    "categories": [
+     "yfusion"
+    ],
+    "mj": 300.0,
+    "emissions": 1,
+    "acceleration": 1,
+    "top_speed": 1,
+    "stack": 300,
     "burnt": null
    },
    {
@@ -2880,11 +3397,14 @@
     "en": "Huge wooden chest",
     "icon": "item__bi-wooden-chest-giga",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 400.0,
     "emissions": 1.3,
     "acceleration": 1,
     "top_speed": 1,
-    "stack": 16,
+    "stack": 10,
     "burnt": null
    },
    {
@@ -2894,6 +3414,9 @@
     "en": "Charged train battery pack 1",
     "icon": "item__bet-fuel-1-full",
     "category": "bet-fuel-battery",
+    "categories": [
+     "bet-fuel-battery"
+    ],
     "mj": 600.0,
     "emissions": 1,
     "acceleration": 1.5,
@@ -2902,12 +3425,49 @@
     "burnt": "bet-fuel-1-empty"
    },
    {
+    "id": "y_mox2fuelsplited",
+    "type": "item",
+    "ru": "Ослабленное топливо MX-C",
+    "en": "MX-C Fusion Reduced",
+    "icon": "item__y_mox2fuelsplited",
+    "category": "yfusion",
+    "categories": [
+     "yfusion"
+    ],
+    "mj": 600.0,
+    "emissions": 1,
+    "acceleration": 1,
+    "top_speed": 1,
+    "stack": 200,
+    "burnt": null
+   },
+   {
+    "id": "y_mox1fuel",
+    "type": "item",
+    "ru": "Термоядерное топливо MX-A",
+    "en": "MX-A Fusion Fuel",
+    "icon": "item__y_mox1fuel",
+    "category": "yfusion",
+    "categories": [
+     "yfusion"
+    ],
+    "mj": 1000.0,
+    "emissions": 1,
+    "acceleration": 1,
+    "top_speed": 1,
+    "stack": 400,
+    "burnt": null
+   },
+   {
     "id": "nuclear-fuel",
     "type": "item",
     "ru": "Ядерное топливо",
     "en": "Nuclear fuel",
     "icon": "item__nuclear-fuel",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 1210.0,
     "emissions": 5,
     "acceleration": 2,
@@ -2922,6 +3482,9 @@
     "en": "Hypernuclear Fuel",
     "icon": "item__clowns-hypernuclear-fuel",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 1210.0,
     "emissions": 1,
     "acceleration": 2.25,
@@ -2936,6 +3499,9 @@
     "en": "Turbonuclear Fuel",
     "icon": "item__clowns-turbonuclear-fuel",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 1210.0,
     "emissions": 1,
     "acceleration": 2.5,
@@ -2950,6 +3516,9 @@
     "en": "Plutonium nuclear fuel",
     "icon": "item__angels-nuclear-fuel",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 1464.1,
     "emissions": 1,
     "acceleration": 2.5,
@@ -2964,6 +3533,9 @@
     "en": "Charged train battery pack 2",
     "icon": "item__bet-fuel-2-full",
     "category": "bet-fuel-battery",
+    "categories": [
+     "bet-fuel-battery"
+    ],
     "mj": 1800.0,
     "emissions": 1,
     "acceleration": 2,
@@ -2972,12 +3544,32 @@
     "burnt": "bet-fuel-2-empty"
    },
    {
+    "id": "advanced-tritium-breeder-fuel-cell",
+    "type": "item",
+    "ru": "Улучшенный топливный элемент для наработки трития",
+    "en": "Advanced tritium breeder fuel cell",
+    "icon": "item__advanced-tritium-breeder-fuel-cell",
+    "category": "nuclear",
+    "categories": [
+     "nuclear"
+    ],
+    "mj": 2000.0,
+    "emissions": 1,
+    "acceleration": 1,
+    "top_speed": 1,
+    "stack": 5,
+    "burnt": "used-up-advanced-tritium-breeder-fuel-cell"
+   },
+   {
     "id": "angels-nuclear-fuel-2",
     "type": "item",
     "ru": "Термоядерное топливо",
     "en": "Fusion nuclear fuel",
     "icon": "item__angels-nuclear-fuel-2",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 2196.2,
     "emissions": 1,
     "acceleration": 2.5,
@@ -2992,6 +3584,9 @@
     "en": "Radiothermal Fuel",
     "icon": "item__clowns-radiothermal-fuel",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 2500.0,
     "emissions": 1,
     "acceleration": 1,
@@ -3006,6 +3601,9 @@
     "en": "Charged train battery pack 3",
     "icon": "item__bet-fuel-3-full",
     "category": "bet-fuel-battery",
+    "categories": [
+     "bet-fuel-battery"
+    ],
     "mj": 3000.0,
     "emissions": 1,
     "acceleration": 2.5,
@@ -3020,6 +3618,9 @@
     "en": "Superradiothermal Fuel",
     "icon": "item__clowns-superradiothermal-fuel",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 3250.0,
     "emissions": 1,
     "acceleration": 1,
@@ -3034,6 +3635,9 @@
     "en": "Charged train battery pack 4",
     "icon": "item__bet-fuel-4-full",
     "category": "bet-fuel-battery",
+    "categories": [
+     "bet-fuel-battery"
+    ],
     "mj": 3630.0,
     "emissions": 1,
     "acceleration": 3.5,
@@ -3042,17 +3646,54 @@
     "burnt": "bet-fuel-4-empty"
    },
    {
+    "id": "tritium-breeder-fuel-cell",
+    "type": "item",
+    "ru": "Топливный элемент для наработки трития",
+    "en": "Tritium breeder fuel cell",
+    "icon": "item__tritium-breeder-fuel-cell",
+    "category": "nuclear",
+    "categories": [
+     "nuclear"
+    ],
+    "mj": 4000.0,
+    "emissions": 1,
+    "acceleration": 1,
+    "top_speed": 1,
+    "stack": 5,
+    "burnt": "used-up-tritium-breeder-fuel-cell"
+   },
+   {
     "id": "clowns-ultraradiothermal-fuel",
     "type": "item",
     "ru": "Ультрарадиотермическое топливо",
     "en": "Ultraradiothermal Fuel",
     "icon": "item__clowns-ultraradiothermal-fuel",
     "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
     "mj": 4000.0,
     "emissions": 1,
     "acceleration": 1,
     "top_speed": 1,
     "stack": 1,
+    "burnt": null
+   },
+   {
+    "id": "y_mox2fuel",
+    "type": "item",
+    "ru": "Термоядерное топливо MX-C",
+    "en": "MX-C Fusion Fuel",
+    "icon": "item__y_mox2fuel",
+    "category": "yfusion",
+    "categories": [
+     "yfusion"
+    ],
+    "mj": 7000.0,
+    "emissions": 1,
+    "acceleration": 1,
+    "top_speed": 1,
+    "stack": 200,
     "burnt": null
    },
    {
@@ -3062,6 +3703,9 @@
     "en": "Uranium-235 fuel cell",
     "icon": "item__uranium-fuel-cell",
     "category": "nuclear",
+    "categories": [
+     "nuclear"
+    ],
     "mj": 8000.0,
     "emissions": 1,
     "acceleration": 1,
@@ -3070,12 +3714,32 @@
     "burnt": "depleted-uranium-fuel-cell"
    },
    {
+    "id": "y-fuel-cell-c",
+    "type": "item",
+    "ru": "Топливная ячейка C",
+    "en": "Fuel Cell C",
+    "icon": "item__y-fuel-cell-c",
+    "category": "chemical",
+    "categories": [
+     "chemical"
+    ],
+    "mj": 10000.0,
+    "emissions": 1,
+    "acceleration": 1,
+    "top_speed": 1,
+    "stack": 500,
+    "burnt": null
+   },
+   {
     "id": "angels-thorium-fuel-cell",
     "type": "item",
     "ru": "Ториевый топливный элемент",
     "en": "Thorium fuel cell",
     "icon": "item__angels-thorium-fuel-cell",
     "category": "bob-thorium",
+    "categories": [
+     "bob-thorium"
+    ],
     "mj": 12000.0,
     "emissions": 1,
     "acceleration": 1,
@@ -3090,6 +3754,9 @@
     "en": "Mixed-oxide (MOX) fuel cell",
     "icon": "item__angels-mixed-oxide-cell",
     "category": "nuclear",
+    "categories": [
+     "nuclear"
+    ],
     "mj": 40000.0,
     "emissions": 1,
     "acceleration": 1,
@@ -3104,6 +3771,9 @@
     "en": "Deuterium fuel cell",
     "icon": "item__angels-deuterium-fuel-cell",
     "category": "bob-deuterium",
+    "categories": [
+     "bob-deuterium"
+    ],
     "mj": 80000.0,
     "emissions": 1,
     "acceleration": 1,
@@ -3120,7 +3790,7 @@
     "en": "Alien flame fluid",
     "icon": "fluid__bob-alien-fire",
     "kj": 2600.0,
-    "emissions": 1,
+    "emissions": 1.05,
     "gas": false,
     "base_color": {
      "r": 0.8,
@@ -3134,7 +3804,7 @@
     "ru": "Жидкая резина",
     "en": "Liquid rubber",
     "icon": "fluid__angels-liquid-rubber",
-    "kj": 1225.0,
+    "kj": 2450.0,
     "emissions": 15,
     "gas": false,
     "base_color": {
@@ -3144,13 +3814,28 @@
     }
    },
    {
+    "id": "diesel-fuel",
+    "type": "fluid",
+    "ru": "Дизельное топливо",
+    "en": "Diesel Fuel",
+    "icon": "fluid__diesel-fuel",
+    "kj": 2250.0,
+    "emissions": 0.9,
+    "gas": false,
+    "base_color": {
+     "r": 0.8,
+     "g": 0.7,
+     "b": 0
+    }
+   },
+   {
     "id": "liquid-rubber-pre",
     "type": "fluid",
     "ru": "Резиновая смесь",
     "en": "Pre-Rubber Mixture",
     "icon": "fluid__liquid-rubber-pre",
-    "kj": 1075.0,
-    "emissions": 10,
+    "kj": 2150.0,
+    "emissions": 9,
     "gas": false,
     "base_color": {
      "r": 1,
@@ -3164,8 +3849,8 @@
     "ru": "Растительное масло",
     "en": "Vegetable oil",
     "icon": "fluid__angels-liquid-vegetable-oil",
-    "kj": 1050.0,
-    "emissions": 10,
+    "kj": 2100.0,
+    "emissions": 0.95,
     "gas": false,
     "base_color": {
      "r": 1,
@@ -3174,18 +3859,18 @@
     }
    },
    {
-    "id": "angels-liquid-plastic",
+    "id": "angels-gas-butane",
     "type": "fluid",
-    "ru": "Жидкий пластик",
-    "en": "Liquid plastic",
-    "icon": "fluid__angels-liquid-plastic",
-    "kj": 960.0,
-    "emissions": 10,
-    "gas": false,
+    "ru": "Бутан",
+    "en": "Butane gas",
+    "icon": "fluid__angels-gas-butane",
+    "kj": 1900.0,
+    "emissions": 1.8,
+    "gas": true,
     "base_color": {
-     "r": 0.8,
-     "g": 0.8,
-     "b": 1
+     "r": 0.8117680781523893,
+     "g": 0.8117680781523893,
+     "b": 0.8117680781523893
     }
    },
    {
@@ -3194,8 +3879,8 @@
     "ru": "Рыбий жир",
     "en": "Fish oil",
     "icon": "fluid__angels-liquid-fish-oil",
-    "kj": 950.0,
-    "emissions": 10,
+    "kj": 1900.0,
+    "emissions": 0.95,
     "gas": false,
     "base_color": {
      "r": 0.7607843137254902,
@@ -3209,8 +3894,8 @@
     "ru": "Жидкая смола",
     "en": "Liquid resin",
     "icon": "fluid__angels-liquid-resin",
-    "kj": 948.0,
-    "emissions": 10,
+    "kj": 1896.0,
+    "emissions": 6.5,
     "gas": false,
     "base_color": {
      "r": 1,
@@ -3224,8 +3909,8 @@
     "ru": "Суперконцентрат резины",
     "en": "Rubber Masterbatch",
     "icon": "fluid__liquid-rubber-masterbatch",
-    "kj": 925.0,
-    "emissions": 10,
+    "kj": 1850.0,
+    "emissions": 7,
     "gas": false,
     "base_color": {
      "r": 1,
@@ -3239,118 +3924,13 @@
     "ru": "Полиэтилен",
     "en": "Polyethylene liquid",
     "icon": "fluid__angels-liquid-polyethylene",
-    "kj": 898.0,
-    "emissions": 10,
+    "kj": 1796.0,
+    "emissions": 6.5,
     "gas": false,
     "base_color": {
      "r": 0.3893798077944375,
      "g": 0.3893798077944375,
      "b": 0.3893798077944375
-    }
-   },
-   {
-    "id": "angels-liquid-raw-vegetable-oil",
-    "type": "fluid",
-    "ru": "Сырое растительное масло",
-    "en": "Raw vegetable oil",
-    "icon": "fluid__angels-liquid-raw-vegetable-oil",
-    "kj": 800.0,
-    "emissions": 10,
-    "gas": false,
-    "base_color": {
-     "r": 0.7607843137254902,
-     "g": 0.4784313725490196,
-     "b": 0.11372549019607843
-    }
-   },
-   {
-    "id": "angels-liquid-toluene",
-    "type": "fluid",
-    "ru": "Толуол",
-    "en": "Toluene liquid",
-    "icon": "fluid__angels-liquid-toluene",
-    "kj": 720.0,
-    "emissions": 10,
-    "gas": false,
-    "base_color": {
-     "r": 0.07009359089303649,
-     "g": 0.07009359089303649,
-     "b": 0.07009359089303649
-    }
-   },
-   {
-    "id": "angels-liquid-ethylbenzene",
-    "type": "fluid",
-    "ru": "Этилбензол",
-    "en": "Ethylbenzene liquid",
-    "icon": "fluid__angels-liquid-ethylbenzene",
-    "kj": 720.0,
-    "emissions": 10,
-    "gas": false,
-    "base_color": {
-     "r": 0.08367926516107593,
-     "g": 0.08367926516107593,
-     "b": 0.08367926516107593
-    }
-   },
-   {
-    "id": "angels-liquid-styrene",
-    "type": "fluid",
-    "ru": "Стирол",
-    "en": "Styrene liquid",
-    "icon": "fluid__angels-liquid-styrene",
-    "kj": 715.0,
-    "emissions": 10,
-    "gas": false,
-    "base_color": {
-     "r": 0.05681935383480573,
-     "g": 0.05681935383480573,
-     "b": 0.05681935383480573
-    }
-   },
-   {
-    "id": "angels-gas-butane",
-    "type": "fluid",
-    "ru": "Бутан",
-    "en": "Butane gas",
-    "icon": "fluid__angels-gas-butane",
-    "kj": 710.0,
-    "emissions": 1.8,
-    "gas": true,
-    "base_color": {
-     "r": 0.8117680781523893,
-     "g": 0.8117680781523893,
-     "b": 0.8117680781523893
-    }
-   },
-   {
-    "id": "diesel-fuel",
-    "type": "fluid",
-    "ru": "Дизельное топливо",
-    "en": "Diesel Fuel",
-    "icon": "fluid__diesel-fuel",
-    "kj": 700.0,
-    "emissions": 0.8,
-    "gas": false,
-    "base_color": {
-     "r": 0.8,
-     "g": 0.7,
-     "b": 0
-    }
-   },
-   {
-    "id": "angels-liquid-raw-fish-oil",
-    "type": "fluid",
-    "ru": "Сырой Рыбий Жир",
-    "en": "Raw fish oil",
-    "icon": "fluid__angels-liquid-raw-fish-oil",
-    "kj": 700.0,
-    "emissions": 10,
-    "gas": false,
-    "base_color": {
-     "r": 0.7607843137254902,
-     "g": 0.4784313725490196,
-     "b": 0.11372549019607843
     }
    },
    {
@@ -3359,8 +3939,8 @@
     "ru": "Бензол",
     "en": "Benzene gas",
     "icon": "fluid__angels-gas-benzene",
-    "kj": 670.0,
-    "emissions": 10,
+    "kj": 1615.0,
+    "emissions": 6.5,
     "gas": true,
     "base_color": {
      "r": 0.05681935383480573,
@@ -3369,18 +3949,48 @@
     }
    },
    {
-    "id": "angels-gas-propene",
+    "id": "angels-liquid-raw-vegetable-oil",
     "type": "fluid",
-    "ru": "Пропилен",
-    "en": "Propene gas",
-    "icon": "fluid__angels-gas-propene",
-    "kj": 520.0,
-    "emissions": 5,
-    "gas": true,
+    "ru": "Сырое растительное масло",
+    "en": "Raw vegetable oil",
+    "icon": "fluid__angels-liquid-raw-vegetable-oil",
+    "kj": 1600.0,
+    "emissions": 1.5,
+    "gas": false,
     "base_color": {
-     "r": 0.3893798077944375,
-     "g": 0.3893798077944375,
-     "b": 0.3893798077944375
+     "r": 0.7607843137254902,
+     "g": 0.4784313725490196,
+     "b": 0.11372549019607843
+    }
+   },
+   {
+    "id": "angels-liquid-raw-fish-oil",
+    "type": "fluid",
+    "ru": "Сырой Рыбий Жир",
+    "en": "Raw fish oil",
+    "icon": "fluid__angels-liquid-raw-fish-oil",
+    "kj": 1400.0,
+    "emissions": 1.5,
+    "gas": false,
+    "base_color": {
+     "r": 0.7607843137254902,
+     "g": 0.4784313725490196,
+     "b": 0.11372549019607843
+    }
+   },
+   {
+    "id": "angels-liquid-plastic",
+    "type": "fluid",
+    "ru": "Жидкий пластик",
+    "en": "Liquid plastic",
+    "icon": "fluid__angels-liquid-plastic",
+    "kj": 1280.0,
+    "emissions": 8,
+    "gas": false,
+    "base_color": {
+     "r": 0.8,
+     "g": 0.8,
+     "b": 1
     }
    },
    {
@@ -3389,8 +3999,8 @@
     "ru": "Бутадиен",
     "en": "Butadiene gas",
     "icon": "fluid__angels-gas-butadiene",
-    "kj": 505.0,
-    "emissions": 10,
+    "kj": 1265.0,
+    "emissions": 3,
     "gas": true,
     "base_color": {
      "r": 0.1342155182705467,
@@ -3399,19 +4009,18 @@
     }
    },
    {
-    "id": "angels-liquid-phenol",
+    "id": "bob-liquid-fuel",
     "type": "fluid",
-    "ru": "Фенол",
-    "en": "Phenol liquid",
-    "icon": "fluid__angels-liquid-phenol",
-    "kj": 470.0,
-    "emissions": 10,
+    "ru": "Жидкое топливо",
+    "en": "Liquid fuel",
+    "icon": "fluid__bob-liquid-fuel",
+    "kj": 1140.0,
+    "emissions": 0.95,
     "gas": false,
     "base_color": {
-     "r": 0.5778068054832692,
-     "g": 0.330964459596651,
-     "b": 0.330964459596651,
-     "a": 1
+     "r": 1,
+     "g": 0.9,
+     "b": 0.5
     }
    },
    {
@@ -3420,7 +4029,7 @@
     "ru": "Этан",
     "en": "Ethane gas",
     "icon": "fluid__angels-gas-ethane",
-    "kj": 390.0,
+    "kj": 1000.0,
     "emissions": 1.5,
     "gas": true,
     "base_color": {
@@ -3430,28 +4039,13 @@
     }
    },
    {
-    "id": "bob-nitroglycerin",
-    "type": "fluid",
-    "ru": "Нитроглицерин",
-    "en": "Nitroglycerin",
-    "icon": "fluid__bob-nitroglycerin",
-    "kj": 365.0,
-    "emissions": 10,
-    "gas": false,
-    "base_color": {
-     "r": 0.3,
-     "g": 0.3,
-     "b": 1
-    }
-   },
-   {
     "id": "angels-gas-ethylene",
     "type": "fluid",
     "ru": "Этилен",
     "en": "Ethylene gas",
     "icon": "fluid__angels-gas-ethylene",
-    "kj": 365.0,
-    "emissions": 1,
+    "kj": 930.0,
+    "emissions": 2.8,
     "gas": true,
     "base_color": {
      "r": 0.3893798077944375,
@@ -3460,19 +4054,157 @@
     }
    },
    {
-    "id": "crude-oil",
+    "id": "angels-gas-propene",
     "type": "fluid",
-    "ru": "Сырая нефть",
-    "en": "Crude oil",
-    "icon": "fluid__crude-oil",
-    "kj": 350.0,
-    "emissions": 10,
+    "ru": "Пропилен",
+    "en": "Propene gas",
+    "icon": "fluid__angels-gas-propene",
+    "kj": 920.0,
+    "emissions": 5,
+    "gas": true,
+    "base_color": {
+     "r": 0.3893798077944375,
+     "g": 0.3893798077944375,
+     "b": 0.3893798077944375
+    }
+   },
+   {
+    "id": "angels-liquid-fuel-oil",
+    "type": "fluid",
+    "ru": "Горючее",
+    "en": "Fuel oil",
+    "icon": "fluid__angels-liquid-fuel-oil",
+    "kj": 890.0,
+    "emissions": 1.2,
     "gas": false,
-    "base_color": [
-     0,
-     0,
-     0
-    ]
+    "base_color": {
+     "r": 0.8,
+     "g": 0.8,
+     "b": 0
+    }
+   },
+   {
+    "id": "angels-liquid-ngl",
+    "type": "fluid",
+    "ru": "Сжиженный природный газ",
+    "en": "Natural gas liquids",
+    "icon": "fluid__angels-liquid-ngl",
+    "kj": 780.0,
+    "emissions": 1.8,
+    "gas": false,
+    "base_color": {
+     "r": 0.21686982342976496,
+     "g": 0.3443771436526495,
+     "b": 0.1573426384752491,
+     "a": 1
+    }
+   },
+   {
+    "id": "angels-gas-hydrazine",
+    "type": "fluid",
+    "ru": "Гидразин",
+    "en": "Hydrazine gas",
+    "icon": "fluid__angels-gas-hydrazine",
+    "kj": 760.0,
+    "emissions": 0.2,
+    "gas": true,
+    "base_color": {
+     "r": 0.3953747816857817,
+     "g": 0.42542897947845815,
+     "b": 0.7927473370386712,
+     "a": 1
+    }
+   },
+   {
+    "id": "bob-nitroglycerin",
+    "type": "fluid",
+    "ru": "Нитроглицерин",
+    "en": "Nitroglycerin",
+    "icon": "fluid__bob-nitroglycerin",
+    "kj": 730.0,
+    "emissions": 3,
+    "gas": false,
+    "base_color": {
+     "r": 0.3,
+     "g": 0.3,
+     "b": 1
+    }
+   },
+   {
+    "id": "angels-liquid-styrene",
+    "type": "fluid",
+    "ru": "Стирол",
+    "en": "Styrene liquid",
+    "icon": "fluid__angels-liquid-styrene",
+    "kj": 710.0,
+    "emissions": 6.5,
+    "gas": false,
+    "base_color": {
+     "r": 0.05681935383480573,
+     "g": 0.05681935383480573,
+     "b": 0.05681935383480573
+    }
+   },
+   {
+    "id": "angels-gas-residual",
+    "type": "fluid",
+    "ru": "Остаточный газ",
+    "en": "Residual gas",
+    "icon": "fluid__angels-gas-residual",
+    "kj": 700.0,
+    "emissions": 4.5,
+    "gas": true,
+    "base_color": {
+     "r": 0.8,
+     "g": 0.29478512495747433,
+     "b": 0.5247160059047402,
+     "a": 1
+    }
+   },
+   {
+    "id": "angels-liquid-ethylbenzene",
+    "type": "fluid",
+    "ru": "Этилбензол",
+    "en": "Ethylbenzene liquid",
+    "icon": "fluid__angels-liquid-ethylbenzene",
+    "kj": 685.0,
+    "emissions": 6.5,
+    "gas": false,
+    "base_color": {
+     "r": 0.08367926516107593,
+     "g": 0.08367926516107593,
+     "b": 0.08367926516107593
+    }
+   },
+   {
+    "id": "angels-liquid-toluene",
+    "type": "fluid",
+    "ru": "Толуол",
+    "en": "Toluene liquid",
+    "icon": "fluid__angels-liquid-toluene",
+    "kj": 680.0,
+    "emissions": 6.5,
+    "gas": false,
+    "base_color": {
+     "r": 0.07009359089303649,
+     "g": 0.07009359089303649,
+     "b": 0.07009359089303649
+    }
+   },
+   {
+    "id": "angels-liquid-naphtha",
+    "type": "fluid",
+    "ru": "Мазут",
+    "en": "Residual fuel oil",
+    "icon": "fluid__angels-liquid-naphtha",
+    "kj": 660.0,
+    "emissions": 3,
+    "gas": false,
+    "base_color": {
+     "r": 0.8,
+     "g": 0.4,
+     "b": 0.4
+    }
    },
    {
     "id": "angels-gas-dimethylamine",
@@ -3480,8 +4212,8 @@
     "ru": "Диметиламин",
     "en": "Dimethylamine gas",
     "icon": "fluid__angels-gas-dimethylamine",
-    "kj": 310.0,
-    "emissions": 10,
+    "kj": 620.0,
+    "emissions": 2,
     "gas": true,
     "base_color": {
      "r": 0.40393513474267717,
@@ -3491,28 +4223,13 @@
     }
    },
    {
-    "id": "bob-liquid-fuel",
-    "type": "fluid",
-    "ru": "Жидкое топливо",
-    "en": "Liquid fuel",
-    "icon": "fluid__bob-liquid-fuel",
-    "kj": 300.0,
-    "emissions": 1.5,
-    "gas": false,
-    "base_color": {
-     "r": 1,
-     "g": 0.9,
-     "b": 0.5
-    }
-   },
-   {
     "id": "angels-gas-methylamine",
     "type": "fluid",
     "ru": "Метиламин",
     "en": "Methylamine gas",
     "icon": "fluid__angels-gas-methylamine",
-    "kj": 287.5,
-    "emissions": 10,
+    "kj": 575.0,
+    "emissions": 2,
     "gas": true,
     "base_color": {
      "r": 0.40777728406073155,
@@ -3522,13 +4239,43 @@
     }
    },
    {
+    "id": "crude-oil",
+    "type": "fluid",
+    "ru": "Сырая нефть",
+    "en": "Crude oil",
+    "icon": "fluid__crude-oil",
+    "kj": 560.0,
+    "emissions": 10,
+    "gas": false,
+    "base_color": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "id": "angels-gas-methane",
+    "type": "fluid",
+    "ru": "Метан",
+    "en": "Methane gas",
+    "icon": "fluid__angels-gas-methane",
+    "kj": 558.0,
+    "emissions": 1.1,
+    "gas": true,
+    "base_color": {
+     "r": 0.9999693030195174,
+     "g": 0.9999693030195174,
+     "b": 0.9999693030195174
+    }
+   },
+   {
     "id": "angels-gas-dimethylhydrazine",
     "type": "fluid",
     "ru": "Диметилгидразин",
     "en": "Dimethylhydrazine gas",
     "icon": "fluid__angels-gas-dimethylhydrazine",
-    "kj": 275.0,
-    "emissions": 10,
+    "kj": 550.0,
+    "emissions": 2,
     "gas": true,
     "base_color": {
      "r": 0.39445662916887464,
@@ -3543,8 +4290,8 @@
     "ru": "Акрилонитрил",
     "en": "Acrylonitrile",
     "icon": "fluid__liquid-acrylonitrile",
-    "kj": 275.0,
-    "emissions": 10,
+    "kj": 550.0,
+    "emissions": 4,
     "gas": false,
     "base_color": {
      "r": 0.32002135371165225,
@@ -3556,16 +4303,31 @@
    {
     "id": "gas-vinyl-acetylene",
     "type": "fluid",
-    "ru": "Винилацетат",
-    "en": "Vinyl Acetate Gas",
+    "ru": "Винилацетилен",
+    "en": "Vinylacetylene gas",
     "icon": "fluid__gas-vinyl-acetylene",
-    "kj": 275.0,
-    "emissions": 10,
+    "kj": 550.0,
+    "emissions": 3,
     "gas": true,
     "base_color": {
-     "r": 0.625029313678836,
-     "g": 0.342867371737347,
-     "b": 0.342867371737347,
+     "r": 0.05681935383480573,
+     "g": 0.05681935383480573,
+     "b": 0.05681935383480573
+    }
+   },
+   {
+    "id": "angels-liquid-phenol",
+    "type": "fluid",
+    "ru": "Фенол",
+    "en": "Phenol liquid",
+    "icon": "fluid__angels-liquid-phenol",
+    "kj": 540.0,
+    "emissions": 6.5,
+    "gas": false,
+    "base_color": {
+     "r": 0.5778068054832692,
+     "g": 0.330964459596651,
+     "b": 0.330964459596651,
      "a": 1
     }
    },
@@ -3575,8 +4337,8 @@
     "ru": "Ацетон",
     "en": "Acetone gas",
     "icon": "fluid__angels-gas-acetone",
-    "kj": 262.0,
-    "emissions": 10,
+    "kj": 524.0,
+    "emissions": 1.05,
     "gas": true,
     "base_color": {
      "r": 0.6544482166538695,
@@ -3586,13 +4348,29 @@
     }
    },
    {
+    "id": "angels-gas-ethanol",
+    "type": "fluid",
+    "ru": "Этанол",
+    "en": "Ethanol gas",
+    "icon": "fluid__angels-gas-ethanol",
+    "kj": 510.0,
+    "emissions": 0.7,
+    "gas": true,
+    "base_color": {
+     "r": 0.6883127404302188,
+     "g": 0.3939188026332975,
+     "b": 0.3939188026332975,
+     "a": 1
+    }
+   },
+   {
     "id": "angels-liquid-bisphenol-a",
     "type": "fluid",
-    "ru": "Бифенол-А",
+    "ru": "Бисфенол А",
     "en": "Bisphenol A liquid",
     "icon": "fluid__angels-liquid-bisphenol-a",
-    "kj": 252.5,
-    "emissions": 10,
+    "kj": 505.0,
+    "emissions": 4,
     "gas": false,
     "base_color": {
      "r": 0.5851066411796654,
@@ -3602,18 +4380,275 @@
     }
    },
    {
-    "id": "angels-liquid-fuel-oil",
+    "id": "angels-gas-raw-1",
     "type": "fluid",
-    "ru": "Горючее",
-    "en": "Fuel oil",
-    "icon": "fluid__angels-liquid-fuel-oil",
-    "kj": 250.0,
-    "emissions": 2,
+    "ru": "Природный газ",
+    "en": "Raw gas",
+    "icon": "fluid__angels-gas-raw-1",
+    "kj": 500.0,
+    "emissions": 4,
+    "gas": true,
+    "base_color": {
+     "r": 0.3509886768870104,
+     "g": 0.391667145205725,
+     "b": 0.13102763032172948,
+     "a": 1
+    }
+   },
+   {
+    "id": "liquid-dichlorobutene",
+    "type": "fluid",
+    "ru": "Дихлорбутен",
+    "en": "Dichlorobutene",
+    "icon": "fluid__liquid-dichlorobutene",
+    "kj": 500.0,
+    "emissions": 6,
     "gas": false,
+    "base_color": {
+     "r": 0.37346961458003747,
+     "g": 0.6234802463454483,
+     "b": 0.3445031592873116,
+     "a": 1
+    }
+   },
+   {
+    "id": "liquid-methyl-methacrylate",
+    "type": "fluid",
+    "ru": "Метилметакрилат",
+    "en": "Methyl Methacrylate",
+    "icon": "fluid__liquid-methyl-methacrylate",
+    "kj": 450.0,
+    "emissions": 1.5,
+    "gas": false,
+    "base_color": {
+     "r": 0.6317697122929802,
+     "g": 0.3538696701940923,
+     "b": 0.3538696701940923,
+     "a": 1
+    }
+   },
+   {
+    "id": "angels-gas-chlor-methane",
+    "type": "fluid",
+    "ru": "Хлорметан",
+    "en": "Chloromethane gas",
+    "icon": "fluid__angels-gas-chlor-methane",
+    "kj": 432.0,
+    "emissions": 6,
+    "gas": true,
+    "base_color": {
+     "r": 0.40720307832971764,
+     "g": 0.680192749216074,
+     "b": 0.37556219818544356,
+     "a": 1
+    }
+   },
+   {
+    "id": "gas-hydrogen-cyanide",
+    "type": "fluid",
+    "ru": "Циановодород",
+    "en": "Hydrogen Cyanide Gas",
+    "icon": "fluid__gas-hydrogen-cyanide",
+    "kj": 410.0,
+    "emissions": 4,
+    "gas": true,
+    "base_color": {
+     "r": 0.2842394493917797,
+     "g": 0.31703804892342813,
+     "b": 0.5417588984854529,
+     "a": 1
+    }
+   },
+   {
+    "id": "angels-gas-hydrogen-sulfide",
+    "type": "fluid",
+    "ru": "Сероводород",
+    "en": "Hydrogen sulfide gas",
+    "icon": "fluid__angels-gas-hydrogen-sulfide",
+    "kj": 364.0,
+    "emissions": 8,
+    "gas": true,
     "base_color": {
      "r": 0.8,
      "g": 0.8,
-     "b": 0
+     "b": 0.3953747816857817,
+     "a": 1
+    }
+   },
+   {
+    "id": "angels-gas-enriched-hydrogen-sulfide",
+    "type": "fluid",
+    "ru": "Обогащённый сероводород",
+    "en": "Enriched hydrogen sulfide gas",
+    "icon": "fluid__angels-gas-enriched-hydrogen-sulfide",
+    "kj": 364.0,
+    "emissions": 8,
+    "gas": true,
+    "base_color": {
+     "r": 0.6928203230275509,
+     "g": 0.6928203230275509,
+     "b": 0.24835826338098638,
+     "a": 1
+    }
+   },
+   {
+    "id": "angels-gas-allylchlorid",
+    "type": "fluid",
+    "ru": "Аллилхлорид",
+    "en": "Allyl chloride gas",
+    "icon": "fluid__angels-gas-allylchlorid",
+    "kj": 360.0,
+    "emissions": 6,
+    "gas": true,
+    "base_color": {
+     "r": 0.6286913230673026,
+     "g": 0.4968169770238683,
+     "b": 0.34356267365161136,
+     "a": 1
+    }
+   },
+   {
+    "id": "angels-liquid-multi-phase-oil",
+    "type": "fluid",
+    "ru": "Многофазная нефть",
+    "en": "Multi-phase oil",
+    "icon": "fluid__angels-liquid-multi-phase-oil",
+    "kj": 360.0,
+    "emissions": 15,
+    "gas": false,
+    "base_color": {
+     "r": 0.20068487502432936,
+     "g": 0.3106595283595107,
+     "b": 0.1509466323345731,
+     "a": 1
+    }
+   },
+   {
+    "id": "angels-liquid-glycerol",
+    "type": "fluid",
+    "ru": "Глицерин",
+    "en": "Glycerol liquid",
+    "icon": "fluid__angels-liquid-glycerol",
+    "kj": 310.0,
+    "emissions": 0.95,
+    "gas": false,
+    "base_color": {
+     "r": 0.6726676688507385,
+     "g": 0.3649917231708046,
+     "b": 0.3649917231708046,
+     "a": 1
+    }
+   },
+   {
+    "id": "angels-liquid-cellulose-acetate",
+    "type": "fluid",
+    "ru": "Ацетат целлюлозы",
+    "en": "Cellulose acetate",
+    "icon": "fluid__angels-liquid-cellulose-acetate",
+    "kj": 310.0,
+    "emissions": 1.05,
+    "gas": false,
+    "base_color": {
+     "r": 0.6732780185761127,
+     "g": 0.32421679746086,
+     "b": 0.32421679746086,
+     "a": 1
+    }
+   },
+   {
+    "id": "gas-vinyl-chloride",
+    "type": "fluid",
+    "ru": "Винилхлорид",
+    "en": "Vinyl Chloride Gas",
+    "icon": "fluid__gas-vinyl-chloride",
+    "kj": 310.0,
+    "emissions": 6,
+    "gas": true,
+    "base_color": {
+     "r": 0.37346961458003747,
+     "g": 0.6234802463454483,
+     "b": 0.3445031592873116,
+     "a": 1
+    }
+   },
+   {
+    "id": "angels-gas-acid",
+    "type": "fluid",
+    "ru": "Высокосернистый газ",
+    "en": "Acid gas",
+    "icon": "fluid__angels-gas-acid",
+    "kj": 304.0,
+    "emissions": 7,
+    "gas": true,
+    "base_color": {
+     "r": 0.7051848405643615,
+     "g": 0.6953439059893723,
+     "b": 0.26112225949610257,
+     "a": 1
+    }
+   },
+   {
+    "id": "liquid-acetone-cyanohydrin",
+    "type": "fluid",
+    "ru": "Ацетонциангидрин",
+    "en": "Acetone Cyanohydrin",
+    "icon": "fluid__liquid-acetone-cyanohydrin",
+    "kj": 300.0,
+    "emissions": 4,
+    "gas": false,
+    "base_color": {
+     "r": 0.633089596291505,
+     "g": 0.35679135546354096,
+     "b": 0.44076477002848635,
+     "a": 1
+    }
+   },
+   {
+    "id": "angels-gas-formaldehyde",
+    "type": "fluid",
+    "ru": "Формальдегид",
+    "en": "Formaldehyde gas",
+    "icon": "fluid__angels-gas-formaldehyde",
+    "kj": 280.0,
+    "emissions": 1.05,
+    "gas": true,
+    "base_color": {
+     "r": 0.6490213849866079,
+     "g": 0.34208495676813794,
+     "b": 0.34208495676813794,
+     "a": 1
+    }
+   },
+   {
+    "id": "angels-gas-melamine",
+    "type": "fluid",
+    "ru": "Меламин",
+    "en": "Melamine gas",
+    "icon": "fluid__angels-gas-melamine",
+    "kj": 262.0,
+    "emissions": 2,
+    "gas": true,
+    "base_color": {
+     "r": 0.309157775421881,
+     "g": 0.34498600620855324,
+     "b": 0.5902476428520059,
+     "a": 1
+    }
+   },
+   {
+    "id": "angels-liquid-acetic-anhydride",
+    "type": "fluid",
+    "ru": "Уксусный ангидрид",
+    "en": "Acetic anhydride",
+    "icon": "fluid__angels-liquid-acetic-anhydride",
+    "kj": 255.0,
+    "emissions": 1.05,
+    "gas": false,
+    "base_color": {
+     "r": 0.6247337847254805,
+     "g": 0.3294663691006702,
+     "b": 0.3294663691006702,
+     "a": 1
     }
    },
    {
@@ -3633,240 +4668,66 @@
     }
    },
    {
-    "id": "angels-gas-raw-1",
+    "id": "angels-liquid-condensates",
     "type": "fluid",
-    "ru": "Природный газ",
-    "en": "Raw gas",
-    "icon": "fluid__angels-gas-raw-1",
+    "ru": "Газовые конденсаты",
+    "en": "Gas condensates",
+    "icon": "fluid__angels-liquid-condensates",
     "kj": 250.0,
-    "emissions": 10,
-    "gas": true,
-    "base_color": {
-     "r": 0.3509886768870104,
-     "g": 0.391667145205725,
-     "b": 0.13102763032172948,
-     "a": 1
-    }
-   },
-   {
-    "id": "angels-liquid-ngl",
-    "type": "fluid",
-    "ru": "Сжиженный природный газ",
-    "en": "Natural gas liquids",
-    "icon": "fluid__angels-liquid-ngl",
-    "kj": 250.0,
-    "emissions": 10,
+    "emissions": 8,
     "gas": false,
     "base_color": {
-     "r": 0.21686982342976496,
-     "g": 0.3443771436526495,
-     "b": 0.1573426384752491,
+     "r": 0.21513521588171614,
+     "g": 0.35487516599822233,
+     "b": 0.14635621962156117,
      "a": 1
     }
    },
    {
-    "id": "angels-gas-residual",
+    "id": "angels-gas-methanol",
     "type": "fluid",
-    "ru": "Остаточный газ",
-    "en": "Residual gas",
-    "icon": "fluid__angels-gas-residual",
-    "kj": 250.0,
-    "emissions": 10,
+    "ru": "Метанол",
+    "en": "Methanol gas",
+    "icon": "fluid__angels-gas-methanol",
+    "kj": 240.0,
+    "emissions": 0.95,
+    "gas": true,
+    "base_color": {
+     "r": 0.7029598178037086,
+     "g": 0.39346504939834137,
+     "b": 0.39346504939834137,
+     "a": 1
+    }
+   },
+   {
+    "id": "angels-gas-synthesis",
+    "type": "fluid",
+    "ru": "Синтез-газ",
+    "en": "Synthesis gas",
+    "icon": "fluid__angels-gas-synthesis",
+    "kj": 240.0,
+    "emissions": 0.8,
     "gas": true,
     "base_color": {
      "r": 0.8,
-     "g": 0.29478512495747433,
-     "b": 0.5247160059047402,
+     "g": 0.1976470588235294,
+     "b": 0.4988235294117647,
      "a": 1
     }
    },
    {
-    "id": "liquid-dichlorobutene",
+    "id": "angels-gas-urea",
     "type": "fluid",
-    "ru": "Дихлорбутен",
-    "en": "Dichlorobutene",
-    "icon": "fluid__liquid-dichlorobutene",
-    "kj": 250.0,
-    "emissions": 10,
-    "gas": false,
-    "base_color": {
-     "r": 0.37346961458003747,
-     "g": 0.6234802463454483,
-     "b": 0.3445031592873116,
-     "a": 1
-    }
-   },
-   {
-    "id": "gas-nitrous-oxide",
-    "type": "fluid",
-    "ru": "Оксид азота",
-    "en": "Nitrous Oxide Gas",
-    "icon": "fluid__gas-nitrous-oxide",
-    "kj": 250.0,
-    "emissions": 10,
+    "ru": "Карбамидный газ",
+    "en": "Urea gas",
+    "icon": "fluid__angels-gas-urea",
+    "kj": 167.0,
+    "emissions": 2,
     "gas": true,
     "base_color": {
-     "r": 0.4476586438085768,
-     "g": 0.12376381122467961,
-     "b": 0.6357026040892302,
-     "a": 1
-    }
-   },
-   {
-    "id": "angels-liquid-naphtha",
-    "type": "fluid",
-    "ru": "Мазут",
-    "en": "Naphtha",
-    "icon": "fluid__angels-liquid-naphtha",
-    "kj": 245.0,
-    "emissions": 3,
-    "gas": false,
-    "base_color": {
-     "r": 0.8,
-     "g": 0.4,
-     "b": 0.4
-    }
-   },
-   {
-    "id": "angels-gas-methane",
-    "type": "fluid",
-    "ru": "Метан",
-    "en": "Methane gas",
-    "icon": "fluid__angels-gas-methane",
-    "kj": 230.0,
-    "emissions": 1,
-    "gas": true,
-    "base_color": {
-     "r": 0.9999693030195174,
-     "g": 0.9999693030195174,
-     "b": 0.9999693030195174
-    }
-   },
-   {
-    "id": "liquid-methyl-methacrylate",
-    "type": "fluid",
-    "ru": "Метилметакрилат",
-    "en": "Methyl Methacrylate",
-    "icon": "fluid__liquid-methyl-methacrylate",
-    "kj": 225.0,
-    "emissions": 10,
-    "gas": false,
-    "base_color": {
-     "r": 0.6317697122929802,
-     "g": 0.3538696701940923,
-     "b": 0.3538696701940923,
-     "a": 1
-    }
-   },
-   {
-    "id": "angels-gas-chlor-methane",
-    "type": "fluid",
-    "ru": "Хлорметан",
-    "en": "Chloromethane gas",
-    "icon": "fluid__angels-gas-chlor-methane",
-    "kj": 216.0,
-    "emissions": 10,
-    "gas": true,
-    "base_color": {
-     "r": 0.40720307832971764,
-     "g": 0.680192749216074,
-     "b": 0.37556219818544356,
-     "a": 1
-    }
-   },
-   {
-    "id": "gas-hydrogen-cyanide",
-    "type": "fluid",
-    "ru": "Синильная кислота",
-    "en": "Hydrogen Cyanide Gas",
-    "icon": "fluid__gas-hydrogen-cyanide",
-    "kj": 205.0,
-    "emissions": 10,
-    "gas": true,
-    "base_color": {
-     "r": 0.2842394493917797,
-     "g": 0.31703804892342813,
-     "b": 0.5417588984854529,
-     "a": 1
-    }
-   },
-   {
-    "id": "angels-gas-hydrogen-sulfide",
-    "type": "fluid",
-    "ru": "Сероводород",
-    "en": "Hydrogen sulfide gas",
-    "icon": "fluid__angels-gas-hydrogen-sulfide",
-    "kj": 182.0,
-    "emissions": 10,
-    "gas": true,
-    "base_color": {
-     "r": 0.8,
-     "g": 0.8,
-     "b": 0.3953747816857817,
-     "a": 1
-    }
-   },
-   {
-    "id": "angels-gas-enriched-hydrogen-sulfide",
-    "type": "fluid",
-    "ru": "Обогащённый сероводород",
-    "en": "Enriched hydrogen sulfide gas",
-    "icon": "fluid__angels-gas-enriched-hydrogen-sulfide",
-    "kj": 182.0,
-    "emissions": 10,
-    "gas": true,
-    "base_color": {
-     "r": 0.6928203230275509,
-     "g": 0.6928203230275509,
-     "b": 0.24835826338098638,
-     "a": 1
-    }
-   },
-   {
-    "id": "angels-gas-allylchlorid",
-    "type": "fluid",
-    "ru": "Аллилхлорид",
-    "en": "Allyl chloride gas",
-    "icon": "fluid__angels-gas-allylchlorid",
-    "kj": 180.0,
-    "emissions": 10,
-    "gas": true,
-    "base_color": {
-     "r": 0.6286913230673026,
-     "g": 0.4968169770238683,
-     "b": 0.34356267365161136,
-     "a": 1
-    }
-   },
-   {
-    "id": "angels-liquid-multi-phase-oil",
-    "type": "fluid",
-    "ru": "Многофазная нефть",
-    "en": "Multi-phase oil",
-    "icon": "fluid__angels-liquid-multi-phase-oil",
-    "kj": 180.0,
-    "emissions": 15,
-    "gas": false,
-    "base_color": {
-     "r": 0.20068487502432936,
-     "g": 0.3106595283595107,
-     "b": 0.1509466323345731,
-     "a": 1
-    }
-   },
-   {
-    "id": "angels-liquid-glycerol",
-    "type": "fluid",
-    "ru": "Глицерин",
-    "en": "Glycerol liquid",
-    "icon": "fluid__angels-liquid-glycerol",
-    "kj": 155.0,
-    "emissions": 10,
-    "gas": false,
-    "base_color": {
-     "r": 0.6726676688507385,
-     "g": 0.3649917231708046,
-     "b": 0.3649917231708046,
+     "r": 0.6371302442176842,
+     "g": 0.3459018802010819,
+     "b": 0.5297633324608954,
      "a": 1
     }
    },
@@ -3877,7 +4738,7 @@
     "en": "Ammonia gas",
     "icon": "fluid__angels-gas-ammonia",
     "kj": 155.0,
-    "emissions": 10,
+    "emissions": 2,
     "gas": true,
     "base_color": {
      "r": 0.41813982529150434,
@@ -3887,205 +4748,13 @@
     }
    },
    {
-    "id": "angels-liquid-cellulose-acetate",
-    "type": "fluid",
-    "ru": "Ацетил-целлюлоза",
-    "en": "Cellulose acetate",
-    "icon": "fluid__angels-liquid-cellulose-acetate",
-    "kj": 155.0,
-    "emissions": 10,
-    "gas": false,
-    "base_color": {
-     "r": 0.6732780185761127,
-     "g": 0.32421679746086,
-     "b": 0.32421679746086,
-     "a": 1
-    }
-   },
-   {
-    "id": "gas-vinyl-chloride",
-    "type": "fluid",
-    "ru": "Винилхлорид",
-    "en": "Vinyl Chloride Gas",
-    "icon": "fluid__gas-vinyl-chloride",
-    "kj": 155.0,
-    "emissions": 10,
-    "gas": true,
-    "base_color": {
-     "r": 0.37346961458003747,
-     "g": 0.6234802463454483,
-     "b": 0.3445031592873116,
-     "a": 1
-    }
-   },
-   {
-    "id": "angels-gas-acid",
-    "type": "fluid",
-    "ru": "Высокосернистый газ",
-    "en": "Acid gas",
-    "icon": "fluid__angels-gas-acid",
-    "kj": 152.0,
-    "emissions": 10,
-    "gas": true,
-    "base_color": {
-     "r": 0.7051848405643615,
-     "g": 0.6953439059893723,
-     "b": 0.26112225949610257,
-     "a": 1
-    }
-   },
-   {
-    "id": "liquid-acetone-cyanohydrin",
-    "type": "fluid",
-    "ru": "Ацетонциангидрин",
-    "en": "Acetone Cyanohydrin",
-    "icon": "fluid__liquid-acetone-cyanohydrin",
-    "kj": 150.0,
-    "emissions": 10,
-    "gas": false,
-    "base_color": {
-     "r": 0.633089596291505,
-     "g": 0.35679135546354096,
-     "b": 0.44076477002848635,
-     "a": 1
-    }
-   },
-   {
-    "id": "angels-gas-formaldehyde",
-    "type": "fluid",
-    "ru": "Формальдегид",
-    "en": "Formaldehyde gas",
-    "icon": "fluid__angels-gas-formaldehyde",
-    "kj": 140.0,
-    "emissions": 10,
-    "gas": true,
-    "base_color": {
-     "r": 0.6490213849866079,
-     "g": 0.34208495676813794,
-     "b": 0.34208495676813794,
-     "a": 1
-    }
-   },
-   {
-    "id": "angels-gas-ethanol",
-    "type": "fluid",
-    "ru": "Этанол",
-    "en": "Ethanol gas",
-    "icon": "fluid__angels-gas-ethanol",
-    "kj": 135.0,
-    "emissions": 1,
-    "gas": true,
-    "base_color": {
-     "r": 0.6883127404302188,
-     "g": 0.3939188026332975,
-     "b": 0.3939188026332975,
-     "a": 1
-    }
-   },
-   {
-    "id": "angels-gas-melamine",
-    "type": "fluid",
-    "ru": "Меламин",
-    "en": "Melamine gas",
-    "icon": "fluid__angels-gas-melamine",
-    "kj": 131.0,
-    "emissions": 10,
-    "gas": true,
-    "base_color": {
-     "r": 0.309157775421881,
-     "g": 0.34498600620855324,
-     "b": 0.5902476428520059,
-     "a": 1
-    }
-   },
-   {
-    "id": "angels-liquid-acetic-anhydride",
-    "type": "fluid",
-    "ru": "Уксусный ангидрид",
-    "en": "Acetic anhydride",
-    "icon": "fluid__angels-liquid-acetic-anhydride",
-    "kj": 127.5,
-    "emissions": 10,
-    "gas": false,
-    "base_color": {
-     "r": 0.6247337847254805,
-     "g": 0.3294663691006702,
-     "b": 0.3294663691006702,
-     "a": 1
-    }
-   },
-   {
-    "id": "angels-gas-hydrazine",
-    "type": "fluid",
-    "ru": "Гидразин",
-    "en": "Hydrazine gas",
-    "icon": "fluid__angels-gas-hydrazine",
-    "kj": 125.0,
-    "emissions": 0.1,
-    "gas": true,
-    "base_color": {
-     "r": 0.3953747816857817,
-     "g": 0.42542897947845815,
-     "b": 0.7927473370386712,
-     "a": 1
-    }
-   },
-   {
-    "id": "angels-gas-synthesis",
-    "type": "fluid",
-    "ru": "Синтез-газ",
-    "en": "Synthesis gas",
-    "icon": "fluid__angels-gas-synthesis",
-    "kj": 120.0,
-    "emissions": 10,
-    "gas": true,
-    "base_color": {
-     "r": 0.8,
-     "g": 0.1976470588235294,
-     "b": 0.4988235294117647,
-     "a": 1
-    }
-   },
-   {
-    "id": "angels-gas-methanol",
-    "type": "fluid",
-    "ru": "Метанол",
-    "en": "Methanol gas",
-    "icon": "fluid__angels-gas-methanol",
-    "kj": 100.0,
-    "emissions": 1,
-    "gas": true,
-    "base_color": {
-     "r": 0.7029598178037086,
-     "g": 0.39346504939834137,
-     "b": 0.39346504939834137,
-     "a": 1
-    }
-   },
-   {
-    "id": "angels-gas-urea",
-    "type": "fluid",
-    "ru": "Карбамидный газ",
-    "en": "Urea gas",
-    "icon": "fluid__angels-gas-urea",
-    "kj": 83.5,
-    "emissions": 10,
-    "gas": true,
-    "base_color": {
-     "r": 0.6371302442176842,
-     "g": 0.3459018802010819,
-     "b": 0.5297633324608954,
-     "a": 1
-    }
-   },
-   {
     "id": "gas-chloroethane",
     "type": "fluid",
     "ru": "Хлорэтан",
     "en": "Chloroethane",
     "icon": "fluid__gas-chloroethane",
-    "kj": 77.5,
-    "emissions": 10,
+    "kj": 155.0,
+    "emissions": 6,
     "gas": false,
     "base_color": {
      "r": 0.35,
@@ -4094,19 +4763,33 @@
     }
    },
    {
-    "id": "angels-gas-deuterium",
+    "id": "y_hydrogen",
     "type": "fluid",
-    "ru": "Дейтерий (газ)",
-    "en": "Deuterium gas",
-    "icon": "fluid__angels-gas-deuterium",
-    "kj": 75.0,
-    "emissions": 10,
-    "gas": true,
+    "ru": "Гидротин",
+    "en": "Hydrotin Gas",
+    "icon": "fluid__y_hydrogen",
+    "kj": 150.0,
+    "emissions": 0.1,
+    "gas": false,
     "base_color": {
-     "r": 0.8,
-     "g": 0.8,
-     "b": 0.3614117647058823,
-     "a": 1
+     "r": 0.3,
+     "g": 0.6,
+     "b": 0.3
+    }
+   },
+   {
+    "id": "ye_cornoil",
+    "type": "fluid",
+    "ru": "Растительное масло",
+    "en": "vegetable oil",
+    "icon": "fluid__ye_cornoil",
+    "kj": 150.0,
+    "emissions": 0.5,
+    "gas": false,
+    "base_color": {
+     "r": 0.5,
+     "g": 0.5,
+     "b": 0.8
     }
    },
    {
@@ -4115,13 +4798,29 @@
     "ru": "Водород",
     "en": "Hydrogen gas",
     "icon": "fluid__angels-gas-hydrogen",
-    "kj": 35.0,
-    "emissions": 0.2,
+    "kj": 150.0,
+    "emissions": 0.1,
     "gas": true,
     "base_color": {
      "r": 0.8,
      "g": 0.48,
      "b": 0.48,
+     "a": 1
+    }
+   },
+   {
+    "id": "angels-gas-deuterium",
+    "type": "fluid",
+    "ru": "Дейтерий (газ)",
+    "en": "Deuterium gas",
+    "icon": "fluid__angels-gas-deuterium",
+    "kj": 150.0,
+    "emissions": 0.1,
+    "gas": true,
+    "base_color": {
+     "r": 0.8,
+     "g": 0.8,
+     "b": 0.3614117647058823,
      "a": 1
     }
    }
@@ -4393,80 +5092,80 @@
    {
     "id": "nco-wide-crane",
     "type": "inserter",
-    "ru": "Широкий погрузочный кран",
-    "en": "Wide Loading Crane",
+    "ru": "Широкий экспресс погрузочный кран",
+    "en": "Wide Express Loading Crane",
     "icon": "inserter__nco-wide-crane",
-    "rotation": 0.05750000000000001,
+    "rotation": 0.06,
     "source": "electric",
     "bulk": false
    },
    {
     "id": "nco-crane",
     "type": "inserter",
-    "ru": "Погрузочный кран",
-    "en": "Loading Crane",
+    "ru": "Экспресс погрузочный кран",
+    "en": "Express Loading Crane",
     "icon": "inserter__nco-crane",
-    "rotation": 0.0161,
+    "rotation": 0.06,
     "source": "electric",
     "bulk": false
    },
    {
     "id": "nco-red-wide-crane",
     "type": "inserter",
-    "ru": "Широкий красный погрузочный кран",
-    "en": "Wide Red Loading Crane",
+    "ru": "Широкий быстрый погрузочный кран",
+    "en": "Wide Fast Loading Crane",
     "icon": "inserter__nco-red-wide-crane",
-    "rotation": 0.0384,
+    "rotation": 0.04,
     "source": "electric",
     "bulk": false
    },
    {
     "id": "nco-red-crane",
     "type": "inserter",
-    "ru": "Красный погрузочный кран",
-    "en": "Red Loading Crane",
+    "ru": "Быстрый погрузочный кран",
+    "en": "Fast Loading Crane",
     "icon": "inserter__nco-red-crane",
-    "rotation": 0.017199999999999997,
+    "rotation": 0.04,
     "source": "electric",
     "bulk": false
    },
    {
     "id": "nco-wide-turbo-crane",
     "type": "inserter",
-    "ru": "Широкий турбо кран",
-    "en": "Wide Turbo Crane",
+    "ru": "Широкий турбо погрузочный кран",
+    "en": "Wide Turbo Loading Crane",
     "icon": "inserter__nco-wide-turbo-crane",
-    "rotation": 0.0768,
+    "rotation": 0.08,
     "source": "electric",
     "bulk": false
    },
    {
     "id": "nco-turbo-crane",
     "type": "inserter",
-    "ru": "Турбо кран",
-    "en": "Turbo Crane",
+    "ru": "Турбо погрузочный кран",
+    "en": "Turbo Loading Crane",
     "icon": "inserter__nco-turbo-crane",
-    "rotation": 0.0216,
+    "rotation": 0.08,
     "source": "electric",
     "bulk": false
    },
    {
     "id": "nco-wide-express-crane",
     "type": "inserter",
-    "ru": "Широкий экспресс кран",
-    "en": "Wide Express Crane",
+    "ru": "Широкий гипер погрузочный кран",
+    "en": "Wide Ultimate Loading Crane",
     "icon": "inserter__nco-wide-express-crane",
-    "rotation": 0.096,
+    "rotation": 0.1,
     "source": "electric",
     "bulk": false
    },
    {
     "id": "nco-express-crane",
     "type": "inserter",
-    "ru": "Экспресс кран",
-    "en": "Express Crane",
+    "ru": "Гипер погрузочный кран",
+    "en": "Ultimate Loading Crane",
     "icon": "inserter__nco-express-crane",
-    "rotation": 0.096,
+    "rotation": 0.1,
     "source": "electric",
     "bulk": false
    }
@@ -4506,15 +5205,6 @@
     "en": "Substation",
     "icon": "electric-pole__substation",
     "wire": 17,
-    "supply": 8.5
-   },
-   {
-    "id": "crystal-drain-pole-rampant",
-    "type": "electric-pole",
-    "ru": "Кристаллический пилон",
-    "en": "Crystal Pylon",
-    "icon": "electric-pole__crystal-drain-pole-rampant",
-    "wire": 29,
     "supply": 8.5
    },
    {
@@ -4633,6 +5323,15 @@
     "icon": "electric-pole__bob-substation-4",
     "wire": 35,
     "supply": 17.5
+   },
+   {
+    "id": "y-substation-h",
+    "type": "electric-pole",
+    "ru": "Станция AEET",
+    "en": "AEET Station",
+    "icon": "electric-pole__y-substation-h",
+    "wire": 63,
+    "supply": 31.5
    },
    {
     "id": "small-iron-electric-pole",
@@ -4800,7 +5499,7 @@
     "icon": "lab__salvaged-lab",
     "power_w": 650000.0,
     "speed": 0.15,
-    "inputs": 8,
+    "inputs": 9,
     "source": "electric",
     "tiles": [
      5,
@@ -4850,20 +5549,7 @@
     "source": "electric",
     "radius": 2.49,
     "categories": [
-     "coal",
-     "angels-ore1",
-     "angels-ore2",
-     "angels-ore3",
-     "angels-ore4",
-     "angels-ore5",
-     "angels-ore6",
-     "infinite-coal",
-     "infinite-angels-ore1",
-     "infinite-angels-ore2",
-     "infinite-angels-ore3",
-     "infinite-angels-ore4",
-     "infinite-angels-ore5",
-     "infinite-angels-ore6"
+     "basic-solid"
     ]
    },
    {
@@ -4877,20 +5563,7 @@
     "source": "burner",
     "radius": 0.99,
     "categories": [
-     "coal",
-     "angels-ore1",
-     "angels-ore2",
-     "angels-ore3",
-     "angels-ore4",
-     "angels-ore5",
-     "angels-ore6",
-     "infinite-coal",
-     "infinite-angels-ore1",
-     "infinite-angels-ore2",
-     "infinite-angels-ore3",
-     "infinite-angels-ore4",
-     "infinite-angels-ore5",
-     "infinite-angels-ore6"
+     "basic-solid"
     ]
    },
    {
@@ -4904,8 +5577,8 @@
     "source": "electric",
     "radius": 0.49000000000000005,
     "categories": [
-     "crude-oil",
-     "angels-natural-gas"
+     "basic-fluid",
+     "water"
     ]
    },
    {
@@ -4919,20 +5592,7 @@
     "source": "electric",
     "radius": 2.49,
     "categories": [
-     "coal",
-     "angels-ore1",
-     "angels-ore2",
-     "angels-ore3",
-     "angels-ore4",
-     "angels-ore5",
-     "angels-ore6",
-     "infinite-coal",
-     "infinite-angels-ore1",
-     "infinite-angels-ore2",
-     "infinite-angels-ore3",
-     "infinite-angels-ore4",
-     "infinite-angels-ore5",
-     "infinite-angels-ore6"
+     "basic-solid"
     ]
    },
    {
@@ -4946,20 +5606,7 @@
     "source": "electric",
     "radius": 2.49,
     "categories": [
-     "coal",
-     "angels-ore1",
-     "angels-ore2",
-     "angels-ore3",
-     "angels-ore4",
-     "angels-ore5",
-     "angels-ore6",
-     "infinite-coal",
-     "infinite-angels-ore1",
-     "infinite-angels-ore2",
-     "infinite-angels-ore3",
-     "infinite-angels-ore4",
-     "infinite-angels-ore5",
-     "infinite-angels-ore6"
+     "basic-solid"
     ]
    },
    {
@@ -4973,20 +5620,7 @@
     "source": "electric",
     "radius": 2.49,
     "categories": [
-     "coal",
-     "angels-ore1",
-     "angels-ore2",
-     "angels-ore3",
-     "angels-ore4",
-     "angels-ore5",
-     "angels-ore6",
-     "infinite-coal",
-     "infinite-angels-ore1",
-     "infinite-angels-ore2",
-     "infinite-angels-ore3",
-     "infinite-angels-ore4",
-     "infinite-angels-ore5",
-     "infinite-angels-ore6"
+     "basic-solid"
     ]
    },
    {
@@ -5000,20 +5634,7 @@
     "source": "electric",
     "radius": 2.49,
     "categories": [
-     "coal",
-     "angels-ore1",
-     "angels-ore2",
-     "angels-ore3",
-     "angels-ore4",
-     "angels-ore5",
-     "angels-ore6",
-     "infinite-coal",
-     "infinite-angels-ore1",
-     "infinite-angels-ore2",
-     "infinite-angels-ore3",
-     "infinite-angels-ore4",
-     "infinite-angels-ore5",
-     "infinite-angels-ore6"
+     "basic-solid"
     ]
    },
    {
@@ -5027,20 +5648,7 @@
     "source": "electric",
     "radius": 3.49,
     "categories": [
-     "coal",
-     "angels-ore1",
-     "angels-ore2",
-     "angels-ore3",
-     "angels-ore4",
-     "angels-ore5",
-     "angels-ore6",
-     "infinite-coal",
-     "infinite-angels-ore1",
-     "infinite-angels-ore2",
-     "infinite-angels-ore3",
-     "infinite-angels-ore4",
-     "infinite-angels-ore5",
-     "infinite-angels-ore6"
+     "basic-solid"
     ]
    },
    {
@@ -5054,20 +5662,7 @@
     "source": "electric",
     "radius": 5.49,
     "categories": [
-     "coal",
-     "angels-ore1",
-     "angels-ore2",
-     "angels-ore3",
-     "angels-ore4",
-     "angels-ore5",
-     "angels-ore6",
-     "infinite-coal",
-     "infinite-angels-ore1",
-     "infinite-angels-ore2",
-     "infinite-angels-ore3",
-     "infinite-angels-ore4",
-     "infinite-angels-ore5",
-     "infinite-angels-ore6"
+     "basic-solid"
     ]
    },
    {
@@ -5081,20 +5676,7 @@
     "source": "electric",
     "radius": 6.49,
     "categories": [
-     "coal",
-     "angels-ore1",
-     "angels-ore2",
-     "angels-ore3",
-     "angels-ore4",
-     "angels-ore5",
-     "angels-ore6",
-     "infinite-coal",
-     "infinite-angels-ore1",
-     "infinite-angels-ore2",
-     "infinite-angels-ore3",
-     "infinite-angels-ore4",
-     "infinite-angels-ore5",
-     "infinite-angels-ore6"
+     "basic-solid"
     ]
    },
    {
@@ -5108,20 +5690,7 @@
     "source": "electric",
     "radius": 8.49,
     "categories": [
-     "coal",
-     "angels-ore1",
-     "angels-ore2",
-     "angels-ore3",
-     "angels-ore4",
-     "angels-ore5",
-     "angels-ore6",
-     "infinite-coal",
-     "infinite-angels-ore1",
-     "infinite-angels-ore2",
-     "infinite-angels-ore3",
-     "infinite-angels-ore4",
-     "infinite-angels-ore5",
-     "infinite-angels-ore6"
+     "basic-solid"
     ]
    },
    {
@@ -5135,8 +5704,8 @@
     "source": "electric",
     "radius": 0.49000000000000005,
     "categories": [
-     "crude-oil",
-     "angels-natural-gas"
+     "basic-fluid",
+     "water"
     ]
    },
    {
@@ -5150,8 +5719,8 @@
     "source": "electric",
     "radius": 0.49000000000000005,
     "categories": [
-     "crude-oil",
-     "angels-natural-gas"
+     "basic-fluid",
+     "water"
     ]
    },
    {
@@ -5165,8 +5734,8 @@
     "source": "electric",
     "radius": 0.49000000000000005,
     "categories": [
-     "crude-oil",
-     "angels-natural-gas"
+     "basic-fluid",
+     "water"
     ]
    },
    {
@@ -5208,35 +5777,8 @@
     "source": "electric",
     "radius": 0.49000000000000005,
     "categories": [
-     "crude-oil",
-     "angels-natural-gas"
-    ]
-   },
-   {
-    "id": "pd-relic-deep-drill",
-    "type": "mining-drill",
-    "ru": "Глубинный бур",
-    "en": "Deep drill",
-    "icon": "mining-drill__pd-relic-deep-drill",
-    "speed": 1,
-    "power_w": 90000.0,
-    "source": "void",
-    "radius": 4.49,
-    "categories": [
-     "coal",
-     "angels-ore1",
-     "angels-ore2",
-     "angels-ore3",
-     "angels-ore4",
-     "angels-ore5",
-     "angels-ore6",
-     "infinite-coal",
-     "infinite-angels-ore1",
-     "infinite-angels-ore2",
-     "infinite-angels-ore3",
-     "infinite-angels-ore4",
-     "infinite-angels-ore5",
-     "infinite-angels-ore6"
+     "basic-fluid",
+     "water"
     ]
    }
   ],
@@ -5247,17 +5789,8 @@
     "ru": "Электрический береговой насос МК1",
     "en": "Electric Offshore Pump MK1",
     "icon": "offshore-pump__offshore-pump",
-    "per_s": 1200,
+    "per_s": 600,
     "source": "electric"
-   },
-   {
-    "id": "angels-ground-water-pump",
-    "type": "offshore-pump",
-    "ru": "Скважина грунтовых вод",
-    "en": "Ground water bore",
-    "icon": "offshore-pump__angels-ground-water-pump",
-    "per_s": 60,
-    "source": "void"
    },
    {
     "id": "angels-seafloor-pump",
@@ -5274,7 +5807,7 @@
     "ru": "Твердотопливный береговой насос",
     "en": "Burner Pump",
     "icon": "offshore-pump__offshore-mk0-pump",
-    "per_s": 300,
+    "per_s": 200,
     "source": "burner"
    },
    {
@@ -5283,7 +5816,7 @@
     "ru": "Электрический береговой насос МК2",
     "en": "Electric Offshore Pump MK2",
     "icon": "offshore-pump__offshore-mk2-pump",
-    "per_s": 2400,
+    "per_s": 1200,
     "source": "electric"
    },
    {
@@ -5292,7 +5825,7 @@
     "ru": "Электрический береговой насос МК3",
     "en": "Electric Offshore Pump MK3",
     "icon": "offshore-pump__offshore-mk3-pump",
-    "per_s": 3600,
+    "per_s": 2400,
     "source": "electric"
    },
    {
@@ -5323,7 +5856,7 @@
     "source": "electric"
    }
   ],
-  "assemblers_count": 233,
+  "assemblers_count": 282,
   "assemblers_fastest": [
    {
     "id": "bi-bio-garden-huge",
@@ -5358,7 +5891,7 @@
     "speed": 8,
     "categories": 3,
     "source": "electric",
-    "modules": 8,
+    "modules": 7,
     "power_w": 1500000.0
    },
    {
@@ -5382,7 +5915,7 @@
     "speed": 6,
     "categories": 3,
     "source": "electric",
-    "modules": 7,
+    "modules": 6,
     "power_w": 1000000.0
    },
    {
@@ -5418,47 +5951,35 @@
     "speed": 5,
     "categories": 8,
     "source": "electric",
-    "modules": 9,
+    "modules": 7,
     "power_w": 2000000.0
    },
    {
-    "id": "assembling-machine-8",
+    "id": "ye_dnasplicer",
     "type": "assembling-machine",
-    "ru": "Суперсборочный автомат 8",
-    "en": "Assembling machine 8",
-    "icon": "assembling-machine__assembling-machine-8",
-    "speed": 4.5,
-    "categories": 8,
+    "ru": "ДНК-сплайсер",
+    "en": "DNA-Splicer",
+    "icon": "assembling-machine__ye_dnasplicer",
+    "speed": 5,
+    "categories": 1,
     "source": "electric",
-    "modules": 8,
-    "power_w": 1500000.0
+    "modules": 0,
+    "power_w": 800000.0
    },
    {
-    "id": "bob-electronics-machine-3",
+    "id": "ye_fassembly_sp",
     "type": "assembling-machine",
-    "ru": "Автомат для сборки электроники 3",
-    "en": "Electronics assembling machine 3",
-    "icon": "assembling-machine__bob-electronics-machine-3",
-    "speed": 4,
-    "categories": 3,
+    "ru": "Фабрика P3",
+    "en": "P3-Factory",
+    "icon": "assembling-machine__ye_fassembly_sp",
+    "speed": 5,
+    "categories": 2,
     "source": "electric",
     "modules": 4,
-    "power_w": 360000.0
+    "power_w": 700000.0
    }
   ],
   "burner_machines": [
-   {
-    "id": "deadlock-copper-lamp",
-    "type": "assembling-machine",
-    "ru": "Медная лампа",
-    "en": "Copper Lamp",
-    "icon": "assembling-machine__deadlock-copper-lamp",
-    "speed": 1,
-    "categories": 1,
-    "source": "burner",
-    "modules": 0,
-    "power_w": 10000.0
-   },
    {
     "id": "bob-stone-mixing-furnace",
     "type": "assembling-machine",
@@ -5482,6 +6003,78 @@
     "source": "burner",
     "modules": 0,
     "power_w": 90000.0
+   },
+   {
+    "id": "y_obninsk_mc",
+    "type": "assembling-machine",
+    "ru": "Мастерский Обнинский ядерный реактор 2/2016",
+    "en": "Obninsk Mastercrafted Nuclear Reactor 2/2016",
+    "icon": "assembling-machine__y_obninsk_mc",
+    "speed": 1,
+    "categories": 1,
+    "source": "burner",
+    "modules": 0,
+    "power_w": 35000000.0
+   },
+   {
+    "id": "y-obninsk-reactor",
+    "type": "assembling-machine",
+    "ru": "Обнинский реактор AM-1/1951",
+    "en": "Obninsk Reactor AM-1/1951",
+    "icon": "assembling-machine__y-obninsk-reactor",
+    "speed": 1,
+    "categories": 1,
+    "source": "burner",
+    "modules": 0,
+    "power_w": 30000000.0
+   },
+   {
+    "id": "ye_overheater",
+    "type": "assembling-machine",
+    "ru": "Перегреватель F5",
+    "en": "Overheater F5",
+    "icon": "assembling-machine__ye_overheater",
+    "speed": 1,
+    "categories": 1,
+    "source": "burner",
+    "modules": 0,
+    "power_w": 28000000.0
+   },
+   {
+    "id": "y-sfe",
+    "type": "assembling-machine",
+    "ru": "Твердотопливный двигатель",
+    "en": "Solid-Fuel Engine",
+    "icon": "assembling-machine__y-sfe",
+    "speed": 1,
+    "categories": 1,
+    "source": "burner",
+    "modules": 0,
+    "power_w": 3000000.0
+   },
+   {
+    "id": "y-1stirling-engine",
+    "type": "assembling-machine",
+    "ru": "Карманный двигатель Стирлинга",
+    "en": "Pocket Stirling Engine",
+    "icon": "assembling-machine__y-1stirling-engine",
+    "speed": 1,
+    "categories": 1,
+    "source": "burner",
+    "modules": 0,
+    "power_w": 300000.0
+   },
+   {
+    "id": "ye_rheinsberg",
+    "type": "assembling-machine",
+    "ru": "ВВЭР-210 (Райнсберг)",
+    "en": "WWER-210 (Rheinsberg)",
+    "icon": "assembling-machine__ye_rheinsberg",
+    "speed": 1,
+    "categories": 1,
+    "source": "burner",
+    "modules": 0,
+    "power_w": 75000000.0
    },
    {
     "id": "angels-burner-ore-crusher",
@@ -5554,6 +6147,18 @@
     "source": "burner",
     "modules": 3,
     "power_w": 300000.0
+   },
+   {
+    "id": "deadlock-copper-lamp",
+    "type": "assembling-machine",
+    "ru": "Медная лампа",
+    "en": "Copper Lamp",
+    "icon": "assembling-machine__deadlock-copper-lamp",
+    "speed": 1,
+    "categories": 1,
+    "source": "burner",
+    "modules": 0,
+    "power_w": 10000.0
    }
   ],
   "resources": [
@@ -5568,7 +6173,7 @@
     "fluid": null,
     "fluid_amount": null,
     "results": [],
-    "category": "coal"
+    "category": "basic-solid"
    },
    {
     "id": "crude-oil",
@@ -5583,7 +6188,7 @@
     "results": [
      "angels-liquid-multi-phase-oil"
     ],
-    "category": "crude-oil"
+    "category": "basic-fluid"
    },
    {
     "id": "angels-sea-pump-resource",
@@ -5598,7 +6203,7 @@
     "results": [
      "water"
     ],
-    "category": "angels-sea-pump-resource"
+    "category": "angels-sea-pump"
    },
    {
     "id": "angels-ore1",
@@ -5613,7 +6218,7 @@
     "results": [
      "angels-ore1"
     ],
-    "category": "angels-ore1",
+    "category": "basic-solid",
     "fluid_ru": "Вода",
     "fluid_en": "Water",
     "fluid_icon": "fluid__water"
@@ -5631,7 +6236,7 @@
     "results": [
      "angels-ore2"
     ],
-    "category": "angels-ore2",
+    "category": "basic-solid",
     "fluid_ru": "Пар",
     "fluid_en": "Steam",
     "fluid_icon": "fluid__steam"
@@ -5649,7 +6254,7 @@
     "results": [
      "angels-ore3"
     ],
-    "category": "angels-ore3",
+    "category": "basic-solid",
     "fluid_ru": "Вода",
     "fluid_en": "Water",
     "fluid_icon": "fluid__water"
@@ -5667,7 +6272,7 @@
     "results": [
      "angels-ore4"
     ],
-    "category": "angels-ore4",
+    "category": "basic-solid",
     "fluid_ru": "Пар",
     "fluid_en": "Steam",
     "fluid_icon": "fluid__steam"
@@ -5685,7 +6290,7 @@
     "results": [
      "angels-ore5"
     ],
-    "category": "angels-ore5",
+    "category": "basic-solid",
     "fluid_ru": "Пар",
     "fluid_en": "Steam",
     "fluid_icon": "fluid__steam"
@@ -5703,7 +6308,7 @@
     "results": [
      "angels-ore6"
     ],
-    "category": "angels-ore6",
+    "category": "basic-solid",
     "fluid_ru": "Пар",
     "fluid_en": "Steam",
     "fluid_icon": "fluid__steam"
@@ -5736,7 +6341,7 @@
     "results": [
      "coal"
     ],
-    "category": "infinite-coal"
+    "category": "basic-solid"
    },
    {
     "id": "infinite-angels-ore1",
@@ -5751,7 +6356,7 @@
     "results": [
      "angels-ore1"
     ],
-    "category": "infinite-angels-ore1",
+    "category": "basic-solid",
     "fluid_ru": "Серная кислота",
     "fluid_en": "Sulfuric acid",
     "fluid_icon": "fluid__sulfuric-acid"
@@ -5769,7 +6374,7 @@
     "results": [
      "angels-ore2"
     ],
-    "category": "infinite-angels-ore2",
+    "category": "basic-solid",
     "fluid_ru": "Фтороводородная кислота",
     "fluid_en": "Hydrofluoric acid",
     "fluid_icon": "fluid__angels-liquid-hydrofluoric-acid"
@@ -5787,7 +6392,7 @@
     "results": [
      "angels-ore3"
     ],
-    "category": "infinite-angels-ore3",
+    "category": "basic-solid",
     "fluid_ru": "Серная кислота",
     "fluid_en": "Sulfuric acid",
     "fluid_icon": "fluid__sulfuric-acid"
@@ -5805,7 +6410,7 @@
     "results": [
      "angels-ore4"
     ],
-    "category": "infinite-angels-ore4",
+    "category": "basic-solid",
     "fluid_ru": "Соляная кислота",
     "fluid_en": "Hydrochloric acid",
     "fluid_icon": "fluid__angels-liquid-hydrochloric-acid"
@@ -5823,7 +6428,7 @@
     "results": [
      "angels-ore5"
     ],
-    "category": "infinite-angels-ore5",
+    "category": "basic-solid",
     "fluid_ru": "Азотная кислота",
     "fluid_en": "Nitric acid",
     "fluid_icon": "fluid__angels-liquid-nitric-acid"
@@ -5841,7 +6446,7 @@
     "results": [
      "angels-ore6"
     ],
-    "category": "infinite-angels-ore6",
+    "category": "basic-solid",
     "fluid_ru": "Азотная кислота",
     "fluid_en": "Nitric acid",
     "fluid_icon": "fluid__angels-liquid-nitric-acid"
@@ -5859,7 +6464,20 @@
     "results": [
      "angels-gas-natural-1"
     ],
-    "category": "angels-natural-gas"
+    "category": "basic-fluid"
+   },
+   {
+    "id": "scrap",
+    "type": "resource",
+    "ru": "Металлолом",
+    "en": "Scrap",
+    "icon": "resource__scrap",
+    "map_color": "#e5e5e5",
+    "infinite": false,
+    "fluid": null,
+    "fluid_amount": null,
+    "results": [],
+    "category": "basic-solid"
    }
   ],
   "ore_decoder": [
@@ -5915,7 +6533,7 @@
         "amount": 5
        }
       ],
-      "machine_category": "angels-ore-sorting"
+      "machine_category": null
      },
      {
       "stage": "chunk",
@@ -5969,7 +6587,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting"
+      "machine_category": null
      },
      {
       "stage": "crystal",
@@ -6031,7 +6649,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting-3"
+      "machine_category": null
      },
      {
       "stage": "pure",
@@ -6093,7 +6711,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting-4"
+      "machine_category": null
      }
     ],
     "infinite_fluid": {
@@ -6156,7 +6774,7 @@
         "amount": 5
        }
       ],
-      "machine_category": "angels-ore-sorting"
+      "machine_category": null
      },
      {
       "stage": "chunk",
@@ -6210,7 +6828,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting"
+      "machine_category": null
      },
      {
       "stage": "crystal",
@@ -6272,7 +6890,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting-3"
+      "machine_category": null
      },
      {
       "stage": "pure",
@@ -6334,7 +6952,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting-4"
+      "machine_category": null
      }
     ],
     "infinite_fluid": {
@@ -6397,7 +7015,7 @@
         "amount": 5
        }
       ],
-      "machine_category": "angels-ore-sorting"
+      "machine_category": null
      },
      {
       "stage": "chunk",
@@ -6451,7 +7069,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting"
+      "machine_category": null
      },
      {
       "stage": "crystal",
@@ -6513,7 +7131,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting-3"
+      "machine_category": null
      },
      {
       "stage": "pure",
@@ -6575,7 +7193,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting-4"
+      "machine_category": null
      }
     ],
     "infinite_fluid": {
@@ -6638,7 +7256,7 @@
         "amount": 5
        }
       ],
-      "machine_category": "angels-ore-sorting"
+      "machine_category": null
      },
      {
       "stage": "chunk",
@@ -6692,7 +7310,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting"
+      "machine_category": null
      },
      {
       "stage": "crystal",
@@ -6754,7 +7372,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting-3"
+      "machine_category": null
      },
      {
       "stage": "pure",
@@ -6816,7 +7434,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting-4"
+      "machine_category": null
      }
     ],
     "infinite_fluid": {
@@ -6879,7 +7497,7 @@
         "amount": 5
        }
       ],
-      "machine_category": "angels-ore-sorting"
+      "machine_category": null
      },
      {
       "stage": "chunk",
@@ -6933,7 +7551,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting"
+      "machine_category": null
      },
      {
       "stage": "crystal",
@@ -6995,7 +7613,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting-3"
+      "machine_category": null
      },
      {
       "stage": "pure",
@@ -7057,7 +7675,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting-4"
+      "machine_category": null
      }
     ],
     "infinite_fluid": {
@@ -7120,7 +7738,7 @@
         "amount": 5
        }
       ],
-      "machine_category": "angels-ore-sorting"
+      "machine_category": null
      },
      {
       "stage": "chunk",
@@ -7174,7 +7792,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting"
+      "machine_category": null
      },
      {
       "stage": "crystal",
@@ -7236,7 +7854,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting-3"
+      "machine_category": null
      },
      {
       "stage": "pure",
@@ -7298,7 +7916,7 @@
         "amount": 1
        }
       ],
-      "machine_category": "angels-ore-sorting-4"
+      "machine_category": null
      }
     ],
     "infinite_fluid": {
@@ -7433,64 +8051,10 @@
     "en": "Highlight belts"
    },
    {
-    "id": "beltbrush-cycle-corners",
-    "keys": "CONTROL + R",
-    "ru": "Конвейерная кисть: следующий тип",
-    "en": "Beltbrush: Cycle Type"
-   },
-   {
-    "id": "beltbrush-cycle-corners-rev",
-    "keys": "CONTROL + SHIFT + R",
-    "ru": "Конвейерная кисть: предыдущий тип",
-    "en": "Beltbrush: Cycle Type (Reverse)"
-   },
-   {
-    "id": "beltbrush-line-longer",
-    "keys": "CONTROL + SHIFT + EQUALS",
-    "ru": "Конвейерная кисть: увеличить размер",
-    "en": "Beltbrush: Increase Size"
-   },
-   {
-    "id": "beltbrush-line-shorter",
-    "keys": "CONTROL + SHIFT + MINUS",
-    "ru": "Конвейерная кисть: уменьшить размер",
-    "en": "Beltbrush: Decrease Size"
-   },
-   {
-    "id": "beltbrush-cycle-balancers",
-    "keys": "CONTROL + B",
-    "ru": "Конвейерная кисть: следующий балансировщик",
-    "en": "Beltbrush: Cycle Balancers"
-   },
-   {
-    "id": "beltbrush-cycle-balancers-rev",
-    "keys": "CONTROL + SHIFT + B",
-    "ru": "Конвейерная кисть: предыдущий балансировщик",
-    "en": "Beltbrush: Cycle Balancers (Reverse)"
-   },
-   {
     "id": "queue-to-front",
     "keys": "ALT + Q",
     "ru": "Переключить порядок добавления в очередь",
     "en": "Toggle queuing order"
-   },
-   {
-    "id": "VehicleSnap-toggle",
-    "keys": "SHIFT + V",
-    "ru": "Вкл/выкл привязку транспортного средства для игрока",
-    "en": "VehicleSnap on/off for player"
-   },
-   {
-    "id": "ruins-claim-tool",
-    "keys": "SHIFT + C",
-    "ru": "Захватить руины",
-    "en": "Claim ruins"
-   },
-   {
-    "id": "ReverseEntireBelt",
-    "keys": "ALT + R",
-    "ru": "Развернуть весь конвейер",
-    "en": "Reverse entire belt"
    },
    {
     "id": "bob-inserter-drop-range",
@@ -7541,40 +8105,82 @@
     "en": "Inventory Cleanup"
    },
    {
-    "id": "dolly-move-north",
-    "keys": "SHIFT + UP",
-    "ru": "Переместить объект выше",
-    "en": "Move entity north"
+    "id": "fp_toggle_interface",
+    "keys": "CONTROL + R",
+    "ru": "Открыть/закрыть",
+    "en": "Open/Close"
    },
    {
-    "id": "dolly-move-west",
-    "keys": "SHIFT + LEFT",
-    "ru": "Переместить объект на запад",
-    "en": "Move entity west"
+    "id": "fp_toggle_compact_view",
+    "keys": "CONTROL + SHIFT + R",
+    "ru": "Переключить компактный вид",
+    "en": "Toggle compact view"
    },
    {
-    "id": "dolly-move-south",
-    "keys": "SHIFT + DOWN",
-    "ru": "Переместить объект на юг",
-    "en": "Move entity south"
+    "id": "fp_toggle_pause",
+    "keys": "CONTROL + P",
+    "ru": "Поставить/снять с паузы",
+    "en": "Toggle pause"
    },
    {
-    "id": "dolly-move-east",
-    "keys": "SHIFT + RIGHT",
-    "ru": "Переместить объект на восток",
-    "en": "Move entity east"
+    "id": "fp_refresh_production",
+    "keys": "R",
+    "ru": "Обновить производство",
+    "en": "Refresh production"
    },
    {
-    "id": "dolly-rotate-rectangle",
-    "keys": "KP_0",
-    "ru": "Повернуть продолговатый комбинатор",
-    "en": "Rotate oblong combinator"
+    "id": "fp_up_floor",
+    "keys": "ALT + UP",
+    "ru": "Перейти на уровень выше",
+    "en": "Go up a floor"
    },
    {
-    "id": "dolly-rotate-rectangle-reverse",
-    "keys": "SHIFT + KP_0",
-    "ru": "Обратное вращение прямоугольного комбинатора",
-    "en": "Reverse rotate oblong combinator"
+    "id": "fp_top_floor",
+    "keys": "SHIFT + ALT + UP",
+    "ru": "Перейти на самый верхний уровень",
+    "en": "Go to the top floor"
+   },
+   {
+    "id": "fp_navigate_back",
+    "keys": "SHIFT + ALT + LEFT",
+    "ru": "Назад",
+    "en": "Navigate back"
+   },
+   {
+    "id": "fp_navigate_forward",
+    "keys": "SHIFT + ALT + RIGHT",
+    "ru": "Вперёд",
+    "en": "Navigate forward"
+   },
+   {
+    "id": "fp_toggle_fold_out_subfloors",
+    "keys": "SHIFT + F",
+    "ru": "Свернуть/развернуть подуровни",
+    "en": "Toggle folded out subfloors"
+   },
+   {
+    "id": "fp_confirm_dialog",
+    "keys": "RETURN",
+    "ru": "Подтвердить диалог",
+    "en": "Confirm dialog"
+   },
+   {
+    "id": "fp_toggle_calculator",
+    "keys": "CONTROL + SHIFT + C",
+    "ru": "Переключить калькулятор",
+    "en": "Toggle calculator"
+   },
+   {
+    "id": "fp_delete",
+    "keys": "BACKSPACE",
+    "ru": "Удалить",
+    "en": "Delete"
+   },
+   {
+    "id": "fp_put_into_combinator",
+    "keys": "C",
+    "ru": "Поместить в комбинатор",
+    "en": "Put into combinator"
    },
    {
     "id": "search-factory",
@@ -7587,18 +8193,6 @@
     "keys": "SHIFT + ALT + mouse-button-1",
     "ru": "Поиск выбранного объекта по фабрике",
     "en": "Search factory for selected object"
-   },
-   {
-    "id": "pressed-fnei-gui-key",
-    "keys": "CONTROL + E",
-    "ru": "FNEI главная кнопка",
-    "en": "FNEI main key"
-   },
-   {
-    "id": "pressed-fnei-back-key",
-    "keys": "BACKSPACE",
-    "ru": "FNEI кнопка назад",
-    "en": "FNEI back key"
    },
    {
     "id": "ghost-counter-selection-hotkey",
@@ -7691,154 +8285,28 @@
     "en": "Toggle alerts display"
    },
    {
-    "id": "random-name",
-    "keys": "CONTROL + N",
-    "ru": "Выбрать случайное название",
-    "en": "Choose random name"
-   },
-   {
     "id": "find-orphans",
     "keys": "SHIFT + O",
     "ru": "Найти непарные подземные трубы и конвейеры",
     "en": "Find unpaired undergound pipes/belts"
    },
    {
-    "id": "PI_inserter_selector_ui",
-    "keys": "SHIFT + I",
-    "ru": "Включить планировщик освобождения манипуляторов",
-    "en": "Activate inserter cleanup planner"
+    "id": "paranoidal-autofill-refill",
+    "keys": "SHIFT + ALT + F",
+    "ru": "Автозакладка: дополнить рядом",
+    "en": "Autofill: top up nearby"
    },
    {
-    "id": "pi-orphan-mark-del-key",
-    "keys": "CONTROL + ALT + I",
-    "ru": "Удалить метки уничтоженных манипуляторов",
-    "en": "Delete orphan marks"
+    "id": "key-I",
+    "keys": "I",
+    "ru": "Журнал базы: персонаж",
+    "en": "Base journal: character"
    },
    {
-    "id": "rename",
-    "keys": "CONTROL + R",
-    "ru": "Сменить название объекта",
-    "en": "Rename entity"
-   },
-   {
-    "id": "todolist-toggle-ui",
-    "keys": "SHIFT + T",
-    "ru": "Закрыть/Открыть \"Задачи\"",
-    "en": "Min/maximize todo list"
-   },
-   {
-    "id": "todo-search-shortcut",
-    "keys": "CONTROL + F",
-    "ru": "Перейти в поле поиска",
-    "en": "Focus search field"
-   },
-   {
-    "id": "tms-toggle",
-    "keys": "CONTROL + SHIFT + X",
-    "ru": "Переключатель режима поездов",
-    "en": "Train Mode Switcher"
-   },
-   {
-    "id": "valves-threshold-minus",
-    "keys": "PAD -",
-    "ru": "Понизить порог срабатывания клапана",
-    "en": "Decrement valve threshold"
-   },
-   {
-    "id": "valves-threshold-plus",
-    "keys": "PAD +",
-    "ru": "Повысить порог срабатывания клапана",
-    "en": "Increment valve threshold"
-   },
-   {
-    "id": "cen-recall-last-item",
-    "keys": "SHIFT + Q",
-    "ru": "Вспомнить предыдущий предмет",
-    "en": "Recall last item"
-   },
-   {
-    "id": "cen-quick-craft",
-    "keys": "CONTROL + Q",
-    "ru": "Быстрый крафт",
-    "en": "Quick craft"
-   },
-   {
-    "id": "cen-scroll-next",
-    "keys": "SHIFT + ALT + mouse-wheel-up",
-    "ru": "Следующий предмет",
-    "en": "Next item"
-   },
-   {
-    "id": "cen-scroll-previous",
-    "keys": "SHIFT + ALT + mouse-wheel-down",
-    "ru": "Предыдущий предмет",
-    "en": "Previous item"
-   },
-   {
-    "id": "fp_toggle_interface",
-    "keys": "CONTROL + R",
-    "ru": "Открыть/закрыть",
-    "en": "Open/Close"
-   },
-   {
-    "id": "fp_toggle_compact_view",
-    "keys": "CONTROL + SHIFT + R",
-    "ru": "Переключить компактный вид",
-    "en": "Toggle compact view"
-   },
-   {
-    "id": "fp_toggle_pause",
-    "keys": "CONTROL + P",
-    "ru": "Поставить/снять с паузы",
-    "en": "Toggle pause"
-   },
-   {
-    "id": "fp_refresh_production",
-    "keys": "R",
-    "ru": "Обновить производство",
-    "en": "Refresh production"
-   },
-   {
-    "id": "fp_up_floor",
-    "keys": "ALT + UP",
-    "ru": "Перейти на уровень выше",
-    "en": "Go up a floor"
-   },
-   {
-    "id": "fp_top_floor",
-    "keys": "SHIFT + ALT + UP",
-    "ru": "Перейти на самый верхний уровень",
-    "en": "Go to the top floor"
-   },
-   {
-    "id": "fp_toggle_fold_out_subfloors",
-    "keys": "SHIFT + F",
-    "ru": "Свернуть/развернуть подуровни",
-    "en": "Toggle folded out subfloors"
-   },
-   {
-    "id": "fp_cycle_production_views",
-    "keys": "CONTROL + RIGHT",
-    "ru": "Переключиться между видами",
-    "en": "Cycle production view"
-   },
-   {
-    "id": "fp_reverse_cycle_production_views",
-    "keys": "CONTROL + LEFT",
-    "ru": "Переключиться между видами (в обратном порядке)",
-    "en": "Reverse cycle production view"
-   },
-   {
-    "id": "fp_confirm_dialog",
-    "keys": "ENTER",
-    "ru": "Подтвердить диалог",
-    "en": "Confirm dialog"
-   },
-   {
-    "id": "fp_toggle_calculator",
-    "keys": "CONTROL + SHIFT + C",
-    "ru": "Переключить калькулятор",
-    "en": "Toggle calculator"
+    "id": "rpg-open-stats",
+    "keys": "ALT + I",
+    "ru": "Журнал базы: сразу статистика",
+    "en": "Base journal: straight to the statistics"
    },
    {
     "id": "toggle-ghost-revive",
@@ -7889,34 +8357,106 @@
     "en": "Manual Inventory Sort"
    },
    {
-    "id": "milestones_toggle_gui",
-    "keys": "CONTROL + ALT + M",
-    "ru": "Показать этапы",
-    "en": "Show milestones"
+    "id": "ReverseEntireBelt",
+    "keys": "ALT + R",
+    "ru": "Развернуть весь конвейер",
+    "en": "Reverse entire belt"
    },
    {
-    "id": "get-module-inserter-ex",
-    "keys": "SHIFT + ALT + E",
-    "ru": "Получить вставщик модулей",
-    "en": "Get Module Inserter"
+    "id": "beltbrush-cycle-corners",
+    "keys": "ALT + C",
+    "ru": "Конвейерная кисть: следующий тип",
+    "en": "Beltbrush: Cycle Type"
    },
    {
-    "id": "toggle-module-inserter-ex",
-    "keys": "CONTROL + I",
-    "ru": "Переключить окно настройки вставщика модулей",
-    "en": "Toggle Module Inserter Configuration Window"
+    "id": "beltbrush-cycle-corners-rev",
+    "keys": "ALT + SHIFT + C",
+    "ru": "Конвейерная кисть: предыдущий тип",
+    "en": "Beltbrush: Cycle Type (Reverse)"
    },
    {
-    "id": "module-inserter-ex-next-preset",
-    "keys": "SHIFT + ALT + mouse-wheel-down",
-    "ru": "Следующий \"Пресет\"",
-    "en": "Next Preset"
+    "id": "beltbrush-line-longer",
+    "keys": "CONTROL + SHIFT + EQUALS",
+    "ru": "Конвейерная кисть: увеличить размер",
+    "en": "Beltbrush: Increase Size"
    },
    {
-    "id": "module-inserter-ex-previous-preset",
-    "keys": "SHIFT + ALT + mouse-wheel-up",
-    "ru": "Предыдущий \"Пресет\"",
-    "en": "Previous Preset"
+    "id": "beltbrush-line-shorter",
+    "keys": "CONTROL + SHIFT + MINUS",
+    "ru": "Конвейерная кисть: уменьшить размер",
+    "en": "Beltbrush: Decrease Size"
+   },
+   {
+    "id": "beltbrush-cycle-balancers",
+    "keys": "ALT + B",
+    "ru": "Конвейерная кисть: следующий балансировщик",
+    "en": "Beltbrush: Cycle Balancers"
+   },
+   {
+    "id": "beltbrush-cycle-balancers-rev",
+    "keys": "ALT + SHIFT + B",
+    "ru": "Конвейерная кисть: предыдущий балансировщик",
+    "en": "Beltbrush: Cycle Balancers (Reverse)"
+   },
+   {
+    "id": "dolly-move-north",
+    "keys": "SHIFT + UP",
+    "ru": "Переместить объект на север",
+    "en": "Move entity north"
+   },
+   {
+    "id": "dolly-move-west",
+    "keys": "SHIFT + LEFT",
+    "ru": "Переместить объект на запад",
+    "en": "Move entity west"
+   },
+   {
+    "id": "dolly-move-south",
+    "keys": "SHIFT + DOWN",
+    "ru": "Переместить объект на юг",
+    "en": "Move entity south"
+   },
+   {
+    "id": "dolly-move-east",
+    "keys": "SHIFT + RIGHT",
+    "ru": "Переместить объект на восток",
+    "en": "Move entity east"
+   },
+   {
+    "id": "dolly-rotate-rectangle",
+    "keys": "KP_0",
+    "ru": "Повернуть прямоугольный комбинатор",
+    "en": "Rotate oblong combinator"
+   },
+   {
+    "id": "dolly-rotate-rectangle-reverse",
+    "keys": "SHIFT + KP_0",
+    "ru": "Обратное вращение прямоугольного комбинатора",
+    "en": "Reverse rotate oblong combinator"
+   },
+   {
+    "id": "ruins-claim-tool",
+    "keys": "SHIFT + C",
+    "ru": "Захватить руины",
+    "en": "Claim ruins"
+   },
+   {
+    "id": "VehicleSnap-toggle",
+    "keys": "SHIFT + V",
+    "ru": "Вкл/выкл привязку транспортного средства для игрока",
+    "en": "VehicleSnap on/off for player"
+   },
+   {
+    "id": "PI_inserter_selector_ui",
+    "keys": "SHIFT + I",
+    "ru": "Включить планировщик освобождения манипуляторов",
+    "en": "Activate inserter cleanup planner"
+   },
+   {
+    "id": "pi-orphan-mark-del-key",
+    "keys": "CONTROL + ALT + I",
+    "ru": "Удалить метки уничтоженных манипуляторов",
+    "en": "Delete orphan marks"
    },
    {
     "id": "pv-visualize-selected",
@@ -7943,10 +8483,94 @@
     "en": "Color by fluid system"
    },
    {
-    "id": "key-I",
-    "keys": "I",
-    "ru": "Характеристики Игрока",
-    "en": "Players Stats"
+    "id": "runames-random-name",
+    "keys": "CONTROL + N",
+    "ru": "Случайное название",
+    "en": "Random name"
+   },
+   {
+    "id": "runames-rename",
+    "keys": "CONTROL + R",
+    "ru": "Сменить название объекта",
+    "en": "Rename"
+   },
+   {
+    "id": "todolist-toggle-ui",
+    "keys": "SHIFT + T",
+    "ru": "Закрыть/Открыть \"Задачи\"",
+    "en": "Min/maximize todo list"
+   },
+   {
+    "id": "todo-search-shortcut",
+    "keys": "CONTROL + F",
+    "ru": "Перейти в поле поиска",
+    "en": "Focus search field"
+   },
+   {
+    "id": "tms-toggle",
+    "keys": "CONTROL + SHIFT + X",
+    "ru": "Переключатель режима поездов",
+    "en": "Train Mode Switcher"
+   },
+   {
+    "id": "valves-threshold-minus",
+    "keys": "KP_MINUS",
+    "ru": "Понизить порог срабатывания клапана",
+    "en": "Decrement valve threshold"
+   },
+   {
+    "id": "valves-threshold-plus",
+    "keys": "KP_PLUS",
+    "ru": "Повысить порог срабатывания клапана",
+    "en": "Increment valve threshold"
+   },
+   {
+    "id": "cen-recall-last-item",
+    "keys": "SHIFT + Q",
+    "ru": "Вспомнить предыдущий предмет",
+    "en": "Recall last item"
+   },
+   {
+    "id": "cen-quick-craft",
+    "keys": "CONTROL + Q",
+    "ru": "Быстрый крафт",
+    "en": "Quick craft"
+   },
+   {
+    "id": "cen-scroll-next",
+    "keys": "SHIFT + ALT + mouse-wheel-up",
+    "ru": "Следующий предмет",
+    "en": "Next item"
+   },
+   {
+    "id": "cen-scroll-previous",
+    "keys": "SHIFT + ALT + mouse-wheel-down",
+    "ru": "Предыдущий предмет",
+    "en": "Previous item"
+   },
+   {
+    "id": "get-module-inserter-ex",
+    "keys": "SHIFT + ALT + E",
+    "ru": "Получить вставщик модулей",
+    "en": "Get Module Inserter"
+   },
+   {
+    "id": "toggle-module-inserter-ex",
+    "keys": "CONTROL + I",
+    "ru": "Переключить окно настройки вставщика модулей",
+    "en": "Toggle Module Inserter Configuration Window"
+   },
+   {
+    "id": "module-inserter-ex-next-preset",
+    "keys": "SHIFT + ALT + mouse-wheel-down",
+    "ru": "Следующий \"Пресет\"",
+    "en": "Next Preset"
+   },
+   {
+    "id": "module-inserter-ex-previous-preset",
+    "keys": "SHIFT + ALT + mouse-wheel-up",
+    "ru": "Предыдущий \"Пресет\"",
+    "en": "Previous Preset"
    },
    {
     "id": "rcalc-get-selection-tool",
@@ -8001,20 +8625,36 @@
     "keys": "CONTROL + SHIFT + Q",
     "ru": "Панель контроля качества",
     "en": "Quality control panel"
+   },
+   {
+    "id": "milestones_toggle_gui",
+    "keys": "CONTROL + ALT + M",
+    "ru": "Показать этапы",
+    "en": "Show milestones"
+   },
+   {
+    "id": "nan-e-toggle",
+    "keys": "ALT + N",
+    "ru": "Окно НЯН-И",
+    "en": "NAN-E's window"
+   },
+   {
+    "id": "ppd-dispatcher",
+    "keys": "CONTROL + SHIFT + D",
+    "ru": "Диспетчерская",
+    "en": "Dispatcher"
+   },
+   {
+    "id": "bnl-douse",
+    "keys": "mouse-button-1",
+    "ru": "Вылить бочку с водой (BnL)",
+    "en": "Pour a water barrel (BnL)"
    }
   ],
   "hotkey_conflicts": [
    [
     "CONTROL + R",
-    5
-   ],
-   [
-    "CONTROL + SHIFT + R",
-    3
-   ],
-   [
-    "CONTROL + B",
-    3
+    4
    ],
    [
     "SHIFT + C",
@@ -8023,6 +8663,14 @@
    [
     "R",
     3
+   ],
+   [
+    "ALT + B",
+    2
+   ],
+   [
+    "ALT + C",
+    2
    ],
    [
     "ALT + R",
@@ -8041,11 +8689,11 @@
     2
    ],
    [
-    "SHIFT + V",
+    "SHIFT + O",
     2
    ],
    [
-    "SHIFT + O",
+    "CONTROL + SHIFT + R",
     2
    ],
    [
@@ -8054,6 +8702,10 @@
    ],
    [
     "SHIFT + F",
+    2
+   ],
+   [
+    "RETURN",
     2
    ],
    [
@@ -8073,7 +8725,15 @@
     2
    ],
    [
+    "CONTROL + B",
+    2
+   ],
+   [
     "CONTROL + N",
+    2
+   ],
+   [
+    "SHIFT + V",
     2
    ],
    [
@@ -8454,7 +9114,7 @@
     "ru": "Обломки",
     "en": "Wreckage",
     "icon": "container__aai-big-ship-wreck-1",
-    "health": 300,
+    "health": 3000,
     "crafting_speed": null,
     "research_speed": null,
     "energy_usage_w": null,
@@ -8472,7 +9132,7 @@
       1.5
      ]
     ],
-    "inventory": 3,
+    "inventory": 4,
     "range": null
    },
    "salvaged-lab": {
@@ -8562,7 +9222,7 @@
     "ru": "Космический корабль",
     "en": "Spaceship",
     "icon": "container__crash-site-spaceship",
-    "health": 600,
+    "health": 750,
     "crafting_speed": null,
     "research_speed": null,
     "energy_usage_w": null,
@@ -8661,7 +9321,7 @@
       1.2
      ]
     ],
-    "inventory": 8,
+    "inventory": 50,
     "range": null
    },
    "memory-unit": {
@@ -9082,7 +9742,7 @@
     "production_w": null,
     "buffer_j": null,
     "source": "burner",
-    "effectivity": 0.5,
+    "effectivity": 0.2,
     "size": [
      [
       -0.6,
@@ -9109,7 +9769,7 @@
     "production_w": null,
     "buffer_j": null,
     "source": "burner",
-    "effectivity": 2,
+    "effectivity": 0.45,
     "size": [
      [
       -0.6,
@@ -9136,7 +9796,7 @@
     "production_w": null,
     "buffer_j": null,
     "source": "burner",
-    "effectivity": null,
+    "effectivity": 0.4,
     "size": [
      [
       -0.6,
@@ -9342,8 +10002,8 @@
    "nco-crane": {
     "id": "nco-crane",
     "type": "inserter",
-    "ru": "Погрузочный кран",
-    "en": "Loading Crane",
+    "ru": "Экспресс погрузочный кран",
+    "en": "Express Loading Crane",
     "icon": "inserter__nco-crane",
     "health": 375,
     "crafting_speed": null,
@@ -9364,33 +10024,6 @@
      ]
     ],
     "inventory": null,
-    "range": null
-   },
-   "Schall-pickup-tower-R128": {
-    "id": "Schall-pickup-tower-R128",
-    "type": "container",
-    "ru": "Башня сбора IV",
-    "en": "Pickup tower IV",
-    "icon": "container__Schall-pickup-tower-R128",
-    "health": 350,
-    "crafting_speed": null,
-    "research_speed": null,
-    "energy_usage_w": null,
-    "production_w": null,
-    "buffer_j": null,
-    "source": null,
-    "effectivity": null,
-    "size": [
-     [
-      -0.7,
-      -0.7
-     ],
-     [
-      0.7,
-      0.7
-     ]
-    ],
-    "inventory": 40,
     "range": null
    },
    "pd-fire-safety-turret": {
@@ -9605,7 +10238,7 @@
    {
     "id": "CW-air-filter-machine-4",
     "type": "assembling-machine",
-    "ru": "Воздухо-очистительная станция МК4",
+    "ru": "Воздухо-очистительная станция MK4",
     "en": "Air filter machine MK4",
     "icon": "assembling-machine__CW-air-filter-machine-4",
     "pollution": -300,
@@ -9673,6 +10306,15 @@
     "icon": "assembling-machine__angels-desert-farm-3",
     "pollution": -160,
     "speed": 4
+   },
+   {
+    "id": "y-electric-air-heater",
+    "type": "assembling-machine",
+    "ru": "Воздухоочиститель Fatmice",
+    "en": "Fatmice Air Scrubber",
+    "icon": "assembling-machine__y-electric-air-heater",
+    "pollution": -150,
+    "speed": 2
    },
    {
     "id": "angels-bio-generator-temperate-2",
@@ -10116,7 +10758,8 @@
     "icon": "quality__ic-defect-5",
     "level": 0,
     "color": "#141414",
-    "next_probability": 0.1,
+    "next_probability": 1,
+    "chain_probability": 0.1,
     "defect": true
    },
    {
@@ -10127,7 +10770,8 @@
     "icon": "quality__ic-defect-4",
     "level": 0,
     "color": "#222222",
-    "next_probability": 0.1,
+    "next_probability": 1,
+    "chain_probability": 0.1,
     "defect": true
    },
    {
@@ -10138,7 +10782,8 @@
     "icon": "quality__ic-defect-3",
     "level": 0,
     "color": "#303030",
-    "next_probability": 0.1,
+    "next_probability": 1,
+    "chain_probability": 0.1,
     "defect": true
    },
    {
@@ -10149,7 +10794,8 @@
     "icon": "quality__ic-defect-2",
     "level": 0,
     "color": "#3e3e3e",
-    "next_probability": 0.1,
+    "next_probability": 1,
+    "chain_probability": 0.1,
     "defect": true
    },
    {
@@ -10160,7 +10806,8 @@
     "icon": "quality__ic-defect-1",
     "level": 0,
     "color": "#4c4c4c",
-    "next_probability": 0.1,
+    "next_probability": 1,
+    "chain_probability": 0.1,
     "defect": true
    },
    {
@@ -10171,7 +10818,8 @@
     "icon": "quality__normal",
     "level": 0,
     "color": "#b2b2b2",
-    "next_probability": 0.20400000000000001,
+    "next_probability": 2.04,
+    "chain_probability": 0.20400000000000001,
     "defect": false
    },
    {
@@ -10182,7 +10830,8 @@
     "icon": "quality__uncommon",
     "level": 2,
     "color": "#2ba53d",
-    "next_probability": 0.2,
+    "next_probability": 2,
+    "chain_probability": 0.2,
     "defect": false
    },
    {
@@ -10193,7 +10842,8 @@
     "icon": "quality__rare",
     "level": 3,
     "color": "#2ba53d",
-    "next_probability": 0.196,
+    "next_probability": 1.96,
+    "chain_probability": 0.196,
     "defect": false
    },
    {
@@ -10204,7 +10854,8 @@
     "icon": "quality__epic",
     "level": 4,
     "color": "#2ba53d",
-    "next_probability": 0.192,
+    "next_probability": 1.92,
+    "chain_probability": 0.192,
     "defect": false
    },
    {
@@ -10215,7 +10866,8 @@
     "icon": "quality__legendary",
     "level": 5,
     "color": "#2ba53d",
-    "next_probability": 0.188,
+    "next_probability": 1.88,
+    "chain_probability": 0.188,
     "defect": false
    },
    {
@@ -10226,7 +10878,8 @@
     "icon": "quality__uncommon-t5",
     "level": 6,
     "color": "#2ba53d",
-    "next_probability": 0.184,
+    "next_probability": 1.8399999999999999,
+    "chain_probability": 0.184,
     "defect": false
    },
    {
@@ -10237,7 +10890,8 @@
     "icon": "quality__rare-t1",
     "level": 8,
     "color": "#1968b2",
-    "next_probability": 0.18000000000000005,
+    "next_probability": 1.8000000000000003,
+    "chain_probability": 0.18000000000000005,
     "defect": false
    },
    {
@@ -10248,7 +10902,8 @@
     "icon": "quality__rare-t2",
     "level": 9,
     "color": "#1968b2",
-    "next_probability": 0.17600000000000002,
+    "next_probability": 1.7600000000000002,
+    "chain_probability": 0.17600000000000002,
     "defect": false
    },
    {
@@ -10259,7 +10914,8 @@
     "icon": "quality__rare-t3",
     "level": 10,
     "color": "#1968b2",
-    "next_probability": 0.17200000000000001,
+    "next_probability": 1.7200000000000002,
+    "chain_probability": 0.17200000000000001,
     "defect": false
    },
    {
@@ -10270,7 +10926,8 @@
     "icon": "quality__rare-t4",
     "level": 11,
     "color": "#1968b2",
-    "next_probability": 0.168,
+    "next_probability": 1.6800000000000002,
+    "chain_probability": 0.168,
     "defect": false
    },
    {
@@ -10281,7 +10938,8 @@
     "icon": "quality__rare-t5",
     "level": 12,
     "color": "#1968b2",
-    "next_probability": 0.164,
+    "next_probability": 1.6400000000000001,
+    "chain_probability": 0.164,
     "defect": false
    },
    {
@@ -10292,7 +10950,8 @@
     "icon": "quality__epic-t1",
     "level": 14,
     "color": "#8900b2",
-    "next_probability": 0.16,
+    "next_probability": 1.6,
+    "chain_probability": 0.16,
     "defect": false
    },
    {
@@ -10303,7 +10962,8 @@
     "icon": "quality__epic-t2",
     "level": 15,
     "color": "#8900b2",
-    "next_probability": 0.156,
+    "next_probability": 1.56,
+    "chain_probability": 0.156,
     "defect": false
    },
    {
@@ -10314,7 +10974,8 @@
     "icon": "quality__epic-t3",
     "level": 16,
     "color": "#8900b2",
-    "next_probability": 0.152,
+    "next_probability": 1.52,
+    "chain_probability": 0.152,
     "defect": false
    },
    {
@@ -10325,7 +10986,8 @@
     "icon": "quality__epic-t4",
     "level": 17,
     "color": "#8900b2",
-    "next_probability": 0.148,
+    "next_probability": 1.48,
+    "chain_probability": 0.148,
     "defect": false
    },
    {
@@ -10336,7 +10998,8 @@
     "icon": "quality__epic-t5",
     "level": 18,
     "color": "#8900b2",
-    "next_probability": 0.144,
+    "next_probability": 1.44,
+    "chain_probability": 0.144,
     "defect": false
    },
    {
@@ -10347,7 +11010,8 @@
     "icon": "quality__legendary-t1",
     "level": 20,
     "color": "#b26800",
-    "next_probability": 0.13999999999999999,
+    "next_probability": 1.4,
+    "chain_probability": 0.13999999999999999,
     "defect": false
    },
    {
@@ -10358,7 +11022,8 @@
     "icon": "quality__legendary-t2",
     "level": 21,
     "color": "#b26800",
-    "next_probability": 0.13599999999999998,
+    "next_probability": 1.3599999999999999,
+    "chain_probability": 0.13599999999999998,
     "defect": false
    },
    {
@@ -10369,7 +11034,8 @@
     "icon": "quality__legendary-t3",
     "level": 22,
     "color": "#b26800",
-    "next_probability": 0.13199999999999998,
+    "next_probability": 1.3199999999999998,
+    "chain_probability": 0.13199999999999998,
     "defect": false
    },
    {
@@ -10380,7 +11046,8 @@
     "icon": "quality__legendary-t4",
     "level": 23,
     "color": "#b26800",
-    "next_probability": 0.12799999999999997,
+    "next_probability": 1.2799999999999998,
+    "chain_probability": 0.12799999999999997,
     "defect": false
    },
    {
@@ -10391,7 +11058,8 @@
     "icon": "quality__legendary-t5",
     "level": 24,
     "color": "#b26800",
-    "next_probability": 0.12399999999999997,
+    "next_probability": 1.2399999999999998,
+    "chain_probability": 0.12399999999999997,
     "defect": false
    },
    {
@@ -10402,7 +11070,8 @@
     "icon": "quality__unique-t1",
     "level": 26,
     "color": "#eb2d79",
-    "next_probability": 0.11999999999999997,
+    "next_probability": 1.1999999999999997,
+    "chain_probability": 0.11999999999999997,
     "defect": false
    },
    {
@@ -10413,7 +11082,8 @@
     "icon": "quality__unique-t2",
     "level": 28,
     "color": "#eb2d79",
-    "next_probability": 0.11599999999999996,
+    "next_probability": 1.1599999999999997,
+    "chain_probability": 0.11599999999999996,
     "defect": false
    },
    {
@@ -10424,7 +11094,8 @@
     "icon": "quality__unique-t3",
     "level": 30,
     "color": "#eb2d79",
-    "next_probability": 0.11199999999999996,
+    "next_probability": 1.1199999999999997,
+    "chain_probability": 0.11199999999999996,
     "defect": false
    },
    {
@@ -10435,7 +11106,8 @@
     "icon": "quality__unique-t4",
     "level": 32,
     "color": "#eb2d79",
-    "next_probability": 0.10799999999999996,
+    "next_probability": 1.0799999999999996,
+    "chain_probability": 0.10799999999999996,
     "defect": false
    },
    {
@@ -10446,7 +11118,8 @@
     "icon": "quality__unique-t5",
     "level": 34,
     "color": "#eb2d79",
-    "next_probability": 0.10399999999999995,
+    "next_probability": 1.0399999999999996,
+    "chain_probability": 0.10399999999999995,
     "defect": false
    },
    {
@@ -10457,7 +11130,8 @@
     "icon": "quality__astral-t1",
     "level": 37,
     "color": "#77e114",
-    "next_probability": 0.09999999999999996,
+    "next_probability": 0.9999999999999997,
+    "chain_probability": 0.09999999999999996,
     "defect": false
    },
    {
@@ -10468,7 +11142,8 @@
     "icon": "quality__astral-t2",
     "level": 40,
     "color": "#1477e1",
-    "next_probability": 0.09599999999999995,
+    "next_probability": 0.9599999999999994,
+    "chain_probability": 0.09599999999999995,
     "defect": false
    },
    {
@@ -10479,7 +11154,8 @@
     "icon": "quality__astral-t3",
     "level": 43,
     "color": "#bf14e1",
-    "next_probability": 0.09199999999999996,
+    "next_probability": 0.9199999999999996,
+    "chain_probability": 0.09199999999999996,
     "defect": false
    },
    {
@@ -10490,7 +11166,8 @@
     "icon": "quality__astral-t4",
     "level": 46,
     "color": "#e1bf14",
-    "next_probability": 0.08799999999999994,
+    "next_probability": 0.8799999999999993,
+    "chain_probability": 0.08799999999999994,
     "defect": false
    },
    {
@@ -10501,7 +11178,8 @@
     "icon": "quality__astral-t5",
     "level": 49,
     "color": "#e11477",
-    "next_probability": 0.08399999999999995,
+    "next_probability": 0.8399999999999995,
+    "chain_probability": 0.08399999999999995,
     "defect": false
    },
    {
@@ -10512,7 +11190,8 @@
     "icon": "quality__quantum-t1",
     "level": 53,
     "color": "#49ba6b",
-    "next_probability": 0.07999999999999993,
+    "next_probability": 0.7999999999999994,
+    "chain_probability": 0.07999999999999993,
     "defect": false
    },
    {
@@ -10523,7 +11202,8 @@
     "icon": "quality__quantum-t2",
     "level": 57,
     "color": "#49a7ba",
-    "next_probability": 0.07599999999999993,
+    "next_probability": 0.7599999999999993,
+    "chain_probability": 0.07599999999999993,
     "defect": false
    },
    {
@@ -10534,7 +11214,8 @@
     "icon": "quality__quantum-t3",
     "level": 61,
     "color": "#8f49ba",
-    "next_probability": 0.07199999999999993,
+    "next_probability": 0.7199999999999993,
+    "chain_probability": 0.07199999999999993,
     "defect": false
    },
    {
@@ -10545,7 +11226,8 @@
     "icon": "quality__quantum-t4",
     "level": 65,
     "color": "#ba9e49",
-    "next_probability": 0.06799999999999992,
+    "next_probability": 0.6799999999999993,
+    "chain_probability": 0.06799999999999992,
     "defect": false
    },
    {
@@ -10556,7 +11238,8 @@
     "icon": "quality__quantum-t5",
     "level": 69,
     "color": "#ba4978",
-    "next_probability": 0.06399999999999992,
+    "next_probability": 0.6399999999999992,
+    "chain_probability": 0.06399999999999992,
     "defect": false
    },
    {
@@ -10567,7 +11250,8 @@
     "icon": "quality__infernal-t1",
     "level": 77,
     "color": "#de5337",
-    "next_probability": 0.05999999999999992,
+    "next_probability": 0.5999999999999992,
+    "chain_probability": 0.05999999999999992,
     "defect": false
    },
    {
@@ -10578,7 +11262,8 @@
     "icon": "quality__infernal-t2",
     "level": 85,
     "color": "#de2323",
-    "next_probability": 0.05599999999999992,
+    "next_probability": 0.5599999999999992,
+    "chain_probability": 0.05599999999999992,
     "defect": false
    },
    {
@@ -10589,7 +11274,8 @@
     "icon": "quality__unbreakable",
     "level": 97,
     "color": "#37deaf",
-    "next_probability": 0.051999999999999914,
+    "next_probability": 0.5199999999999991,
+    "chain_probability": 0.051999999999999914,
     "defect": false
    },
    {
@@ -10600,7 +11286,8 @@
     "icon": "quality__godly",
     "level": 109,
     "color": "#fc03d3",
-    "next_probability": 0.047999999999999904,
+    "next_probability": 0.479999999999999,
+    "chain_probability": 0.047999999999999904,
     "defect": false
    },
    {
@@ -10611,7 +11298,8 @@
     "icon": "quality__extreme",
     "level": 133,
     "color": "#fffb15",
-    "next_probability": 0.0439999999999999,
+    "next_probability": 0.43999999999999895,
+    "chain_probability": 0.0439999999999999,
     "defect": false
    }
   ],
@@ -10748,7 +11436,7 @@
     "category": "quality",
     "tier": 1,
     "effect": {
-     "quality": 0.1,
+     "quality": 0.01,
      "speed": -0.2
     }
    },
@@ -10761,7 +11449,7 @@
     "category": "quality",
     "tier": 2,
     "effect": {
-     "quality": 0.2,
+     "quality": 0.02,
      "speed": -0.2
     }
    },
@@ -10774,7 +11462,7 @@
     "category": "quality",
     "tier": 3,
     "effect": {
-     "quality": 0.3,
+     "quality": 0.03,
      "speed": -0.2
     }
    },
@@ -10989,7 +11677,7 @@
     "category": "quality",
     "tier": 4,
     "effect": {
-     "quality": 0.4,
+     "quality": 0.04,
      "speed": -0.2
     }
    },
@@ -11002,7 +11690,7 @@
     "category": "quality",
     "tier": 5,
     "effect": {
-     "quality": 0.5,
+     "quality": 0.05,
      "speed": -0.2
     }
    },
@@ -11612,12 +12300,6 @@
     "champions": 6,
     "bosses": 4
    },
-   "rampant": {
-    "units": 35,
-    "hp_max": 6750000,
-    "champions": 320,
-    "bosses": 320
-   },
    "big_monsters": {
     "units": 6,
     "hp_max": 3600000,
@@ -11635,6 +12317,24 @@
     "hp_max": 3000000,
     "champions": 106,
     "bosses": 108
+   },
+   "rampant": {
+    "units": 35,
+    "hp_max": 6750000,
+    "champions": 320,
+    "bosses": 320
+   },
+   "replicators": {
+    "units": 15,
+    "hp_max": 1920,
+    "champions": 0,
+    "bosses": 0
+   },
+   "protomolecule": {
+    "units": 2,
+    "hp_max": 60,
+    "champions": 0,
+    "bosses": 0
    }
   },
   "enemy_toughest": [
@@ -11781,8 +12481,8 @@
    {
     "id": "biterzilla35",
     "type": "unit",
-    "ru": "КАМЕНИСТЫЙ ЛЕВИАФАН",
-    "en": "Rock Beast",
+    "ru": "КАМЕНИСТЫЙ ЛЕВИАФАН 5",
+    "en": "Rock Beast 5",
     "icon": "unit__biterzilla35",
     "health": 3600000,
     "speed_kmh": 19.4,
@@ -11791,8 +12491,8 @@
    {
     "id": "maf-giant-fire-spitter5",
     "type": "unit",
-    "ru": "КОРОЛЬ ОГНЕННЫХ ПЛЕВАК",
-    "en": "Incendiary Spitter Monster",
+    "ru": "КОРОЛЬ ОГНЕННЫХ ПЛЕВАК 5",
+    "en": "Incendiary Spitter Monster 5",
     "icon": "unit__maf-giant-fire-spitter5",
     "health": 3500000,
     "speed_kmh": 17.3,
@@ -11831,7 +12531,10 @@
      "1",
      "2",
      "toxin",
-     "uranium-damage"
+     "tpr-intoxication",
+     "plasma",
+     "uranium-damage",
+     "flo-thermal"
     ]
    },
    {
@@ -11850,7 +12553,10 @@
      "5",
      "6",
      "toxin",
-     "uranium-damage"
+     "tpr-intoxication",
+     "plasma",
+     "uranium-damage",
+     "flo-thermal"
     ]
    },
    {
@@ -11866,13 +12572,16 @@
      "2",
      "3",
      "toxin",
-     "uranium-damage"
+     "tpr-intoxication",
+     "plasma",
+     "uranium-damage",
+     "flo-thermal"
     ]
    },
    {
     "id": "energy-thief-biter-v1-t10-rampant",
     "type": "unit",
-    "ru": "Энерговор-Кусака:ур.10",
+    "ru": "СапёрКусака:ур.10",
     "en": "SapperBiter:Lvl.10",
     "icon": "unit__energy-thief-biter-v1-t10-rampant",
     "faction": "energy-thief",
@@ -11884,7 +12593,10 @@
      "4",
      "6",
      "toxin",
-     "uranium-damage"
+     "tpr-intoxication",
+     "plasma",
+     "uranium-damage",
+     "flo-thermal"
     ]
    },
    {
@@ -11899,7 +12611,10 @@
      "1",
      "2",
      "toxin",
-     "uranium-damage"
+     "tpr-intoxication",
+     "plasma",
+     "uranium-damage",
+     "flo-thermal"
     ]
    },
    {
@@ -11916,7 +12631,10 @@
      "3",
      "5",
      "toxin",
-     "uranium-damage"
+     "tpr-intoxication",
+     "plasma",
+     "uranium-damage",
+     "flo-thermal"
     ]
    },
    {
@@ -11931,7 +12649,10 @@
      "1",
      "2",
      "toxin",
-     "uranium-damage"
+     "tpr-intoxication",
+     "plasma",
+     "uranium-damage",
+     "flo-thermal"
     ]
    },
    {
@@ -11951,7 +12672,10 @@
      "6",
      "8",
      "toxin",
-     "uranium-damage"
+     "tpr-intoxication",
+     "plasma",
+     "uranium-damage",
+     "flo-thermal"
     ]
    },
    {
@@ -11969,7 +12693,10 @@
      "4",
      "6",
      "toxin",
-     "uranium-damage"
+     "tpr-intoxication",
+     "plasma",
+     "uranium-damage",
+     "flo-thermal"
     ]
    },
    {
@@ -11996,7 +12723,10 @@
      "4",
      "5",
      "toxin",
-     "uranium-damage"
+     "tpr-intoxication",
+     "plasma",
+     "uranium-damage",
+     "flo-thermal"
     ]
    },
    {
@@ -12014,7 +12744,10 @@
      "4",
      "6",
      "toxin",
-     "uranium-damage"
+     "tpr-intoxication",
+     "plasma",
+     "uranium-damage",
+     "flo-thermal"
     ]
    },
    {
@@ -12030,26 +12763,32 @@
      "2",
      "3",
      "toxin",
-     "uranium-damage"
+     "tpr-intoxication",
+     "plasma",
+     "uranium-damage",
+     "flo-thermal"
     ]
    },
    {
     "id": "spawner-spitter-v1-t10-rampant",
     "type": "unit",
-    "ru": "Породитель-Плевака:ур.10",
+    "ru": "ПородительПлевака:ур.10",
     "en": "SpawnerSpitter:Lvl.10",
     "icon": "unit__spawner-spitter-v1-t10-rampant",
     "faction": "spawner",
     "health": 25000,
     "resist": [
      "toxin",
-     "uranium-damage"
+     "tpr-intoxication",
+     "plasma",
+     "uranium-damage",
+     "flo-thermal"
     ]
    },
    {
     "id": "suicide-biter-v1-t10-rampant",
     "type": "unit",
-    "ru": "Камикадзе,Кусака:ур.10",
+    "ru": "СамоубийцаКусака:ур.10",
     "en": "SuicideBiter:Lvl.10",
     "icon": "unit__suicide-biter-v1-t10-rampant",
     "faction": "suicide",
@@ -12061,7 +12800,10 @@
      "5",
      "6",
      "toxin",
-     "uranium-damage"
+     "tpr-intoxication",
+     "plasma",
+     "uranium-damage",
+     "flo-thermal"
     ]
    },
    {
@@ -12080,20 +12822,26 @@
      "6",
      "7",
      "toxin",
-     "uranium-damage"
+     "tpr-intoxication",
+     "plasma",
+     "uranium-damage",
+     "flo-thermal"
     ]
    },
    {
     "id": "wasp-spitter-v1-t10-rampant",
     "type": "unit",
-    "ru": "Оса,Плевака:ур.10",
+    "ru": "ОсаПлевака:ур.10",
     "en": "WaspSpitter:Lvl.10",
     "icon": "unit__wasp-spitter-v1-t10-rampant",
     "faction": "wasp",
     "health": 25000,
     "resist": [
      "toxin",
-     "uranium-damage"
+     "tpr-intoxication",
+     "plasma",
+     "uranium-damage",
+     "flo-thermal"
     ]
    }
   ],
@@ -12204,8 +12952,8 @@
    {
     "id": "biterzilla15",
     "type": "unit",
-    "ru": "АДСКИЙ ЛЕВИАФАН",
-    "en": "Giant of Hell",
+    "ru": "АДСКИЙ ЛЕВИАФАН 5",
+    "en": "Giant of Hell 5",
     "icon": "unit__biterzilla15",
     "health": 3500000,
     "speed_kmh": 19.4
@@ -12213,8 +12961,8 @@
    {
     "id": "biterzilla25",
     "type": "unit",
-    "ru": "СИНИЙ ЛЕВИАФАН",
-    "en": "Giant Blue",
+    "ru": "СИНИЙ ЛЕВИАФАН 5",
+    "en": "Giant Blue 5",
     "icon": "unit__biterzilla25",
     "health": 2000000,
     "speed_kmh": 28.1
@@ -12222,8 +12970,8 @@
    {
     "id": "biterzilla35",
     "type": "unit",
-    "ru": "КАМЕНИСТЫЙ ЛЕВИАФАН",
-    "en": "Rock Beast",
+    "ru": "КАМЕНИСТЫЙ ЛЕВИАФАН 5",
+    "en": "Rock Beast 5",
     "icon": "unit__biterzilla35",
     "health": 3600000,
     "speed_kmh": 19.4
@@ -12231,8 +12979,8 @@
    {
     "id": "bm-motherbiterzilla5",
     "type": "unit",
-    "ru": "КОРОЛЕВА-МАТКА",
-    "en": "Brood Mother",
+    "ru": "КОРОЛЕВА-МАТКА 5",
+    "en": "Brood Mother 5",
     "icon": "unit__bm-motherbiterzilla5",
     "health": 3500000,
     "speed_kmh": 18.4
@@ -12240,8 +12988,8 @@
    {
     "id": "maf-giant-fire-spitter5",
     "type": "unit",
-    "ru": "КОРОЛЬ ОГНЕННЫХ ПЛЕВАК",
-    "en": "Incendiary Spitter Monster",
+    "ru": "КОРОЛЬ ОГНЕННЫХ ПЛЕВАК 5",
+    "en": "Incendiary Spitter Monster 5",
     "icon": "unit__maf-giant-fire-spitter5",
     "health": 3500000,
     "speed_kmh": 17.3
@@ -12249,8 +12997,8 @@
    {
     "id": "maf-giant-acid-spitter5",
     "type": "unit",
-    "ru": "КОРОЛЬ КИСЛОТНЫХ ПЛЕВАК",
-    "en": "Monster Acid Spitter",
+    "ru": "КОРОЛЬ КИСЛОТНЫХ ПЛЕВАК 5",
+    "en": "Monster Acid Spitter 5",
     "icon": "unit__maf-giant-acid-spitter5",
     "health": 3500000,
     "speed_kmh": 17.3
@@ -12269,8 +13017,8 @@
    {
     "id": "maf_flying_saucer_10",
     "type": "spider-vehicle",
-    "ru": "Летающая тарелка",
-    "en": "Flying-saucer",
+    "ru": "Летающая тарелка 10",
+    "en": "Flying-saucer 10",
     "icon": "spider-vehicle__maf_flying_saucer_10",
     "health": 200000
    },
@@ -12508,6 +13256,42 @@
     "range": 40
    },
    {
+    "id": "y_turret_gun1f12",
+    "type": "ammo-turret",
+    "ru": "T-GUN «Громила»",
+    "en": "T-GUN \"BruteMan\"",
+    "icon": "ammo-turret__y_turret_gun1f12",
+    "health": 3500,
+    "range": 36
+   },
+   {
+    "id": "y_turret_gun2f12",
+    "type": "ammo-turret",
+    "ru": "T-GUN «Модлин»",
+    "en": "T-GUN \"Maudlin\"",
+    "icon": "ammo-turret__y_turret_gun2f12",
+    "health": 3000,
+    "range": 28
+   },
+   {
+    "id": "y_turret_flame",
+    "type": "ammo-turret",
+    "ru": "T-CHEMIC «Чистильщик»",
+    "en": "T-CHEMIC \"SKleen\"",
+    "icon": "ammo-turret__y_turret_flame",
+    "health": 5000,
+    "range": 30
+   },
+   {
+    "id": "y_turret_plasma",
+    "type": "ammo-turret",
+    "ru": "T-PLASMA",
+    "en": "T-PLASMA",
+    "icon": "ammo-turret__y_turret_plasma",
+    "health": 4000,
+    "range": 35
+   },
+   {
     "id": "bi-dart-turret",
     "type": "ammo-turret",
     "ru": "Дротиковая турель",
@@ -12524,6 +13308,33 @@
     "icon": "ammo-turret__bi-bio-cannon",
     "health": 900,
     "range": 120
+   },
+   {
+    "id": "pd-anti-air-turret-1",
+    "type": "ammo-turret",
+    "ru": "Зенитная турель 1",
+    "en": "Anti-air turret 1",
+    "icon": "ammo-turret__pd-anti-air-turret-1",
+    "health": 400,
+    "range": 25
+   },
+   {
+    "id": "pd-anti-air-turret-2",
+    "type": "ammo-turret",
+    "ru": "Зенитная турель 2",
+    "en": "Anti-air turret 2",
+    "icon": "ammo-turret__pd-anti-air-turret-2",
+    "health": 600,
+    "range": 30
+   },
+   {
+    "id": "pd-anti-air-turret-3",
+    "type": "ammo-turret",
+    "ru": "Зенитная турель 3",
+    "en": "Anti-air turret 3",
+    "icon": "ammo-turret__pd-anti-air-turret-3",
+    "health": 800,
+    "range": 35
    },
    {
     "id": "laser-turret",
@@ -12661,6 +13472,24 @@
     "range": 75
    },
    {
+    "id": "y-weapon-ztt",
+    "type": "electric-turret",
+    "ru": "D-ZTT «jorgenRe»",
+    "en": "D-ZTT \"jorgenRe\"",
+    "icon": "electric-turret__y-weapon-ztt",
+    "health": 6000,
+    "range": 38
+   },
+   {
+    "id": "y_turret_laser22f12",
+    "type": "electric-turret",
+    "ru": "T-LAS «Айзенвульф»",
+    "en": "T-LAS \"Eisenwulf\"",
+    "icon": "electric-turret__y_turret_laser22f12",
+    "health": 3000,
+    "range": 34
+   },
+   {
     "id": "pd-relic-prism-turret",
     "type": "electric-turret",
     "ru": "Призменная турель",
@@ -12767,11 +13596,11 @@
   "achievement_kinds": [
    [
     "produce-achievement",
-    514
+    505
    ],
    [
     "achievement",
-    164
+    195
    ],
    [
     "produce-per-hour-achievement",
@@ -12810,12 +13639,12 @@
     6
    ],
    [
-    "research-achievement",
+    "deliver-by-robots-achievement",
     5
    ],
    [
-    "deliver-by-robots-achievement",
-    5
+    "research-achievement",
+    4
    ],
    [
     "use-entity-in-energy-production-achievement",
@@ -12961,6 +13790,86 @@
     "ru": "Нитроглицерин",
     "en": "Nitroglycerin",
     "icon": "fluid__bob-nitroglycerin",
+    "gas": false
+   },
+   {
+    "id": "y-con_water",
+    "type": "fluid",
+    "ru": "Загрязнённая вода",
+    "en": "Contaminated Water",
+    "icon": "fluid__y-con_water",
+    "gas": false
+   },
+   {
+    "id": "y-liquid-uc2",
+    "type": "fluid",
+    "ru": "Жидкий УниКомпозит A2",
+    "en": "Liquid Unicomp A2",
+    "icon": "fluid__y-liquid-uc2",
+    "gas": false
+   },
+   {
+    "id": "y-mechanical-force",
+    "type": "fluid",
+    "ru": "Механическая сила (MF)",
+    "en": "Mechanical Force",
+    "icon": "fluid__y-mechanical-force",
+    "gas": false
+   },
+   {
+    "id": "y_emulsion",
+    "type": "fluid",
+    "ru": "Промышленная промывочная эмульсия",
+    "en": "Industrial Washing Emulsion",
+    "icon": "fluid__y_emulsion",
+    "gas": false
+   },
+   {
+    "id": "y_hydrogen",
+    "type": "fluid",
+    "ru": "Гидротин",
+    "en": "Hydrotin Gas",
+    "icon": "fluid__y_hydrogen",
+    "gas": false
+   },
+   {
+    "id": "y_richemulsion",
+    "type": "fluid",
+    "ru": "Богатая эмульсия",
+    "en": "Rich Emulsion",
+    "icon": "fluid__y_richemulsion",
+    "gas": false
+   },
+   {
+    "id": "y_syngas_raw",
+    "type": "fluid",
+    "ru": "Газ Фрумитал-R",
+    "en": "Frumital-R Gas",
+    "icon": "fluid__y_syngas_raw",
+    "gas": false
+   },
+   {
+    "id": "ye_blood",
+    "type": "fluid",
+    "ru": "Кровь пришельцев",
+    "en": "alien blood",
+    "icon": "fluid__ye_blood",
+    "gas": false
+   },
+   {
+    "id": "ye_cornoil",
+    "type": "fluid",
+    "ru": "Растительное масло",
+    "en": "vegetable oil",
+    "icon": "fluid__ye_cornoil",
+    "gas": false
+   },
+   {
+    "id": "ye_slurry",
+    "type": "fluid",
+    "ru": "Шлам",
+    "en": "Slurry",
+    "icon": "fluid__ye_slurry",
     "gas": false
    },
    {
@@ -13295,7 +14204,7 @@
     "id": "angels-liquid-naphtha",
     "type": "fluid",
     "ru": "Мазут",
-    "en": "Naphtha",
+    "en": "Residual fuel oil",
     "icon": "fluid__angels-liquid-naphtha",
     "gas": false
    },
@@ -13414,7 +14323,7 @@
    {
     "id": "angels-liquid-bisphenol-a",
     "type": "fluid",
-    "ru": "Бифенол-А",
+    "ru": "Бисфенол А",
     "en": "Bisphenol A liquid",
     "icon": "fluid__angels-liquid-bisphenol-a",
     "gas": false
@@ -13518,7 +14427,7 @@
    {
     "id": "angels-gas-nitrogen-monoxide",
     "type": "fluid",
-    "ru": "Mоноксид азота",
+    "ru": "Моноксид азота",
     "en": "Nitrogen monoxide gas",
     "icon": "fluid__angels-gas-nitrogen-monoxide",
     "gas": true
@@ -13719,7 +14628,7 @@
     "id": "angels-gas-sulfur-dioxide",
     "type": "fluid",
     "ru": "Триоксид серы",
-    "en": "Sulfur dioxide gas",
+    "en": "Sulfur trioxide gas",
     "icon": "fluid__angels-gas-sulfur-dioxide",
     "gas": true
    },
@@ -14012,9 +14921,25 @@
     "gas": false
    },
    {
+    "id": "nitrogen",
+    "type": "fluid",
+    "ru": "Азот",
+    "en": "Nitrogen",
+    "icon": "fluid__nitrogen",
+    "gas": true
+   },
+   {
+    "id": "liquid-air",
+    "type": "fluid",
+    "ru": "Сжатый воздух",
+    "en": "Liquid air",
+    "icon": "fluid__liquid-air",
+    "gas": true
+   },
+   {
     "id": "angels-liquid-pulping-liquor",
     "type": "fluid",
-    "ru": "Целлюлозный ликвор",
+    "ru": "Варочный раствор",
     "en": "Pulping liquor",
     "icon": "fluid__angels-liquid-pulping-liquor",
     "gas": false
@@ -14022,7 +14947,7 @@
    {
     "id": "angels-liquid-brown-liquor",
     "type": "fluid",
-    "ru": "Коричневый ликвор",
+    "ru": "Отработанный сульфитный раствор",
     "en": "Brown liquor",
     "icon": "fluid__angels-liquid-brown-liquor",
     "gas": false
@@ -14030,7 +14955,7 @@
    {
     "id": "angels-liquid-white-liquor",
     "type": "fluid",
-    "ru": "Белый ликвор",
+    "ru": "Белый щёлок",
     "en": "White liquor",
     "icon": "fluid__angels-liquid-white-liquor",
     "gas": false
@@ -14038,7 +14963,7 @@
    {
     "id": "angels-liquid-black-liquor",
     "type": "fluid",
-    "ru": "Чёрный ликвор",
+    "ru": "Чёрный щёлок",
     "en": "Black liquor",
     "icon": "fluid__angels-liquid-black-liquor",
     "gas": false
@@ -14046,7 +14971,7 @@
    {
     "id": "angels-liquid-green-liquor",
     "type": "fluid",
-    "ru": "Зелёный ликвор",
+    "ru": "Зелёный щёлок",
     "en": "Green liquor",
     "icon": "fluid__angels-liquid-green-liquor",
     "gas": false
@@ -14126,7 +15051,7 @@
    {
     "id": "angels-liquid-cellulose-acetate-mixture",
     "type": "fluid",
-    "ru": "Ацетат-целлюлозная смесь",
+    "ru": "Смесь для получения ацетата целлюлозы",
     "en": "Cellulose acetate mixture",
     "icon": "fluid__angels-liquid-cellulose-acetate-mixture",
     "gas": false
@@ -14134,7 +15059,7 @@
    {
     "id": "angels-liquid-cellulose-acetate",
     "type": "fluid",
-    "ru": "Ацетил-целлюлоза",
+    "ru": "Ацетат целлюлозы",
     "en": "Cellulose acetate",
     "icon": "fluid__angels-liquid-cellulose-acetate",
     "gas": false
@@ -14214,15 +15139,15 @@
    {
     "id": "liquid-chlorobutadiene",
     "type": "fluid",
-    "ru": "Хлорбутадиен (неопрен)",
-    "en": "Chlorobutadiene (Neoprene)",
+    "ru": "Хлоропрен",
+    "en": "Chloroprene",
     "icon": "fluid__liquid-chlorobutadiene",
     "gas": false
    },
    {
     "id": "gas-hydrogen-cyanide",
     "type": "fluid",
-    "ru": "Синильная кислота",
+    "ru": "Циановодород",
     "en": "Hydrogen Cyanide Gas",
     "icon": "fluid__gas-hydrogen-cyanide",
     "gas": true
@@ -14270,15 +15195,15 @@
    {
     "id": "gas-vinyl-acetylene",
     "type": "fluid",
-    "ru": "Винилацетат",
-    "en": "Vinyl Acetate Gas",
+    "ru": "Винилацетилен",
+    "en": "Vinylacetylene gas",
     "icon": "fluid__gas-vinyl-acetylene",
     "gas": true
    },
    {
     "id": "gas-nitrous-oxide",
     "type": "fluid",
-    "ru": "Оксид азота",
+    "ru": "Закись азота",
     "en": "Nitrous Oxide Gas",
     "icon": "fluid__gas-nitrous-oxide",
     "gas": true
@@ -14385,28 +15310,12 @@
     "ru": "Газ гексафторида вольфрама",
     "en": "Tungsten hexachloride gas",
     "icon": "fluid__angels-gas-tungsten-hexachloride",
-    "gas": false
-   },
-   {
-    "id": "nitrogen",
-    "type": "fluid",
-    "ru": "Азот",
-    "en": "Nitrogen",
-    "icon": "fluid__nitrogen",
-    "gas": true
-   },
-   {
-    "id": "liquid-air",
-    "type": "fluid",
-    "ru": "Сжатый воздух",
-    "en": "Liquid air",
-    "icon": "fluid__liquid-air",
     "gas": true
    }
   ]
  },
  "vanilla_reference": {
-  "note": "Factorio 2.0 base + quality + elevated-rails without Space Age. recipes/technologies: count of type=\"recipe\"/\"technology\" in the game prototypes (approx.); the rest: well-known vanilla values. Update by hand only if the vanilla game changes.",
+  "note": "Vanilla Factorio base + quality + elevated-rails (values measured on 2.0, approximate for 2.1). recipes/technologies: count of type=\"recipe\"/\"technology\" in the game prototypes (approx.); the rest: well-known vanilla values. Update by hand only if the vanilla game changes.",
   "recipes": 201,
   "technologies": 200,
   "qualities": 5,

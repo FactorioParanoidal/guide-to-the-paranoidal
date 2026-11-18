@@ -43,17 +43,17 @@
 "ru": "Железо-угольный аккумулятор",
 "en": "Fe-C accumulator"
 },
-"ammo__artillery-shell-thermonuclear": {
-"ru": "Тактическая термоядерная боеголовка",
-"en": "Tactical thermonuclear artillery shell"
+"accumulator__y-accumulator-b-tx": {
+"ru": "Аккумулятор AQE",
+"en": "AQE Accumulator"
 },
-"ammo__bob-atomic-artillery-shell": {
-"ru": "Атомные артиллерийские снаряды",
-"en": "Atomic artillery shell"
+"accumulator__y-accumulator-crystal-m": {
+"ru": "Квантриновый аккумулятор",
+"en": "Quantrinum Accumulator"
 },
-"ammo__thermonuclear-bomb": {
-"ru": "Термоядерная бомба",
-"en": "Thermonuclear bomb"
+"accumulator__y_compensator_25": {
+"ru": "Компенсатор потока Mk4",
+"en": "Flux Compensator Mk4"
 },
 "ammo-turret__bi-bio-cannon": {
 "ru": "Прототип артиллерии",
@@ -139,6 +139,18 @@
 "ru": "Пулемётная турель  Полковник",
 "en": "Gun turret  Полковник"
 },
+"ammo-turret__pd-anti-air-turret-1": {
+"ru": "Зенитная турель 1",
+"en": "Anti-air turret 1"
+},
+"ammo-turret__pd-anti-air-turret-2": {
+"ru": "Зенитная турель 2",
+"en": "Anti-air turret 2"
+},
+"ammo-turret__pd-anti-air-turret-3": {
+"ru": "Зенитная турель 3",
+"en": "Anti-air turret 3"
+},
 "ammo-turret__w93-dcannon-turret": {
 "ru": "Спаренная пушечная турель (Передовая)",
 "en": "Dual cannon turret (Frontline)"
@@ -191,6 +203,22 @@
 "ru": "Тяжёлая дробовая турель",
 "en": "Heavy scattergun turret"
 },
+"ammo-turret__y_turret_flame": {
+"ru": "T-CHEMIC «Чистильщик»",
+"en": "T-CHEMIC \"SKleen\""
+},
+"ammo-turret__y_turret_gun1f12": {
+"ru": "T-GUN «Громила»",
+"en": "T-GUN \"BruteMan\""
+},
+"ammo-turret__y_turret_gun2f12": {
+"ru": "T-GUN «Модлин»",
+"en": "T-GUN \"Maudlin\""
+},
+"ammo-turret__y_turret_plasma": {
+"ru": "T-PLASMA",
+"en": "T-PLASMA"
+},
 "armor__bob-power-armor-mk5": {
 "ru": "Силовая броня MK5",
 "en": "Power armor MK5"
@@ -202,6 +230,10 @@
 "armor__respirator": {
 "ru": "Респиратор",
 "en": "Respirator"
+},
+"armor__tpr-gas-mask": {
+"ru": "Противогаз",
+"en": "Gas mask"
 },
 "artillery-turret__artillery-turret": {
 "ru": "Артиллерийское орудие",
@@ -236,7 +268,7 @@
 "en": "Air filter machine MK3"
 },
 "assembling-machine__CW-air-filter-machine-4": {
-"ru": "Воздухо-очистительная станция МК4",
+"ru": "Воздухо-очистительная станция MK4",
 "en": "Air filter machine MK4"
 },
 "assembling-machine__CW-air-filter-machine-5": {
@@ -940,11 +972,11 @@
 "en": "Washing plant 2"
 },
 "assembling-machine__angels-washing-plant-3": {
-"ru": "Гидрометаллургический завод 3",
+"ru": "Промывочная установка МК3",
 "en": "Washing plant 3"
 },
 "assembling-machine__angels-washing-plant-4": {
-"ru": "Гидрометаллургический завод 4",
+"ru": "Промывочная установка МК4",
 "en": "Washing plant 4"
 },
 "assembling-machine__assembling-machine-1": {
@@ -1107,6 +1139,14 @@
 "ru": "Агрегатор точки росы",
 "en": "Dew Point Aggregator"
 },
+"assembling-machine__droid-assembling-machine": {
+"ru": "Сборщик дроидов",
+"en": "Droid Assembler"
+},
+"assembling-machine__droid-guard-station": {
+"ru": "Пост охраны дроидов",
+"en": "Droid Guard Station"
+},
 "assembling-machine__electronics-machine-4": {
 "ru": "Суперавтомат для сборки электроники 4",
 "en": "Electronics assembling machine 4"
@@ -1114,6 +1154,10 @@
 "assembling-machine__electronics-machine-5": {
 "ru": "Суперавтомат для сборки электроники 5",
 "en": "Electronics assembling machine 5"
+},
+"assembling-machine__fusion-test-site": {
+"ru": "Термоядерный полигон",
+"en": "Fusion test site"
 },
 "assembling-machine__ground-auto-fabricator": {
 "ru": "Наземная фабрикаторная станция",
@@ -1154,6 +1198,190 @@
 "assembling-machine__space-telescope-uplink-station": {
 "ru": "Передающая станция для орбитальной обсерватории",
 "en": "Space Telescope Uplink Station"
+},
+"assembling-machine__y-1stirling-engine": {
+"ru": "Карманный двигатель Стирлинга",
+"en": "Pocket Stirling Engine"
+},
+"assembling-machine__y-alien-infuser": {
+"ru": "Инопланетный инфузор",
+"en": "Alien Infuser"
+},
+"assembling-machine__y-atomic-constructor": {
+"ru": "Реструктор Cimota",
+"en": "Cimota Restructor"
+},
+"assembling-machine__y-atomic-quantum-composer": {
+"ru": "Атомно-квантовый композер",
+"en": "Atomic Quantum Composer"
+},
+"assembling-machine__y-dirtwasher": {
+"ru": "Промывочная машина",
+"en": "Washer"
+},
+"assembling-machine__y-electric-air-heater": {
+"ru": "Воздухоочиститель Fatmice",
+"en": "Fatmice Air Scrubber"
+},
+"assembling-machine__y-emotor-s": {
+"ru": "Малый электромотор",
+"en": "Small Electric Motor"
+},
+"assembling-machine__y-fame-gen": {
+"ru": "Древний монумент",
+"en": "Ancient Monument"
+},
+"assembling-machine__y-ffe": {
+"ru": "Жидкотопливный двигатель",
+"en": "Liquid-Fuel Engine"
+},
+"assembling-machine__y-obninsk-reactor": {
+"ru": "Обнинский реактор AM-1/1951",
+"en": "Obninsk Reactor AM-1/1951"
+},
+"assembling-machine__y-quantrinum-reactor": {
+"ru": "Квантриновый реактор",
+"en": "Quantrinum Reactor"
+},
+"assembling-machine__y-sfe": {
+"ru": "Твердотопливный двигатель",
+"en": "Solid-Fuel Engine"
+},
+"assembling-machine__y-stargate": {
+"ru": "Врата «Лайка»",
+"en": "Laika-Gate"
+},
+"assembling-machine__y-underground-drill": {
+"ru": "Специальный подземный бур",
+"en": "Special Underground Drill"
+},
+"assembling-machine__y_charger": {
+"ru": "Зарядник Зайдона",
+"en": "Zaydon Charger"
+},
+"assembling-machine__y_crusher2": {
+"ru": "Электрическая дробилка",
+"en": "Electric Crusher"
+},
+"assembling-machine__y_crystalizer": {
+"ru": "Кристаллизатор",
+"en": "Crystalizer"
+},
+"assembling-machine__y_formpress2": {
+"ru": "Электрический формовочный пресс",
+"en": "Electric Form Press"
+},
+"assembling-machine__y_hppump": {
+"ru": "Насос высокого давления",
+"en": "High Pressure Pumpe"
+},
+"assembling-machine__y_maintance_workshop": {
+"ru": "Ремонтная мастерская",
+"en": "Maintenance Workshop"
+},
+"assembling-machine__y_mc_dirtwasher": {
+"ru": "Мастерская промывочная машина",
+"en": "Mastercrafted Washer"
+},
+"assembling-machine__y_mc_underground_drill": {
+"ru": "Мастерский подземный бур",
+"en": "Mastercrafted Underground Drill"
+},
+"assembling-machine__y_mixer_emu": {
+"ru": "Смеситель эмульсии",
+"en": "Emulsion Mixer"
+},
+"assembling-machine__y_moxmixer": {
+"ru": "Смеситель термоядерного топлива",
+"en": "Fusion Fuel Mixer"
+},
+"assembling-machine__y_obninsk_mc": {
+"ru": "Мастерский Обнинский ядерный реактор 2/2016",
+"en": "Obninsk Mastercrafted Nuclear Reactor 2/2016"
+},
+"assembling-machine__y_smelter": {
+"ru": "Промышленная плавильня «Франк и Пеппе»",
+"en": "Frank & Peppe Industrial Smelter"
+},
+"assembling-machine__y_trade_ultimate": {
+"ru": "Великий символ господства: культ наживы",
+"en": "Mighty Domination Symbol, Cult of Profit"
+},
+"assembling-machine__y_trockner": {
+"ru": "Сушилка-сепаратор",
+"en": "Dryer & Separator"
+},
+"assembling-machine__ye_canmachine": {
+"ru": "Машина обработки жидкостей C",
+"en": "C-Handle Machinery"
+},
+"assembling-machine__ye_dnasplicer": {
+"ru": "ДНК-сплайсер",
+"en": "DNA-Splicer"
+},
+"assembling-machine__ye_emotor_m": {
+"ru": "Средний электромотор",
+"en": "Medium Electric Motor"
+},
+"assembling-machine__ye_farm": {
+"ru": "Каркасная ферма",
+"en": "Framed Farm"
+},
+"assembling-machine__ye_fassembly1": {
+"ru": "Фабрика C1",
+"en": "C1-Factory"
+},
+"assembling-machine__ye_fassembly2": {
+"ru": "Фабрика Y2",
+"en": "Y2-Factory"
+},
+"assembling-machine__ye_fassembly_sp": {
+"ru": "Фабрика P3",
+"en": "P3-Factory"
+},
+"assembling-machine__ye_gasmotor": {
+"ru": "Газовый двигатель",
+"en": "Gas Fuel Engine"
+},
+"assembling-machine__ye_green_ultimate": {
+"ru": "Великий символ господства: культ природы",
+"en": "Mighty Domination Symbol from the Cult of Nature"
+},
+"assembling-machine__ye_icemaker": {
+"ru": "Ледогенератор",
+"en": "Eci-Maker"
+},
+"assembling-machine__ye_meatfarm": {
+"ru": "Клеточное ранчо",
+"en": "Caged Ranch"
+},
+"assembling-machine__ye_mfheatmotor_m": {
+"ru": "Электрический нагреватель MF",
+"en": "Electric MF Heatgenerator"
+},
+"assembling-machine__ye_overheater": {
+"ru": "Перегреватель F5",
+"en": "Overheater F5"
+},
+"assembling-machine__ye_pool": {
+"ru": "Гидра-ферма",
+"en": "Hydra-Farm"
+},
+"assembling-machine__ye_rheinsberg": {
+"ru": "ВВЭР-210 (Райнсберг)",
+"en": "WWER-210 (Rheinsberg)"
+},
+"assembling-machine__ye_sturbine": {
+"ru": "Паровая турбина",
+"en": "Steam-Turbine"
+},
+"assembling-machine__ye_trade_node": {
+"ru": "Торговый узел",
+"en": "Trade Node"
+},
+"assembling-machine__yie_science_blue_gen": {
+"ru": "Исследовательский центр",
+"en": "Research Center"
 },
 "boiler__bi-bio-boiler": {
 "ru": "Биобойлер",
@@ -1234,6 +1462,10 @@
 "burner-generator__torch": {
 "ru": "Факел",
 "en": "Torch"
+},
+"burner-generator__y_bg-1": {
+"ru": "Твердотопливный генератор",
+"en": "Burner Generator"
 },
 "capsule__clowns-neurotoxin-capsule": {
 "ru": "Капсула с нейротоксином",
@@ -1347,10 +1579,6 @@
 "ru": "Танк",
 "en": "Tank"
 },
-"container__Schall-pickup-tower-R128": {
-"ru": "Башня сбора IV",
-"en": "Pickup tower IV"
-},
 "container__aai-big-ship-wreck-1": {
 "ru": "Обломки",
 "en": "Wreckage"
@@ -1451,10 +1679,6 @@
 "ru": "Подстанция 4",
 "en": "Substation 4"
 },
-"electric-pole__crystal-drain-pole-rampant": {
-"ru": "Кристаллический пилон",
-"en": "Crystal Pylon"
-},
 "electric-pole__factory-circuit-connector": {
 "ru": "Коннектор логической сети фабрики",
 "en": "Factory circuit connector"
@@ -1486,6 +1710,10 @@
 "electric-pole__ued-small-db": {
 "ru": "Средний подземный электрощит",
 "en": "Small Underground Distribution Board"
+},
+"electric-pole__y-substation-h": {
+"ru": "Станция AEET",
+"en": "AEET Station"
 },
 "electric-turret__bob-laser-turret-2": {
 "ru": "Лазерная турель 2",
@@ -1554,6 +1782,14 @@
 "electric-turret__w93-tlaser-turret2": {
 "ru": "Термолазерная турель (Тыловая)",
 "en": "Thermal laser turret (Backline)"
+},
+"electric-turret__y-weapon-ztt": {
+"ru": "D-ZTT «jorgenRe»",
+"en": "D-ZTT \"jorgenRe\""
+},
+"electric-turret__y_turret_laser22f12": {
+"ru": "T-LAS «Айзенвульф»",
+"en": "T-LAS \"Eisenwulf\""
 },
 "fluid__angels-alien-goo": {
 "ru": "Инопланетная слизь",
@@ -1720,7 +1956,7 @@
 "en": "Nitrogen dioxide gas"
 },
 "fluid__angels-gas-nitrogen-monoxide": {
-"ru": "Mоноксид азота",
+"ru": "Моноксид азота",
 "en": "Nitrogen monoxide gas"
 },
 "fluid__angels-gas-oxygen": {
@@ -1749,7 +1985,7 @@
 },
 "fluid__angels-gas-sulfur-dioxide": {
 "ru": "Триоксид серы",
-"en": "Sulfur dioxide gas"
+"en": "Sulfur trioxide gas"
 },
 "fluid__angels-gas-synthesis": {
 "ru": "Синтез-газ",
@@ -1780,23 +2016,23 @@
 "en": "Sodium hydroxide solution"
 },
 "fluid__angels-liquid-bisphenol-a": {
-"ru": "Бифенол-А",
+"ru": "Бисфенол А",
 "en": "Bisphenol A liquid"
 },
 "fluid__angels-liquid-black-liquor": {
-"ru": "Чёрный ликвор",
+"ru": "Чёрный щёлок",
 "en": "Black liquor"
 },
 "fluid__angels-liquid-brown-liquor": {
-"ru": "Коричневый ликвор",
+"ru": "Отработанный сульфитный раствор",
 "en": "Brown liquor"
 },
 "fluid__angels-liquid-cellulose-acetate": {
-"ru": "Ацетил-целлюлоза",
+"ru": "Ацетат целлюлозы",
 "en": "Cellulose acetate"
 },
 "fluid__angels-liquid-cellulose-acetate-mixture": {
-"ru": "Ацетат-целлюлозная смесь",
+"ru": "Смесь для получения ацетата целлюлозы",
 "en": "Cellulose acetate mixture"
 },
 "fluid__angels-liquid-chlorauric-acid": {
@@ -1852,7 +2088,7 @@
 "en": "Glycerol liquid"
 },
 "fluid__angels-liquid-green-liquor": {
-"ru": "Зелёный ликвор",
+"ru": "Зелёный щёлок",
 "en": "Green liquor"
 },
 "fluid__angels-liquid-hexachloroplatinic-acid": {
@@ -1977,7 +2213,7 @@
 },
 "fluid__angels-liquid-naphtha": {
 "ru": "Мазут",
-"en": "Naphtha"
+"en": "Residual fuel oil"
 },
 "fluid__angels-liquid-ngl": {
 "ru": "Сжиженный природный газ",
@@ -2016,7 +2252,7 @@
 "en": "Propionic acid"
 },
 "fluid__angels-liquid-pulping-liquor": {
-"ru": "Целлюлозный ликвор",
+"ru": "Варочный раствор",
 "en": "Pulping liquor"
 },
 "fluid__angels-liquid-raw-fish-oil": {
@@ -2076,7 +2312,7 @@
 "en": "15% Semiheavy water"
 },
 "fluid__angels-liquid-white-liquor": {
-"ru": "Белый ликвор",
+"ru": "Белый щёлок",
 "en": "White liquor"
 },
 "fluid__angels-mineral-sludge": {
@@ -2248,11 +2484,11 @@
 "en": "Chloroethane"
 },
 "fluid__gas-hydrogen-cyanide": {
-"ru": "Синильная кислота",
+"ru": "Циановодород",
 "en": "Hydrogen Cyanide Gas"
 },
 "fluid__gas-nitrous-oxide": {
-"ru": "Оксид азота",
+"ru": "Закись азота",
 "en": "Nitrous Oxide Gas"
 },
 "fluid__gas-phosgene": {
@@ -2260,8 +2496,8 @@
 "en": "Phosgene Gas"
 },
 "fluid__gas-vinyl-acetylene": {
-"ru": "Винилацетат",
-"en": "Vinyl Acetate Gas"
+"ru": "Винилацетилен",
+"en": "Vinylacetylene gas"
 },
 "fluid__gas-vinyl-chloride": {
 "ru": "Винилхлорид",
@@ -2280,8 +2516,8 @@
 "en": "Liquid air"
 },
 "fluid__liquid-chlorobutadiene": {
-"ru": "Хлорбутадиен (неопрен)",
-"en": "Chlorobutadiene (Neoprene)"
+"ru": "Хлоропрен",
+"en": "Chloroprene"
 },
 "fluid__liquid-dichlorobutene": {
 "ru": "Дихлорбутен",
@@ -2322,6 +2558,46 @@
 "fluid__water": {
 "ru": "Вода",
 "en": "Water"
+},
+"fluid__y-con_water": {
+"ru": "Загрязнённая вода",
+"en": "Contaminated Water"
+},
+"fluid__y-liquid-uc2": {
+"ru": "Жидкий УниКомпозит A2",
+"en": "Liquid Unicomp A2"
+},
+"fluid__y-mechanical-force": {
+"ru": "Механическая сила (MF)",
+"en": "Mechanical Force"
+},
+"fluid__y_emulsion": {
+"ru": "Промышленная промывочная эмульсия",
+"en": "Industrial Washing Emulsion"
+},
+"fluid__y_hydrogen": {
+"ru": "Гидротин",
+"en": "Hydrotin Gas"
+},
+"fluid__y_richemulsion": {
+"ru": "Богатая эмульсия",
+"en": "Rich Emulsion"
+},
+"fluid__y_syngas_raw": {
+"ru": "Газ Фрумитал-R",
+"en": "Frumital-R Gas"
+},
+"fluid__ye_blood": {
+"ru": "Кровь пришельцев",
+"en": "alien blood"
+},
+"fluid__ye_cornoil": {
+"ru": "Растительное масло",
+"en": "vegetable oil"
+},
+"fluid__ye_slurry": {
+"ru": "Шлам",
+"en": "Slurry"
 },
 "fluid-turret__flamethrower-turret": {
 "ru": "Огнемётная турель",
@@ -2390,6 +2666,42 @@
 "generator__steam-turbine": {
 "ru": "Паровая турбина",
 "en": "Steam turbine"
+},
+"generator__y-beg": {
+"ru": "Большой генератор-S",
+"en": "Big Generator-S"
+},
+"generator__y-heg": {
+"ru": "Огромный генератор-S",
+"en": "Huge Generator-S"
+},
+"generator__y-meg-s": {
+"ru": "Средний генератор-S",
+"en": "Medium Generator-S"
+},
+"generator__y-notfall-generator-s2": {
+"ru": "Малый турбогенератор-S",
+"en": "Small Turbine Generator-S"
+},
+"generator__y-obninsk-turbine": {
+"ru": "Турбина Ренсуира",
+"en": "Rensuir Turbine"
+},
+"generator__y-seg": {
+"ru": "Малый генератор-S",
+"en": "Small Generator-S"
+},
+"generator__y-seg-p": {
+"ru": "Малый генератор-P",
+"en": "Small Generator-P"
+},
+"generator__ye_tfmw_generator-s": {
+"ru": "TMFW-Gen-50 - S",
+"en": "TMFW-Gen-50 - S"
+},
+"generator__ye_tfmw_turbine-s": {
+"ru": "TMFW-TUR-72 - S",
+"en": "TMFW-TUR-72 - S"
 },
 "gun__Schall-sniper-rifle": {
 "ru": "Снайперская винтовка",
@@ -2496,36 +2808,36 @@
 "en": "Long-handed inserter"
 },
 "inserter__nco-crane": {
-"ru": "Погрузочный кран",
-"en": "Loading Crane"
+"ru": "Экспресс погрузочный кран",
+"en": "Express Loading Crane"
 },
 "inserter__nco-express-crane": {
-"ru": "Экспресс кран",
-"en": "Express Crane"
+"ru": "Гипер погрузочный кран",
+"en": "Ultimate Loading Crane"
 },
 "inserter__nco-red-crane": {
-"ru": "Красный погрузочный кран",
-"en": "Red Loading Crane"
+"ru": "Быстрый погрузочный кран",
+"en": "Fast Loading Crane"
 },
 "inserter__nco-red-wide-crane": {
-"ru": "Широкий красный погрузочный кран",
-"en": "Wide Red Loading Crane"
+"ru": "Широкий быстрый погрузочный кран",
+"en": "Wide Fast Loading Crane"
 },
 "inserter__nco-turbo-crane": {
-"ru": "Турбо кран",
-"en": "Turbo Crane"
+"ru": "Турбо погрузочный кран",
+"en": "Turbo Loading Crane"
 },
 "inserter__nco-wide-crane": {
-"ru": "Широкий погрузочный кран",
-"en": "Wide Loading Crane"
+"ru": "Широкий экспресс погрузочный кран",
+"en": "Wide Express Loading Crane"
 },
 "inserter__nco-wide-express-crane": {
-"ru": "Широкий экспресс кран",
-"en": "Wide Express Crane"
+"ru": "Широкий гипер погрузочный кран",
+"en": "Wide Ultimate Loading Crane"
 },
 "inserter__nco-wide-turbo-crane": {
-"ru": "Широкий турбо кран",
-"en": "Wide Turbo Crane"
+"ru": "Широкий турбо погрузочный кран",
+"en": "Wide Turbo Loading Crane"
 },
 "inserter__w93-hardened-inserter": {
 "ru": "Бронированный манипулятор",
@@ -2534,6 +2846,10 @@
 "item__advanced-circuit": {
 "ru": "Продвинутая схема",
 "en": "Advanced circuit"
+},
+"item__advanced-tritium-breeder-fuel-cell": {
+"ru": "Улучшенный топливный элемент для наработки трития",
+"en": "Advanced tritium breeder fuel cell"
 },
 "item__angels-bio-puffer-1": {
 "ru": "Газообразующий фугу",
@@ -2606,10 +2922,6 @@
 "item__angels-geode-red": {
 "ru": "Красные кристаллы",
 "en": "Red geode"
-},
-"item__angels-milling-drum": {
-"ru": "Дробильная насадка",
-"en": "Milling drum"
 },
 "item__angels-mixed-oxide-cell": {
 "ru": "МОКС-топливный элемент",
@@ -2791,6 +3103,10 @@
 "ru": "Сборочный автомат 1",
 "en": "Assembling machine 1"
 },
+"item__automation-science-pack": {
+"ru": "Автоматизационный исследовательский пакет",
+"en": "Automation science pack"
+},
 "item__barrel": {
 "ru": "Бочка",
 "en": "Barrel"
@@ -2858,6 +3174,10 @@
 "item__big-lab": {
 "ru": "Биг-лаба",
 "en": "Big Lab"
+},
+"item__bnl-advertising-flyer": {
+"ru": "Рекламная листовка BnL",
+"en": "BnL advertising flyer"
 },
 "item__bob-advanced-processing-unit": {
 "ru": "Электронная вычислительная плата",
@@ -2991,9 +3311,21 @@
 "ru": "Твердотопливный бур",
 "en": "Burner mining drill"
 },
+"item__chemical-science-pack": {
+"ru": "Химический исследовательский пакет",
+"en": "Chemical science pack"
+},
 "item__clowns-hypernuclear-fuel": {
 "ru": "Гиперъядерное топливо",
 "en": "Hypernuclear Fuel"
+},
+"item__clowns-plate-magnesium": {
+"ru": "Магниевый слиток",
+"en": "Magnesium Plate"
+},
+"item__clowns-plate-osmium": {
+"ru": "Осмиевый слиток",
+"en": "Osmium Plate"
 },
 "item__clowns-radiothermal-fuel": {
 "ru": "Радиотермическое топливо",
@@ -3067,9 +3399,17 @@
 "ru": "Отсыпка территории",
 "en": "Landfill"
 },
+"item__logistic-science-pack": {
+"ru": "Логистический исследовательский пакет",
+"en": "Logistic science pack"
+},
 "item__memory-unit": {
 "ru": "Хранилище материопамяти",
 "en": "Memory unit"
+},
+"item__military-science-pack": {
+"ru": "Военный исследовательский пакет",
+"en": "Military science pack"
 },
 "item__mirv-rocket": {
 "ru": "РГЧ ИН",
@@ -3083,9 +3423,21 @@
 "ru": "Гипер-лаба",
 "en": "Hyper Lab"
 },
+"item__ppd-transformer-320": {
+"ru": "Трансформатор Т-320",
+"en": "Transformer T-320"
+},
+"item__ppd-transformer-40": {
+"ru": "Трансформатор Т-40",
+"en": "Transformer T-40"
+},
 "item__processing-unit": {
 "ru": "Процессор",
 "en": "Processing unit"
+},
+"item__production-science-pack": {
+"ru": "Производственный исследовательский пакет",
+"en": "Production science pack"
 },
 "item__rocket-fuel": {
 "ru": "Ракетное топливо",
@@ -3111,6 +3463,10 @@
 "ru": "Твёрдое топливо",
 "en": "Solid fuel"
 },
+"item__space-science-pack": {
+"ru": "Космический исследовательский пакет",
+"en": "Space science pack"
+},
 "item__steel-plate": {
 "ru": "Стальная балка",
 "en": "Steel plate"
@@ -3122,6 +3478,10 @@
 "item__teleporter": {
 "ru": "teleporter",
 "en": "teleporter"
+},
+"item__tritium-breeder-fuel-cell": {
+"ru": "Топливный элемент для наработки трития",
+"en": "Tritium breeder fuel cell"
 },
 "item__tungsten-ore": {
 "ru": "Вольфрамовая руда",
@@ -3143,6 +3503,10 @@
 "ru": "Урановая руда",
 "en": "Uranium ore"
 },
+"item__utility-science-pack": {
+"ru": "Вспомогательный исследовательский пакет",
+"en": "Utility science pack"
+},
 "item__wood": {
 "ru": "Древесина",
 "en": "Wood"
@@ -3150,6 +3514,78 @@
 "item__wooden-chest": {
 "ru": "Деревянный сундук",
 "en": "Wooden chest"
+},
+"item__y-battery-single-use2": {
+"ru": "Заряженный элемент батареи",
+"en": "Full Battery Cell"
+},
+"item__y-battery-single-use3": {
+"ru": "Блок элементов батареи",
+"en": "Blocked Battery Cells"
+},
+"item__y-coal-dust": {
+"ru": "Угольная пыль",
+"en": "Coal Dust"
+},
+"item__y-fuel-cell-c": {
+"ru": "Топливная ячейка C",
+"en": "Fuel Cell C"
+},
+"item__y-fuel-reactor": {
+"ru": "Топливная ячейка Обнинска",
+"en": "Obninsk Reactor Cell"
+},
+"item__y-infused-mud": {
+"ru": "Насыщенная грязь",
+"en": "Infused Mud"
+},
+"item__y-mixed-fuel": {
+"ru": "Блок смешанного твёрдого топлива",
+"en": "Mixed Solid Fuel Block"
+},
+"item__y-mixed-fuel-loaded": {
+"ru": "Обогащённый топливный блок",
+"en": "Enriched Fuel Block"
+},
+"item__y-res1": {
+"ru": "УниКомпозитный кусок",
+"en": "N4-Material Chunk (Durotal)"
+},
+"item__y-res2": {
+"ru": "Энергоминерал",
+"en": "F7-Material Chunk (Nuatreel)"
+},
+"item__y-unicomp-a2": {
+"ru": "УниКомпозит A2",
+"en": "UC-A2 (Unicomp)"
+},
+"item__y_greensign": {
+"ru": "Знак природы",
+"en": "Nature Sign"
+},
+"item__y_mox1fuel": {
+"ru": "Термоядерное топливо MX-A",
+"en": "MX-A Fusion Fuel"
+},
+"item__y_mox2fuel": {
+"ru": "Термоядерное топливо MX-C",
+"en": "MX-C Fusion Fuel"
+},
+"item__y_mox2fuelsplited": {
+"ru": "Ослабленное топливо MX-C",
+"en": "MX-C Fusion Reduced"
+},
+"item__ye_biomixed": {
+"ru": "Рабио",
+"en": "Rabio"
+},
+"item__ye_corn_b": {
+"ru": "Вугарный тростник",
+"en": "Vuger Cane"
+},
+"item__ypfw_trader_sign": {
+"ru": "Знак торговца",
+"en": "Merchant Sign"
 },
 "lab__big-lab": {
 "ru": "Биг-лаба",
@@ -3210,6 +3646,10 @@
 "locomotive__bob-armoured-locomotive-2": {
 "ru": "Бронированный локомотив MK2",
 "en": "Armoured locomotive MK2"
+},
+"locomotive__bob-armoured-locomotive-3": {
+"ru": "Бронированный локомотив MK3",
+"en": "Armoured locomotive MK3"
 },
 "locomotive__bob-locomotive-2": {
 "ru": "Локомотив MK2",
@@ -3294,10 +3734,6 @@
 "mining-drill__paranoidal-pumpjack-4": {
 "ru": "Нефтяная вышка MK4",
 "en": "Pumpjack MK4"
-},
-"mining-drill__pd-relic-deep-drill": {
-"ru": "Глубинный бур",
-"en": "Deep drill"
 },
 "mining-drill__pumpjack": {
 "ru": "Нефтяная вышка",
@@ -3603,10 +4039,6 @@
 "ru": "Модуль скорости 3",
 "en": "Speed Module 3"
 },
-"offshore-pump__angels-ground-water-pump": {
-"ru": "Скважина грунтовых вод",
-"en": "Ground water bore"
-},
 "offshore-pump__angels-seafloor-pump": {
 "ru": "Донный насос",
 "en": "Seafloor pump"
@@ -3839,6 +4271,18 @@
 "ru": "Урановый реактор",
 "en": "Uranium reactor"
 },
+"recipe__TN-warhead-big--1": {
+"ru": "Трёхступенчатая термоядерная боеголовка",
+"en": "3-stage atomic warhead"
+},
+"recipe__TN-warhead-big--2": {
+"ru": "Трёхступенчатая термоядерная боеголовка (компактная)",
+"en": "3-stage atomic warhead (compact)"
+},
+"recipe__TN-warhead-big--3": {
+"ru": "Трёхступенчатая термоядерная боеголовка (сверхкомпактная)",
+"en": "3-stage atomic warhead (very compact)"
+},
 "recipe__angels-bio-puffer-egg-1": {
 "ru": "Разведение Газообразующих фугу",
 "en": "Gaseous puffer breeding"
@@ -3879,18 +4323,6 @@
 "ru": "Электронная вычислительная плата",
 "en": "Advanced processing unit"
 },
-"recipe__bob-fission-reactor-equipment-3": {
-"ru": "Портативный термоядерный реактор MK3",
-"en": "Portable fission reactor MK3"
-},
-"recipe__bob-power-armor-mk4": {
-"ru": "Силовая броня MK4",
-"en": "Power armor MK4"
-},
-"recipe__bob-power-armor-mk5": {
-"ru": "Силовая броня MK5",
-"en": "Power armor MK5"
-},
 "recipe__intelligent-io": {
 "ru": "Интеллектуальное арифметико-логическое устройство",
 "en": "Intelligent I/O interface"
@@ -3923,17 +4355,21 @@
 "ru": "Перепрофилировать космический шаттл",
 "en": "Repurpose Space Shuttle"
 },
-"recipe__repurpose-spy-shuttle": {
-"ru": "Перепрофилировать картографический шаттл",
-"en": "Repurpose Telescope Shuttle"
-},
 "recipe__sand-sluicing": {
 "ru": "Просеивание песка",
 "en": "Sand Sluicing"
 },
+"recipe__y-fame": {
+"ru": "Репутация",
+"en": "Reputation"
+},
 "repair-tool__repair-pack": {
 "ru": "Ремонтный комплект",
 "en": "Repair pack"
+},
+"repair-tool__y-repair-durotal": {
+"ru": "Дуроталевый ремонтный набор",
+"en": "Durotal Repair Tool"
 },
 "resource__angels-fissure": {
 "ru": "Разлом земной коры",
@@ -4007,6 +4443,10 @@
 "ru": "Бесконечный кластер угля",
 "en": "Infinite coal"
 },
+"resource__scrap": {
+"ru": "Металлолом",
+"en": "Scrap"
+},
 "rocket-silo__rocket-silo": {
 "ru": "Ракетная шахта",
 "en": "Rocket silo"
@@ -4051,6 +4491,18 @@
 "ru": "Солнечная панель",
 "en": "Solar panel"
 },
+"solar-panel__y-stirling-solar-dish": {
+"ru": "Солнечный двигатель Стирлинга",
+"en": "Sun-Powered Stirling Solar Engine"
+},
+"solar-panel__y_alien_solar": {
+"ru": "Крошечный коллектор потока Sol-Ray",
+"en": "Tiny Sol-Ray Stream Collector"
+},
+"solar-panel__y_alien_solar2": {
+"ru": "Малый коллектор потока Sol-Ray",
+"en": "Small Sol-Ray Stream Collector"
+},
 "spider-vehicle__bm-spidertron_1": {
 "ru": "Паукотрон 1",
 "en": "Spidertron 1"
@@ -4088,8 +4540,8 @@
 "en": "Tankotron"
 },
 "spider-vehicle__maf_flying_saucer_10": {
-"ru": "Летающая тарелка",
-"en": "Flying-saucer"
+"ru": "Летающая тарелка 10",
+"en": "Flying-saucer 10"
 },
 "spider-vehicle__spidertron": {
 "ru": "Паукотрон",
@@ -4118,6 +4570,10 @@
 "storage-tank__storage-tank": {
 "ru": "Резервуар",
 "en": "Storage tank"
+},
+"technology__CW-air-filtering-6": {
+"ru": "Очистители загрязнения воздуха 6",
+"en": "Air filtering 6"
 },
 "technology__JunkTrain_tech": {
 "ru": "Простейшие паровозы",
@@ -4203,9 +4659,9 @@
 "ru": "Артиллерия",
 "en": "Artillery"
 },
-"technology__astrometrics": {
-"ru": "Астрометрика",
-"en": "Astrometrics"
+"technology__asteroid-mining": {
+"ru": "Добыча ресурсов на астероидах",
+"en": "Asteroid Mining"
 },
 "technology__atomic-bomb": {
 "ru": "Атомная бомба",
@@ -4214,6 +4670,10 @@
 "technology__automation": {
 "ru": "Автоматизация",
 "en": "Automation"
+},
+"technology__autonomous-space-mining-drones": {
+"ru": "Автономные астероидные дроны-добытчики",
+"en": "Autonomous Space Mining Drones"
 },
 "technology__bi-tech-bio-farming": {
 "ru": "Теплица",
@@ -4226,10 +4686,6 @@
 "technology__bob-artifact-radar": {
 "ru": "Наземный радар",
 "en": "Ground radar"
-},
-"technology__bob-atomic-artillery-shell": {
-"ru": "Атомный Артиллерийский Снаряд",
-"en": "Atomic artillery shell"
 },
 "technology__bob-boiler-5": {
 "ru": "Бойлер 5",
@@ -4256,8 +4712,12 @@
 "en": "Cargo planes"
 },
 "technology__cybersyn-train-network": {
-"ru": "Сеть поездов Cybersyn",
+"ru": "Диспетчерская сеть поездов",
 "en": "Cybersyn train network"
+},
+"technology__droid-m-o": {
+"ru": "Д-ОК",
+"en": "M-O"
 },
 "technology__elevated-rail": {
 "ru": "Надземные рельсы",
@@ -4279,37 +4739,13 @@
 "ru": "Ёмкость материопамяти",
 "en": "Fluid memory storage"
 },
-"technology__ftl-propulsion": {
-"ru": "Сверхсветовой двигатель",
-"en": "Faster than light propulsion systems"
+"technology__god-module-4": {
+"ru": "Квантовые модули IV",
+"en": "Quantum modules IV"
 },
-"technology__ftl-theory-A": {
-"ru": "Сверхсветовая теория A",
-"en": "Faster than light theory A"
-},
-"technology__ftl-theory-B": {
-"ru": "Сверхсветовая теория B",
-"en": "Faster than light theory B"
-},
-"technology__ftl-theory-C": {
-"ru": "Сверхсветовая теория C",
-"en": "Faster than light theory C"
-},
-"technology__ftl-theory-D": {
-"ru": "Сверхсветовая теория D",
-"en": "Faster than light theory D"
-},
-"technology__ftl-theory-D1": {
-"ru": "Сверхсветовая теория D1",
-"en": "Faster than light theory D1"
-},
-"technology__ftl-theory-D2": {
-"ru": "Сверхсветовая теория D2",
-"en": "Faster than light theory D2"
-},
-"technology__fusion-reactor": {
-"ru": "Термоядерный реактор",
-"en": "Fusion Reactor"
+"technology__god-module-5": {
+"ru": "Квантовые модули V",
+"en": "Quantum modules V"
 },
 "technology__heavy-armor": {
 "ru": "Тяжёлая броня",
@@ -4327,17 +4763,21 @@
 "ru": "Контроль качества 10",
 "en": "Quality control 10"
 },
-"technology__laboratory-productivity-1": {
-"ru": "Продуктивность исследований 1",
-"en": "Research Productivity 1"
-},
 "technology__laser": {
 "ru": "Лазерные технологии",
 "en": "Laser"
 },
+"technology__logistics": {
+"ru": "Логистика",
+"en": "Logistics"
+},
 "technology__memory-unit": {
 "ru": "Хранилище материопамяти",
 "en": "Memory storage"
+},
+"technology__military": {
+"ru": "Военная промышленность",
+"en": "Military"
 },
 "technology__mirv-technology": {
 "ru": "РГЧ ИН",
@@ -4348,8 +4788,20 @@
 "en": "Module components I"
 },
 "technology__multiple-unit-train-control": {
-"ru": "Система многих единиц для поездов",
-"en": "Multiple Unit Train Control"
+"ru": "Система многих единиц",
+"en": "Multiple unit train control"
+},
+"technology__nan-e": {
+"ru": "НЯН-Я",
+"en": "NAN-E"
+},
+"technology__nan-e-defibrillator": {
+"ru": "НЯН-Я: дефибриллятор 03 МЕД",
+"en": "NAN-E: D-FIB's defibrillator"
+},
+"technology__nan-e-umbrella": {
+"ru": "НЯН-Я: зонт ЗОН-ТТ",
+"en": "NAN-E: BRL-A's umbrella"
 },
 "technology__nanobots": {
 "ru": "Наноботы",
@@ -4359,9 +4811,17 @@
 "ru": "Ядерная энергия",
 "en": "Nuclear power"
 },
+"technology__observation-satellite": {
+"ru": "Спутник наблюдения",
+"en": "Observation Satellite"
+},
 "technology__orbital-ai-core": {
 "ru": "Орбитальное AI-ядро данных",
 "en": "Orbital AI Data Core"
+},
+"technology__orbital-assembler-power-problem": {
+"ru": "Проблема потребляемой мощности орбитальных сборщиков",
+"en": "Orbital Assembler Power Problem"
 },
 "technology__orbital-autonomous-fabricators": {
 "ru": "Автономный орбитальный фабрикатор",
@@ -4395,6 +4855,10 @@
 "ru": "Скорость ремонта защитных башен 1",
 "en": "Defense tower repair speed 1"
 },
+"technology__research-efficiency-1": {
+"ru": "Директива 99-99: экономная наука 1",
+"en": "Directive 99-99: Frugal Research 1"
+},
 "technology__research-speed-1": {
 "ru": "Скорость лабораторий 1",
 "en": "Lab research speed 1"
@@ -4411,25 +4875,29 @@
 "ru": "Ракетная шахта",
 "en": "Rocket silo"
 },
+"technology__shuttle-repurposing": {
+"ru": "Перепрофилирование шаттлов",
+"en": "Shuttle Repurposing"
+},
 "technology__solar-energy": {
 "ru": "Солнечная энергия",
 "en": "Solar energy"
 },
-"technology__space-construction": {
-"ru": "Строительство в космосе",
-"en": "Space Construction"
+"technology__space-assembler-theory": {
+"ru": "Теория создания космического сборщика",
+"en": "Space Assembler Theory"
 },
 "technology__space-lab": {
 "ru": "Космическая лаборатория",
 "en": "Space Lab"
 },
+"technology__space-shuttle": {
+"ru": "Космический челнок",
+"en": "Space Shuttle"
+},
 "technology__space-telescope": {
 "ru": "Космическая обсерватория-телескоп",
 "en": "Space Telescope"
-},
-"technology__spaceship-command": {
-"ru": "Командный центр космического корабля",
-"en": "Spaceship Command"
 },
 "technology__steam-power": {
 "ru": "Паровая электростанция",
@@ -4443,13 +4911,13 @@
 "ru": "Гигантская ветряная турбина",
 "en": "Huge wind turbine"
 },
-"technology__thermonuclear-bomb": {
-"ru": "Термоядерная бомба",
-"en": "Thermonuclear bomb"
-},
 "technology__toolbelt": {
 "ru": "Пояс для инструментов",
 "en": "Toolbelt"
+},
+"technology__vacuum-smelting": {
+"ru": "Вакуумная плавка",
+"en": "Vacuum Smelting"
 },
 "technology__w93-modular-turrets": {
 "ru": "Модульные турели",
@@ -4471,9 +4939,9 @@
 "ru": "Образец чужеродного растения",
 "en": "Alien plant-life sample"
 },
-"tool__automation-science-pack": {
-"ru": "Автоматизационный исследовательский пакет",
-"en": "Automation science pack"
+"tool__bnl-flight-recorder": {
+"ru": "Бортовой самописец «Аксиомы-7»",
+"en": "Axiom-7 flight recorder"
 },
 "tool__bob-advanced-logistic-science-pack": {
 "ru": "Транспортный исследовательский пакет",
@@ -4539,18 +5007,6 @@
 "ru": "Схема модуля скорости",
 "en": "Speed circuit board"
 },
-"tool__chemical-science-pack": {
-"ru": "Химический исследовательский пакет",
-"en": "Chemical science pack"
-},
-"tool__logistic-science-pack": {
-"ru": "Логистический исследовательский пакет",
-"en": "Logistic science pack"
-},
-"tool__military-science-pack": {
-"ru": "Военный исследовательский пакет",
-"en": "Military science pack"
-},
 "tool__module-combining-case": {
 "ru": "Корпус для комбинирования модулей",
 "en": "Module combining case"
@@ -4559,21 +5015,9 @@
 "ru": "Данные со спутника",
 "en": "Satellite Data"
 },
-"tool__production-science-pack": {
-"ru": "Производственный исследовательский пакет",
-"en": "Production science pack"
-},
-"tool__space-science-pack": {
-"ru": "Космический исследовательский пакет",
-"en": "Space science pack"
-},
 "tool__station-science": {
 "ru": "Данные с космической станции",
 "en": "Station Data"
-},
-"tool__utility-science-pack": {
-"ru": "Вспомогательный исследовательский пакет",
-"en": "Utility science pack"
 },
 "transport-belt__bob-basic-transport-belt": {
 "ru": "Медленный Конвейер",
@@ -4598,6 +5042,10 @@
 "transport-belt__turbo-transport-belt": {
 "ru": "Турбо Конвейер",
 "en": "Turbo transport belt"
+},
+"tree__tree-01": {
+"ru": "Дерево",
+"en": "Tree"
 },
 "underground-belt__bob-basic-underground-belt": {
 "ru": "Медленный Подземный конвейер",
@@ -4656,20 +5104,20 @@
 "en": "Big biter"
 },
 "unit__biterzilla15": {
-"ru": "АДСКИЙ ЛЕВИАФАН",
-"en": "Giant of Hell"
+"ru": "АДСКИЙ ЛЕВИАФАН 5",
+"en": "Giant of Hell 5"
 },
 "unit__biterzilla25": {
-"ru": "СИНИЙ ЛЕВИАФАН",
-"en": "Giant Blue"
+"ru": "СИНИЙ ЛЕВИАФАН 5",
+"en": "Giant Blue 5"
 },
 "unit__biterzilla35": {
-"ru": "КАМЕНИСТЫЙ ЛЕВИАФАН",
-"en": "Rock Beast"
+"ru": "КАМЕНИСТЫЙ ЛЕВИАФАН 5",
+"en": "Rock Beast 5"
 },
 "unit__bm-motherbiterzilla5": {
-"ru": "КОРОЛЕВА-МАТКА",
-"en": "Brood Mother"
+"ru": "КОРОЛЕВА-МАТКА 5",
+"en": "Brood Mother 5"
 },
 "unit__bm_fake_human_boss_cannon_explosive_10": {
 "ru": "Босс с разрывной пушкой 10",
@@ -4764,7 +5212,7 @@
 "en": "ElectricBiter:Lvl.10"
 },
 "unit__energy-thief-biter-v1-t10-rampant": {
-"ru": "Энерговор-Кусака:ур.10",
+"ru": "СапёрКусака:ур.10",
 "en": "SapperBiter:Lvl.10"
 },
 "unit__fast-biter-v1-t10-rampant": {
@@ -4800,12 +5248,12 @@
 "en": "Boss Biter 10"
 },
 "unit__maf-giant-acid-spitter5": {
-"ru": "КОРОЛЬ КИСЛОТНЫХ ПЛЕВАК",
-"en": "Monster Acid Spitter"
+"ru": "КОРОЛЬ КИСЛОТНЫХ ПЛЕВАК 5",
+"en": "Monster Acid Spitter 5"
 },
 "unit__maf-giant-fire-spitter5": {
-"ru": "КОРОЛЬ ОГНЕННЫХ ПЛЕВАК",
-"en": "Incendiary Spitter Monster"
+"ru": "КОРОЛЬ ОГНЕННЫХ ПЛЕВАК 5",
+"en": "Incendiary Spitter Monster 5"
 },
 "unit__medium-biter": {
 "ru": "Средний кусака",
@@ -4827,16 +5275,20 @@
 "ru": "ЯдовитыйКусака:ур.10",
 "en": "PoisonBiter:Lvl.10"
 },
+"unit__replicator-droid-heavy": {
+"ru": "Репликатор: Тяжелый штурмовой дроид",
+"en": "Replicator: Heavy Assault Droid"
+},
 "unit__small-biter": {
 "ru": "Малый кусака",
 "en": "Small biter"
 },
 "unit__spawner-spitter-v1-t10-rampant": {
-"ru": "Породитель-Плевака:ур.10",
+"ru": "ПородительПлевака:ур.10",
 "en": "SpawnerSpitter:Lvl.10"
 },
 "unit__suicide-biter-v1-t10-rampant": {
-"ru": "Камикадзе,Кусака:ур.10",
+"ru": "СамоубийцаКусака:ур.10",
 "en": "SuicideBiter:Lvl.10"
 },
 "unit__troll-biter-v1-t10-rampant": {
@@ -4848,7 +5300,7 @@
 "en": "RegenerativeFlyer:Lvl.10"
 },
 "unit__wasp-spitter-v1-t10-rampant": {
-"ru": "Оса,Плевака:ур.10",
+"ru": "ОсаПлевака:ур.10",
 "en": "WaspSpitter:Lvl.10"
 },
 "unit-spawner__biter-spawner": {
@@ -4960,16 +5412,16 @@
 "en": "Dart turret"
 },
 "sprite:biterzilla35": {
-"ru": "КАМЕНИСТЫЙ ЛЕВИАФАН",
-"en": "Rock Beast"
+"ru": "КАМЕНИСТЫЙ ЛЕВИАФАН 5",
+"en": "Rock Beast 5"
 },
 "sprite:bm-motherbiterzilla5": {
-"ru": "КОРОЛЕВА-МАТКА",
-"en": "Brood Mother"
+"ru": "КОРОЛЕВА-МАТКА 5",
+"en": "Brood Mother 5"
 },
 "sprite:maf-giant-fire-spitter5": {
-"ru": "КОРОЛЬ ОГНЕННЫХ ПЛЕВАК",
-"en": "Incendiary Spitter Monster"
+"ru": "КОРОЛЬ ОГНЕННЫХ ПЛЕВАК 5",
+"en": "Incendiary Spitter Monster 5"
 },
 "sprite:bm_fake_human_boss_nuke_rocket_10": {
 "ru": "Босс с ядерной бомбой 10",
@@ -5071,10 +5523,6 @@
 "ru": "Заповедник фугу",
 "en": "Puffer refugium"
 },
-"sprite:Schall-pickup-tower-R128": {
-"ru": "Башня сбора IV",
-"en": "Pickup tower IV"
-},
 "sprite:repair-turret": {
 "ru": "Защитная башня",
 "en": "Defense tower"
@@ -5108,8 +5556,8 @@
 "en": "Spidertron 5"
 },
 "sprite:maf_flying_saucer_10": {
-"ru": "Летающая тарелка",
-"en": "Flying-saucer"
+"ru": "Летающая тарелка 10",
+"en": "Flying-saucer 10"
 },
 "sprite:salvaged-assembling-machine": {
 "ru": "Извлечённый сборочный автомат",
@@ -5186,5 +5634,9 @@
 "sprite:erp-lab": {
 "ru": "Центр обработки данных",
 "en": "Data Processor"
+},
+"sprite:ye_fassembly2": {
+"ru": "Фабрика Y2",
+"en": "Y2-Factory"
 }
 }

@@ -339,20 +339,8 @@
    "poison-capsule"
   ],
   [
-   "ammo",
-   "bob-atomic-artillery-shell"
-  ],
-  [
    "item",
    "mirv-rocket"
-  ],
-  [
-   "ammo",
-   "thermonuclear-bomb"
-  ],
-  [
-   "ammo",
-   "artillery-shell-thermonuclear"
   ],
   [
    "capsule",
@@ -369,15 +357,63 @@
   [
    "armor",
    "respirator"
+  ],
+  [
+   "item",
+   "ppd-transformer-40"
+  ],
+  [
+   "item",
+   "ppd-transformer-320"
+  ],
+  [
+   "item",
+   "clowns-plate-osmium"
+  ],
+  [
+   "item",
+   "clowns-plate-magnesium"
+  ],
+  [
+   "item",
+   "y-res1"
+  ],
+  [
+   "item",
+   "y-res2"
+  ],
+  [
+   "item",
+   "ypfw_trader_sign"
+  ],
+  [
+   "repair-tool",
+   "y-repair-durotal"
+  ],
+  [
+   "armor",
+   "tpr-gas-mask"
+  ],
+  [
+   "tree",
+   "tree-01"
+  ],
+  [
+   "unit",
+   "replicator-droid-heavy"
+  ],
+  [
+   "technology",
+   "military"
+  ],
+  [
+   "technology",
+   "logistics"
   ]
  ],
  "technology_icons": [
   "ic-defect-control-1",
   "ic-defect-control-10",
-  "ftl-propulsion",
-  "ftl-theory-A",
-  "spaceship-command",
-  "space-construction",
   "rocket-silo",
   "rocket-failure-revision",
   "factory-architecture-t1",
@@ -388,10 +424,7 @@
   "teleporter",
   "nuclear-power",
   "angels-thorium-power",
-  "fusion-reactor",
-  "thermonuclear-bomb",
   "atomic-bomb",
-  "bob-atomic-artillery-shell",
   "mirv-technology",
   "Schall-tank-SH-0",
   "cargo-planes",
@@ -420,7 +453,6 @@
   "recycling",
   "modules",
   "research-speed-1",
-  "laboratory-productivity-1",
   "railway",
   "elevated-rail",
   "cybersyn-train-network",
@@ -446,14 +478,20 @@
   "automation",
   "orbital-ai-core",
   "space-telescope",
-  "astrometrics",
   "orbital-autonomous-fabricators",
   "artillery",
   "repair-turret-speed-1",
   "bob-artifact-radar",
   "space-lab",
   "angels-electric-boiler",
-  "afterburner"
+  "afterburner",
+  "research-efficiency-1",
+  "nan-e",
+  "droid-m-o",
+  "nan-e-umbrella",
+  "nan-e-defibrillator",
+  "military",
+  "logistics"
  ],
  "sprites": [
   {
@@ -740,11 +778,6 @@
    "name": "angels-bio-refugium-puffer"
   },
   {
-   "key": "Schall-pickup-tower-R128",
-   "type": "container",
-   "name": "Schall-pickup-tower-R128"
-  },
-  {
    "key": "repair-turret",
    "type": "container",
    "name": "repair-turret"
@@ -884,6 +917,11 @@
    "key": "erp-lab",
    "type": "lab",
    "name": "erp-lab"
+  },
+  {
+   "key": "ye_fassembly2",
+   "type": "assembling-machine",
+   "name": "ye_fassembly2"
   }
  ],
  "static": [
@@ -918,9 +956,21 @@
    "quality": 82
   },
   {
-   "src": "paranoidal.png",
-   "dst": "logo/paranoidal-circuit.png",
-   "note": "PARANOIDAL circuit logo"
+   "src": "paranoidal.gif",
+   "dst": "logo/paranoidal-plate.webp",
+   "crop": [
+    26,
+    26,
+    1973,
+    247
+   ],
+   "anim": {
+    "every": 2,
+    "height": 64,
+    "quality": 75,
+    "alpha_quality": 80
+   },
+   "note": "PARANOIDAL plate (top bar and footer): animated circuit logo with alpha, cropped to the letters, 10 fps"
   },
   {
    "src": "__core__/graphics/icons/alerts/danger-icon.png",
