@@ -1,0 +1,50 @@
+<!-- CHAPTER 20 — RPG, base journal, achievements (2.1 rewrite 2026-11-18). Widgets: xp-curve (paranoidal-CodexRPG control.lua: xp 1500, 200 levels,
+     50 per skill, death penalty 30 %), achievement-kinds (records.achievement_kinds).
+     Facts: paranoidal-CodexRPG info.json (RPG from PM RPG System; base journal: passport, statistics of base, world, war and quality, milestones,
+     short codex, BnL Premium: Gold Card holders and their wishes, calendar and alarm; hotkeys I / Alt+I), premium.cfg («Норматив BnL: 700 лет»),
+     ПР-071; paranoidal-achievements info.json (achievements + milestones, Ctrl+Alt+M; 1064 achievements in the dump);
+     paranoidal-sound (Epic Weapon Sounds, Boombastique, CIS train sounds); RuNames-reforged (11 name sets, Ctrl+N / Ctrl+R);
+     reskins-*, prismatic-belts, bullet-trails, GlowingLaserBeams, Vibrant_paint, minime, paranoidal-vehicle-physics (shield flash),
+     paranoidal-lighting. -->
+<section id="life" class="chapter" data-num="20" data-icon="assets/icons/technology__qol-crafting-speed-1-1.webp" data-toc="RPG, журнал базы и достижения|RPG, base journal, achievements">
+  <header class="ch-head">
+    <div class="ch-num"><ru>Глава 20</ru><en>Chapter 20</en></div>
+    <h2><ru>RPG, журнал базы и достижения</ru><en>RPG, base journal and achievements</en></h2>
+    <p class="ch-lead"><ru>Ваш инженер растёт вместе с заводом: копит опыт, получает уровни и вкладывает очки в навыки. Журнал базы считает всё, что можно посчитать. А ещё здесь больше тысячи достижений, звуки, краски и русские названия станций.</ru><en>Your engineer grows with the factory: earns experience, gains levels and spends points on skills. The base journal counts everything that can be counted. On top of that: over a thousand achievements, sounds, colours and Russian station names.</en></p>
+    <div class="ch-tags"><span><ru>200 уровней</ru><en>200 levels</en></span><span><ru>{{n:counts.achievements}} достижений</ru><en>{{n:counts.achievements}} achievements</en></span><span><ru>11 наборов названий</ru><en>11 name sets</en></span></div>
+  </header>
+
+  <h3 id="life-rpg"><ru>Инженер с прокачкой</ru><en>An engineer who levels up</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>За постройки, крафт, <a class="x" href="#science">исследования</a>, <a class="x" href="#enemies">убийства</a> и <a class="x" href="#endgame">запуски ракет</a> персонаж получает опыт. Уровней <b>200</b>, за каждый очко навыка. В каждом навыке до 50 очков: скорость крафта и добычи, бег, здоровье, дальность, инвентарь и прочее.</ru><en>Building, crafting, <a class="x" href="#science">research</a>, <a class="x" href="#enemies">kills</a> and <a class="x" href="#endgame">rocket launches</a> earn your character experience. There are <b>200</b> levels, each worth a skill point. Each skill takes up to 50 points: crafting and mining speed, running, health, reach, inventory and more.</en></p>
+      <p><ru>Смерть стоит 30% прогресса текущего уровня. Не всего опыта, но достаточно, чтобы не лезть к ульям в одних трусах. Ниже видно, сколько опыта нужно на каждый уровень.</ru><en>Death costs 30% of your progress in the current level. Not all your experience, but enough to stop you visiting hives in your underwear. Below is how much experience each level takes.</en></p>
+    </div>
+    <div class="panel" data-widget="xp-curve"></div>
+  </div>
+
+  <h3 id="life-journal"><ru>Журнал базы</ru><en>The base journal</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>Клавиша <kbd>I</kbd> открывает полноэкранный журнал: паспорт базы, персонаж, статистика базы, мира, войны и качества, вехи, краткий кодекс по сборке. <kbd>Alt</kbd>+<kbd>I</kbd> сразу открывает статистику. Удобно, чтобы понять, куда делись последние двадцать часов.</ru><en>The <kbd>I</kbd> key opens a full-screen journal: the base passport, your character, statistics of the base, the world, the war and quality, milestones and a short codex of the modpack. <kbd>Alt</kbd>+<kbd>I</kbd> opens the statistics right away. Handy for figuring out where the last twenty hours went.</en></p>
+    </div>
+    <div class="callout tip"><p><ru><b>Премиум BnL.</b> Закладка с держателями Золотой карты BnL, то есть с теми, кто поддерживает сборку, и с их исполненными пожеланиями. Это единственная карта BnL, по которой что-то выдают. Бухгалтерия до сих пор проверяет, не сбой ли это. Норматив рассмотрения пожеланий в BnL 700 лет, сборка укладывается быстрее. Функции премиума, вроде календаря и будильника, открыты всем.</ru><en><b>BnL Premium.</b> A bookmark with the BnL Gold Card holders, the people who support the modpack, and the wishes they got granted. It is the only BnL card that actually pays out anything. Accounting is still checking whether it is a glitch. BnL's standard review time for wishes is 700 years; the modpack is faster. Premium features such as the calendar and the alarm clock are open to everyone.</en></p></div>
+  </div>
+
+  <h3 id="life-achievements"><ru>Больше тысячи достижений</ru><en>Over a thousand achievements</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>В ванили около шестидесяти достижений. Здесь их {{n:counts.achievements}}: ступени производства для сотен предметов, производство в час, длина маршрутов поездов, бои с <a class="x" href="#enemies-rampant">Rampant</a> и исполинами, <a class="x" href="#defects">качество и брак</a>, энергетика, Factorissimo, ракеты, сезоны, руины и легендарные руины. Рядом вехи: когда вы впервые сделали каждую важную вещь (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>M</kbd>).</ru><en>Vanilla has about sixty achievements. Here there are {{n:counts.achievements}}: production tiers for hundreds of items, production per hour, train route lengths, battles with <a class="x" href="#enemies-rampant">Rampant</a> and giants, <a class="x" href="#defects">quality and defects</a>, power, Factorissimo, rockets, seasons, ruins and legendary ruins. Next to them are milestones: when you first made each important thing (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>M</kbd>).</en></p>
+      <p><ru>У этого гайда тоже есть достижения, счётчик в правом верхнем углу. Некоторые выдаются за чтение глав, некоторые за эксперименты в калькуляторах. Попробуйте собрать все.</ru><en>This guide has achievements too: see the counter in the top right corner. Some are given for reading chapters, some for experiments in the calculators. Try to collect them all.</en></p>
+    </div>
+    <div class="panel" data-widget="achievement-kinds"></div>
+  </div>
+
+  <h3 id="life-atmo"><ru>Звук, свет и краски</ru><en>Sound, light and colour</en></h3>
+  <div class="grid g3">
+    <div class="card rv"><h4><ru>Звук</ru><en>Sound</en></h4><p><ru>Эпичные звуки оружия, переработанные звуки машин, природы и интерфейса, а поезда звучат как настоящие поезда стран СНГ. Какой звук играть, если источников несколько, выбирается в настройках. Неудачные запуски ракет тоже озвучены. Громко.</ru><en>Epic weapon sounds, reworked machine, nature and interface sounds, and trains that sound like real trains of the CIS countries. Which sound plays when several sources overlap is chosen in the settings. Failed rocket launches have sound too. Loud sound.</en></p></div>
+    <div class="card rv"><h4><ru>Графика</ru><en>Graphics</en></h4><p><ru>Перерисованные машины Боба и Ангела с цветами уровней, цветные ленты, трассеры пуль, цветные лазеры, вспышка щита при попадании, яркая покраска техники и станций, большие лампы и световые индикаторы.</ru><en>Redrawn Bob's and Angel's machines with tier colours, coloured belts, bullet tracers, coloured lasers, a shield flash on impact, vivid paint for vehicles and stations, big lamps and status lights.</en></p></div>
+    <div class="card rv"><h4><ru>Имена</ru><en>Names</en></h4><p><ru><a class="x" href="#logistics-trains">Станции</a>, локомотивы, лаборатории, радары и робопорты получают русские названия из одиннадцати наборов. Любое из них можно переименовать (<kbd>Ctrl</kbd>+<kbd>R</kbd>) или назвать случайно (<kbd>Ctrl</kbd>+<kbd>N</kbd>). А персонажа можно уменьшить или сменить ему облик.</ru><en><a class="x" href="#logistics-trains">Stations</a>, locomotives, labs, radars and roboports get Russian names from eleven name sets. Any of them can be renamed (<kbd>Ctrl</kbd>+<kbd>R</kbd>) or given a random name (<kbd>Ctrl</kbd>+<kbd>N</kbd>). And your character can be shrunk or given a new look.</en></p></div>
+  </div>
+  <div class="quip rv"><ru>Через сто часов вы будете знать названия всех станций до Урюпинска. Через двести сами начнёте говорить «а давайте построим ещё одну Сортировочную».</ru><en>After a hundred hours you will know every station name down to the smallest village. After two hundred you will be saying “let us build one more Marshalling Yard” yourself.</en></div>
+</section>

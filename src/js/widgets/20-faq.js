@@ -1,5 +1,5 @@
 /* Chapter 20 widget.
-   readiness-quiz : 8 questions; answers must stay consistent with the chapters (update when mechanics change). */
+   readiness-quiz : 9 questions; answers must stay consistent with the chapters (update when mechanics change). */
 (function (G) {
   var Q = [
     { q: ['КПД стартового котла?', 'Starter boiler efficiency?'], a: [['100%, как в ванили', '100%, like vanilla'], ['50%', '50%'], ['98%', '98%'], ['Котлов нет, только солнце', 'No boilers, only solar']], ok: 1, link: '#energy-kpd' },
@@ -7,8 +7,9 @@
     { q: ['Где взять железную руду?', 'Where do you get iron ore?'], a: [['На железном месторождении', 'From an iron ore field'], ['Сортировкой сложных руд, например сапфирита', 'By sorting compound ores, e.g. saphirite'], ['Купить у жуков', 'Buy it from the bugs'], ['Из камня', 'From stone']], ok: 1, link: '#refining-tiers' },
     { q: ['Что нужно буру на сапфирите, кроме электричества?', 'What does a drill on saphirite need besides power?'], a: [['Ничего', 'Nothing'], ['Вода', 'Water'], ['Смазка', 'Lubricant'], ['Удача', 'Luck']], ok: 1, link: '#mining-fluids' },
     { q: ['От чего здесь растёт эволюция жуков?', 'What makes bug evolution grow here?'], a: [['От времени', 'Time'], ['От загрязнения', 'Pollution'], ['От ваших исследований', 'Your research'], ['От фазы луны', 'The moon phase']], ok: 2, link: '#science-evolution' },
-    { q: ['Шанс взрыва первой ракеты без исследований?', 'Chance the first rocket explodes without research?'], a: [['0%', '0%'], ['5%', '5%'], ['50%', '50%'], ['100%', '100%']], ok: 2, link: '#space-explosions' },
+    { q: ['Шанс взрыва первой ракеты без исследований?', 'Chance the first rocket explodes without research?'], a: [['0%', '0%'], ['5%', '5%'], ['50%', '50%'], ['100%', '100%']], ok: 2, link: '#endgame-explosions' },
     { q: ['Горящий резервуар можно спасти, если…', 'A burning tank can be saved if…'], a: [['…полить его из ведра', '…you pour a bucket on it'], ['…за минуту откачать горючее ниже 25%', '…you drain the fuel below 25% within a minute'], ['…отойти подальше', '…you walk away'], ['…никак', '…no way']], ok: 1, link: '#chemistry-fire' },
+    { q: ['Обломок лайнера горит. Как его добыть?', 'A starliner wreck is on fire. How do you mine it?'], a: [['Кирка справится', 'The pickaxe will do'], ['Сначала потушить бочкой воды', 'Put it out with a water barrel first'], ['Подождать до утра', 'Wait until morning'], ['Никак, он потерян', 'You cannot, it is lost']], ok: 1, link: '#start-fire' },
     { q: ['Кто из этих врагов существует в сборке?', 'Which of these enemies exists in the modpack?'], a: [['Люди с ядерными ракетами', 'Humans with nuclear rockets'], ['Жуки-джаггернауты', 'Juggernaut bugs'], ['Летающие тарелки', 'Flying saucers'], ['Все перечисленные', 'All of the above']], ok: 3, link: '#enemies-events' }
   ];
   G.widget('readiness-quiz', function (el) {
@@ -26,8 +27,8 @@
     }
     function result() {
       var verdict = score === Q.length ? [G.t('Готов к Paranoidal', 'Paranoidal-ready'), G.t('Вы прочитали гайд внимательнее, чем некоторые читают договор ипотеки. Запускайте игру. Жуки уже ждут.', 'You read the guide more carefully than some people read a mortgage contract. Launch the game. The bugs are waiting.'), '#8de06a']
-        : score >= 5 ? [G.t('Почти готов', 'Almost ready'), G.t('Пара пробелов есть, но в Paranoidal всё равно всё узнаётся на практике. Обычно ночью и под атакой.', 'A few gaps, but in Paranoidal you learn everything in practice anyway. Usually at night and under attack.'), '#ffd25a']
-          : [G.t('Сначала ваниль', 'Vanilla first'), G.t('Честно? Пролистайте гайд ещё раз. Или включите пресет «без врагов» — это не стыдно, это стратегия.', 'Honestly? Skim the guide again. Or pick the “no enemies” preset: no shame, it is strategy.'), '#ff5a4a'];
+        : score >= 6 ? [G.t('Почти готов', 'Almost ready'), G.t('Пара пробелов есть, но в Paranoidal всё равно всё узнаётся на практике. Обычно ночью и под атакой.', 'A few gaps, but in Paranoidal you learn everything in practice anyway. Usually at night and under attack.'), '#ffd25a']
+          : [G.t('Сначала ваниль', 'Vanilla first'), G.t('Пролистайте гайд ещё раз. Или включите при создании карты мирный режим: стыдиться тут нечего.', 'Skim the guide again. Or turn on peaceful mode when you create the map: nothing to be ashamed of.'), '#ff5a4a'];
       el.innerHTML = '<div class="qz-res"><b class="out" style="color:' + verdict[2] + '">' + score + ' / ' + Q.length + '</b><h4>' + verdict[0] + '</h4><p>' + verdict[1] + '</p><button class="fbtn" data-again>' + G.t('Пройти ещё раз', 'Try again') + '</button></div>';
       el.querySelector('[data-again]').onclick = function () { i = 0; score = 0; picked = null; render(); };
       if (score === Q.length) G.achieve('quiz', 'Отличник', 'Straight A', G.icon('technology__ic-defect-control-10'), 'Ответить на все вопросы теста', 'Answer every quiz question correctly');

@@ -1,0 +1,62 @@
+<!-- CHAPTER 13 — Late game: Yuoki Industries (new in the 2.1 guide, 2026-11-18). No widget.
+     Facts: mods/Yuoki changelog 9.0.0 and locale/ru/tips.cfg (26 tips, category Yuoki): roadmap by science; mechanical force: 150 °C,
+     840 kJ per unit (Bob steam 465 °C = 90 kJ), small generator 4 MF/s → 3.2 MW (95 %), medium 8 MF/s → 6.4 MW, underground shaft 25 tiles,
+     no MF barrels; N4/F7 only from centrifuging super-pure Angels ores (3 ores → 3 chunks, with a seed 5); factories C1/Y2/P3 are the
+     only fabricators; currencies (technician, merchant, nature, science signs, reputation, UC-A2) never get quality; transmutation
+     100 ore / 100 slag → 1 UC-A2; archaeology (dirt anywhere, washing → ancient shards); reputation monument (1 per 1800 s), Laika gate
+     needs 10 reputation; exports for merchant signs; great domination symbols 50 000 / 30 000 / 60 000 signs; F12+ turrets supersede
+     the build's top turrets; repair tools Durotal / Airat9000 / Quantrinum-R; YI suits 9×9 … walkers 13×13 on top of power armour;
+     Sol-Ray collectors 1.5 / 3 MW day and night, quantrinum accumulator 600 MJ (dump). -->
+<section id="yuoki" class="chapter" data-num="13" data-icon="assets/icons/item__y-unicomp-a2.webp" data-toc="Поздняя игра: Yuoki|Late game: Yuoki">
+  <header class="ch-head">
+    <div class="ch-num"><ru>Глава 13</ru><en>Chapter 13</en></div>
+    <h2><ru>Поздняя игра: Yuoki Industries</ru><en>Late game: Yuoki Industries</en></h2>
+    <p class="ch-lead"><ru>Когда у Ангела и Боба кончаются привычные цепочки, начинается Юоки. Он берёт ваши самые технологичные продукты и превращает их в инопланетные материалы, трансмутацию, генетику, торговлю с другими мирами и культ наживы. Поздний капитализм в буквальном смысле.</ru><en>When Angel's and Bob's familiar chains run out, Yuoki begins. It takes your most advanced products and turns them into alien materials, transmutation, genetics, trade with other worlds and a cult of profit. Late capitalism, literally.</en></p>
+    <div class="ch-tags">{{chip:item/y-res1}}{{chip:item/y-res2}}{{chip:item/y-unicomp-a2}}{{chip:item/ypfw_trader_sign}}</div>
+    {{sprite:ye_fassembly2|ch-art}}
+  </header>
+
+  <h3 id="yuoki-road"><ru>Дорожная карта</ru><en>The roadmap</en></h3>
+  <p><ru>Руды Юоки на карте нет: всё делается из продуктов сборки, и всё открывается исследованиями, по одному шагу на эпоху науки. У Юоки есть свой раздел подсказок в игре, 26 иллюстрированных страниц. Прочитайте его, это сэкономит вечер.</ru><en>There is no Yuoki ore on the map: everything is made from the modpack's products, and everything is unlocked by research, one step per science era. Yuoki has its own in-game tips section, 26 illustrated pages. Read it, it will save you an evening.</en></p>
+  <div class="steps">
+    <div class="step rv"><h4><ru>Зелёная наука</ru><en>Green science</en></h4><p><ru>{{name:solar-panel/y-stirling-solar-dish}}: 30 кВт днём и ночью. Немного, но честно.</ru><en>The {{name:solar-panel/y-stirling-solar-dish}}: 30 kW day and night. Not much, but honest.</en></p></div>
+    <div class="step rv"><h4><ru>Синяя наука</ru><en>Blue science</en></h4><p><ru><a class="x g" href="#g-mf">Механическая сила</a>: двигатели, валы и генераторы. Подробно ниже.</ru><en><a class="x g" href="#g-mf">Mechanical force</a>: engines, shafts and generators. Details below.</en></p></div>
+    <div class="step rv"><h4><ru>Производственная наука</ru><en>Production science</en></h4><p><ru>Вход в Юоки: материалы N4 и F7, фабрики C1, Y2 и P3, археология, трансмутация, кристаллизация, агрономия.</ru><en>The entrance to Yuoki: N4 and F7 materials, the C1, Y2 and P3 factories, archaeology, transmutation, crystallization, agronomy.</en></p></div>
+    <div class="step rv"><h4><ru>Утилитарная наука</ru><en>Utility science</en></h4><p><ru>Квантрин, генетика, поздняя энергетика, торговля, оборона и первый костюм YI.</ru><en>Quantrinum, genetics, late power, trade, defence and the first YI suit.</en></p></div>
+    <div class="step rv"><h4><ru>Инопланетная наука</ru><en>Alien science</en></h4><p><ru>Старшие костюмы и шагающие ходоки YI поверх силовой брони Боба. Для последнего нужно пятнадцать видов пакетов сразу.</ru><en>The senior YI suits and walkers on top of Bob's power armour. The last one needs fifteen pack kinds at once.</en></p></div>
+  </div>
+
+  <h3 id="yuoki-mf"><ru>Механическая сила</ru><en>Mechanical force</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>{{name:fluid/y-mechanical-force}} работает как пар, только намного плотнее. Двигатель сжигает топливо и нагревает рабочую жидкость до 150 °C, по валам она идёт к генератору, генератор забирает тепло и даёт ток. Одна единица несёт 840 кДж, а пар Боба на 465 °C всего 90 кДж. Поэтому станции на механической силе получаются компактными.</ru><en>{{name:fluid/y-mechanical-force}} works like steam, only much denser. An engine burns fuel and heats the working fluid to 150 °C, shafts carry it to a generator, and the generator takes the heat and gives electricity. One unit carries 840 kJ, while Bob's steam at 465 °C carries just 90. That is why mechanical force plants are compact.</en></p>
+      <p><ru>Малый генератор берёт 4 единицы в секунду и выдаёт 3,2 МВт, средний вдвое больше. Подземный вал перекрывает 25 клеток. В бочки механическая сила не разливается: бочка сохраняет количество, но не температуру, и энергия бы пропала. Даже физика здесь против халявы.</ru><en>A small generator takes 4 units per second and gives 3.2 MW, a medium one twice that. An underground shaft spans 25 tiles. Mechanical force cannot be barrelled: a barrel keeps the amount but not the temperature, and the energy would vanish. Even physics is against freebies here.</en></p>
+    </div>
+    <div class="grid g2">
+      <div class="card rv"><h4>{{icon:solar-panel/y_alien_solar2}} <ru>Коллекторы Sol-Ray</ru><en>Sol-Ray collectors</en></h4><p><ru>1,5 и 3 МВт днём и ночью. Солнце инопланетное, график свой.</ru><en>1.5 and 3 MW day and night. An alien sun keeps its own schedule.</en></p></div>
+      <div class="card rv"><h4>{{icon:accumulator/y-accumulator-crystal-m}} <ru>Квантриновый аккумулятор</ru><en>Quantrinum accumulator</en></h4><p><ru>600 МДж в одном здании. Для сравнения, обычный держит 10.</ru><en>600 MJ in one building. For comparison, a regular one holds 10.</en></p></div>
+    </div>
+  </div>
+
+  <h3 id="yuoki-materials"><ru>Материалы N4 и F7</ru><en>N4 and F7 materials</en></h3>
+  <p><ru>Два базовых вещества Юоки получают центрифугированием <b>сверхчистых</b> <a class="x" href="#refining-tiers">руд Ангела</a>, которые, в свою очередь, делают из кристаллов на четвёртой ступени сортировки. Строительный материал {{name:item/y-res1}} получают из сапфирита, рубита и бобмониума, энергетический {{name:item/y-res2}} из дживолита, стиратита и кротиниума. Выход три куска, с кристаллической затравкой пять.</ru><en>Yuoki's two base substances come from centrifuging <b>super-pure</b> <a class="x" href="#refining-tiers">Angel's ores</a>, which in turn are made from crystals at the fourth sorting stage. Saphirite, rubyte and bobmonium give three pieces of {{name:item/y-res1}}, the building material. Jivolite, stiratite and crotinnium give three pieces of {{name:item/y-res2}}, the energy material. With a crystal seed you get five.</en></p>
+  <p><ru>Дальше дробилка, пресс и ценная пыль, без которой не обходится почти ничего. Детали Юоки делают только фабрики C1, Y2 и P3, и каждая деталь съедает какой-нибудь поздний продукт сборки. Так что Юоки не отменяет Ангела и Боба, а сидит у них на шее.</ru><en>Then come the crusher, the press and precious dust, which almost everything needs. Yuoki components are made only by the C1, Y2 and P3 factories, and each component eats some late product of the modpack. So Yuoki does not replace Angel's and Bob's, it sits on their shoulders.</en></p>
+
+  <h3 id="yuoki-economy"><ru>Валюты, трансмутация и торговля</ru><en>Currencies, transmutation and trade</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>Юоки платит и берёт плату особыми предметами. Знак техника выпадает при производстве деталей, знак природы при агрономии и генетике, знак науки делает исследовательский центр из набора всех <a class="x" href="#science-packs">пакетов</a>, знак торговца приносит экспорт. Ещё есть репутация и {{name:item/y-unicomp-a2}}. Качества у валют нет: инфляция качеством не лечится.</ru><en>Yuoki pays and charges with special items. A technician sign drops when components are made, a nature sign from agronomy and genetics, a science sign is made by the research center from a set of all <a class="x" href="#science-packs">packs</a>, a merchant sign comes from exports. Then there is reputation and {{name:item/y-unicomp-a2}}. Currencies have no quality: inflation cannot be cured with quality.</en></p>
+      <p><ru><b>Трансмутация</b> разбирает вещество на универсальную основу: 100 любой руды или 100 шлака дают один УниКомпозит A2. Курс намеренно жёсткий. Это дорогая валюта, а не бесплатная свалка. Позже обратная трансмутация вернёт из него руду, с большой потерей.</ru><en><b>Transmutation</b> breaks matter down into a universal base: 100 of any ore or 100 slag give one UniComposite A2. The rate is harsh on purpose. It is an expensive currency, not a free dump. Later, reverse transmutation turns it back into ore, at a big loss.</en></p>
+      <p><ru><b>Археология</b>: подземный бур копает грязь где угодно, промывка находит в ней древние осколки, которых больше нигде нет. <b>Торговля</b>: древний монумент медленно приносит репутацию, за 10 репутации строятся врата «Лайка», а через них другим мирам продают чипы, топливные ячейки и еду за знаки торговца.</ru><en><b>Archaeology</b>: an underground drill digs dirt anywhere, and washing finds ancient shards in it that exist nowhere else. <b>Trade</b>: the ancient monument slowly yields reputation, 10 reputation builds the Laika gate, and through it you sell chips, fuel cells and food to other worlds for merchant signs.</en></p>
+    </div>
+    <div class="callout tip"><p><ru><b>Великие символы господства.</b> Вершина экономики Юоки: культ наживы за 50 000 знаков торговца, культ науки за 30 000 знаков науки и культ природы за 60 000 знаков природы. Культ наживы сам печатает знак торговца раз в 30 секунд. Деньги, которые делают деньги. BnL бы прослезилась.</ru><en><b>Great domination symbols.</b> The summit of Yuoki's economy: the cult of profit for 50,000 merchant signs, the cult of science for 30,000 science signs and the cult of nature for 60,000 nature signs. The cult of profit prints a merchant sign every 30 seconds by itself. Money that makes money. BnL would shed a tear.</en></p></div>
+  </div>
+
+  <h3 id="yuoki-defense"><ru>Оборона и броня</ru><en>Defence and armour</en></h3>
+  <div class="grid g3">
+    <div class="card rv"><h4>{{icon:ammo-turret/y_turret_gun1f12}} <ru>Турели F12+</ru><en>F12+ turrets</en></h4><p><ru>Улучшенные версии лучших <a class="x" href="#military-turrets">турелей сборки</a>: каждая съедает при сборке турель, которую заменяет. Пулемётные, пушечная, лазерная, плазменная, огнемётная.</ru><en>Upgraded versions of the modpack's best <a class="x" href="#military-turrets">turrets</a>: each one consumes the turret it supersedes. Machine-gun, cannon, laser, plasma, flamethrower.</en></p></div>
+    <div class="card rv"><h4>{{icon:repair-tool/y-repair-durotal}} <ru>Ремнаборы</ru><en>Repair tools</en></h4><p><ru>Три ремнабора выше пятого ремкомплекта Боба, от дуроталевого до «Квантрина-R» на 30 000 единиц прочности.</ru><en>Three repair tools above Bob's repair pack 5, from Durotal to Quantrinum-R with 30,000 durability.</en></p></div>
+    <div class="card rv"><h4><ru>Костюмы и ходоки YI</ru><en>YI suits and walkers</en></h4><p><ru>Продолжают силовую броню: сетки от 9×9 у первого костюма до 13×13 у старшего ходока. Каждый собирается из предыдущей брони.</ru><en>They continue power armour: grids from 9×9 on the first suit to 13×13 on the top walker. Each one is built from the previous armour.</en></p></div>
+  </div>
+  <div class="quip rv"><ru>Вы думали, что построили всё. Юоки вежливо уточняет, что вы ещё не построили врата для торговли с другими мирами.</ru><en>You thought you had built everything. Yuoki politely points out that you have not built the gate for trading with other worlds yet.</en></div>
+</section>

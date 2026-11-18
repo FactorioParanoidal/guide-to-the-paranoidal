@@ -2,7 +2,9 @@
    science-wall   : science packs with number of technologies using them (records.science_packs)
    tech-eras      : technologies by number of pack kinds (records.tech_by_pack_kinds)
    lab-scale      : lab footprints to scale (records.labs + records.spot sizes)
-   evolution-calc : evolution = 1 − exp(−(0.0015·techs + 0.0000035·packs)), research_evolution_factor/parameters.lua */
+   evolution-calc : evolution = 1 − exp(−(0.0012·techs + 0.0000015·packs)), research_evolution_factor/parameters.lua
+                    (Paranoidal 2026-10-30: constant_factor 0.12, linear_factor 0.15); thresholds: Big Monsters defaults of
+                    zzzparanoidal (soldiers 20 %, giants 40 %, spidertrons/saucers 80 %), robotarmy-citadel 50 %, flyers 10 % (ПР-063) */
 (function (G) {
   G.widget('science-wall', function (el) {
     function render() {
@@ -10,7 +12,7 @@
       var max = Math.max.apply(null, main.map(function (p) { return p.techs; }));
       function card(p) { return '<div class="sw-card"><img src="' + G.icon(p.icon) + '" alt="" data-ru="' + G.esc(p.ru) + '" data-en="' + G.esc(p.en) + '"><b>' + G.fmt(p.techs) + '</b><i style="height:' + Math.max(3, p.techs / max * 60) + 'px"></i></div>'; }
       el.innerHTML = '<div class="panel-title">' + G.t('Научные пакеты и число технологий, где они нужны', 'Science packs and how many technologies need them') + '</div><div class="sw">' + main.map(card).join('') + '</div>' +
-        '<h4>' + G.t('Платы модулей — «наука» для лаборатории модулей', 'Module boards: “science” for the module lab') + '</h4><div class="sw small">' + mods.map(card).join('') + '</div>';
+        '<h4>' + G.t('Платы модулей: «наука» для лаборатории модулей', 'Module boards: “science” for the module lab') + '</h4><div class="sw small">' + mods.map(card).join('') + '</div>';
     }
     render(); G.onLang(render);
   });
@@ -49,7 +51,7 @@
         '<div class="stat"><span class="v">×' + G.fmt(l.speed) + '</span><span class="l">' + G.t('скорость исследований', 'research speed') + '</span></div>' +
         '<div class="stat"><span class="v">' + power(l.power_w) + '</span><span class="l">' + G.t('потребляет', 'power draw') + '</span></div>' +
         '<div class="stat"><span class="v">' + l.inputs + '</span><span class="l">' + G.t('видов научных пакетов', 'science pack kinds') + '</span></div></div>' +
-        '<p class="muted small-note">' + G.t('Клетка фона — одна клетка игры. Лаборатории нарисованы в одном масштабе.', 'One background square is one game tile. Labs are drawn to the same scale.') + '</p>';
+        '<p class="muted small-note">' + G.t('Одна клетка фона равна одной клетке игры. Лаборатории нарисованы в одном масштабе.', 'One background square is one game tile. Labs are drawn to the same scale.') + '</p>';
       el.querySelectorAll('[data-l]').forEach(function (b) { b.onclick = function () { sel = b.getAttribute('data-l'); render(); if (sel === 'paranoidal-beta8-hyper-lab') G.achieve('hyperlab', 'Гигаватт на науку', 'A gigawatt for science', G.icon('item__paranoidal-beta8-hyper-lab'), 'Рассмотреть гипер-лабу', 'Inspect the hyper lab'); }; });
     }
     render(); G.onLang(render);
@@ -58,14 +60,14 @@
   G.widget('evolution-calc', function (el) {
     var techs = 120, packsExp = 4.5;
     function render() {
-      var packs = Math.round(Math.pow(10, packsExp)), x = 0.0015 * techs + packs * 0.0000035, evo = 1 - Math.exp(-x);
-      var stage = evo < 0.1 ? G.t('маленькие кусаки и черви. Пока.', 'small biters and worms. For now.') : evo < 0.3 ? G.t('средние жуки; с 10% — летуны, с 20% могут прийти вражеские солдаты.', 'medium bugs; flyers from 10%, hostile soldiers may come from 20%.') : evo < 0.6 ? G.t('большие жуки; с 40% — исполинские монстры.', 'big bugs; giant monsters from 40%.') : evo < 0.8 ? G.t('чудовища.', 'behemoths.') : G.t('паукотроны врага, летающие тарелки и прочий апокалипсис.', 'enemy spidertrons, flying saucers and other apocalypse.');
+      var packs = Math.round(Math.pow(10, packsExp)), x = 0.0012 * techs + packs * 0.0000015, evo = 1 - Math.exp(-x);
+      var stage = evo < 0.1 ? G.t('маленькие кусаки и черви. Пока.', 'small biters and worms. For now.') : evo < 0.3 ? G.t('средние жуки; с 10% летуны, с 20% могут прийти вражеские солдаты.', 'medium bugs; flyers from 10%, hostile soldiers may come from 20%.') : evo < 0.6 ? G.t('большие жуки; с 40% исполинские монстры.', 'big bugs; giant monsters from 40%.') : evo < 0.8 ? G.t('чудовища, а с 50% где-то вдали вырастает Цитадель репликаторов.', 'behemoths, and from 50% the Replicator Citadel rises somewhere far away.') : G.t('паукотроны врага, летающие тарелки и прочий апокалипсис.', 'enemy spidertrons, flying saucers and other apocalypse.');
       el.innerHTML = '<div class="panel-title"><img class="ic" src="' + G.icon('unit__behemoth-biter') + '" alt="">' + G.t('Калькулятор эволюции', 'Evolution calculator') + '</div>' +
         '<div class="qc-form"><label>' + G.t('Изучено технологий', 'Technologies researched') + ': <b>' + techs + '</b><input class="frange" type="range" min="0" max="900" value="' + techs + '" data-t></label>' +
         '<label>' + G.t('Потрачено пакетов', 'Packs spent') + ': <b>' + G.fmt(packs) + '</b><input class="frange" type="range" min="2" max="7.5" step="0.05" value="' + packsExp + '" data-p></label></div>' +
         '<div class="ev-meter"><i style="width:' + (evo * 100) + '%"></i><b>' + G.fmt(evo * 100, { maximumFractionDigits: 1 }) + '%</b></div>' +
         '<p>' + G.t('Что вас ждёт: ', 'What awaits you: ') + '<b>' + stage + '</b></p>' +
-        '<p class="muted small-note">' + G.t('Показатель = 0,0015 × технологии + 0,0000035 × пакеты; эволюция = 1 − e^(−показатель). Пороги событий — из настроек Big Monsters; реальный состав врагов зависит ещё и от расстояния до гнёзд.', 'Exponent = 0.0015 × technologies + 0.0000035 × packs; evolution = 1 − e^(−exponent). Event thresholds come from Big Monsters settings; the actual enemy mix also depends on distance to nests.') + '</p>';
+        '<p class="muted small-note">' + G.t('Показатель = 0,0012 × технологии + 0,0000015 × пакеты; эволюция = 1 − e^(−показатель). Пороги событий взяты из настроек сборки, а реальный состав врагов зависит ещё и от расстояния до гнёзд.', 'Exponent = 0.0012 × technologies + 0.0000015 × packs; evolution = 1 − e^(−exponent). Event thresholds come from the modpack settings; the actual enemy mix also depends on the distance to nests.') + '</p>';
       el.querySelector('[data-t]').oninput = function () { techs = +this.value; render(); };
       el.querySelector('[data-p]').oninput = function () { packsExp = +this.value; render(); };
     }

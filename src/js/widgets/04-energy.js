@@ -1,7 +1,10 @@
 /* Chapter 04 widgets (power & efficiency).
    kpd-calc     : installation × fuel × count → fuel per minute, losses, pollution; vs vanilla 100%
    boiler-ladder: solid and liquid boiler tiers with efficiency gauges, steam temperature, smog per MW
-   wind-sim     : live wind using the Wind-Turbines-Reforged formula (README) and the three turbine tiers */
+   wind-sim     : live wind using the Wind-Turbines-Reforged formula (README) and the three turbine tiers
+   district-calc: power districts transformer (paranoidal-power-districts shared.lua/engine.lua: nominal 40/80/160/320 MW,
+                  bonus 6/8/10/12 % in the green zone 90–110 %, main grid pays load / (1 + bonus) + idle 0.25 % of the
+                  nominal; outside the zone no bonus; output cap 125 %) */
 (function (G) {
   function R() { return G.data.records; }
   function mw(w) { return G.fmt(w / 1e6, { maximumFractionDigits: 2 }); }
@@ -27,8 +30,8 @@
       var pol = (I.pol || 0) * (F.emissions || 1) * n;
       var unit = I.kind === 'solid' ? G.t('шт.', 'pcs') : G.t('ед.', 'units');
       el.innerHTML = '<div class="panel-title"><img class="ic" src="' + G.icon(I.r.icon) + '" alt="">' + G.t('Калькулятор КПД', 'Efficiency calculator') + '</div>' +
-        '<div class="qc-form"><label>' + G.t('Установка', 'Installation') + '<select class="fsel" data-i>' + inst.map(function (x, i) { return '<option value="' + i + '" ' + (i === ii ? 'selected' : '') + '>' + G.esc(G.nm(x.r)) + ' — ' + G.fmt(x.eff * 100) + '%</option>'; }).join('') + '</select></label>' +
-        '<label>' + G.t('Топливо', 'Fuel') + '<select class="fsel" data-f>' + fuels().map(function (f, i) { return '<option value="' + i + '" ' + (f === F ? 'selected' : '') + '>' + G.esc(G.nm(f)) + ' — ' + (I.kind === 'solid' ? G.fmt(f.mj) + ' ' + G.t('МДж', 'MJ') : G.fmt(f.kj) + ' ' + G.t('кДж', 'kJ')) + '</option>'; }).join('') + '</select></label>' +
+        '<div class="qc-form"><label>' + G.t('Установка', 'Installation') + '<select class="fsel" data-i>' + inst.map(function (x, i) { return '<option value="' + i + '" ' + (i === ii ? 'selected' : '') + '>' + G.esc(G.nm(x.r)) + ' · ' + G.fmt(x.eff * 100) + '%</option>'; }).join('') + '</select></label>' +
+        '<label>' + G.t('Топливо', 'Fuel') + '<select class="fsel" data-f>' + fuels().map(function (f, i) { return '<option value="' + i + '" ' + (f === F ? 'selected' : '') + '>' + G.esc(G.nm(f)) + ' · ' + (I.kind === 'solid' ? G.fmt(f.mj) + ' ' + G.t('МДж', 'MJ') : G.fmt(f.kj) + ' ' + G.t('кДж', 'kJ')) + '</option>'; }).join('') + '</select></label>' +
         '<label>' + G.t('Сколько штук', 'How many') + ' <b>' + n + '</b><input class="frange" type="range" min="1" max="40" value="' + n + '" data-n></label>' +
         '<label>' + G.t('Полезная мощность', 'Useful power') + '<b class="out">' + mw(P) + ' ' + G.t('МВт', 'MW') + '</b></label></div>' +
         '<div class="kc-flow"><div class="kc-in">' + G.t('Сгорает', 'Burned') + ' <b>' + mw(Pin) + ' ' + G.t('МВт', 'MW') + '</b></div><div class="kc-bar"><i class="u" style="width:' + (eff * 100) + '%">' + G.fmt(eff * 100) + '% ' + G.t('в дело', 'useful') + '</i><i class="l" style="width:' + ((1 - eff) * 100) + '%">' + (eff < 0.97 ? G.fmt((1 - eff) * 100) + '% ' + G.t('в трубу', 'up the chimney') : '') + '</i></div></div>' +
@@ -60,7 +63,7 @@
           return '<div class="bl-card"><div class="bl-tier">' + ['I', 'II', 'III', 'IV', 'V'][i] + '</div><img class="ic-lg" src="' + G.icon(b.icon) + '" alt="" data-ru="' + G.esc(b.ru) + '" data-en="' + G.esc(b.en) + '">' + gauge(b.effectivity) +
             '<dl><dt>' + G.t('Мощность', 'Power') + '</dt><dd>' + mw(b.power_w) + ' ' + G.t('МВт', 'MW') + '</dd><dt>' + G.t('Пар', 'Steam') + '</dt><dd>' + b.target_temperature + ' °C</dd><dt>' + G.t('Смог на МВт', 'Smog per MW') + '</dt><dd>' + G.fmt(perMW, { maximumFractionDigits: 1 }) + '</dd></dl></div>';
         }).join('') + '</div>';
-      }).join('') + '<p class="muted small-note">' + G.t('Смог на МВт — загрязнение в минуту на мегаватт полезной мощности при топливе с множителем ×1.', 'Smog per MW: pollution per minute per megawatt of useful power with a ×1 fuel.') + '</p>';
+      }).join('') + '<p class="muted small-note">' + G.t('Смог на МВт: загрязнение в минуту на мегаватт полезной мощности при топливе с множителем ×1.', 'Smog per MW: pollution per minute per megawatt of useful power with a ×1 fuel.') + '</p>';
     }
     render(); G.onLang(render);
   });
@@ -99,5 +102,31 @@
     }
     el.querySelector('[data-p]').onclick = function () { running = !running; };
     frame();
+  });
+  G.widget('district-calc', function (el) {
+    var T = [['Т-40', 'T-40', 40, 0.06], ['Т-80', 'T-80', 80, 0.08], ['Т-160', 'T-160', 160, 0.10], ['Т-320', 'T-320', 320, 0.12]];
+    var ti = 0, share = 100;   // load as % of the nominal
+    function render() {
+      var t = T[ti], N = t[2], want = N * share / 100, L = Math.min(want, N * 1.25), idle = N * 0.0025;
+      var zone = share >= 90 && share <= 110, B = zone ? t[3] : 0, take = L / (1 + B) + idle, saved = L - take;
+      var st = share < 0.5 ? G.t('без нагрузки: трансформатор только тратит на холостой ход', 'no load: the transformer only spends on idling') :
+        share > 125 ? G.t('выше предела 125%: району не хватает энергии', 'above the 125% cap: the district runs short of power') :
+        zone ? G.t('зелёная зона: бонус работает', 'green zone: the bonus works') :
+        share < 90 ? G.t('недогруз: бонуса нет', 'underloaded: no bonus') : G.t('перегруз: бонуса нет', 'overloaded: no bonus');
+      el.innerHTML = '<div class="panel-title">' + G.t('Калькулятор трансформатора', 'Transformer calculator') + '</div>' +
+        '<div class="wbar">' + T.map(function (x, i) { return '<button class="fbtn ' + (i === ti ? 'go' : '') + '" data-t="' + i + '">' + G.t(x[0], x[1]) + '</button>'; }).join('') + '</div>' +
+        '<div class="ds-ctl"><label>' + G.t('Нагрузка района', 'District load') + ': <b class="out">' + G.fmt(want, { maximumFractionDigits: 1 }) + ' ' + G.t('МВт', 'MW') + '</b> (' + share + '%)</label>' +
+        '<input class="frange" type="range" min="0" max="140" step="1" value="' + share + '" data-s style="flex:1;min-width:180px"></div>' +
+        '<div class="dc-gauge"><i class="z" style="left:' + (90 / 140 * 100) + '%;width:' + (20 / 140 * 100) + '%"></i><i class="cap" style="left:' + (125 / 140 * 100) + '%"></i><i class="m" style="left:' + (Math.min(share, 140) / 140 * 100) + '%"></i></div>' +
+        '<p class="dc-st' + (zone ? ' ok' : '') + '">' + st + '</p>' +
+        '<div class="grid g2"><div class="qc-big"><span>' + G.t('Берёт из общей сети', 'Takes from the main grid') + '</span><b>' + G.fmt(take, { maximumFractionDigits: 2 }) + '</b><small>' + G.t('МВт', 'MW') + '</small></div>' +
+        '<div class="qc-big"><span>' + G.t('Сэкономлено', 'Saved') + '</span><b>' + (saved >= 0 ? '+' : '') + G.fmt(saved, { maximumFractionDigits: 2 }) + '</b><small>' + G.t('МВт', 'MW') + (zone ? ' · ' + G.t('бонус', 'bonus') + ' ' + Math.round(t[3] * 100) + '%' : '') + '</small></div></div>' +
+        '<p class="muted small-note">' + G.t('Без исследований КПД и точной регулировки. Холостой ход 0,25% номинала. Отрицательная экономия означает, что трансформатор работает в убыток.', 'Without the efficiency and fine regulation research. Idling costs 0.25% of the nominal. Negative savings mean the transformer runs at a loss.') + '</p>';
+      el.querySelectorAll('[data-t]').forEach(function (b) { b.onclick = function () { ti = +b.getAttribute('data-t'); render(); }; });
+      var r = el.querySelector('[data-s]');
+      r.oninput = function () { share = +r.value; render(); var n = el.querySelector('[data-s]'); n.focus(); };
+      if (zone && ti === 3) G.achieve('district', 'Главный энергетик', 'Chief power engineer', G.icon('item__ppd-transformer-320'), 'Вывести Т-320 в зелёную зону', 'Put a T-320 in the green zone');
+    }
+    render(); G.onLang(render);
   });
 })(window.Guide);

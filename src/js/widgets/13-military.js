@@ -10,7 +10,7 @@
       var col = { 'ammo-turret': '#ffa020', 'electric-turret': '#58b6ff', 'fluid-turret': '#ff7a5a' };
       el.innerHTML = '<div class="wbar">' + [['all', 'Все', 'All'], ['ammo-turret', 'Огнестрельные', 'Ballistic'], ['electric-turret', 'Энергетические', 'Energy'], ['fluid-turret', 'Огнемёты и вода', 'Flame & water']].map(function (b) { return '<button class="fbtn ' + (filt === b[0] ? 'go' : '') + '" data-f="' + b[0] + '">' + G.t(b[1], b[2]) + '</button>'; }).join('') + '<span class="muted">' + G.t('дальность, клеток', 'range, tiles') + '</span></div><div class="tr-list">' +
         T.map(function (t) { return '<div class="sl-row vk"><span class="sl-q">' + G.iconImg(t) + G.esc(G.nm(t)) + '</span><span class="sl-bar"><i style="width:' + (t.range / max * 100) + '%;background:' + col[t.type] + '"></i></span><b>' + G.fmt(t.range) + '</b></div>'; }).join('') + '</div>' +
-        '<p class="muted small-note">' + G.t('Ванильная пулемётная турель бьёт на 18 клеток, лазерная — на 24. Артиллерия здесь не показана: она стреляет за горизонт.', 'The vanilla gun turret reaches 18 tiles, the laser turret 24. Artillery is not shown: it fires beyond the horizon.') + '</p>';
+        '<p class="muted small-note">' + G.t('Ванильная пулемётная турель бьёт на 18 клеток, лазерная на 24. Артиллерия здесь не показана: она стреляет за горизонт.', 'The vanilla gun turret reaches 18 tiles, the laser turret 24. Artillery is not shown: it fires beyond the horizon.') + '</p>';
       el.querySelectorAll('[data-f]').forEach(function (b) { b.onclick = function () { filt = b.getAttribute('data-f'); render(); }; });
     }
     render(); G.onLang(render);

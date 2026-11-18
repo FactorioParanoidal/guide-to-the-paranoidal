@@ -1,0 +1,75 @@
+<!-- CHAPTER 16 — World & weather (2.1 rewrite 2026-11-18). Widgets: season-dial (NightBrightness season.lua; 24-day year set by zzzparanoidal;
+     wind Wind-Turbines-Reforged, wire losses ElectricResistance2), smog-scene (visible-pollutants + ToxicPollution2-reforged, illustrative),
+     ruins-map (paranoidal-ruins README: 87 small, 58 medium, 29 large + 150 base).
+     Facts: paranoidal-rain settings.lua + locale (first 30 min dry, rains 2–20 min, ~60 min between, seasons: no rain in winter, summer 10 %,
+     monsoon 8 %, solar 75 %, washes pollution, puts fires out in 30 s, enemy fire and acid harmless, bites/spits +15 % day / +25 % night and
+     more attacks, flamethrowers 50 %, burning fluids and cook-off 2.5× slower, thunder at the speed of sound, lightning strikes from
+     thunder near players 10 % (60 min protection at start), hits poles/radars/robots, forecast by radars); paranoidal-ruins README
+     (174 + 150 ruins, no distance dependence by default, no repeats, /ruins, OreRadar «?», 22 legendary ruins: ≥ 100 chunks beyond the start,
+     64–160 tiles, 11 trials + 11 citadels, rewards quality 4–7 / 6–10, relics, fury setting); Paranoidal-Alien-biomes; Noxys_Trees;
+     paranoidal-decoration-cleanup; squeak-through-2; ZCS trash landfill. -->
+<section id="world" class="chapter" data-num="16" data-icon="assets/icons/technology__solar-energy.webp" data-toc="Мир и погода|World and weather">
+  <header class="ch-head">
+    <div class="ch-num"><ru>Глава 16</ru><en>Chapter 16</en></div>
+    <h2><ru>Мир и погода</ru><en>World and weather</en></h2>
+    <p class="ch-lead"><ru>Планета здесь живая: у неё есть времена года, тёмные ночи, дожди с грозами, разноцветная почва, леса, которые растут и умирают, смог, который видно глазами и который бьёт по лёгким, и руины тех, кто был здесь до вас. BnL обещала курорт. BnL много чего обещала.</ru><en>The planet is alive: it has seasons, dark nights, rain and thunderstorms, colourful soil, forests that grow and die, smog you can see with your eyes and feel in your lungs, and the ruins of those who came before you. BnL promised a resort. BnL promised a lot of things.</en></p>
+    <div class="ch-tags">{{chip:fluid/water}}{{chip:tree/tree-01}}{{chip:technology/angels-bio-arboretum-1}}{{chip:lab/pd-relic-archive}}</div>
+    {{sprite:texugo-wind-turbine3|ch-art}}
+  </header>
+
+  <h3 id="world-seasons"><ru>Времена года и ночи, в которых темно</ru><en>Seasons, and nights that are actually dark</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>Год на планете длится <b>24 игровых дня</b>. Летом дни длинные, а солнечные панели работают на полную. Зимой выработка падает вплоть до половины. Ночи по-настоящему тёмные: яркость опускается до 5–15%, и без света база превращается в россыпь огоньков.</ru><en>A year on the planet lasts <b>24 game days</b>. In summer days are long and solar panels run at full power. In winter output drops to as little as half. Nights are really dark: brightness falls to 5–15%, and without lights your base turns into a scatter of little glows.</en></p>
+      <p><ru>Сезон меняется ровно в полночь, и об этом пишут в чат. Вместе с ним ступенькой меняются ветер и потери в проводах: зимой ветер ×1,33 и ветряки могут выдать больше номинала, летом ветер слабее, а провода греются и съедают больше.</ru><en>The season changes exactly at midnight, and the chat announces it. Wind and wire losses change with it in a single step: in winter the wind is ×1.33 and turbines can give more than their rating, in summer the wind is weaker and the wires heat up and eat more.</en></p>
+      <p><ru>Поэтому света в сборке много: лампы, встроенные в пол, большие лампы 2×2, медные лампы, столбы со встроенными фонарями и крупные индикаторы на бурах и станциях. Ночная база Paranoidal может быть очень красивой. Или очень тёмной.</ru><en>That is why the modpack has a lot of light: floor-embedded lamps, large 2×2 lamps, copper lamps, poles with built-in lights and big status lights on drills and stations. A Paranoidal base at night can be very pretty. Or very dark.</en></p>
+    </div>
+    <div class="panel" data-widget="season-dial"></div>
+  </div>
+
+  <h3 id="world-weather"><ru>Дождь и гроза</ru><en>Rain and thunderstorms</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>Первые полчаса сухо. Потом приходят дожди: от мороси до ливня, иногда муссон. Зимой дождей нет, летом бывает один дождь на всё лето, и то не всегда, весной и осенью как обычно. Сеть радаров предсказывает погоду: чем больше радаров, тем реже прогноз врёт.</ru><en>The first half hour is dry. Then the rains come: from drizzle to downpour, sometimes a monsoon. There is no rain in winter, summer gets at most one rain, and not always, spring and autumn as usual. A radar network forecasts the weather: the more radars, the less often the forecast lies.</en></p>
+      <p><ru>В дождь солнечные панели дают 75% мощности. Загрязнение вымывается из воздуха, пожары гаснут, горящие жидкости и детонация идут в 2,5 раза медленнее. Огонь и кислота врагов в дождь безвредны, а огнемёты бьют вдвое слабее. Зато укусы и плевки врагов сильнее (днём на 15%, ночью на 25%), и нападают они чаще. Сырость им нравится.</ru><en>In rain, solar panels give 75% power. Pollution is washed out of the air, fires go out, burning fluids and cook-offs run 2.5 times slower. Enemy fire and acid are harmless in the rain, and flamethrowers hit half as hard. On the other hand enemy bites and spits get stronger (by 15% by day, 25% at night), and they attack more often. They like the damp.</en></p>
+    </div>
+    <div class="callout warn"><p><ru><b>Молнии бьют всерьёз.</b> Гром идёт со скоростью звука: сосчитайте секунды после вспышки и узнаете расстояние. Иногда удар попадает в цель: гасит энергию, перегружает сеть через опору, отключает радар, сжигает роботов и может что-нибудь поджечь. Первый час игры молния в игроков не бьёт. Потом бьёт.</ru><en><b>Lightning strikes for real.</b> Thunder travels at the speed of sound: count the seconds after the flash and you know the distance. Sometimes a strike hits a target: it drains energy, overloads the grid through a pole, knocks out a radar, fries robots and can set things on fire. For the first hour lightning never hits players. After that it does.</en></p></div>
+  </div>
+
+  <h3 id="world-pollution"><ru>Смог, который видно</ru><en>Smog you can see</en></h3>
+  <div class="split">
+    <div class="panel" data-widget="smog-scene"></div>
+    <div>
+      <p><ru>Загрязнение здесь видно своими глазами. Над грязной базой висит <b>серый смог</b>, и чем его больше, тем хуже видно. Солнечные панели под смогом теряют мощность. А персонажа густой смог <b>отравляет</b>: защищают респиратор, противогаз, броня и закрытая техника, подробнее в главе <a class="x" href="#military-hazards">«Военное дело»</a>.</ru><en>Here you can see pollution with your own eyes. A <b>grey smog</b> hangs over a dirty base, and the more there is, the less you see. Solar panels under smog lose power. And thick smog <b>poisons</b> your character: a respirator, a gas mask, armour and closed vehicles protect you; see <a class="x" href="#military-hazards">“Warfare”</a>.</en></p>
+      <p><ru>Бороться со смогом можно: <a class="x" href="#bio-clean">поглощающие машины</a>, модули очистки, чистое <a class="x" href="#fuels">топливо</a>, высокий <a class="x" href="#energy-boilers">КПД</a> котлов, дождь. Можно и не бороться, а встречать <a class="x" href="#enemies">гостей</a>.</ru><en>You can fight smog: <a class="x" href="#bio-clean">absorbing machines</a>, cleaning modules, clean <a class="x" href="#fuels">fuel</a>, high-<a class="x" href="#energy-boilers">efficiency</a> boilers, rain. Or you can skip the fight and welcome <a class="x" href="#enemies">guests</a>.</en></p>
+      <p class="see" id="world-landfill"><ru>Мусорный полигон уничтожает мусор и шлак, расплачиваясь загрязнением.</ru><en>The trash landfill destroys junk and slag, paying in pollution.</en></p>
+    </div>
+  </div>
+
+  <h3 id="world-nature"><ru>Почва, лес и порядок</ru><en>Soil, forest and tidiness</en></h3>
+  <div class="grid g3">
+    <div class="card rv"><h4><ru>Инопланетные биомы</ru><en>Alien biomes</en></h4><p><ru>Почва всех цветов: красная, рыжая, белая, фиолетовая, вулканическая, дюны и лава. Цвет почвы влияет на то, какая руда чаще лежит под ногами (<a class="x" href="#mining-rso">геология</a>). Плиток в игре {{n:counts.tiles}}.</ru><en>Soil in every colour: red, rusty, white, purple, volcanic, dunes and lava. Soil colour affects which ore lies underfoot more often (<a class="x" href="#mining-rso">geology</a>). The game has {{n:counts.tiles}} tiles.</en></p></div>
+    <div class="card rv"><h4><ru>Живой лес</ru><en>A living forest</en></h4><p><ru>{{n:counts.trees}} видов деревьев. Лес медленно разрастается и отмирает в зависимости от условий. Вырубите полосу под железную дорогу, и через время она может зарасти.</ru><en>{{n:counts.trees}} kinds of trees. The forest slowly spreads and dies off depending on conditions. Cut a strip for a railway, and after a while it may grow back.</en></p></div>
+    <div class="card rv"><h4><ru>Порядок</ru><en>Tidiness</en></h4><p><ru>Декор под зданиями и плиткой убирается сам, мелких камней карта не ставит. Между вплотную стоящими зданиями можно протиснуться. Чистоту на полу наводит <a class="x" href="#helpers">Д-ОК</a>.</ru><en>Decorations under buildings and tiles clear themselves, and the map places no small decorative rocks. You can squeeze between buildings that stand side by side. <a class="x" href="#helpers">M-O</a> keeps the floor clean.</en></p></div>
+  </div>
+
+  <h3 id="world-ruins"><ru>Руины: вы здесь не первый</ru><en>Ruins: you are not the first</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>По всей планете разбросаны руины чужих баз, фортов и оазисов: <b>174 собственные руины Paranoidal</b> трёх размеров и ещё 150 классических. В них постройки и предметы из всех модов сборки, мусор, бракованные и обычные изделия, поздние диковины. Руины не повторяются, пока не появится каждая руина своего размера, а от расстояния до центра по умолчанию не зависят: хорошая руина может попасться сразу за стартом.</ru><en>Ruins of other bases, forts and oases are scattered all over the planet: <b>174 of Paranoidal's own ruins</b> in three sizes and 150 classic ones. They hold buildings and items from every mod of the modpack, junk, defective and normal goods, late curiosities. Ruins do not repeat until every ruin of a size has appeared, and by default they do not depend on the distance from the centre: a good ruin may turn up right past the start.</en></p>
+      <p><ru>Некоторые руины <b>охраняются</b>: черви, исправные турели и минные поля, а оборона руин вас своим не считает. Среди горючего встречаются ловушки, привет <a class="x" href="#chemistry-fire">огнеопасным жидкостям</a>.</ru><en>Some ruins are <b>guarded</b>: worms, working turrets and minefields, and the ruin's defence does not take you for a friend. Among the fuel you may find traps; say hello to <a class="x" href="#chemistry-fire">flammable fluids</a>.</en></p>
+      <p><ru>Геологический радар отмечает ещё не найденные руины знаком «?» как «необычный сигнал», а журнал находок ведёт учёт (команда <code>/ruins</code>).</ru><en>The ore radar marks undiscovered ruins with a “?” as an “unusual signal”, and the discovery journal keeps count (the <code>/ruins</code> command).</en></p>
+    </div>
+    <div class="panel" data-widget="ruins-map"></div>
+  </div>
+
+  <h3 id="world-legendary"><ru>Легендарные руины</ru><en>Legendary ruins</en></h3>
+  <div class="split rev">
+    <div class="dossier" data-stamp="СЕКРЕТНО" data-stamp-en="CLASSIFIED"><p><ru>Очень далеко от дома, не ближе 100 чанков за краем стартовой зоны, ждут <b>22 легендарные руины</b>, каждая один раз за карту, размером от 64×64 до 160×160 клеток. Это уже не сундук с хламом, а целые испытания со своими механиками и стражами. Пока руина не пройдена, её стены неприкосновенны, а строить внутри нельзя.</ru><en>Very far from home, no closer than 100 chunks past the edge of the starting area, <b>22 legendary ruins</b> are waiting, each once per map, from 64×64 to 160×160 tiles. Not a chest of junk anymore but whole trials with their own mechanics and guardians. Until a ruin is beaten its walls are untouchable and you cannot build inside.</en></p></div>
+    <div>
+      <p><ru>Руины делятся на две половины. <b>11 испытаний</b> проходятся с ранним снаряжением: там нужно думать, а не стрелять. <b>11 цитаделей</b> требуют оружия эпохи зелёной науки. Названия и правила лучше узнать на месте: лабиринт, сапёр и пирамида тут только для разминки.</ru><en>The ruins come in two halves. <b>11 trials</b> can be beaten with early gear: they make you think, not shoot. <b>11 citadels</b> need green-science-era weapons. Names and rules are best learned on site: a labyrinth, a minesweeper and a pyramid are only the warm-up.</en></p>
+      <p><ru>Награда: <a class="x" href="#defects-quality">предметы высоких ступеней качества</a> (у испытаний 4–7, у цитаделей 6–10) и одна из 22 уникальных <span class="tease">реликвий</span>, построек, которые не скрафтить. Если руина погибнет до победы, награда пропадёт навсегда. Опасность задаёт отдельная настройка карты «ярость»: легендарная, суровая или перемирие (стражи не стреляют, но загадки остаются).</ru><en>The reward: <a class="x" href="#defects-quality">items of high quality grades</a> (4–7 for trials, 6–10 for citadels) and one of 22 unique <span class="tease">relics</span>, buildings that cannot be crafted. If a ruin is destroyed before you win, the reward is gone forever. The danger is set by a separate map setting, “fury”: legendary, harsh or truce (guardians hold fire, but the puzzles stay).</en></p>
+    </div>
+  </div>
+  <div class="quip rv"><ru>Кто-то уже пытался построить здесь завод. Судя по руинам, несколько раз. Судя по турелям в руинах, некоторые до сих пор пытаются.</ru><en>Someone already tried to build a factory here. Judging by the ruins, several times. Judging by the turrets in the ruins, some are still trying.</en></div>
+</section>

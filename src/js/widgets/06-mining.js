@@ -42,8 +42,8 @@
   }
   G.widget('field-survey', function (el) {
     var surveys = 0, last = null;
-    el.innerHTML = '<div class="fsv"><canvas width="560" height="380"></canvas><div class="fsv-card deep"></div></div><div class="wbar"><button class="fbtn go" data-go>' + G.bi('⛏ Провести разведку', '⛏ Run a survey') + '</button>' +
-      '<select class="fsel" data-ore></select><span class="muted">' + G.bi('Форма, руда и особенности — случайны; правила — как у RSO Reforged.', 'Shape, ore and features are random; the rules follow RSO Reforged.') + '</span></div>';
+    el.innerHTML = '<div class="fsv"><canvas width="560" height="380"></canvas><div class="fsv-card deep"></div></div><div class="wbar"><button class="fbtn go" data-go>' + G.bi('Провести разведку', 'Run a survey') + '</button>' +
+      '<select class="fsel" data-ore></select><span class="muted">' + G.bi('Форма, руда и особенности случайны, правила те же, что у RSO Reforged.', 'Shape, ore and features are random; the rules follow RSO Reforged.') + '</span></div>';
     var cv = el.querySelector('canvas'), ctx = cv.getContext('2d'), card = el.querySelector('.fsv-card'), sel = el.querySelector('[data-ore]');
     var ores = R().resources.filter(function (r) { return !r.infinite || /^(crude-oil|angels-natural-gas|angels-fissure)$/.test(r.id); }).filter(function (r) { return r.id !== 'angels-sea-pump-resource'; });
     function fillSel() { sel.innerHTML = '<option value="">' + G.t('Случайная руда', 'Random ore') + '</option>' + ores.map(function (r) { return '<option value="' + r.id + '">' + G.esc(G.nm(r)) + '</option>'; }).join(''); }
@@ -104,7 +104,7 @@
       card.innerHTML = '<div class="tt-title"><img src="' + G.icon(L.ore.icon) + '" alt="" style="width:40px;height:40px">' + G.esc(G.nm(L.ore)) + '</div>' +
         '<p>' + G.t('Форма', 'Shape') + ': <b>' + G.t(SHAPES[L.shape][0], SHAPES[L.shape][1]) + '</b>' + (SIGN[L.ore.id] && SIGN[L.ore.id].indexOf(L.shape) >= 0 ? ' <span class="badge">' + G.t('фирменная', 'signature') + '</span>' : '') + '</p>' +
         '<p>' + G.t('Оценка', 'Grade') + ': <b style="color:' + L.gname[2] + '">' + G.t(L.gname[0], L.gname[1]) + '</b></p>' +
-        '<p>' + (L.vein ? '💎 ' + G.t('богатая жила', 'rich vein') + '<br>' : '') + (L.core ? '♾ ' + G.t('бесконечное ядро', 'infinite core') + '<br>' : '') + (L.guard ? '<span style="color:#ff8a7a">☠ ' + G.t('под охраной гнезда', 'guarded by a nest') + '</span>' : '<span class="muted">' + G.t('охраны не видно… пока', 'no guards in sight… yet') + '</span>') + '</p>';
+        '<p>' + (L.vein ? G.t('богатая жила', 'rich vein') + '<br>' : '') + (L.core ? G.t('бесконечное ядро', 'infinite core') + '<br>' : '') + (L.guard ? '<span style="color:#ff8a7a">☠ ' + G.t('под охраной гнезда', 'guarded by a nest') + '</span>' : '<span class="muted">' + G.t('охраны не видно… пока', 'no guards in sight… yet') + '</span>') + '</p>';
     }
     el.querySelector('[data-go]').onclick = survey;
     survey();

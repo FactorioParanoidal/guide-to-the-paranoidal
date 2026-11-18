@@ -1,5 +1,5 @@
 /* Chapter 18 widgets.
-   xp-curve         : XP table of PMRPGsystem (control.lua ResetXPTables: start 1500, m = 1.6 − k(0.018 − 0.018k/200), min growth ×1.02)
+   xp-curve         : XP table of paranoidal-CodexRPG (control.lua, from PM RPG System: start 1500, m = 1.6 − k(0.018 − 0.018k/200), min growth ×1.02)
    achievement-kinds: achievement prototypes by kind (records.achievement_kinds) */
 (function (G) {
   function table() {
@@ -27,7 +27,7 @@
       var A = G.data.records.achievement_kinds, tot = A.reduce(function (a, x) { return a + x[1]; }, 0), cells = '';
       var colors = ['#ffa020', '#ffa020', '#58b6ff', '#ff5a4a', '#7ccf5a', '#b58cff', '#3fd6cc', '#e06ad3', '#ffe6c0', '#9a9a9a'];
       A.forEach(function (x, i) { for (var k = 0; k < x[1]; k++) cells += '<i style="background:' + colors[Math.min(i, colors.length - 1)] + '"></i>'; });
-      el.innerHTML = '<div class="ak-grid">' + cells + '</div><div class="chips">' + A.slice(0, 9).map(function (x, i) { var n = NAMES[x[0]] || [x[0], x[0]]; return '<span class="chip"><i style="background:' + colors[i] + '"></i>' + G.t(n[0], n[1]) + ' <b>' + x[1] + '</b></span>'; }).join('') + '<span class="chip"><i style="background:#9a9a9a"></i>' + G.t('прочие', 'other') + '</span></div><p class="muted small-note">' + G.t('Каждая клетка — одно достижение. Всего ', 'Each cell is one achievement. Total ') + G.fmt(tot) + '.</p>';
+      el.innerHTML = '<div class="ak-grid">' + cells + '</div><div class="chips">' + A.slice(0, 9).map(function (x, i) { var n = NAMES[x[0]] || [x[0], x[0]]; return '<span class="chip"><i style="background:' + colors[i] + '"></i>' + G.t(n[0], n[1]) + ' <b>' + x[1] + '</b></span>'; }).join('') + '<span class="chip"><i style="background:#9a9a9a"></i>' + G.t('прочие', 'other') + '</span></div><p class="muted small-note">' + G.t('Каждая клетка означает одно достижение. Всего ', 'Each cell is one achievement. Total ') + G.fmt(tot) + '.</p>';
     }
     render(); G.onLang(render);
   });

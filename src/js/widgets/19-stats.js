@@ -34,7 +34,7 @@
     function render() {
       el.innerHTML = '<div class="stats-row dash">' + cards.map(function (c) {
         return '<div class="stat"><span class="v">' + G.fmt(c[0]) + '</span><span class="l">' + G.t(c[1], c[2]) + '</span>' + (c[4] ? '<span class="x">×' + G.fmt(c[0] / c[4], { maximumFractionDigits: c[0] / c[4] < 10 ? 1 : 0 }) + '</span>' : '') + '<img class="ic" src="' + G.icon(c[3]) + '" alt="" onerror="this.remove()"></div>';
-      }).join('') + '</div><p class="muted small-note">' + G.t('×N — во сколько раз больше, чем в ванили. Данные: ', '×N: how many times more than vanilla. Data: ') + '<code>' + G.esc(G.data.meta.data.dump || '') + '</code>, Factorio ' + G.esc(G.data.meta.data.engine || '') + ', ' + G.t('сгенерировано', 'generated') + ' ' + G.esc(G.data.meta.data.generated || '') + '.</p>';
+      }).join('') + '</div><p class="muted small-note">' + G.t('×N показывает, во сколько раз больше, чем в ванили. Данные: ', '×N: how many times more than vanilla. Data: ') + '<code>' + G.esc(G.data.meta.data.dump || '') + '</code>, Factorio ' + G.esc(G.data.meta.data.engine || '') + ', ' + G.t('сгенерировано', 'generated') + ' ' + G.esc(G.data.meta.data.generated || '') + '.</p>';
     }
     render(); G.onLang(render);
   });

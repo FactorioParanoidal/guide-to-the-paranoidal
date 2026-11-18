@@ -1,0 +1,48 @@
+<!-- CHAPTER 18 — The rocket and the finale (2.1 rewrite 2026-11-18). Widgets: rocket-launch (RocketExplosions2: chance = 0.5·(0.1a + 0.1b + 0.8ab),
+     a = 0.681^revisions, b = 0.891^launched), research-summit (records.tech_most_expensive).
+     Facts: Rocket-Silo-Construction (6 stages), RocketExplosions2 (7 revisions; launches anger the bugs), ПР-082 (victory for the first rocket
+     from a rocket silo, MIRV silo and Blueprint Sandboxes do not count; SpaceX removed; play continues; victory window lists mining shuttle,
+     orbital fabricator + ground station, solar collector 1000 MW, infinite research and achievements — zzzparanoidal locale rocket-victory.cfg),
+     ERP variant A (shuttles, ore dropships, fabricators, space lab, observation satellite → «Данные со спутника», data center,
+     «Данные с космической станции»), MIRV2. -->
+<section id="endgame" class="chapter" data-num="18" data-icon="assets/icons/technology__rocket-silo.webp" data-toc="Ракета и финал|The rocket and the finale">
+  <header class="ch-head">
+    <div class="ch-num"><ru>Глава 18</ru><en>Chapter 18</en></div>
+    <h2><ru>Ракета и финал</ru><en>The rocket and the finale</en></h2>
+    <p class="ch-lead"><ru>Цель та же, что в ванили: запустить ракету. Разница в дороге к ней. Шахту строят полгода, первая ракета взрывается через раз, а жуки воспринимают старт как личное оскорбление. Но когда ракета всё-таки уйдёт в небо, вы это запомните.</ru><en>The goal is the same as in vanilla: launch a rocket. The difference is the road there. The silo takes ages to build, the first rocket explodes every other time, and the bugs take the launch as a personal insult. But when the rocket finally goes up, you will remember it.</en></p>
+    <div class="ch-tags">{{chip:technology/rocket-silo}}{{chip:item/satellite}}{{chip:tool/planetary-data}}{{chip:tool/station-science}}</div>
+    {{sprite:rocket-silo|ch-art}}
+  </header>
+
+  <h3 id="endgame-silo"><ru>Шахту ещё нужно построить</ru><en>First you have to build the silo</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>Ракетную шахту не ставят из инвентаря. Котлован сначала выкапывают, потом заливают, потом строят: <b>шесть этапов</b>, каждый со своими материалами. Бетон, кирпич, сталь, арматура, трубы, кабели, платы, двигатели, процессоры. Стройка ест много электричества и дымит. Готовая шахта сама по себе большой проект.</ru><en>A rocket silo is not placed from your inventory. The pit is dug first, then filled, then built: <b>six stages</b>, each with its own materials. Concrete, bricks, steel, rebar, pipes, cables, circuits, engines, processors. Construction eats a lot of power and smokes. A finished silo is a big project of its own.</en></p>
+    </div>
+    <figure class="deep sprite-card">{{sprite:rsc-silo-stage1|md}}<figcaption><ru>Первый этап: котлован</ru><en>Stage one: the pit</en></figcaption></figure>
+  </div>
+
+  <h3 id="endgame-explosions"><ru>Первые ракеты взрываются</ru><en>The first rockets explode</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>Ваша первая ракета взорвётся с вероятностью <b>50%</b>. Каждая следующая немного надёжнее (опыт!), а семь исследований «Усовершенствование конструкции ракеты» снижают шанс аварии ещё сильнее. Шанс считается так: 0,5 × (0,1a + 0,1b + 0,8ab), где a = 0,681<sup>исследования</sup>, b = 0,891<sup>запуски</sup>. Попробуйте запустить сами.</ru><en>Your first rocket explodes with a <b>50%</b> chance. Each next one is a bit more reliable (experience!), and seven “Rocket design improvement” researches cut the failure chance further. The formula: 0.5 × (0.1a + 0.1b + 0.8ab), where a = 0.681<sup>revisions</sup>, b = 0.891<sup>launches</sup>. Try a launch yourself.</en></p>
+      <p><ru>Запуск ракеты ещё и <b>злит <a class="x" href="#enemies-rampant">жуков</a></b>: они собирают дополнительные волны атак. В день старта держите оборону в полной готовности.</ru><en>A launch also <b>angers the <a class="x" href="#enemies-rampant">bugs</a></b>: they form extra attack waves. On launch day keep your defences on full alert.</en></p>
+    </div>
+    <div class="panel" data-widget="rocket-launch"></div>
+  </div>
+
+  <h3 id="endgame-victory"><ru>Победа и что дальше</ru><en>Victory and what comes next</en></h3>
+  <div class="split">
+    <div>
+      <p><ru>Первая ракета, ушедшая из ракетной шахты, засчитывается как <b>победа</b>. Ракеты баллистической шахты и запуски в песочницах чертежей не считаются: BnL не признаёт ракеты сторонних производителей. После окна победы игра продолжается.</ru><en>The first rocket that leaves a rocket silo counts as <b>victory</b>. Rockets from the ballistic missile silo and launches inside blueprint sandboxes do not count: BnL does not recognise third-party rockets. After the victory window the game goes on.</en></p>
+      <p><ru>А дальше по желанию. Спутник наблюдения приносит <b>данные со спутника</b>, космическая станция <b>данные со станции</b>: это <a class="x" href="#science-packs">«научные пакеты»</a> для космических исследований в центре обработки данных. Добывающий шаттл возит руду с астероидов, иногда с орбиты падает десантная капсула со случайной рудой. Орбитальный фабрикатор работает в паре с наземной станцией, а орбитальный солнечный коллектор питает наземный ресивер на 1000 МВт без перерывов. Плюс бесконечные исследования и достижения.</ru><en>After that, it is up to you. The observation satellite brings <b>satellite data</b>, the space station <b>space station data</b>: <a class="x" href="#science-packs">“science packs”</a> for space research in the data center. The mining shuttle hauls ore from asteroids, and now and then an ore dropship falls from orbit. The orbital fabricator works together with a ground station, and an orbital solar collector feeds a ground receiver with 1000 MW non-stop. Plus infinite research and achievements.</en></p>
+    </div>
+    <div class="callout tip"><p><ru><b>Баллистическая ракета.</b> Её запускают <b>на орбиту</b>, а потом по вызову она обрушивается на планету разделяющимися боеголовками. Отличный способ закончить спор с ульем. Победой это не считается, зато очень убедительно. Про обычные <a class="x" href="#military-big">ядерные заряды</a> в главе «Военное дело».</ru><en><b>The ballistic missile.</b> It is launched <b>into orbit</b> and then, on call, comes crashing down on the planet with multiple warheads. A great way to settle an argument with a hive. It does not count as victory, but it is very persuasive. Ordinary <a class="x" href="#military-big">nuclear charges</a> are in “Warfare”.</en></p></div>
+  </div>
+  <div class="spoiler" data-label="Что BnL пишет после первой ракеты? Нажмите" data-label-en="What does BnL write after the first rocket? Click"><div class="sp-body"><p><ru>Головной офис ответит, не сомневайтесь: «Ваше заявление о восстановлении в должности принято к рассмотрению. Срок рассмотрения 700 лет». Что вы на это подумаете, игра тоже напишет. Остальное прочитайте сами.</ru><en>Head office will reply, rest assured: “Your application for reinstatement has been accepted for review. Review time: 700 years.” The game will also tell you what you think of that. Read the rest yourself.</en></p></div></div>
+
+  <h3 id="endgame-summit"><ru>Вершина дерева</ru><en>The top of the tree</en></h3>
+  <p><ru>Если ракеты мало, вот самые дорогие исследования игры. Ванильная «Ракетная шахта» стоит 5 000 пакетов. Здесь это разминка.</ru><en>If a rocket is not enough, here are the most expensive researches in the game. Vanilla's “Rocket silo” costs 5,000 packs. Here that is a warm-up.</en></p>
+  <div class="panel" data-widget="research-summit"></div>
+  <div class="quip rv"><ru>В ванили ракета означает титры. Здесь ракета означает, что вы наконец можете позволить себе передохнуть. Ненадолго.</ru><en>In vanilla, a rocket means credits. Here, a rocket means you can finally afford a breather. A short one.</en></div>
+</section>

@@ -67,7 +67,7 @@
         rows.map(function (f) {
           var mj = f.mj >= 1000 ? G.fmt(f.mj / 1000, { maximumFractionDigits: 2 }) + ' ' + G.t('ГДж', 'GJ') : G.fmt(f.mj, { maximumFractionDigits: 2 });
           return '<tr class="' + (f.emissions < 0 ? 'neg' : f.emissions >= 3 ? 'dirty' : '') + '"><td>' + G.iconImg(f) + ' ' + G.esc(G.nm(f)) + '</td><td class="n">' + mj + '</td><td class="n">' + G.fmt(f.emissions) + '</td><td class="n">' + G.fmt(f.acceleration) + '</td><td class="n">' + G.fmt(f.top_speed) + '</td></tr>';
-        }).join('') + '</table></div>' + (sorted.length > SHORT ? '<div class="wbar"><button class="fbtn" data-all>' + (all ? G.t('Свернуть', 'Show less') : G.t('Показать все', 'Show all') + ' ' + sorted.length) + '</button></div>' : '') + '<p class="muted small-note">' + G.t('Нажмите на заголовок столбца, чтобы отсортировать. Зелёным — топливо с отрицательным загрязнением.', 'Click a column header to sort. Green: fuel with negative emissions.') + '</p>';
+        }).join('') + '</table></div>' + (sorted.length > SHORT ? '<div class="wbar"><button class="fbtn" data-all>' + (all ? G.t('Свернуть', 'Show less') : G.t('Показать все', 'Show all') + ' ' + sorted.length) + '</button></div>' : '') + '<p class="muted small-note">' + G.t('Нажмите на заголовок столбца, чтобы отсортировать. Зелёным отмечено топливо с отрицательным загрязнением.', 'Click a column header to sort. Green: fuel with negative emissions.') + '</p>';
       var ab = el.querySelector('[data-all]'); if (ab) ab.onclick = function () { all = !all; render(); };
       el.querySelectorAll('th[data-k]').forEach(function (th) { th.onclick = function () { var k = th.getAttribute('data-k'); if (k === key) dir = -dir; else { key = k; dir = -1; } render(); }; });
     }
@@ -87,7 +87,7 @@
       var locos = R.locomotives.filter(function (l) { return l.effectivity; }).sort(function (a, b) { return a.effectivity - b.effectivity; });
       var cars = R.cars.filter(function (c) { return /^(car|tank|bob-tank-3|gunship|cargo-plane|jet|flying-fortress|Schall-tank-SH)$/.test(c.id); }).sort(function (a, b) { return a.effectivity - b.effectivity; });
       el.innerHTML = '<div class="grid g2"><div>' + bars(locos, 'effectivity', G.t('Локомотивы: КПД топлива', 'Locomotives: fuel efficiency')) + '</div><div>' + bars(cars, 'effectivity', G.t('Машины, танки, самолёты: КПД движения', 'Cars, tanks, aircraft: movement efficiency')) + '</div></div>' +
-        '<p class="muted small-note">' + G.t('Да, у маглева КПД 200%: он получает из заряда вдвое больше, чем в нём есть. Инженеры Paranoidal не обязаны соблюдать законы термодинамики. А боевой самолёт с КПД 7% — самый честный двигатель на планете.', 'Yes, the maglev runs at 200%: it gets twice what the charge holds. Paranoidal engineers are not obliged to obey thermodynamics. And the gunship at 7% is the most honest engine on the planet.') + '</p>';
+        '<p class="muted small-note">' + G.t('Локомотивы здесь используют от пятой части энергии топлива до чуть меньше половины, лучший из них маглев. Боевой самолёт с КПД 7% сжигает остальное в небе. Танки, наоборот, экономны.', 'Locomotives here use from a fifth to less than half of the fuel energy, the maglev being the best. The gunship at 7% burns the rest in the sky. Tanks, on the other hand, are frugal.') + '</p>';
     }
     render(); G.onLang(render);
   });

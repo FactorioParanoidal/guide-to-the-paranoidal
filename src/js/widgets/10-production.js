@@ -1,7 +1,7 @@
 /* Chapter 10 widgets (production).
    module-explorer : module families and tiers with effect bars (records.modules)
    factory-zoom    : infinite Factorissimo recursion animation
-   memory-calc     : memory unit power = (1 MW + ceil(n/stack)^0.35 × 480 kW) × (0.2 + 0.8(1 − i/N)²), deep-storage-unit/README.md */
+   memory-calc     : memory unit power = (1 MW + ceil(n/stack)^0.35 × 480 kW) × (0.2 + 0.8(1 − i/N)²), paranoidal-deep-storage/README.md */
 (function (G) {
   var CAT = { speed: ['Скорость', 'Speed'], effectivity: ['Эффективность', 'Efficiency'], productivity: ['Продуктивность', 'Productivity'], quality: ['Качество', 'Quality'],
     'pollution-clean': ['Очистка', 'Cleaning'], 'pollution-create': ['Загрязнение', 'Polluting'], green: ['Эффективность + очистка', 'Efficiency + cleaning'],
@@ -23,7 +23,7 @@
         '<div class="me-effs">' + EFF.map(function (e) {
           var v = (m.effect || {})[e[0]] || 0;
           return '<div class="me-row"><span>' + G.t(e[1], e[2]) + '</span>' + bar(e[0] === 'consumption' || e[0] === 'pollution' ? v : -v) + '<b style="color:' + (v ? e[3] : '#555') + '">' + (v > 0 ? '+' : '') + G.fmt(v * 100, { maximumFractionDigits: 0 }) + '%</b></div>';
-        }).join('') + '</div></div><p class="muted small-note">' + G.t('Зелёное — хорошо для вас, красное — цена. Энергия больше 100% не помещается в шкалу: продуктивность 8 добавляет +1280% потребления.', 'Green is good for you, red is the price. Energy above 100% does not fit the scale: productivity 8 adds +1280% consumption.') + '</p>';
+        }).join('') + '</div></div><p class="muted small-note">' + G.t('Зелёное хорошо для вас, красное означает цену. Энергия больше 100% не помещается в шкалу: продуктивность 8 добавляет +1280% потребления.', 'Green is good for you, red is the price. Energy above 100% does not fit the scale: productivity 8 adds +1280% consumption.') + '</p>';
       el.querySelectorAll('[data-c]').forEach(function (b) { b.onclick = function () { cat = b.getAttribute('data-c'); tier = 99; render(); }; });
       el.querySelector('[data-t]').oninput = function () { tier = +this.value; render(); };
     }

@@ -2,7 +2,7 @@
    season-dial : 24-day year; NightBrightness season.lua: phase = cos(2π·day/24), dusk/dawn tilt ±0.15, solar 50–100%,
                  night brightness 5–15%; season steps: wind ×0.9/1/1.33/1 (Wind-Turbines-Reforged), wire losses 3/2/1.5/2 kW (ElectricResistance2)
    smog-scene  : pollution slider over a small base scene (illustration of visible smog, solar penalty and toxic damage)
-   ruins-map   : random map with the ruin counts from AbandonedRuins-paranoidal (87 small, 57 medium, 26 large + 150 base) */
+   ruins-map   : random map with the ruin counts from paranoidal-ruins README (87 small, 58 medium, 29 large + 150 base) */
 (function (G) {
   G.widget('season-dial', function (el) {
     var day = 0, t = 0.5, playing = true;
@@ -49,7 +49,7 @@
         '<div class="ss-fog" style="opacity:' + (k * 0.92) + '"></div><div class="ss-fog f2" style="opacity:' + (k * 0.7) + '"></div>' + (toxic ? '<div class="ss-hurt">−HP</div>' : '') + '</div>' +
         '<div class="qc-form" style="grid-template-columns:1fr"><label>' + G.t('Загрязнение в чанке', 'Pollution in the chunk') + ': <b>' + G.fmt(p) + '</b><input class="frange" type="range" min="0" max="1200" step="10" value="' + p + '" data-s></label></div>' +
         '<div class="stats-row"><div class="stat"><span class="v">' + solar + '%</span><span class="l">' + G.t('солнце под смогом', 'sun under smog') + '</span></div><div class="stat"><span class="v" style="color:' + (toxic ? '#ff5a4a' : '#8de06a') + '">' + (toxic ? G.t('урон', 'damage') : G.t('терпимо', 'tolerable')) + '</span><span class="l">' + G.t('персонаж без брони', 'character without armor') + '</span></div></div>' +
-        '<p class="muted small-note">' + G.t('По умолчанию смог виден от 60 единиц загрязнения и густеет до 1000; солнце под смогом теряет до 50%. Порог урона для персонажа здесь условный — точный задаётся настройкой мода.', 'By default smog shows from 60 pollution and thickens up to 1000; solar loses up to 50% under smog. The damage threshold here is illustrative; the exact one is a mod setting.') + '</p>';
+        '<p class="muted small-note">' + G.t('По умолчанию смог виден от 60 единиц загрязнения и густеет до 1000; солнце под смогом теряет до 50%. Порог урона для персонажа здесь условный, точный задаётся настройкой мода.', 'By default smog shows from 60 pollution and thickens up to 1000; solar loses up to 50% under smog. The damage threshold here is illustrative; the exact one is a mod setting.') + '</p>';
       el.querySelector('[data-s]').oninput = function () { p = +this.value; render(); };
     }
     render(); G.onLang(render);
@@ -57,7 +57,7 @@
 
   G.widget('ruins-map', function (el) {
     function render() {
-      var W = 520, H = 360, s = '', counts = [[87, 8, '#ffa020'], [57, 16, '#ffa020'], [26, 32, '#ff5a1f'], [150, 12, '#79a6d6']];
+      var W = 520, H = 360, s = '', counts = [[87, 8, '#ffa020'], [58, 16, '#ffa020'], [29, 32, '#ff5a1f'], [150, 12, '#79a6d6']];
       s += '<rect width="' + W + '" height="' + H + '" fill="#2b2419"/>';
       s += '<rect x="' + (W / 2 - 40) + '" y="' + (H / 2 - 40) + '" width="80" height="80" fill="rgba(124,207,90,.15)" stroke="#7ccf5a" stroke-dasharray="4 3"/><text x="' + W / 2 + '" y="' + (H / 2 + 4) + '" class="rm-t">' + G.t('старт', 'start') + '</text>';
       counts.forEach(function (c) {
@@ -67,8 +67,8 @@
           s += '<rect x="' + x + '" y="' + y + '" width="' + sz + '" height="' + sz + '" fill="' + c[2] + '" opacity=".85"/>' + (danger ? '<text x="' + (x + sz + 1) + '" y="' + (y + sz) + '" class="rm-d">☠</text>' : '');
         }
       });
-      el.innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" class="rm">' + s + '</svg><div class="chips"><span class="chip"><i style="background:#ffa020"></i>87 ' + G.t('малых 8×8', 'small 8×8') + '</span><span class="chip"><i style="background:#ffa020"></i>57 ' + G.t('средних 16×16', 'medium 16×16') + '</span><span class="chip"><i style="background:#ff5a1f"></i>26 ' + G.t('больших 32×32', 'large 32×32') + '</span><span class="chip"><i style="background:#79a6d6"></i>150 ' + G.t('классических', 'classic') + '</span></div>' +
-        '<div class="wbar"><button class="fbtn" data-r>' + G.t('↻ Другая карта', '↻ Another map') + '</button><span class="muted">' + G.t('Половина руин каждого вида на условной карте; ☠ — опасные.', 'Half of each ruin kind on a mock map; ☠ marks dangerous ones.') + '</span></div>';
+      el.innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" class="rm">' + s + '</svg><div class="chips"><span class="chip"><i style="background:#ffa020"></i>87 ' + G.t('малых 8×8', 'small 8×8') + '</span><span class="chip"><i style="background:#ffa020"></i>58 ' + G.t('средних 16×16', 'medium 16×16') + '</span><span class="chip"><i style="background:#ff5a1f"></i>29 ' + G.t('больших 32×32', 'large 32×32') + '</span><span class="chip"><i style="background:#79a6d6"></i>150 ' + G.t('классических', 'classic') + '</span></div>' +
+        '<div class="wbar"><button class="fbtn" data-r>' + G.t('Другая карта', 'Another map') + '</button><span class="muted">' + G.t('Половина руин каждого вида на условной карте, череп отмечает опасные.', 'Half of each ruin kind on a mock map; a skull marks dangerous ones.') + '</span></div>';
       el.querySelector('[data-r]').onclick = render;
     }
     render(); G.onLang(render);

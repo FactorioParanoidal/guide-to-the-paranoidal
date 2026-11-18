@@ -1,6 +1,6 @@
 /* Chapter 16 widgets (space).
    rocket-launch : failure chance from RocketExplosions2/control.lua (defaults: dfc 50%, research factor 0.1^(1/6), launch factor 0.1^(1/20)) + launch animation
-   ftl-ladder    : the most expensive technologies (records.tech_most_expensive), log bars of total packs */
+   research-summit: the most expensive technologies (records.tech_most_expensive), log bars of total packs */
 (function (G) {
   G.widget('rocket-launch', function (el) {
     var rev = 0, launched = 0, busy = false, history = [];
@@ -12,7 +12,7 @@
         '<div class="qc-form"><label>' + G.t('Исследований надёжности', 'Reliability revisions') + ': <b>' + rev + ' / 7</b><input class="frange" type="range" min="0" max="7" value="' + rev + '" data-r></label>' +
         '<label>' + G.t('Уже запущено ракет', 'Rockets already launched') + ': <b>' + launched + '</b><input class="frange" type="range" min="0" max="60" value="' + launched + '" data-l></label></div>' +
         '<div class="qc-big"><span>' + G.t('Шанс взрыва при старте', 'Chance of exploding at launch') + '</span><b style="color:' + (c > .25 ? '#ff5a4a' : c > .08 ? '#ffd25a' : '#8de06a') + '">' + G.fmt(c * 100, { maximumFractionDigits: 1 }) + '%</b></div>' +
-        '<div class="wbar"><button class="fbtn go" data-go ' + (busy ? 'disabled' : '') + '>' + G.t('Пуск!', 'Launch!') + '</button><span class="rl-hist">' + history.slice(-12).map(function (h) { return h ? '💥' : '✅'; }).join('') + '</span></div>';
+        '<div class="wbar"><button class="fbtn go" data-go ' + (busy ? 'disabled' : '') + '>' + G.t('Пуск!', 'Launch!') + '</button><span class="rl-hist">' + history.slice(-12).map(function (h) { return '<i class="rl-b' + (h ? ' x' : '') + '" title="' + (h ? G.t('взрыв', 'explosion') : G.t('успех', 'success')) + '"></i>'; }).join('') + '</span></div>';
       el.querySelector('[data-r]').oninput = function () { rev = +this.value; render(); };
       el.querySelector('[data-l]').oninput = function () { launched = +this.value; render(); };
       el.querySelector('[data-go]').onclick = launch;
@@ -31,7 +31,7 @@
     render(); G.onLang(function () { render(); });
   });
 
-  G.widget('ftl-ladder', function (el) {
+  G.widget('research-summit', function (el) {
     function render() {
       var T = G.data.records.tech_most_expensive, max = Math.log10(T[0].packs_total);
       el.innerHTML = '<div class="panel-title">' + G.t('Самые дорогие исследования игры, в научных пакетах', 'The most expensive research in the game, in science packs') + '</div>' +

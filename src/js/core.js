@@ -64,7 +64,7 @@
     document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.classList.toggle('on', b.getAttribute('data-set-lang') === G.lang); });
     var s = document.getElementById('search');
     if (s) s.placeholder = s.getAttribute('data-ph-' + G.lang);
-    document.title = G.t('Paranoidal — гайд для ванильного игрока', 'Paranoidal — a guide for vanilla players');
+    document.title = G.t('Paranoidal: гайд для ванильного игрока', 'Paranoidal: a guide for vanilla players');
     formatNumbers();
     langCbs.forEach(function (f) { try { f(G.lang); } catch (e) { console.error(e); } });
     buildSearchIndex();
@@ -364,7 +364,7 @@
     document.querySelectorAll('main kbd').forEach(function (k) {
       if (k.closest('#qol-keys, [data-widget]')) return;
       k.classList.add('kbd-link');
-      k.setAttribute('data-tip-ru', 'Все горячие клавиши — в главе «Удобства»');
+      k.setAttribute('data-tip-ru', 'Все горячие клавиши собраны в главе «Удобства»');
       k.setAttribute('data-tip-en', 'All hotkeys are in the “Quality of life” chapter');
     });
     document.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('kbd.kbd-link')) location.hash = '#qol-keys'; });

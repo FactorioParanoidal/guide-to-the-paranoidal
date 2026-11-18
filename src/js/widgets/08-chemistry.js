@@ -1,6 +1,6 @@
 /* Chapter 08 widgets (chemistry).
    fluid-wall : all visible fluids (records.fluids_all) with search and gas/liquid filter
-   tank-fire  : interactive tank overheat (Flammable_Oils_QUICKFIX PARANOIDAL-CHANGES.md: burns 60 s, drained below 25% → goes out, else explosion) */
+   tank-fire  : interactive tank overheat (paranoidal-flammable-fluids README.md: burns 60 s, drained below 25% → goes out, else explosion) */
 (function (G) {
   /* fluid-wall: every fluid as a named tile (icon + name), alphabetical, search, gases/liquids filter, first 36 + "show all" */
   G.widget('fluid-wall', function (el) {
@@ -31,9 +31,9 @@
         '<div class="tf-stage ' + state + '"><img class="tf-tank" src="' + G.asset('assets/sprites/storage-tank.webp') + '" alt="">' + (fireOn ? '<div class="tf-fire"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="tf-smoke"></div>' : '') +
         (state === 'boom' ? '<div class="tf-boom"><i></i><i></i></div>' : '') + '<div class="tf-level"><i style="height:' + level + '%"></i><b>' + Math.round(level) + '%</b><em></em></div></div>' +
         '<div class="tf-timer"><i style="width:' + (t / BURN * 100) + '%"></i><span>' + (state === 'burning' ? G.t('До взрыва: ', 'Until explosion: ') + Math.max(0, Math.ceil(BURN - t)) + ' ' + G.t('с игрового времени (здесь ускорено в 8 раз)', 's of game time (8× faster here)') : '') + '</span></div>' +
-        '<div class="wbar">' + (state === 'idle' ? '<button class="fbtn danger" data-ign>' + G.t('🔥 Попасть шальной пулей', '🔥 Hit it with a stray bullet') + '</button>' : '') +
-        (state === 'burning' ? '<button class="fbtn go" data-drain>' + G.t('💧 Откачивать! (жмите быстрее)', '💧 Drain it! (click faster)') + '</button>' : '') +
-        (state === 'out' || state === 'boom' ? '<button class="fbtn" data-reset>' + G.t('↺ Ещё раз', '↺ Again') + '</button>' : '') + '</div>' +
+        '<div class="wbar">' + (state === 'idle' ? '<button class="fbtn danger" data-ign>' + G.t('Попасть шальной пулей', 'Hit it with a stray bullet') + '</button>' : '') +
+        (state === 'burning' ? '<button class="fbtn go" data-drain>' + G.t('Откачивать! (жмите быстрее)', 'Drain it! (click faster)') + '</button>' : '') +
+        (state === 'out' || state === 'boom' ? '<button class="fbtn" data-reset>' + G.t('Ещё раз', 'Again') + '</button>' : '') + '</div>' +
         '<div class="tf-msg">' + msg() + '</div>';
       var b;
       if ((b = el.querySelector('[data-ign]'))) b.onclick = ignite;
@@ -43,7 +43,7 @@
     function msg() {
       if (state === 'idle') return G.t('Полный резервуар горючего. Что может пойти не так?', 'A full tank of fuel. What could possibly go wrong?');
       if (state === 'burning') return G.t('Резервуар горит! Слейте горючее ниже 25% начального, пока не поздно. Над ним уже валит чёрный дым.', 'The tank is on fire! Drain below 25% of the initial amount before it is too late. Black smoke is already pouring out.');
-      if (state === 'out') return '<b style="color:#8de06a">' + G.t('Пожар погас.', 'The fire is out.') + '</b> ' + G.t('Горючего меньше четверти — нечему взрываться. Вы спасли базу. На этот раз.', 'Less than a quarter left: nothing to explode. You saved the base. This time.');
+      if (state === 'out') return '<b style="color:#8de06a">' + G.t('Пожар погас.', 'The fire is out.') + '</b> ' + G.t('Горючего меньше четверти, взрываться нечему. Вы спасли базу. На этот раз.', 'Less than a quarter left: nothing to explode. You saved the base. This time.');
       return '<b style="color:#ff5a4a">' + G.t('БАБАХ.', 'KABOOM.') + '</b> ' + G.t('Мощный взрыв, 40–200 долгих пожаров вокруг на две минуты и ' + G.fmt(Math.round(250 * level)) + ' единиц загрязнения разом. Жуки уже в пути.', 'A massive explosion, 40–200 long fires around for two minutes and ' + G.fmt(Math.round(250 * level)) + ' pollution at once. The bugs are on their way.');
     }
     function check() { if (state === 'burning' && level < 25) { state = 'out'; clearInterval(timer); G.achieve('firefighter', 'Пожарный', 'Firefighter', G.icon('fluid-turret__pd-fire-safety-turret'), 'Потушить горящий резервуар', 'Put out a burning tank'); } }

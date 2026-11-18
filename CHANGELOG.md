@@ -1,5 +1,29 @@
 # Changelog — Guide to the Paranoidal
 
+## 2.0.0 — 2026-11-18
+
+The guide is rewritten for Paranoidal 2.1 (Factorio 2.1.24 with Quality, Elevated rails and Recycler). Every chapter was
+checked against the 2.1 dump (`sa-review-mainref-20261118`, modpack `pre_release_2.1` 8f08d8abba) and the mod sources.
+
+- New chapter list (24 with the cover): «Старт BnL: первый час» replaces the crash start; new chapters «Поздняя игра:
+  Yuoki» and «Помощники BnL: НЯН-Я и Д-ОК»; «Ракета и финал» replaces «Космос и эндгейм» (victory for the first rocket,
+  no interstellar ship); «Мир и погода» adds rain and thunderstorms.
+- New in the chapters: power districts with a transformer calculator, flammable fluids and fire safety turrets, Clowns
+  chains, cargo-inertia trains and push-pull locomotives, loading cranes by colour, real nuclear blasts, robot army,
+  anti-air turrets and target priority, the Replicator Citadel, the protomolecule, the merged ruins (174 + 150 +
+  22 legendary), Codex RPG with the base journal and BnL Premium, own tips sections.
+- Numbers from 2.1: liquid fuel heat values, locomotive efficiencies, offshore pumps, recyclers 1–4, Yuoki generators,
+  evolution formula (0.12 % per technology, 0.15 % per 1000 packs), 101 enemy kinds (only hostile units counted).
+- Widgets: quality calculator uses the 2.1 quality units (effect × next_probability, chain_probability for skips);
+  new district calculator; the control post loop animation is removed (the post no longer sends defects back);
+  threat board shows the Citadel; puffer breeding reads the 2.1 result probabilities; ruin counts updated.
+- Design: no tracked capitals in labels, chapter chips are in-game icons with their names, prose lines ≤ 75
+  characters, a BnL fine-print line on the cover, no emoji in buttons. Texts in RU edited with the humanizer-ru skill and its
+  scanner (repeated joke templates and headings, vague claims and calques removed; dashes only in quotes).
+- New PARANOIDAL plate in the top bar and the footer: the animated circuit logo with a transparent background.
+- Tools: `{{name:type/name}}` and `{{chip:type/name}}` give exact in-game names; extract_stats reads the 2.1 dump format.
+  collect_assets has an `anim` entry for animated sources (crop, resize, frame step).
+
 ## 1.3.7 — 2026-10-30
 
 - Seasons (chapter 15): the season dial uses the real dusk/dawn shift of NightBrightness (±0.15, was half of it), so

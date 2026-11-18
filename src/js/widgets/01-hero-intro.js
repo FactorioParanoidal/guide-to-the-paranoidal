@@ -46,7 +46,7 @@
             '<i class="p" style="width:' + (sc(r[1]) * 100).toFixed(2) + '%"><em>' + G.fmt(r[1]) + '</em></i></span>' +
             '<span class="vsb-x">×' + G.fmt(mult, { maximumFractionDigits: mult < 10 ? 1 : 0 }) + '</span></a>';
         }).join('') +
-        '<p class="muted small-note">' + G.t('Ванильные значения — Factorio 2.0 с Quality и Elevated Rails, без Space Age (рецепты и технологии — приблизительно, по прототипам игры).', 'Vanilla values: Factorio 2.0 with Quality and Elevated Rails, no Space Age (recipes and technologies are approximate, counted from game prototypes).') + '</p>';
+        '<p class="muted small-note">' + G.t('Ванильные значения: Factorio с дополнениями «Качество» и «Надземные рельсы». Рецепты и технологии посчитаны по прототипам игры примерно.', 'Vanilla values: Factorio with the Quality and Elevated rails add-ons. Recipes and technologies are approximate counts of the game prototypes.') + '</p>';
       el.querySelectorAll('[data-s]').forEach(function (b) { b.onclick = function () { log = b.getAttribute('data-s') === 'log'; draw(); }; });
       requestAnimationFrame(function () { el.classList.add('drawn'); });
     }

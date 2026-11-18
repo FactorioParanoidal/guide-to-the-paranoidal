@@ -17,7 +17,7 @@
       el.innerHTML = list.map(function (x) {
         var w = Math.log10(x.hp) / max * 100, isV = x.tag === G.t('ваниль', 'vanilla');
         return '<div class="hp-row' + (isV ? ' van' : '') + '"><span class="sl-q">' + G.iconImg(x.r) + G.esc(G.nm(x.r)) + ' <small class="badge">' + x.tag + '</small></span><span class="sl-bar"><i style="width:' + w + '%"></i></span><b>' + G.fmt(x.hp) + '</b><em>' + (x.hp > beh ? '×' + G.fmt(x.hp / beh, { maximumFractionDigits: 0 }) : '') + '</em></div>';
-      }).join('') + '<p class="muted small-note">' + G.t('Логарифмическая шкала. Справа — во сколько раз здоровье больше, чем у ванильного чудовища (25 000).', 'Log scale. On the right: how many times the HP exceeds a vanilla behemoth (25,000).') + '</p>';
+      }).join('') + '<p class="muted small-note">' + G.t('Логарифмическая шкала. Справа показано, во сколько раз здоровье больше, чем у ванильного чудовища (25 000).', 'Log scale. On the right: how many times the HP exceeds a vanilla behemoth (25,000).') + '</p>';
     }
     render(); G.onLang(render);
   });
@@ -28,13 +28,13 @@
       el.innerHTML = '<div class="panel-title">' + G.t('Фракции Rampant, 10-й уровень', 'Rampant factions, tier 10') + '</div><div class="fg">' +
         F.map(function (u) { return '<div class="fg-c" data-ru="' + G.esc(u.ru) + '" data-en="' + G.esc(u.en) + '" src="' + G.icon(u.icon) + '"><img src="' + G.icon(u.icon) + '" alt=""><b>' + G.fmt(u.health) + '</b></div>'; }).join('') + '</div>' +
         '<h4>' + G.t('Левиафаны Боба', 'Bob\'s leviathans') + '</h4><div class="fg">' + B.map(function (u) { return '<div class="fg-c" data-ru="' + G.esc(u.ru) + '" data-en="' + G.esc(u.en) + '" src="' + G.icon(u.icon) + '"><img src="' + G.icon(u.icon) + '" alt=""><b>' + G.fmt(u.health) + '</b></div>'; }).join('') + '</div>' +
-        '<p class="muted small-note">' + G.t('Число — здоровье. Наведите курсор для названия.', 'The number is HP. Hover for the name.') + '</p>';
+        '<p class="muted small-note">' + G.t('Число показывает здоровье. Наведите курсор, чтобы увидеть название.', 'The number is HP. Hover for the name.') + '</p>';
     }
     render(); G.onLang(render);
   });
 
   G.widget('enemy-sources', function (el) {
-    var NAMES = { rampant: ['Rampant', 'Rampant', '#ffa020'], bob: ['Жуки Боба', 'Bob\'s bugs', '#58b6ff'], humans: ['Люди', 'Humans', '#ff5a4a'], big_monsters: ['Исполины', 'Giants', '#b58cff'], vanilla: ['Ваниль', 'Vanilla', '#7ccf5a'], other: ['Прочие', 'Other', '#888'] };
+    var NAMES = { rampant: ['Rampant', 'Rampant', '#ffa020'], bob: ['Жуки Боба', 'Bob\'s bugs', '#58b6ff'], humans: ['Люди', 'Humans', '#ff5a4a'], big_monsters: ['Исполины', 'Giants', '#b58cff'], replicators: ['Репликаторы', 'Replicators', '#3fd6cc'], protomolecule: ['Протомолекула', 'Protomolecule', '#8a6cff'], vanilla: ['Ваниль', 'Vanilla', '#7ccf5a'], other: ['Прочие', 'Other', '#888'] };
     function render() {
       var S = G.data.records.enemy_sources, keys = Object.keys(S).sort(function (a, b) { return S[b].units - S[a].units; });
       var tot = keys.reduce(function (a, k) { return a + S[k].units; }, 0), acc = 0, R = 80, C = 2 * Math.PI * R, segs = '';
@@ -68,10 +68,11 @@
       [0.10, 'Летуны', 'Flyers', 'Летают над водой и стенами, ищут слабое место', 'Fly over water and walls, look for a weak spot'],
       [0.20, 'Вражеские солдаты', 'Enemy soldiers', 'Отряд людей с оружием', 'A squad of armed humans'],
       [0.40, 'Исполины', 'Giants', 'Огромные монстры и королева-матка', 'Huge monsters and the Brood Mother'],
+      [0.50, 'Цитадель', 'Citadel', 'Далеко от базы вырастает крепость репликаторов', 'A fortress of replicators grows far from your base'],
       [0.80, 'Паукотроны', 'Spidertrons', 'Вражеские шагающие машины', 'Enemy walking machines'],
       [0.80, 'Летающие тарелки', 'Flying saucers', 'Да, настоящие', 'Yes, real ones']
     ];
-    var EV_ICON = ['🌀', '🦟', '🪖', '🦖', '🕷', '🛸'];
+    var EV_ICON = ['unit__big-biter', 'unit__arachnids-flyer-v1-t10-rampant-hour-boss-from-t10', 'unit__bm_fake_human_melee_1', 'unit__bm-motherbiterzilla5', 'unit__replicator-droid-heavy', 'spider-vehicle__bm-spidertron_5', 'spider-vehicle__maf_flying_saucer_10'];
     var units = {};
     (G.data.records.rampant_faction_units || []).forEach(function (u) { units[u.faction] = u; });
     function pct(x) { return x ? Math.round(x * 100) + '%' : G.t('сразу', 'start'); }
@@ -88,15 +89,15 @@
       }).join('');
       var ev = EV.map(function (e, i) {
         var on = evo >= e[0];
-        return '<div class="tb-c' + (on ? ' on' : '') + '" data-tip-ru="' + G.esc(e[3]) + '" data-tip-en="' + G.esc(e[4]) + '"><span class="tb-i">' + EV_ICON[i] + '</span><b>' + G.t(e[1], e[2]) + '</b><small>' + pct(e[0]) + '</small></div>';
+        return '<div class="tb-c' + (on ? ' on' : '') + '" data-tip-ru="' + G.esc(e[3]) + '" data-tip-en="' + G.esc(e[4]) + '"><span class="tb-i"><img src="' + G.icon(EV_ICON[i]) + '" alt=""></span><b>' + G.t(e[1], e[2]) + '</b><small>' + pct(e[0]) + '</small></div>';
       }).join('');
       el.innerHTML =
         '<div class="tb-evo"><span>' + G.t('Эволюция врагов', 'Enemy evolution') + '</span><b>' + Math.round(evo * 100) + '%</b></div>' +
         '<input class="frange" type="range" min="0" max="1" step="0.01" value="' + evo + '" data-e style="width:100%">' +
-        '<h5 class="tb-h">' + G.t('Уровень жуков из гнёзд', 'Bug level from nests') + ' <span class="muted">— ' + G.t('сейчас до', 'now up to') + ' ' + lvl + '</span></h5><div class="tb-lvls">' + lv + '</div>' +
-        '<h5 class="tb-h">' + G.t('Виды гнёзд', 'Nest types') + ' <span class="muted">— ' + facOn + ' ' + G.t('из', 'of') + ' ' + FAC.length + '</span></h5><div class="tb-fac">' + fac + '</div>' +
+        '<h5 class="tb-h">' + G.t('Уровень жуков из гнёзд', 'Bug level from nests') + ' <span class="muted">(' + G.t('сейчас до', 'now up to') + ' ' + lvl + ')</span></h5><div class="tb-lvls">' + lv + '</div>' +
+        '<h5 class="tb-h">' + G.t('Виды гнёзд', 'Nest types') + ' <span class="muted">(' + facOn + ' ' + G.t('из', 'of') + ' ' + FAC.length + ')</span></h5><div class="tb-fac">' + fac + '</div>' +
         '<h5 class="tb-h">' + G.t('Особые нападения', 'Special attacks') + '</h5><div class="tb">' + ev + '</div>' +
-        '<p class="muted small-note">' + G.t('Это настройки Paranoidal по умолчанию. Дальние базы могут быть сильнее ближних. Особое нападение бывает раз в 100 игровых дней, какое именно — случайно. Наведите курсор на карточку, чтобы узнать подробности.', 'These are Paranoidal\'s default settings. Distant bases can be stronger than near ones. A special attack happens once every 100 game days; which one is random. Hover a card for details.') + '</p>';
+        '<p class="muted small-note">' + G.t('Это настройки Paranoidal по умолчанию. Дальние базы могут быть сильнее ближних. Особое нападение бывает раз в 100 игровых дней, какое именно, решает случай. Цитадель появляется одна на карту. Наведите курсор на карточку, чтобы узнать подробности.', 'These are Paranoidal\'s default settings. Distant bases can be stronger than near ones. A special attack happens once every 100 game days; which one is random. The Citadel appears once per map. Hover a card for details.') + '</p>';
       el.querySelector('[data-e]').oninput = function () {
         evo = +this.value; render();
         if (evo >= 0.8) G.achieve('doom', 'Предвестник апокалипсиса', 'Harbinger of doom', G.icon('unit__bm_fake_human_boss_nuke_rocket_10'), 'Довести эволюцию до 80% на табло угроз', 'Push evolution to 80% on the threat board');
